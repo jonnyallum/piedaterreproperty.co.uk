@@ -26,6 +26,20 @@ export type IconName =
   | 'clock'
   | 'mail'
   | 'check'
+  | 'bed'
+  | 'bath'
+  | 'sofa'
+  | 'leaf'
+  | 'car'
+  | 'search'
+  | 'key'
+  | 'pound'
+  | 'flame'
+  | 'wifi'
+  | 'shield'
+  | 'home'
+  | 'printer'
+  | 'expand'
 
 interface IconProps {
   name: IconName
@@ -76,6 +90,65 @@ const PATHS: Record<IconName, React.ReactNode> = {
     </>
   ),
   check: <path d="M4.5 12.5l4.5 4.5L19.5 6.5" />,
+  bed: (
+    <>
+      <path d="M3 8v10M3 12h18v6M21 18v-4a3 3 0 0 0-3-3h-6v4" />
+      <path d="M6.5 9.5h2.2c.6 0 1 .4 1 1v.5H5.5V10.5c0-.6.4-1 1-1z" />
+    </>
+  ),
+  bath: (
+    <>
+      <path d="M4 12V6.5A1.5 1.5 0 0 1 5.5 5c.9 0 1.5.7 1.5 1.6" />
+      <path d="M3 12h18v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" />
+      <path d="M7 18l-1 2M18 18l1 2" />
+    </>
+  ),
+  sofa: (
+    <>
+      <path d="M5 11V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2" />
+      <path d="M3 12a2 2 0 0 1 2 2v2h14v-2a2 2 0 0 1 2-2 2 2 0 0 1 2 2v3H1v-3a2 2 0 0 1 2-2z" />
+      <path d="M6 18v1.5M18 18v1.5" />
+    </>
+  ),
+  leaf: <path d="M5 19c0-8 6-13 14-13 0 8-5 14-13 14-1 0-1-1-1-1zM8 16c2-3 5-5 8-6" />,
+  car: (
+    <>
+      <path d="M4 16v2M20 16v2M5 16h14l-1.5-5.2A2 2 0 0 0 15.6 9.5H8.4a2 2 0 0 0-1.9 1.3L5 16z" />
+      <path d="M3 16h18" />
+      <circle cx="7.5" cy="16" r="1.2" />
+      <circle cx="16.5" cy="16" r="1.2" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M20 20l-4.2-4.2" />
+    </>
+  ),
+  key: (
+    <>
+      <circle cx="8" cy="8" r="3.3" />
+      <path d="M10.4 10.4L19 19M14.5 14.5l2-2M17 17l2-2" />
+    </>
+  ),
+  pound: <path d="M15.5 7.2c-.7-1-1.9-1.6-3.1-1.4C10.7 6 9.7 7.3 9.7 9v9M7 12.5h6M7 18h9.5" />,
+  flame: <path d="M12 3.5s4 3 4 7.8a4 4 0 0 1-8 0c0-1.9 1-3 2-4 .3 1 1.1 1.5 1.1 1.5S12 6.4 12 3.5z" />,
+  wifi: (
+    <>
+      <path d="M4.8 9.4a10.5 10.5 0 0 1 14.4 0M7.6 12.5a6.5 6.5 0 0 1 8.8 0M10.3 15.6a2.6 2.6 0 0 1 3.4 0" />
+      <path d="M12 18.6h.01" />
+    </>
+  ),
+  shield: <path d="M12 3.2l7 3v5.2c0 4-3 6.9-7 8.6-4-1.7-7-4.6-7-8.6V6.2z" />,
+  home: <path d="M4 11l8-6.2 8 6.2M6.2 9.8V19h11.6V9.8M10 19v-5h4v5" />,
+  printer: (
+    <>
+      <path d="M7 9V4h10v5M7 17H5.2A2.2 2.2 0 0 1 3 14.8V11a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3.8a2.2 2.2 0 0 1-2.2 2.2H17" />
+      <path d="M7 14h10v6H7z" />
+      <path d="M17 11.5h.01" />
+    </>
+  ),
+  expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
 }
 
 const FILLED = new Set<IconName>(['whatsapp', 'facebook'])

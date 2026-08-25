@@ -106,7 +106,7 @@ export function HeroSearch() {
     if (location) params.set('location', location)
     if (maxPrice) params.set('maxPrice', maxPrice)
     if (minBeds) params.set('minBeds', minBeds)
-    track('search_submit', { path, location, maxPrice, minBeds })
+    track('search_performed', { path, location, maxPrice, minBeds })
     setSheetOpen(false)
     router.push(`/properties?${params.toString()}`)
   }

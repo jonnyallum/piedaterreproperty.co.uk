@@ -58,6 +58,29 @@ export function isoDate(value: Date | string): string {
   return d.toISOString().slice(0, 10)
 }
 
+interface PriceLike {
+  amount: number
+  qualifier: 'guide' | 'offers_over' | 'oiro' | 'fixed' | 'poa'
+  frequency?: 'pcm' | 'pw' | 'per_night'
+}
+
+const FREQ: Record<NonNullable<PriceLike['frequency']>, string> = {
+  pcm: 'pcm',
+  pw: 'per week',
+  per_night: 'per night',
+}
+
+/** Format a property price with qualifier and frequency: "£1,350 pcm". */
+export function formatPrice(price: PriceLike): string {
+  if (price.qualifier === 'poa') return 'Price on application'
+  const money = gbp(price.amount)
+  const freq = price.frequency ? ` ${FREQ[price.frequency]}` : ''
+  if (price.qualifier === 'guide') return `Guide price ${money}${freq}`
+  if (price.qualifier === 'offers_over') return `Offers over ${money}${freq}`
+  if (price.qualifier === 'oiro') return `Offers in the region of ${money}${freq}`
+  return `${money}${freq}`
+}
+
 /** Floor area in both units, feet first for UK buyers: "1,076 sq ft (100 sq m)". */
 export function floorArea(sqft: number): string {
   const sqm = Math.round(sqft * 0.092903)

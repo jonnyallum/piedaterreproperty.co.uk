@@ -52,7 +52,7 @@ export function RegisterForm() {
         body: JSON.stringify({
           kind: 'registration',
           path: 'lettings',
-          source: 'tenant-register',
+          source: 'tenant_register',
           name: get('name'),
           email: get('email'),
           phone: get('phone'),
@@ -70,7 +70,7 @@ export function RegisterForm() {
       })
       const json = (await res.json()) as { ok: boolean; error?: string }
       if (!res.ok || !json.ok) throw new Error(json.error ?? 'Something went wrong.')
-      track('lead_submit', { kind: 'registration', source: 'tenant-register' })
+      track('tenant_register_submit', { source: 'tenant_register' })
       setDone(true)
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.')

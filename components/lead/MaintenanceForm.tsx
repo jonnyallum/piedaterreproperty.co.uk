@@ -111,7 +111,7 @@ export function MaintenanceForm() {
         body: JSON.stringify({
           kind: 'maintenance',
           path: 'lettings',
-          source: 'tenant-maintenance',
+          source: 'maintenance',
           name: get('name'),
           phone: get('phone'),
           email: get('email') || undefined,
@@ -127,7 +127,7 @@ export function MaintenanceForm() {
       })
       const json = (await res.json()) as { ok: boolean; error?: string }
       if (!res.ok || !json.ok) throw new Error(json.error ?? 'Something went wrong.')
-      track('lead_submit', { kind: 'maintenance', source: 'tenant-maintenance' })
+      track('maintenance_submit', { source: 'maintenance' })
       setDone(true)
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : 'Something went wrong.')

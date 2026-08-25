@@ -684,6 +684,60 @@
     color: var(--c-on-dark);
   }
 
+  /* ---- Property card, arch-topped with a dye bloom on hover ------------ */
+  .property-media {
+    position: relative;
+    overflow: hidden;
+  }
+  .property-media img,
+  .property-media .property-placeholder {
+    transition: transform 700ms var(--ease-quill);
+  }
+  .property-card:hover .property-media img,
+  .property-card:hover .property-media .property-placeholder {
+    transform: scale(1.06);
+  }
+  /* Dye bloom: a warm terracotta wash, not a grey overlay */
+  .property-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      42% 42% at 50% 45%,
+      color-mix(in srgb, var(--pt-terracotta) 22%, transparent),
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 600ms var(--ease-quill);
+    pointer-events: none;
+  }
+  .property-card:hover .property-media::after {
+    opacity: 1;
+  }
+
+  /* Status chip */
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: var(--c-brass);
+    color: var(--pt-ink);
+  }
+  .status-chip[data-tone='verdigris'] {
+    background-color: var(--c-lettings-deep);
+    color: var(--pt-bone);
+  }
+  .status-chip[data-tone='muted'] {
+    background-color: color-mix(in srgb, var(--c-ink) 70%, transparent);
+    color: var(--pt-bone);
+  }
+
   /* ---- Skeleton, clay-mist shimmer, never grey ------------------------- */
   .skeleton {
     background-image: linear-gradient(
@@ -775,4 +829,64 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* --------------------------------------------------------------------------
+   7. Print. Buyers print property particulars. The detail page hides its
+   interactive content with print:hidden and reveals a clean sheet (#pt-print)
+   with hidden print:block. Here we strip the site chrome that lives outside the
+   page (nav, footer, grain, mobile bar, cookie banner), drop the warm grounds
+   for white, and set a one page margin.
+   -------------------------------------------------------------------------- */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #17232e !important;
+  }
+
+  /* Chrome is rendered as direct children of body around #main. Hide it all and
+     keep the page content; the page itself decides what prints. */
+  body > *:not(#main) {
+    display: none !important;
+  }
+
+  #main {
+    z-index: auto !important;
+  }
+
+  /* No hover blooms, shimmer or shadows on paper. */
+  .property-media::after,
+  .skeleton {
+    display: none !important;
+  }
+
+  #pt-print {
+    color: #17232e;
+  }
+
+  #pt-print img {
+    max-height: 6cm;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  @page {
+    margin: 1.4cm;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Progressive enhancement. Elements marked .js-only are hidden until the
+   inline script in the layout adds .js to <html>, so a no-JS visitor sees the
+   <noscript> fallback instead of a non-functional client widget.
+   -------------------------------------------------------------------------- */
+.js-only {
+  display: none;
+}
+html.js .js-only {
+  display: block;
 }

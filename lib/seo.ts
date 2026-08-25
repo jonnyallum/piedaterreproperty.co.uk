@@ -4,6 +4,7 @@
  */
 import type { Metadata } from 'next'
 import { SITE } from './site'
+import type { Property } from '@/lib/schemas/property'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE.urls.production
 /** Indexing is off by default so the temporary preview domain stays noindex. */
@@ -98,6 +99,25 @@ export function realEstateAgentJsonLd() {
   }
 }
 
+/**
+ * Place JSON-LD for a town page, referenced alongside the LocalBusiness node so
+ * a crawler ties the service to a real geographic place in Hampshire.
+ */
+export function placeJsonLd(name: string, description: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name,
+    description,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: name,
+      addressRegion: 'Hampshire',
+      addressCountry: 'GB',
+    },
+  }
+}
+
 /** FAQPage JSON-LD. Pass only the questions actually visible on the page. */
 export function faqPageJsonLd(items: { q: string; a: string }[]) {
   return {
@@ -109,6 +129,100 @@ export function faqPageJsonLd(items: { q: string; a: string }[]) {
       acceptedAnswer: { '@type': 'Answer', text: item.a },
     })),
   }
+}
+
+/** Map a free-text property type onto the closest schema.org accommodation. */
+function residenceType(propertyType: string): string {
+  const t = propertyType.toLowerCase()
+  if (t.includes('flat') || t.includes('apartment') || t.includes('maisonette')) return 'Apartment'
+  if (t.includes('house') || t.includes('bungalow') || t.includes('chalet') || t.includes('cottage'))
+    return 'House'
+  return 'Residence'
+}
+
+/** schema.org availability for a listing status. */
+function offerAvailability(status: Property['status']): string {
+  switch (status) {
+    case 'available':
+      return 'https://schema.org/InStock'
+    case 'under_offer':
+    case 'sold_stc':
+    case 'let_agreed':
+      return 'https://schema.org/LimitedAvailability'
+    case 'sold':
+    case 'let':
+      return 'https://schema.org/SoldOut'
+    default:
+      return 'https://schema.org/OutOfStock'
+  }
+}
+
+const FREQ_UNIT: Record<'pcm' | 'pw' | 'per_night', { code: string; text: string }> = {
+  pcm: { code: 'MON', text: 'per month' },
+  pw: { code: 'WEE', text: 'per week' },
+  per_night: { code: 'DAY', text: 'per night' },
+}
+
+/**
+ * Residence and Offer JSON-LD for a property, returned as a linked graph: the
+ * Offer's itemOffered points at the Residence by @id. Prices on application are
+ * emitted as an Offer with availability and no price, which is valid and honest.
+ */
+export function propertyJsonLd(property: Property): Record<string, unknown>[] {
+  const url = canonical(`/properties/${property.slug}`)
+  const residenceId = `${url}#residence`
+  const images = property.images
+    .map((img) => new URL(img.src, SITE_URL).toString())
+    .filter((src) => !src.endsWith('undefined'))
+
+  const residence: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': residenceType(property.propertyType),
+    '@id': residenceId,
+    name: property.displayAddress,
+    url,
+    description: property.summary,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: property.town,
+      postalCode: property.postcodeOutcode,
+      addressRegion: 'Hampshire',
+      addressCountry: 'GB',
+    },
+  }
+  if (property.bedrooms != null) residence.numberOfBedrooms = property.bedrooms
+  if (property.bathrooms != null) residence.numberOfBathroomsTotal = property.bathrooms
+  if (images.length) residence.image = images
+
+  const offer: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    url,
+    priceCurrency: 'GBP',
+    availability: offerAvailability(property.status),
+    itemOffered: { '@id': residenceId },
+    seller: { '@id': `${SITE_URL}/#organisation` },
+    businessFunction:
+      property.transactionType === 'sale'
+        ? 'https://schema.org/Sell'
+        : 'https://schema.org/LeaseOut',
+  }
+  if (property.price.qualifier !== 'poa') {
+    if (property.price.frequency) {
+      const unit = FREQ_UNIT[property.price.frequency]
+      offer.priceSpecification = {
+        '@type': 'UnitPriceSpecification',
+        price: property.price.amount,
+        priceCurrency: 'GBP',
+        unitCode: unit.code,
+        unitText: unit.text,
+      }
+    } else {
+      offer.price = property.price.amount
+    }
+  }
+
+  return [residence, offer]
 }
 
 /** BreadcrumbList JSON-LD from an ordered trail of label plus path. */
