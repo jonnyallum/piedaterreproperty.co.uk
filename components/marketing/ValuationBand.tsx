@@ -13,6 +13,8 @@ interface ValuationBandProps {
   copy?: string
   cta?: string
   href?: string
+  /** Sales uses the Kiln gradient, lettings the Tide gradient. */
+  tone?: 'sales' | 'lettings'
 }
 
 export function ValuationBand({
@@ -20,15 +22,18 @@ export function ValuationBand({
   copy = 'A free, honest valuation from people who know these streets. No obligation, no hard sell.',
   cta = 'Book a free valuation',
   href = '/sales/free-valuation',
+  tone = 'sales',
 }: ValuationBandProps) {
+  const surface = tone === 'sales' ? 'surface-kiln' : 'surface-tide'
+  const eyebrow = tone === 'sales' ? 'Free valuation' : 'Rental valuation'
   return (
-    <section className="relative isolate overflow-hidden surface-kiln text-on-dark">
+    <section className={`relative isolate overflow-hidden ${surface} text-on-dark`}>
       <Grain fixed={false} photo />
       <div
         className="relative mx-auto flex max-w-content flex-col items-center px-6 py-24 text-center md:px-8"
         style={{ zIndex: 'var(--z-content)' }}
       >
-        <Eyebrow tone="on-dark">Free valuation</Eyebrow>
+        <Eyebrow tone="on-dark">{eyebrow}</Eyebrow>
         <h2 className="mt-4 max-w-3xl text-h1">{heading}</h2>
         <p className="measure mt-5 text-lead text-on-dark/90">{copy}</p>
         <div className="mt-9">

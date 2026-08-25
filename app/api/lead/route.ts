@@ -9,21 +9,27 @@ import { NextResponse } from 'next/server'
  * server log records it, so the funnel works end to end in every environment.
  */
 
+export type LeadKind = 'valuation' | 'enquiry' | 'registration' | 'maintenance'
+
 export interface LeadPayload {
-  kind: 'valuation' | 'enquiry'
-  path: 'sales' | 'lettings'
+  kind: LeadKind
+  path?: 'sales' | 'lettings'
   source?: string
   name: string
-  email: string
-  phone: string
+  email?: string
+  phone?: string
   postcode?: string
   propertyType?: string
   bedrooms?: string
   timeframe?: string
   message?: string
+  /** Arbitrary extra fields (registration criteria, maintenance detail). */
+  extra?: Record<string, string>
   // Honeypot: must be empty. Bots fill hidden fields.
   company?: string
 }
+
+const KINDS = new Set<LeadKind>(['valuation', 'enquiry', 'registration', 'maintenance'])
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 // UK numbers: allow spaces, +44, leading zero, 10 to 11 digits of content.
@@ -44,12 +50,15 @@ export async function POST(request: Request) {
   // Silently accept and drop honeypot hits so bots get no signal.
   if (body.company) return NextResponse.json({ ok: true })
 
-  if (body.kind !== 'valuation' && body.kind !== 'enquiry') return invalid('Unknown kind.')
-  if (body.path !== 'sales' && body.path !== 'lettings') return invalid('Unknown path.')
+  if (!body.kind || !KINDS.has(body.kind)) return invalid('Unknown kind.')
   if (!body.name || body.name.trim().length < 2) return invalid('Please enter your name.')
-  if (!body.email || !EMAIL.test(body.email)) return invalid('Please enter a valid email.')
-  if (!body.phone || !PHONE.test(body.phone.trim()))
-    return invalid('Please enter a valid UK phone number.')
+
+  const hasEmail = body.email ? EMAIL.test(body.email) : false
+  const hasPhone = body.phone ? PHONE.test(body.phone.trim()) : false
+  if (body.email && !hasEmail) return invalid('Please enter a valid email.')
+  if (body.phone && !hasPhone) return invalid('Please enter a valid UK phone number.')
+  // Every lead needs at least one way to reply.
+  if (!hasEmail && !hasPhone) return invalid('Please leave an email or a phone number.')
 
   // Prompt 06: deliver to LEAD_TO_EMAIL via Resend and queue the review ask.
   if (process.env.RESEND_API_KEY) {
