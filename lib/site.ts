@@ -88,11 +88,14 @@ export const SITE = {
 
 export type OpeningHour = (typeof SITE.openingHours)[number]
 
-/** True only when the firm is licensed to trade sales. Gates live sales copy. */
-export const SALES_LIVE =
-  SITE.salesReadiness.hmrcAml &&
-  SITE.salesReadiness.tpoSalesCode &&
-  SITE.salesReadiness.professionalIndemnity
+/**
+ * True only when the firm is licensed to trade sales. A single build-time flag,
+ * NEXT_PUBLIC_SALES_LIVE, is the switch between the pre-launch and live variants
+ * of the whole sales section. It must not be set to "true" until all three
+ * registrations in `salesReadiness` are genuinely confirmed. Default is
+ * pre-launch.
+ */
+export const SALES_LIVE = process.env.NEXT_PUBLIC_SALES_LIVE === 'true'
 
 /** Years trading, computed so copy never dates. Described as "fifteen years". */
 export function yearsTrading(now = new Date()): number {
