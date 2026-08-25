@@ -98,6 +98,19 @@ export function realEstateAgentJsonLd() {
   }
 }
 
+/** FAQPage JSON-LD. Pass only the questions actually visible on the page. */
+export function faqPageJsonLd(items: { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }
+}
+
 /** BreadcrumbList JSON-LD from an ordered trail of label plus path. */
 export function breadcrumbJsonLd(trail: { name: string; path: string }[]) {
   return {

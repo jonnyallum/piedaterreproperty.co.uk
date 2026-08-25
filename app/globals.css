@@ -377,6 +377,27 @@
     background-image: var(--grad-salt-flat);
   }
 
+  /* Drop cap for the founder story: Fraunces, four lines, terracotta */
+  .dropcap::first-letter {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 3.4em;
+    line-height: 0.8;
+    float: left;
+    margin-right: 0.08em;
+    padding-top: 0.05em;
+    color: var(--c-sales);
+  }
+
+  /* Ink-script accent, used at most three times. Placeholder until the real
+     signature asset arrives; Fraunces italic stands in honestly. */
+  .signature {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--c-sales-ink);
+  }
+
   /* The measure for body copy, 62 to 72 characters */
   .measure {
     max-width: 66ch;
@@ -512,6 +533,14 @@
     transform: scaleX(1);
   }
 
+  /* Arch-shaped CTA, the signature form on the valuation band. Radius only,
+     no overflow clip, so the focus ring is never cut. */
+  .btn-arch {
+    border-radius: var(--arch-shallow);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   /* Icon button: circular clay-mist well */
   .btn-icon {
     min-height: 2.75rem;
@@ -612,6 +641,47 @@
     transition:
       opacity var(--dur-reveal) var(--ease-quill),
       transform var(--dur-reveal) var(--ease-quill);
+  }
+
+  /* ---- Coverage marquee ------------------------------------------------ */
+  .marquee {
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .marquee-track {
+    display: inline-flex;
+    gap: 0;
+    white-space: nowrap;
+    will-change: transform;
+    animation: pt-marquee 60s linear infinite;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation-play-state: paused;
+    }
+  }
+  .marquee-item {
+    color: var(--c-ochre);
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: color var(--dur-micro) var(--ease-tide);
+  }
+  .marquee-item:hover {
+    color: var(--c-on-dark);
   }
 
   /* ---- Skeleton, clay-mist shimmer, never grey ------------------------- */

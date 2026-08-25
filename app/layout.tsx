@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     ? { index: true, follow: true }
     : { index: false, follow: false, nocache: true },
   formatDetection: { telephone: true, address: false, email: false },
+  verification: {
+    // Public Search Console verification token from COMPANY_FACTS.
+    google: 'BpT8hQ4na5JN9XjBUw5POfEjtjL-DGcQWznTFk_Z5-w',
+  },
 }
 
 export const viewport: Viewport = {
