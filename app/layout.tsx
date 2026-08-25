@@ -1,0 +1,64 @@
+import type { Metadata, Viewport } from 'next'
+import './globals.css'
+import { fontVariables } from '@/lib/fonts'
+import { SkipLink } from '@/components/chrome/SkipLink'
+import { Nav } from '@/components/chrome/Nav'
+import { Footer } from '@/components/chrome/Footer'
+import { MobileActionBar } from '@/components/chrome/MobileActionBar'
+import { CookieBanner } from '@/components/chrome/CookieBanner'
+import { Grain } from '@/components/primitives/Grain'
+import { themeColor } from '@/lib/tokens'
+import { SITE } from '@/lib/site'
+import { siteUrl } from '@/lib/seo'
+
+const ALLOW_INDEXING = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Pied-à-Terre Property, Solent coast lettings, management and sales',
+    template: '%s . Pied-à-Terre Property',
+  },
+  description:
+    'An established, award-winning independent lettings and management firm on the Solent coast, now selling homes across Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island.',
+  applicationName: SITE.tradingName,
+  robots: ALLOW_INDEXING
+    ? { index: true, follow: true }
+    : { index: false, follow: false, nocache: true },
+  formatDetection: { telephone: true, address: false, email: false },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: themeColor.light },
+    { media: '(prefers-color-scheme: dark)', color: themeColor.dark },
+  ],
+  colorScheme: 'light dark',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en-GB" suppressHydrationWarning>
+      <body className={fontVariables}>
+        {/* Mark that JavaScript is available so scroll entrances never hide
+            content from a no-JS visitor. Runs during parse, before reveals. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+        <SkipLink />
+        <Grain />
+        <Nav />
+        <main id="main" className="relative" style={{ zIndex: 'var(--z-content)' }}>
+          {children}
+        </main>
+        <div className="pb-16 md:pb-0">
+          <Footer />
+        </div>
+        <MobileActionBar />
+        <CookieBanner />
+      </body>
+    </html>
+  )
+}

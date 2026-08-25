@@ -1,0 +1,40 @@
+{
+  "name": "piedaterreproperty.co.uk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Marketing and property website for Pied-a-Terre Property, Solent coast lettings, management and sales.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "check:dashes": "node scripts/check-dashes.mjs",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "check": "npm run check:dashes && npm run check:tokens && npm run lint && npm run typecheck",
+    "optimise-images": "node scripts/optimise-images.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.24",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@tailwindcss/postcss": "4.1.13",
+    "@types/node": "22.10.7",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.37.0",
+    "eslint-config-next": "15.5.24",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.6.14",
+    "sharp": "0.34.4",
+    "tailwindcss": "4.1.13",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

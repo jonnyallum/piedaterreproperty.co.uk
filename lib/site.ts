@@ -1,0 +1,115 @@
+/**
+ * Company facts, typed. The single source of truth for every factual claim on
+ * the site, mirroring _reference/COMPANY_FACTS.md. Nothing on the website may
+ * state a fact that is not here.
+ *
+ * Fields marked with a `confirm` comment are not yet verified with the client
+ * and must not be published as fact until they are. They carry honest
+ * placeholders of the right length and register, tracked in ASSET_REQUEST_LIST.
+ */
+
+export const SITE = {
+  tradingName: 'Pied-à-Terre Property',
+  legalEntity: 'Solent C Property Services Limited',
+  companyNumber: '07482593',
+  director: 'Charisma Marie Smith',
+
+  registeredOffice: {
+    line1: 'C/O Sterling Accounting',
+    line2: '9a Waterberry Drive',
+    town: 'Waterlooville',
+    postcode: 'PO7 7TH',
+  },
+
+  /** The trading office. Used in LocalBusiness schema, contact page and GBP. */
+  office: {
+    line1: '233 Southampton Road',
+    town: 'Portchester',
+    postcode: 'PO6 4PY',
+    // Portchester trading office coordinates, for the contact map.
+    lat: 50.8368,
+    lng: -1.1132,
+  },
+
+  phone: {
+    display: '01243 468738',
+    href: 'tel:+441243468738',
+  },
+
+  // confirm: office email address for the contact page and lead notifications.
+  email: 'hello@piedaterreproperty.co.uk',
+
+  // confirm: WhatsApp business number in international form, digits only.
+  whatsapp: '441243468738',
+
+  urls: {
+    production: 'https://piedaterreproperty.co.uk',
+    instagram: 'https://instagram.com/pied_a_terre_property',
+    facebook: 'https://www.facebook.com/Pied-à-Terre-Property-208212646451645/',
+    tpo: 'https://www.tpos.co.uk',
+    // confirm: Google Business Profile URL and Place ID, needed for reviews.
+    googleBusiness: '',
+  },
+
+  founded: 2011,
+
+  /** confirm: exact opening hours per day, including whether Saturdays are worked. */
+  openingHours: [
+    { day: 'Monday', open: '09:00', close: '17:30' },
+    { day: 'Tuesday', open: '09:00', close: '17:30' },
+    { day: 'Wednesday', open: '09:00', close: '17:30' },
+    { day: 'Thursday', open: '09:00', close: '17:30' },
+    { day: 'Friday', open: '09:00', close: '17:30' },
+    { day: 'Saturday', open: null, close: null },
+    { day: 'Sunday', open: null, close: null },
+  ],
+
+  accreditations: {
+    tpoReference: 'D13453', // confirm: current and sales redress added
+    moneyShield: true,
+    dps: true,
+    award: 'British Property Lettings Award, 2018 to 2019',
+    // confirm: ICO registration number
+    ico: '',
+  },
+
+  /**
+   * The sales arm cannot advertise a live service until all three are held.
+   * Until then the sales section runs in pre-launch mode.
+   */
+  salesReadiness: {
+    hmrcAml: false, // confirm: registration number and date
+    tpoSalesCode: false, // confirm
+    professionalIndemnity: false, // confirm: PI extended to estate agency work
+  },
+
+  managedHomesCopy: 'around 35 managed homes',
+} as const
+
+export type OpeningHour = (typeof SITE.openingHours)[number]
+
+/** True only when the firm is licensed to trade sales. Gates live sales copy. */
+export const SALES_LIVE =
+  SITE.salesReadiness.hmrcAml &&
+  SITE.salesReadiness.tpoSalesCode &&
+  SITE.salesReadiness.professionalIndemnity
+
+/** Years trading, computed so copy never dates. Described as "fifteen years". */
+export function yearsTrading(now = new Date()): number {
+  return now.getFullYear() - SITE.founded
+}
+
+export const COVERAGE = {
+  primary: ['Havant', 'Portsmouth', 'Waterlooville', 'Emsworth', 'Hayling Island'],
+  secondary: [
+    'Portchester',
+    'Fareham',
+    'Denmead',
+    'Cowplain',
+    'Lovedean',
+    'Drayton',
+    'Eastney',
+    'Petersfield',
+    'Buriton',
+  ],
+} as const

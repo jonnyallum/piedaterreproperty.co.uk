@@ -1,0 +1,708 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   PIED-A-TERRE PROPERTY  .  SOLENT BOHEMIA design tokens
+   Single source of raw values for the whole build. No hex and no px may live
+   in application code; everything resolves from the custom properties below.
+
+   Contrast ratios in comments are computed with the WCAG 2.1 relative
+   luminance formula, not estimated. AA is 4.5:1 for body text and 3:1 for
+   large text and non-text; AAA is 7:1 for body text.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Fixed palette (light scene). Never referenced directly by components;
+   components use the semantic roles below so dark mode can remap them.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Grounds, warm paper, never pure white */
+  --pt-bone: #f7f2e8; /* primary page ground */
+  --pt-oat: #ede3d2; /* alternating section ground */
+  --pt-clay-mist: #e2d3c3; /* tertiary ground, card wells */
+  --pt-shell: #f0e0d0; /* soft warm tint for hover fills */
+
+  /* Ink and structure */
+  --pt-ink: #17232e; /* headings, body, footer ground */
+  --pt-indigo: #21384f; /* deep dye, section grounds, nav on scroll */
+  --pt-slate: #4a5c6a; /* secondary body text, meta */
+
+  /* Pigments */
+  --pt-terracotta: #c05c34; /* signature warm, fills and display only */
+  --pt-sienna: #9c3f22; /* text-weight terracotta */
+  --pt-ochre: #d9a02b; /* highlights, underlines, marquees */
+  --pt-marigold: #e8b93f; /* light and glow, sparingly */
+  --pt-madder: #7a2e4a; /* deep plum-red, rare emphasis */
+  --pt-verdigris: #2e7c6e; /* lettings accent */
+  --pt-verdigris-d: #1f5f55; /* verdigris button-fill depth */
+  --pt-sage: #8fa891; /* botanical neutral, dividers */
+  --pt-brass: #b08d57; /* rules, focus rings, credential metal */
+
+  /* ---- Semantic roles, light scene ------------------------------------- */
+  --c-ground: var(--pt-bone);
+  --c-ground-alt: var(--pt-oat);
+  --c-well: var(--pt-clay-mist);
+  --c-hover: var(--pt-shell);
+
+  --c-ink: var(--pt-ink); /* ink on ground        14.30:1  AAA */
+  --c-ink-soft: var(--pt-slate); /* slate on ground       6.21:1  AA  */
+  --c-on-dark: var(--pt-bone); /* bone on ink          14.30:1  AAA */
+
+  --c-sales: var(--pt-terracotta); /* fill and display only          */
+  --c-sales-ink: var(--pt-sienna); /* sienna on ground      5.98:1  AA  */
+  --c-lettings: var(--pt-verdigris);
+  --c-lettings-deep: var(--pt-verdigris-d); /* bone on it   6.66:1  AA  */
+
+  --c-ochre: var(--pt-ochre); /* ink on ochre          6.85:1  AA  */
+  --c-marigold: var(--pt-marigold);
+  --c-madder: var(--pt-madder); /* bone on madder        8.10:1  AAA */
+  --c-sage: var(--pt-sage);
+  --c-brass: var(--pt-brass);
+
+  /* Focus ring survives both grounds: brass ring plus ink inner line */
+  --c-focus-ring: var(--pt-brass);
+  --c-focus-inner: var(--pt-ink);
+
+  /* ---- Gradients (each is used only over a grain overlay) --------------- */
+  --grad-harbour-dusk: linear-gradient(
+    155deg,
+    var(--pt-indigo) 0%,
+    var(--pt-madder) 42%,
+    var(--pt-terracotta) 76%,
+    var(--pt-ochre) 100%
+  );
+  --grad-kiln: linear-gradient(160deg, var(--pt-terracotta) 0%, var(--pt-ochre) 100%);
+  --grad-kiln-hover: linear-gradient(140deg, var(--pt-terracotta) 0%, var(--pt-ochre) 100%);
+  --grad-tide: linear-gradient(140deg, var(--pt-indigo) 0%, var(--pt-verdigris) 100%);
+  --grad-bleach: linear-gradient(
+    180deg,
+    rgba(247, 242, 232, 0.96),
+    rgba(247, 242, 232, 0)
+  );
+  --grad-salt-flat: radial-gradient(
+      42rem 28rem at 12% 8%,
+      rgba(226, 211, 195, 0.55),
+      transparent 60%
+    ),
+    radial-gradient(38rem 26rem at 88% 22%, rgba(143, 168, 145, 0.35), transparent 60%),
+    radial-gradient(36rem 30rem at 60% 96%, rgba(240, 224, 208, 0.5), transparent 62%);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-tide: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-drift: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-micro: 160ms;
+  --dur-ui: 320ms;
+  --dur-reveal: 720ms;
+  --dur-scene: 1200ms;
+
+  /* ---- Surface texture controls, halved on small screens and dark ------ */
+  --grain-opacity: 0.035;
+  --grain-opacity-photo: 0.02;
+  --gradient-opacity: 1;
+
+  /* ---- Named z-index scale --------------------------------------------- */
+  --z-base: 0;
+  --z-grain: 1;
+  --z-content: 2;
+  --z-raised: 10;
+  --z-sticky-bar: 40;
+  --z-nav: 50;
+  --z-menu: 60;
+  --z-modal: 70;
+  --z-toast: 80;
+
+  /* ---- Radii ----------------------------------------------------------- */
+  --radius-xs: 0.25rem; /* 4px, chips */
+  --radius-sm: 0.5rem; /* 8px, buttons, inputs */
+  --radius-md: 0.75rem; /* 12px, cards */
+  --arch-full: 999px 999px 8px 8px;
+  --arch-shallow: 200px 200px 4px 4px;
+
+  /* ---- Warm shadows, no neutral grey ----------------------------------- */
+  --shadow-warm-sm: 0 2px 8px rgba(23, 35, 46, 0.08);
+  --shadow-warm: 0 8px 24px rgba(192, 92, 52, 0.18);
+  --shadow-warm-cta: 0 8px 24px rgba(192, 92, 52, 0.28);
+  --shadow-warm-lg: 0 20px 60px rgba(122, 46, 74, 0.2);
+
+  color-scheme: light;
+}
+
+/* --------------------------------------------------------------------------
+   2. Dark scene. A built night palette, not an inversion. Grain halves,
+   gradients drop to 60%. Both selectors carry identical overrides: the media
+   query for system preference, the attribute for an explicit toggle.
+   -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --c-ground: #12181f; /* night ground */
+    --c-ground-alt: #1a2029; /* panels */
+    --c-well: #1a2029;
+    --c-hover: #222b35;
+
+    --c-ink: #f0e6d8; /* ink on night ground   14.47:1  AAA */
+    --c-ink-soft: #b9c2c9; /* soft on night ground   8.60:1  AAA */
+    --c-on-dark: #f0e6d8;
+
+    --c-sales: #d9764c; /* lifted terracotta              */
+    --c-sales-ink: #e2895f; /* sales text on night    5.10:1  AA  */
+    --c-lettings: #48a392;
+    --c-lettings-deep: #2e7c6e;
+
+    --c-ochre: #d9a02b;
+    --c-madder: #a24467;
+    --c-sage: #8fa891;
+    --c-brass: #c6a06a;
+
+    --grad-bleach: linear-gradient(180deg, rgba(18, 24, 31, 0.96), rgba(18, 24, 31, 0));
+    --grain-opacity: 0.018;
+    --grain-opacity-photo: 0.012;
+    --gradient-opacity: 0.6;
+
+    color-scheme: dark;
+  }
+}
+
+/* Explicit toggle, plus .theme-dark so any container can be a local night scene. */
+:root[data-theme='dark'],
+.theme-dark {
+  --c-ground: #12181f;
+  --c-ground-alt: #1a2029;
+  --c-well: #1a2029;
+  --c-hover: #222b35;
+
+  --c-ink: #f0e6d8;
+  --c-ink-soft: #b9c2c9;
+  --c-on-dark: #f0e6d8;
+
+  --c-sales: #d9764c;
+  --c-sales-ink: #e2895f;
+  --c-lettings: #48a392;
+  --c-lettings-deep: #2e7c6e;
+
+  --c-ochre: #d9a02b;
+  --c-madder: #a24467;
+  --c-sage: #8fa891;
+  --c-brass: #c6a06a;
+
+  --grad-bleach: linear-gradient(180deg, rgba(18, 24, 31, 0.96), rgba(18, 24, 31, 0));
+  --grain-opacity: 0.018;
+  --grain-opacity-photo: 0.012;
+  --gradient-opacity: 0.6;
+
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------------------
+   3. Tailwind theme wiring. Colours and fonts are inline so utilities resolve
+   from the semantic roles at runtime and follow the theme. Static scales are
+   emitted normally.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  --color-ground: var(--c-ground);
+  --color-ground-alt: var(--c-ground-alt);
+  --color-well: var(--c-well);
+  --color-hover: var(--c-hover);
+  --color-ink: var(--c-ink);
+  --color-ink-soft: var(--c-ink-soft);
+  --color-on-dark: var(--c-on-dark);
+  --color-indigo: var(--pt-indigo);
+  --color-sales: var(--c-sales);
+  --color-sales-ink: var(--c-sales-ink);
+  --color-lettings: var(--c-lettings);
+  --color-lettings-deep: var(--c-lettings-deep);
+  --color-ochre: var(--c-ochre);
+  --color-marigold: var(--c-marigold);
+  --color-madder: var(--c-madder);
+  --color-sage: var(--c-sage);
+  --color-brass: var(--c-brass);
+
+  --font-display: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter-tight), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-martian-mono), ui-monospace, 'SFMono-Regular', monospace;
+}
+
+@theme {
+  /* Fluid type ramp with paired line-height, tracking and weight */
+  --text-display: clamp(3.25rem, 8.5vw, 8rem);
+  --text-display--line-height: 0.92;
+  --text-display--letter-spacing: -0.035em;
+  --text-display--font-weight: 300;
+
+  --text-h1: clamp(2.5rem, 5.5vw, 4.75rem);
+  --text-h1--line-height: 0.98;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h1--font-weight: 350;
+
+  --text-h2: clamp(1.9rem, 3.4vw, 3rem);
+  --text-h2--line-height: 1.06;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h2--font-weight: 400;
+
+  --text-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 450;
+
+  --text-lead: clamp(1.1rem, 1.5vw, 1.375rem);
+  --text-lead--line-height: 1.55;
+
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.65;
+
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.16em;
+
+  /* Radii */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+
+  /* Easings, generate ease-quill, ease-tide, ease-drift utilities */
+  --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-tide: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-drift: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Warm shadows */
+  --shadow-warm-sm: 0 2px 8px rgba(23, 35, 46, 0.08);
+  --shadow-warm: 0 8px 24px rgba(192, 92, 52, 0.18);
+  --shadow-warm-cta: 0 8px 24px rgba(192, 92, 52, 0.28);
+  --shadow-warm-lg: 0 20px 60px rgba(122, 46, 74, 0.2);
+
+  /* Content container */
+  --container-content: 82.5rem; /* 1320px max content width */
+
+  --breakpoint-xs: 30rem; /* 480px */
+}
+
+/* --------------------------------------------------------------------------
+   4. Base layer
+   -------------------------------------------------------------------------- */
+@layer base {
+  * {
+    border-color: color-mix(in srgb, var(--c-brass) 40%, transparent);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--c-ground);
+    color: var(--c-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    font-feature-settings: 'cv05' 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+    color: var(--c-ink);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Tabular numerals wherever numbers must not shift width */
+  .tabular {
+    font-feature-settings: 'tnum' 1, 'cv05' 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--c-sales) 30%, transparent);
+    color: var(--c-ink);
+  }
+
+  /* Focus: 2px brass ring at 2px offset, plus a 1px ink inner line */
+  :focus-visible {
+    outline: 2px solid var(--c-focus-ring);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px var(--c-focus-inner);
+    border-radius: var(--radius-xs);
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Signature surfaces and utilities
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* The arch, the signature form */
+  .arch-full {
+    border-radius: var(--arch-full);
+  }
+  .arch-shallow {
+    border-radius: var(--arch-shallow);
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-ink-soft);
+    line-height: 1.2;
+  }
+
+  /* Named gradient surface helpers */
+  .surface-harbour-dusk {
+    background-image: var(--grad-harbour-dusk);
+  }
+  .surface-kiln {
+    background-image: var(--grad-kiln);
+  }
+  .surface-tide {
+    background-image: var(--grad-tide);
+  }
+  .surface-salt-flat {
+    background-image: var(--grad-salt-flat);
+  }
+
+  /* The measure for body copy, 62 to 72 characters */
+  .measure {
+    max-width: 66ch;
+  }
+  .measure-tight {
+    max-width: 52ch;
+  }
+
+  /* Brass hairline divider, never a grey border */
+  .hairline {
+    border: 0;
+    height: 1px;
+    background: color-mix(in srgb, var(--c-brass) 40%, transparent);
+  }
+
+  /* ---- Buttons, five variants ------------------------------------------ */
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem; /* 44px touch target */
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: var(--text-body);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    isolation: isolate;
+    transition:
+      transform var(--dur-ui) var(--ease-quill),
+      box-shadow var(--dur-ui) var(--ease-quill),
+      background-color var(--dur-ui) var(--ease-tide),
+      color var(--dur-ui) var(--ease-tide);
+  }
+  .btn:disabled,
+  .btn[aria-disabled='true'] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+  }
+  .btn:active {
+    transform: scale(0.985);
+  }
+
+  /* Primary sales: Kiln gradient */
+  .btn-sales {
+    background-image: var(--grad-kiln);
+    color: var(--pt-bone);
+    box-shadow: var(--shadow-warm);
+  }
+  .btn-sales:hover {
+    background-image: var(--grad-kiln-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-warm-cta);
+  }
+
+  /* Primary lettings: verdigris depth fill */
+  .btn-lettings {
+    background-color: var(--c-lettings-deep);
+    color: var(--pt-bone);
+    box-shadow: var(--shadow-warm-sm);
+  }
+  .btn-lettings:hover {
+    background-color: var(--pt-verdigris);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-warm);
+  }
+
+  /* Secondary: ink outline, ink wipes in from the left on hover */
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--c-ink);
+    border: 1px solid var(--c-ink);
+  }
+  .btn-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--c-ink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-ui) var(--ease-tide);
+  }
+  .btn-secondary:hover {
+    color: var(--c-ground);
+  }
+  .btn-secondary:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Inverted secondary for dark grounds: bone outline, wipes to bone fill */
+  .btn-secondary.btn-invert {
+    color: var(--c-on-dark);
+    border-color: var(--c-on-dark);
+  }
+  .btn-secondary.btn-invert::before {
+    background-color: var(--c-on-dark);
+  }
+  .btn-secondary.btn-invert:hover {
+    color: var(--pt-ink);
+  }
+
+  /* Ghost: ink label with an ink-bleed ochre underline that draws on hover */
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--c-ink);
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 2.75rem;
+    border-radius: 0;
+  }
+  .btn-ghost::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--c-ochre);
+    filter: blur(0.4px);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-reveal) var(--ease-quill);
+  }
+  .btn-ghost:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Icon button: circular clay-mist well */
+  .btn-icon {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0;
+    border-radius: 999px;
+    background-color: var(--c-well);
+    color: var(--c-ink);
+  }
+  .btn-icon:hover {
+    background-color: var(--c-hover);
+  }
+
+  /* Loading: an indeterminate brass sweep under the label, never a spinner */
+  .btn[aria-busy='true'] {
+    color: color-mix(in srgb, currentColor 60%, transparent);
+    pointer-events: none;
+  }
+  .btn[aria-busy='true']::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 40%;
+    background-color: var(--c-brass);
+    animation: pt-btn-sweep 1s var(--ease-tide) infinite;
+  }
+
+  /* ---- Field, form controls -------------------------------------------- */
+  .field-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-ink-soft);
+    margin-bottom: 0.5rem;
+  }
+  .field-control {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--c-ground);
+    color: var(--c-ink);
+    border: 1px solid color-mix(in srgb, var(--c-brass) 55%, transparent);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    transition:
+      border-color var(--dur-ui) var(--ease-tide),
+      box-shadow var(--dur-ui) var(--ease-tide);
+  }
+  .field-control::placeholder {
+    color: color-mix(in srgb, var(--c-ink-soft) 75%, transparent);
+  }
+  .field-control:hover {
+    border-color: var(--c-brass);
+  }
+  .field-control[aria-invalid='true'] {
+    border-color: var(--pt-sienna);
+  }
+  .field-hint {
+    margin-top: 0.375rem;
+    font-size: var(--text-small);
+    color: var(--c-ink-soft);
+  }
+  .field-error {
+    margin-top: 0.375rem;
+    font-size: var(--text-small);
+    color: var(--pt-sienna);
+  }
+
+  /* ---- Brass rule, animated divider ------------------------------------ */
+  .brass-rule {
+    height: 2px;
+    background-color: var(--c-brass);
+    transform-origin: left;
+  }
+  /* Only pre-hide when JavaScript can draw it back in, so it is never lost. */
+  html.js .brass-rule {
+    transform: scaleX(0);
+  }
+  .brass-rule[data-drawn='true'] {
+    transform: scaleX(1);
+    transition: transform 900ms var(--ease-quill);
+  }
+
+  /* ---- Reveal, scroll entrance ----------------------------------------- */
+  /* Hidden only when JS is present to reveal it; otherwise content shows. */
+  html.js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+  .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition:
+      opacity var(--dur-reveal) var(--ease-quill),
+      transform var(--dur-reveal) var(--ease-quill);
+  }
+
+  /* ---- Skeleton, clay-mist shimmer, never grey ------------------------- */
+  .skeleton {
+    background-image: linear-gradient(
+      100deg,
+      var(--c-well) 30%,
+      var(--c-hover) 50%,
+      var(--c-well) 70%
+    );
+    background-size: 200% 100%;
+    animation: pt-shimmer 1.6s var(--ease-drift) infinite;
+  }
+}
+
+@keyframes pt-btn-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
+
+/* Halve grain below 640px so mobile does not look muddy */
+@media (max-width: 39.99rem) {
+  :root {
+    --grain-opacity: 0.018;
+    --grain-opacity-photo: 0.01;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Motion keyframes and reduced-motion contract
+   -------------------------------------------------------------------------- */
+@keyframes pt-reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pt-brass-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pt-arch-reveal {
+  from {
+    clip-path: inset(0 0 80% 0 round var(--arch-shallow));
+    transform: scale(1.08);
+  }
+  to {
+    clip-path: inset(0 0 0 0 round var(--arch-full));
+    transform: scale(1);
+  }
+}
+
+@keyframes pt-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes pt-shimmer {
+  from {
+    background-position: -150% 0;
+  }
+  to {
+    background-position: 250% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
