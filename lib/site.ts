@@ -116,3 +116,17 @@ export const COVERAGE = {
     'Buriton',
   ],
 } as const
+
+/**
+ * Resolve a town supplied in a query string to the canonical spelling we cover,
+ * or undefined. Used to pre-fill the valuation forms from the area page CTAs
+ * (prompt 07). Deliberately an allow list: a value that arrives in a URL is
+ * never echoed back into a form field unless it is a town we actually serve,
+ * so the CTA cannot be used to plant arbitrary text on our own pages.
+ */
+export function canonicalTown(input: string | string[] | undefined): string | undefined {
+  const raw = (Array.isArray(input) ? input[0] : input)?.trim().toLowerCase()
+  if (!raw) return undefined
+  const all: readonly string[] = [...COVERAGE.primary, ...COVERAGE.secondary]
+  return all.find((town) => town.toLowerCase() === raw)
+}

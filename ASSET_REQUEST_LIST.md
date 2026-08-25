@@ -58,6 +58,31 @@ standard, and the response-time commitment.
 - [ ] Logo in vector, light and dark (currently a typographic wordmark)
 - [ ] The British Property Lettings Award mark, vector if available
 
+## Area pages: local knowledge to confirm (prompt 07)
+
+The five town pages are written from geographic and structural fact plus honest
+qualitative market observation, with no invented statistics. Each page carries a
+`[CONFIRM]` note in `content/areas/content-data.ts` for the figures we deliberately
+did not publish. Nothing below blocks launch, but each one would make the page
+that carries it materially stronger.
+
+- [ ] Whether to publish indicative price and rent ranges per town, and the
+      source for them. Portal averages are not an acceptable citation, so this
+      needs either the firm's own achieved figures or Land Registry and ONS data
+      with the date shown on the page
+- [ ] Havant (PO9): achieved rent and price ranges, if any are to be published
+- [ ] Portsmouth (PO1 to PO6): indicative rent ranges by property type
+- [ ] Waterlooville (PO7, PO8): indicative rent ranges by bedroom count
+- [ ] Emsworth (PO10): indicative price and rent ranges
+- [ ] Hayling Island (PO11): indicative figures, and separately whether the firm
+      will take on holiday let management or is long lets only. That question is
+      asked at almost every island valuation and the page currently cannot
+      answer it
+- [ ] Any street, development or landmark Charisma wants named that we have not
+      included, and anything we have named that she would rather we did not
+- [ ] Local proof on each town page: a Google review that mentions that town by
+      name. Deferred to prompt 10, which brings in the live reviews feed
+
 ## Copy requiring approval
 
 - [ ] The founder's story on the home page and `/about`. Drafted in the house

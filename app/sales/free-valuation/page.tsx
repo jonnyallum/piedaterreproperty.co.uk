@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import { PageHero } from '@/components/marketing/PageHero'
 import { TrustColumn } from '@/components/marketing/TrustColumn'
 import { ValuationForm } from '@/components/lead/ValuationForm'
+import { ValuationFallback } from '@/components/lead/ValuationFallback'
 import { ContactRoutes } from '@/components/lead/ContactRoutes'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
-import { SALES_LIVE } from '@/lib/site'
+import { SALES_LIVE, canonicalTown } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
@@ -30,8 +31,15 @@ const AFTER = [
   },
 ]
 
-export default function FreeValuationPage() {
+export default async function FreeValuationPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ town?: string | string[] }>
+}) {
   const registerMode = !SALES_LIVE
+  // Pre-filled by the area page CTAs. Validated against the coverage allow list
+  // so only a town we actually serve can reach the form.
+  const initialTown = canonicalTown((await searchParams).town)
   return (
     <>
       <PageHero
@@ -75,7 +83,15 @@ export default function FreeValuationPage() {
 
         <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:items-start">
           <div>
-            <ValuationForm path="sales" source="sales-free-valuation" />
+            <div className="js-only">
+              <ValuationForm path="sales" source="valuation_sales" initialTown={initialTown} />
+            </div>
+            <ValuationFallback
+              path="sales"
+              source="valuation_sales"
+              registerMode={registerMode}
+              initialTown={initialTown}
+            />
             <div className="mt-8">
               <ContactRoutes
                 whatsappMessage={

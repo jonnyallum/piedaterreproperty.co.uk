@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import { PageHero } from '@/components/marketing/PageHero'
 import { TrustColumn } from '@/components/marketing/TrustColumn'
 import { ValuationForm } from '@/components/lead/ValuationForm'
+import { ValuationFallback } from '@/components/lead/ValuationFallback'
 import { ContactRoutes } from '@/components/lead/ContactRoutes'
 import { pageMeta } from '@/lib/seo'
+import { canonicalTown } from '@/lib/site'
 
 export const metadata: Metadata = pageMeta({
   title: 'Book a rental valuation',
@@ -27,7 +29,13 @@ const AFTER = [
   },
 ]
 
-export default function RentalValuationPage() {
+export default async function RentalValuationPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ town?: string | string[] }>
+}) {
+  // Pre-filled by the area page CTAs, validated against the coverage allow list.
+  const initialTown = canonicalTown((await searchParams).town)
   return (
     <>
       <PageHero
@@ -60,7 +68,15 @@ export default function RentalValuationPage() {
 
         <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr] lg:items-start">
           <div>
-            <ValuationForm path="lettings" source="lettings-rental-valuation" />
+            <div className="js-only">
+              <ValuationForm path="lettings" source="valuation_lettings" initialTown={initialTown} />
+            </div>
+            <ValuationFallback
+              path="lettings"
+              source="valuation_lettings"
+              registerMode={false}
+              initialTown={initialTown}
+            />
             <div className="mt-8">
               <ContactRoutes whatsappMessage="Hello, I would like a rental valuation for my property." />
             </div>

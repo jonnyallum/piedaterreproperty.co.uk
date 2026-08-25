@@ -2,23 +2,28 @@
 
 /**
  * ValuationForm. The conversion instrument: three steps, progress shown as a
- * filling brass rule, real per-step validation and error states, and a clear
- * thank-you state on success.
+ * filling brass rule, real per-step validation with focus moved to the first
+ * error, a marketing-consent checkbox unticked by default, and a redirect to a
+ * real thank-you URL on success.
  *
- * It respects the sales licensing gate. When path is "sales" and the section is
- * pre-launch, the copy becomes "register your interest" rather than a live
- * valuation offer. The lettings path is always a live rental valuation.
+ * Robustness: form state is mirrored to sessionStorage so a refresh or a failed
+ * submit never loses what was typed, and a timing value is sent so the server
+ * can reject scripted submissions. It respects the sales licensing gate: when
+ * path is "sales" and the section is pre-launch, the copy becomes "register your
+ * interest" rather than a live valuation offer.
  *
- * Submits to /api/lead. Resend delivery, WhatsApp handoff and analytics are
- * finalised in prompt 06; the analytics events fire from here already.
+ * A no-JS visitor never sees this component (it is wrapped in .js-only on the
+ * page); they get the native fallback form in ValuationFallback instead.
  */
-import { useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Field, SelectField, TextareaField } from '@/components/primitives/Field'
 import { Button } from '@/components/primitives/Button'
 import { BrassRule } from '@/components/primitives/BrassRule'
 import { Icon } from '@/components/primitives/Icon'
-import { SITE, SALES_LIVE, COVERAGE } from '@/lib/site'
+import { SALES_LIVE, COVERAGE } from '@/lib/site'
 import { AREAS } from '@/content/areas'
+import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 import { cn } from '@/lib/cn'
 
@@ -26,8 +31,13 @@ type Path = 'sales' | 'lettings'
 
 interface ValuationFormProps {
   path: Path
-  /** Lead-source attribution, for campaign measurement. */
+  /** Canonical lead source; defaults to valuation_sales or valuation_lettings. */
   source?: string
+  /**
+   * Town pre-filled from an area page CTA (prompt 07). Already validated against
+   * the coverage allow list on the server, so it is safe to seed into state.
+   */
+  initialTown?: string
 }
 
 interface FormState {
@@ -59,21 +69,82 @@ const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
 const TOWNS = [...AREAS.map((a) => a.name), ...COVERAGE.secondary]
 const TYPES = ['House', 'Flat or apartment', 'Bungalow', 'Maisonette', 'Other']
 
-export function ValuationForm({ path, source }: ValuationFormProps) {
+interface StoredUtm {
+  source?: string
+  medium?: string
+  campaign?: string
+  content?: string
+}
+
+function readUtm(): StoredUtm | undefined {
+  try {
+    const raw = sessionStorage.getItem('pt_utm')
+    return raw ? (JSON.parse(raw) as StoredUtm) : undefined
+  } catch {
+    return undefined
+  }
+}
+
+export function ValuationForm({ path, source, initialTown }: ValuationFormProps) {
   const idBase = useId()
+  const router = useRouter()
   const preLaunch = path === 'sales' && !SALES_LIVE
   const registerMode = preLaunch
+  const leadSource = source ?? (path === 'sales' ? 'valuation_sales' : 'valuation_lettings')
+  const storeKey = `pt_valuation_${path}`
 
   const [step, setStep] = useState(0)
-  const [data, setData] = useState<FormState>(EMPTY)
+  const [data, setData] = useState<FormState>(
+    initialTown ? { ...EMPTY, postcode: initialTown } : EMPTY
+  )
+  const [consent, setConsent] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitting, setSubmitting] = useState(false)
-  const [done, setDone] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const startedAt = useRef<number>(Date.now())
+  const formRef = useRef<HTMLFormElement | null>(null)
   const headingRef = useRef<HTMLParagraphElement | null>(null)
+
+  // Restore any in-progress submission after a refresh or a failed send.
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem(storeKey)
+      if (raw) {
+        const saved = JSON.parse(raw) as { data?: FormState; consent?: boolean }
+        if (saved.data) {
+          // A pre-filled town survives a stored draft that never reached step one.
+          const restored = { ...EMPTY, ...saved.data, company: '' }
+          if (initialTown && !restored.postcode.trim()) restored.postcode = initialTown
+          setData(restored)
+        }
+        if (saved.consent) setConsent(true)
+      }
+    } catch {
+      // Ignore a malformed store.
+    }
+    startedAt.current = Date.now()
+  }, [storeKey, initialTown])
+
+  // Mirror state so nothing typed is lost. The honeypot is never persisted.
+  useEffect(() => {
+    try {
+      // Persist everything except the honeypot value.
+      sessionStorage.setItem(storeKey, JSON.stringify({ data: { ...data, company: '' }, consent }))
+    } catch {
+      // Storage may be unavailable (private mode); the form still works.
+    }
+  }, [data, consent, storeKey])
 
   const set = (key: keyof FormState, value: string) =>
     setData((d) => ({ ...d, [key]: value }))
+
+  function focusFirstError() {
+    requestAnimationFrame(() => {
+      const el = formRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]')
+      if (el) el.focus()
+      else headingRef.current?.focus()
+    })
+  }
 
   function validateStep(current: number): boolean {
     const e: Record<string, string> = {}
@@ -83,18 +154,23 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
     }
     if (current === 1) {
       if (data.name.trim().length < 2) e.name = 'Enter your name.'
-      if (!EMAIL.test(data.email)) e.email = 'Enter a valid email address.'
-      if (!PHONE.test(data.phone.trim())) e.phone = 'Enter a valid UK phone number.'
+      if (!EMAIL.test(data.email)) e.email = 'That email does not look right. Please check it.'
+      if (!PHONE.test(data.phone.trim()))
+        e.phone = 'Enter a UK phone number, so we can call to arrange a time.'
     }
     setErrors(e)
     return Object.keys(e).length === 0
   }
 
   function next() {
-    if (!validateStep(step)) return
-    if (step === 0) track('valuation_start', { path, source: source ?? 'site' })
-    track('valuation_step', { path, step: step + 1 })
-    setStep((s) => Math.min(s + 1, 2))
+    if (!validateStep(step)) {
+      focusFirstError()
+      return
+    }
+    const nextStep = Math.min(step + 1, 2)
+    if (step === 0) track('valuation_start', { path, source: leadSource })
+    track(nextStep === 1 ? 'valuation_step_2' : 'valuation_step_3', { path })
+    setStep(nextStep)
     requestAnimationFrame(() => headingRef.current?.focus())
   }
 
@@ -107,6 +183,7 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
     e.preventDefault()
     if (!validateStep(1)) {
       setStep(1)
+      focusFirstError()
       return
     }
     setSubmitting(true)
@@ -117,8 +194,8 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           kind: 'valuation',
+          source: leadSource,
           path,
-          source: source ?? 'site',
           name: data.name,
           email: data.email,
           phone: data.phone,
@@ -127,42 +204,32 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
           bedrooms: data.bedrooms,
           timeframe: data.timeframe,
           message: data.message,
+          consentMarketing: consent,
+          elapsedMs: Date.now() - startedAt.current,
+          pagePath: window.location.pathname,
+          referrer: document.referrer || undefined,
+          utm: readUtm(),
           company: data.company,
         }),
       })
       const json = (await res.json()) as { ok: boolean; error?: string }
       if (!res.ok || !json.ok) throw new Error(json.error ?? 'Something went wrong.')
-      track('valuation_submit', { path, source: source ?? 'site' })
-      setDone(true)
+      track('valuation_submit', { path, source: leadSource })
+      try {
+        sessionStorage.removeItem(storeKey)
+      } catch {
+        // Non-fatal.
+      }
+      router.push('/thank-you/valuation')
     } catch (err) {
-      setSubmitError(err instanceof Error ? err.message : 'Something went wrong.')
-    } finally {
+      // The payload is already in sessionStorage; the submit button offers retry.
+      setSubmitError(
+        err instanceof Error && err.message !== 'Failed to fetch'
+          ? err.message
+          : 'We could not send that just now. Please try again, or call us.'
+      )
       setSubmitting(false)
     }
-  }
-
-  if (done) {
-    return (
-      <div className="rounded-md border border-brass/40 bg-ground p-8 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-lettings-deep text-on-dark">
-          <Icon name="check" className="h-7 w-7" />
-        </span>
-        <h2 className="mt-5 text-h3">
-          {registerMode ? 'You are on the list' : 'Thank you, that is booked in'}
-        </h2>
-        <p className="measure mx-auto mt-3 text-body text-ink-soft">
-          {registerMode
-            ? 'We will contact you the week we open our sales books, with a free market appraisal ready to arrange.'
-            : 'We have your details and will call you to arrange a convenient time, usually the same working day.'}
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Button href={SITE.phone.href} external variant="lettings">
-            <Icon name="phone" className="h-5 w-5" />
-            Call {SITE.phone.display}
-          </Button>
-        </div>
-      </div>
-    )
   }
 
   const total = 3
@@ -174,6 +241,7 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
 
   return (
     <form
+      ref={formRef}
       onSubmit={submit}
       noValidate
       className="rounded-md border border-brass/40 bg-ground p-6 md:p-8"
@@ -181,11 +249,14 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
     >
       {/* Progress as a filling brass rule */}
       <div className="mb-6">
-        <div className="flex items-center justify-between">
-          <p ref={headingRef} tabIndex={-1} className="eyebrow outline-none">
-            Step {step + 1} of {total} . {legends[step]}
-          </p>
-        </div>
+        <p
+          ref={headingRef}
+          tabIndex={-1}
+          className="eyebrow outline-none"
+          aria-live="polite"
+        >
+          Step {step + 1} of {total} . {legends[step]}
+        </p>
         <div className="mt-3 h-0.5 w-full bg-well">
           <BrassRule progress={(step + 1) / total} className="h-0.5" />
         </div>
@@ -307,6 +378,15 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
             onChange={(e) => set('message', e.target.value)}
             placeholder="Access, a deadline, questions, or nothing at all."
           />
+          <label className="flex items-start gap-3 text-small text-ink-soft">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-1 h-4 w-4 shrink-0 accent-lettings-deep"
+            />
+            <span>{CONSENT_WORDING}</span>
+          </label>
         </fieldset>
       ) : null}
 
@@ -337,6 +417,14 @@ export function ValuationForm({ path, source }: ValuationFormProps) {
           </Button>
         )}
       </div>
+
+      <p className="mt-4 text-small text-ink-soft">
+        By submitting you agree to our{' '}
+        <a href="/privacy-policy" className="underline underline-offset-2 hover:no-underline">
+          privacy policy
+        </a>
+        . We will only use your details to respond to this enquiry.
+      </p>
     </form>
   )
 }
