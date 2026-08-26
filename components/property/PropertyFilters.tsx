@@ -54,7 +54,7 @@ export function PropertyFilters({ towns, propertyTypes, current }: PropertyFilte
                 ? 'peer-checked:bg-sales-ink'
                 : t.value === 'lettings'
                   ? 'peer-checked:bg-lettings-deep'
-                  : 'peer-checked:bg-ink'
+                  : 'peer-checked:bg-night'
             return (
               <label key={t.value} className="cursor-pointer">
                 <input

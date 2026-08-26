@@ -1,0 +1,2782 @@
+================================================================================
+FULL TEXT DUMP - piedaterreproperty.co.uk
+================================================================================
+Captured: 25 August 2026, via a live logged-out Chrome session (Claude in Chrome).
+Encoding: UTF-8.
+
+PLATFORM NOTE: this site is SQUARESPACE, not Wix. Images are served from
+images.squarespace-cdn.com. There are no /v1/fill/ transform segments to strip;
+Squarespace resizes via a ?format= query parameter instead. The full-resolution
+original of any image is the bare URL with ?format=original appended - that is what
+the stripped_original_src column of image_manifest.csv contains, and what the
+download script fetches.
+
+METHOD: each page was navigated to in a real browser, allowed to hydrate, scrolled
+top-to-bottom in increments to force lazy-loaded sections and images to resolve,
+scrolled back to the top, and had every accordion/summary/disclosure control clicked
+open. No form was filled or submitted, no enquiry sent, no viewing booked.
+
+Body text is document.body.innerText, verbatim, in document order - it therefore
+includes the header nav and the footer as well as the main content. Original wording,
+spelling errors and accents are preserved exactly.
+
+================================================================================
+SITEMAP (https://piedaterreproperty.co.uk/sitemap.xml)
+================================================================================
+sitemap.xml lists 12 URLs and 139 <image:loc> entries:
+  https://piedaterreproperty.co.uk/report-maintenance-issue
+  https://piedaterreproperty.co.uk/whychooseus
+  https://piedaterreproperty.co.uk/home
+  https://piedaterreproperty.co.uk/contactus
+  https://piedaterreproperty.co.uk/portfolio
+  https://piedaterreproperty.co.uk/feesandservicelevels
+  https://piedaterreproperty.co.uk/registerwithus
+  https://piedaterreproperty.co.uk/obligations
+  https://piedaterreproperty.co.uk/the-process
+  https://piedaterreproperty.co.uk/cookies
+  https://piedaterreproperty.co.uk/holdingdeposits
+  https://piedaterreproperty.co.uk/privacy-policy
+
+The site root (/) and /complaints-procedure are NOT in sitemap.xml.
+/complaints-procedure carries <meta name="ROBOTS" content="NOINDEX">, which is why.
+No URLs beyond the requested list were found in sitemap.xml.
+
+Two additional same-domain URLs were discovered by following in-page links.
+Both are dead:
+  https://piedaterreproperty.co.uk/services  -> 404 (linked 5x from /obligations and /portfolio)
+  https://piedaterreproperty.co.uk/deposits  -> 404 (linked 1x from /the-process step 4)
+Both are captured below as their own blocks so the record is complete.
+
+================================================================================
+NAVIGATION STRUCTURE (identical on every page)
+================================================================================
+Home / The Process / Register with us / Request Maintenance / Holding Deposits /
+Complaints Procedure / Why choose us / Landlord Obligations / Portfolio /
+Fees and Service Levels / Contact us
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/
+================================================================================
+HTTP: 200
+TITLE: Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk
+og:type: website
+og:description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+og:image: http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png
+og:image:width: 1500
+og:image:height: 229
+twitter:title: Pied-à-terre Property
+twitter:image: http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png
+twitter:url: https://piedaterreproperty.co.uk
+twitter:card: summary
+twitter:description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+
+--- HEADINGS ---
+H1: CURRENT PROPERTIES
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+LETTING AGENT
+
+Pied-à-terre Property is an in independent letting agent based in Havant. In addition to the immediate area, we also cover Portsmouth, Waterlooville, Emsworth and Hayling Island.
+
+Pied-à-terre Property have recently won the 2018 - 2019 British Property Lettings Award for Emsworth & Hayling Island. These awards provide agents throughout the UK with an invaluable opportunity to compare the service that they provide against the service provided by their local, regional and national competition.
+
+Thank you for taking a moment to visit our website, we hope you find the information you require.
+
+Should you have any queries, please visit our contact page and a member of our experienced team will endeavour to assist you.
+
+If you are a prospective tenant looking for your new home, please complete our registration form so we can keep you updated of suitable properties.
+
+With our commitment to excellence and the added assurance of TPO membership, you can trust us to help you navigate the letting process with integrity and professionalism. When a dispute arises between a consumer and property professional, The Property Ombudsman are an impartial organisation who will work to resolve the dispute.
+
+We are part of a government approved Client Money Protection Scheme (CMP) called Money Shield. The scheme was set up at the request of The Property Ombudsman and allows us to offer greater protection to our clients.  The accounting rules of Money Shield can be viewed by clicking here (opens in new window).
+
+The Money Shield Logo is a Collective Trademark owned by Money Shield Limited.
+
+CURRENT PROPERTIES
+
+Please find below our current properties. If you would like to learn more about the process and additional fees which must be paid, please use the navigation bar at the top of the page to visit our 'tenants' information. If you would like to arrange a viewing, please contact us.
+
+THREE BEDROOM CHALET
+The Curve, Lovedean
+£1,350 pcm
+
+Semi-detached property situated in a quiet, requested Lovedean  cul-de-sac. South facing rear garden. Two ground floor bedrooms plus a first floor master bedroom with en-suite shower room and fitted wardrobe cupboards
+
+ 
+
+TWO BEDROOM TERRACED HOUSE
+Lowland Road, Denmead
+£950 pcm LET AGREED
+
+Two bedroom house situated in a quiet cul-de-sac location in Denmead. Lounge with under stairs storage cupboard and doors that leads to the fitted kitchen with a dining area and access to the low maintenance rear garden. Two allocated parking bays.
+
+FOUR BEDROOM SHORT TERM / HOLIDAY LET.
+Market Parade, Havant.
+Pricing from £140 per night.
+
+Tastefully decorated, modern, clean apartment with 4 double/twin bedrooms (one with an en-suite bathroom) fully fitted kitchen/diner and lounge. Free Wi-Fi and free parking nearby. Ideal for couples, solo adventurers, business travellers, families (with kids), and big groups. 
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[contact page] -> https://piedaterreproperty.co.uk/contactus
+[registration form] -> https://piedaterreproperty.co.uk/registerwithus
+[clicking here] -> https://cdn.ymaws.com/money-shield.co.uk/resource/resmgr/documents/money_shield_scheme_rules__a.pdf
+[contact us.] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508956296799-3MXXLCBNRQ73KLCY2H04/banner-2.jpg  (alt: banner-2.jpg)  [saved as: index__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1526222424722-VARHUQRQB99D61HQYQB9/Small+PNG+for+Web.png  (alt: Small PNG for Web.png)  [saved as: global__pied-a-terre-crest-logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1541951055367-LJKIN947ZD7HPLHW1LZI/Jpeg+for+web.jpg  (alt: Jpeg for web.jpg)  [saved as: global__british-property-awards-2018-2019.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/0b0f221e-6be6-4e19-a352-be7a0cf3e44d/Property-Ombudsman-Logo.jpg  (alt: )  [saved as: global__property-ombudsman-logo.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1563913641196-6SKW4ND782QWJL7OJ8DU/Money+Shield+logo+web+positive+RGB.jpg  (alt: Money Shield logo web positive RGB.jpg)  [saved as: global__money-shield-logo.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118422271-59YN9273RFASUB966KYB/IMG_2838+%282%29.JPG  (alt: IMG_2838 (2).JPG)  [saved as: index__02__img-2838-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118439988-8FDZ4X1F8TFG6WFFDONO/IMG_2767+%282%29+-+Copy.JPG  (alt: IMG_2767 (2) - Copy.JPG)  [saved as: index__03__img-2767-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118441345-4OCX8PN3QXPBR2KW53YM/IMG_2790.JPG  (alt: IMG_2790.JPG)  [saved as: index__04__img-2790.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118442247-FM7UCJSZ4BSROJRSL032/IMG_2792+%282%29+-+Copy.JPG  (alt: IMG_2792 (2) - Copy.JPG)  [saved as: index__05__img-2792-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118440130-ZUNL764XROJWLKUB3OLV/IMG_2775+%282%29+-+Copy.JPG  (alt: IMG_2775 (2) - Copy.JPG)  [saved as: index__06__img-2775-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118441611-ITEJPYK8FCGNA3790KI7/IMG_2778+%282%29+-+Copy.JPG  (alt: IMG_2778 (2) - Copy.JPG)  [saved as: index__07__img-2778-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118443415-1LTFCTMX6XL6DG4G8TW2/IMG_2820.JPG  (alt: IMG_2820.JPG)  [saved as: index__08__img-2820.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118443263-SJPNJY5OKAZEGDVTS5S4/IMG_2826.JPG  (alt: IMG_2826.JPG)  [saved as: index__09__img-2826.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118444548-DDXMTH3OU83VI18DI5YD/IMG_2837+%282%29.JPG  (alt: IMG_2837 (2).JPG)  [saved as: index__10__img-2837-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118661377-T3URK3AU6HAMF4QWZKW9/IMG_2894+%282%29.JPG  (alt: IMG_2894 (2).JPG)  [saved as: index__11__img-2894-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118661813-3CHXZVUWS4DZPT41AOXF/IMG_2917+%282%29.JPG  (alt: IMG_2917 (2).JPG)  [saved as: index__12__img-2917-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118658689-OBPI4FHTWFC6PPDCHHO9/IMG_2908+%282%29.JPG  (alt: IMG_2908 (2).JPG)  [saved as: index__13__img-2908-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118665799-O3V0NCUYOGICU1S9YWJE/IMG_2935+%282%29.JPG  (alt: IMG_2935 (2).JPG)  [saved as: index__14__img-2935-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118666331-SWNFPX252GHKZUB1VXXR/IMG_2921+%282%29.JPG  (alt: IMG_2921 (2).JPG)  [saved as: index__15__img-2921-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118668871-2FF0P9ENFGZ851GBZ3W5/IMG_2952+%282%29.JPG  (alt: IMG_2952 (2).JPG)  [saved as: index__16__img-2952-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118673867-99YIHCVXSF425OE4RAE6/IMG_2959+%282%29.JPG  (alt: IMG_2959 (2).JPG)  [saved as: index__17__img-2959-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118663996-3LR1RHLSL34WLJZFF70S/IMG_2919+%282%29.JPG  (alt: IMG_2919 (2).JPG)  [saved as: index__18__img-2919-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118674019-IY0RAPYVANA2I3FH2N7N/IMG_2957+%282%29.JPG  (alt: IMG_2957 (2).JPG)  [saved as: index__19__img-2957-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401047-3GSUFGU9AX7TA5HZ4MGI/Market+parade+-+kitchen+-+pic+1.jpg  (alt: Market parade - kitchen - pic 1.jpg)  [saved as: index__20__market-parade-kitchen-pic-1.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401529-IIJ3NAUT331E3G2OCFR4/Market+Parade+-+lounge+pic+2.jpg  (alt: Market Parade - lounge pic 2.jpg)  [saved as: index__21__market-parade-lounge-pic-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401193-WL4WBVV3VO0HOVC8KRL3/Market+Parade+-+kitchen+pic+2.jpg  (alt: Market Parade - kitchen pic 2.jpg)  [saved as: index__22__market-parade-kitchen-pic-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400648-B6THLHPXMPT7JG2DLAMB/Market+Parade+-+hallway.jpg  (alt: Market Parade - hallway.jpg)  [saved as: index__23__market-parade-hallway.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400502-STN34YM053DT7PDP3MZ8/Market+Parade+-+en-suite+bathroom.jpg  (alt: Market Parade - en-suite bathroom.jpg)  [saved as: index__24__market-parade-en-suite-bathroom.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598399925-197OXC5EK6ECTWZF07YZ/Market+Parade+-+bathroom.jpg  (alt: Market Parade - bathroom.jpg)  [saved as: index__25__market-parade-bathroom.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400016-1PN9E1IKP5FRVC1S5LWG/Market+Parade+-+double+bedroom+with+en-suite.jpg  (alt: Market Parade - double bedroom with en-suite.jpg)  [saved as: index__26__market-parade-double-bedroom-with-en-sui.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598402282-EXE0PTVMM7XQSFDIMQUF/Market+Parade+-+single+bedroom+pic+3.jpg  (alt: Market Parade - single bedroom pic 3.jpg)  [saved as: index__27__market-parade-single-bedroom-pic-3.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598402195-Q6WETW8PA1ZJ8W5NZRNA/Market+Parade+-+park+view+2.jpg  (alt: Market Parade - park view 2.jpg)  [saved as: index__28__market-parade-park-view-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png  (alt: )  [saved as: index__29__og-image.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/home
+================================================================================
+HTTP: 200
+TITLE: Pied-à-terre Property
+
+NOTE: /home is an alias of the site root. Byte-for-byte identical rendered content, meta tags, headings, body text and images (verified by checksum). Reproduced in full below so this block is self-contained.
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk
+og:type: website
+og:description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+og:image: http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png
+og:image:width: 1500
+og:image:height: 229
+twitter:title: Pied-à-terre Property
+twitter:image: http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png
+twitter:url: https://piedaterreproperty.co.uk
+twitter:card: summary
+twitter:description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+description: Pied-a-terre Property is an independent letting agent based in Emsworth. We also cover the surrounding areas including Waterlooville, Portsmouth, Havant and Chichester.
+
+--- HEADINGS ---
+H1: CURRENT PROPERTIES
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+LETTING AGENT
+
+Pied-à-terre Property is an in independent letting agent based in Havant. In addition to the immediate area, we also cover Portsmouth, Waterlooville, Emsworth and Hayling Island.
+
+Pied-à-terre Property have recently won the 2018 - 2019 British Property Lettings Award for Emsworth & Hayling Island. These awards provide agents throughout the UK with an invaluable opportunity to compare the service that they provide against the service provided by their local, regional and national competition.
+
+Thank you for taking a moment to visit our website, we hope you find the information you require.
+
+Should you have any queries, please visit our contact page and a member of our experienced team will endeavour to assist you.
+
+If you are a prospective tenant looking for your new home, please complete our registration form so we can keep you updated of suitable properties.
+
+With our commitment to excellence and the added assurance of TPO membership, you can trust us to help you navigate the letting process with integrity and professionalism. When a dispute arises between a consumer and property professional, The Property Ombudsman are an impartial organisation who will work to resolve the dispute.
+
+We are part of a government approved Client Money Protection Scheme (CMP) called Money Shield. The scheme was set up at the request of The Property Ombudsman and allows us to offer greater protection to our clients.  The accounting rules of Money Shield can be viewed by clicking here (opens in new window).
+
+The Money Shield Logo is a Collective Trademark owned by Money Shield Limited.
+
+CURRENT PROPERTIES
+
+Please find below our current properties. If you would like to learn more about the process and additional fees which must be paid, please use the navigation bar at the top of the page to visit our 'tenants' information. If you would like to arrange a viewing, please contact us.
+
+THREE BEDROOM CHALET
+The Curve, Lovedean
+£1,350 pcm
+
+Semi-detached property situated in a quiet, requested Lovedean  cul-de-sac. South facing rear garden. Two ground floor bedrooms plus a first floor master bedroom with en-suite shower room and fitted wardrobe cupboards
+
+ 
+
+TWO BEDROOM TERRACED HOUSE
+Lowland Road, Denmead
+£950 pcm LET AGREED
+
+Two bedroom house situated in a quiet cul-de-sac location in Denmead. Lounge with under stairs storage cupboard and doors that leads to the fitted kitchen with a dining area and access to the low maintenance rear garden. Two allocated parking bays.
+
+FOUR BEDROOM SHORT TERM / HOLIDAY LET.
+Market Parade, Havant.
+Pricing from £140 per night.
+
+Tastefully decorated, modern, clean apartment with 4 double/twin bedrooms (one with an en-suite bathroom) fully fitted kitchen/diner and lounge. Free Wi-Fi and free parking nearby. Ideal for couples, solo adventurers, business travellers, families (with kids), and big groups. 
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[contact page] -> https://piedaterreproperty.co.uk/contactus
+[registration form] -> https://piedaterreproperty.co.uk/registerwithus
+[clicking here] -> https://cdn.ymaws.com/money-shield.co.uk/resource/resmgr/documents/money_shield_scheme_rules__a.pdf
+[contact us.] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508956296799-3MXXLCBNRQ73KLCY2H04/banner-2.jpg  (alt: banner-2.jpg)  [saved as: index__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1526222424722-VARHUQRQB99D61HQYQB9/Small+PNG+for+Web.png  (alt: Small PNG for Web.png)  [saved as: global__pied-a-terre-crest-logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1541951055367-LJKIN947ZD7HPLHW1LZI/Jpeg+for+web.jpg  (alt: Jpeg for web.jpg)  [saved as: global__british-property-awards-2018-2019.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/0b0f221e-6be6-4e19-a352-be7a0cf3e44d/Property-Ombudsman-Logo.jpg  (alt: )  [saved as: global__property-ombudsman-logo.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1563913641196-6SKW4ND782QWJL7OJ8DU/Money+Shield+logo+web+positive+RGB.jpg  (alt: Money Shield logo web positive RGB.jpg)  [saved as: global__money-shield-logo.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118422271-59YN9273RFASUB966KYB/IMG_2838+%282%29.JPG  (alt: IMG_2838 (2).JPG)  [saved as: index__02__img-2838-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118439988-8FDZ4X1F8TFG6WFFDONO/IMG_2767+%282%29+-+Copy.JPG  (alt: IMG_2767 (2) - Copy.JPG)  [saved as: index__03__img-2767-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118441345-4OCX8PN3QXPBR2KW53YM/IMG_2790.JPG  (alt: IMG_2790.JPG)  [saved as: index__04__img-2790.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118442247-FM7UCJSZ4BSROJRSL032/IMG_2792+%282%29+-+Copy.JPG  (alt: IMG_2792 (2) - Copy.JPG)  [saved as: index__05__img-2792-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118440130-ZUNL764XROJWLKUB3OLV/IMG_2775+%282%29+-+Copy.JPG  (alt: IMG_2775 (2) - Copy.JPG)  [saved as: index__06__img-2775-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118441611-ITEJPYK8FCGNA3790KI7/IMG_2778+%282%29+-+Copy.JPG  (alt: IMG_2778 (2) - Copy.JPG)  [saved as: index__07__img-2778-2-copy.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118443415-1LTFCTMX6XL6DG4G8TW2/IMG_2820.JPG  (alt: IMG_2820.JPG)  [saved as: index__08__img-2820.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118443263-SJPNJY5OKAZEGDVTS5S4/IMG_2826.JPG  (alt: IMG_2826.JPG)  [saved as: index__09__img-2826.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118444548-DDXMTH3OU83VI18DI5YD/IMG_2837+%282%29.JPG  (alt: IMG_2837 (2).JPG)  [saved as: index__10__img-2837-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118661377-T3URK3AU6HAMF4QWZKW9/IMG_2894+%282%29.JPG  (alt: IMG_2894 (2).JPG)  [saved as: index__11__img-2894-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118661813-3CHXZVUWS4DZPT41AOXF/IMG_2917+%282%29.JPG  (alt: IMG_2917 (2).JPG)  [saved as: index__12__img-2917-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118658689-OBPI4FHTWFC6PPDCHHO9/IMG_2908+%282%29.JPG  (alt: IMG_2908 (2).JPG)  [saved as: index__13__img-2908-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118665799-O3V0NCUYOGICU1S9YWJE/IMG_2935+%282%29.JPG  (alt: IMG_2935 (2).JPG)  [saved as: index__14__img-2935-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118666331-SWNFPX252GHKZUB1VXXR/IMG_2921+%282%29.JPG  (alt: IMG_2921 (2).JPG)  [saved as: index__15__img-2921-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118668871-2FF0P9ENFGZ851GBZ3W5/IMG_2952+%282%29.JPG  (alt: IMG_2952 (2).JPG)  [saved as: index__16__img-2952-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118673867-99YIHCVXSF425OE4RAE6/IMG_2959+%282%29.JPG  (alt: IMG_2959 (2).JPG)  [saved as: index__17__img-2959-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118663996-3LR1RHLSL34WLJZFF70S/IMG_2919+%282%29.JPG  (alt: IMG_2919 (2).JPG)  [saved as: index__18__img-2919-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586118674019-IY0RAPYVANA2I3FH2N7N/IMG_2957+%282%29.JPG  (alt: IMG_2957 (2).JPG)  [saved as: index__19__img-2957-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401047-3GSUFGU9AX7TA5HZ4MGI/Market+parade+-+kitchen+-+pic+1.jpg  (alt: Market parade - kitchen - pic 1.jpg)  [saved as: index__20__market-parade-kitchen-pic-1.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401529-IIJ3NAUT331E3G2OCFR4/Market+Parade+-+lounge+pic+2.jpg  (alt: Market Parade - lounge pic 2.jpg)  [saved as: index__21__market-parade-lounge-pic-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598401193-WL4WBVV3VO0HOVC8KRL3/Market+Parade+-+kitchen+pic+2.jpg  (alt: Market Parade - kitchen pic 2.jpg)  [saved as: index__22__market-parade-kitchen-pic-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400648-B6THLHPXMPT7JG2DLAMB/Market+Parade+-+hallway.jpg  (alt: Market Parade - hallway.jpg)  [saved as: index__23__market-parade-hallway.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400502-STN34YM053DT7PDP3MZ8/Market+Parade+-+en-suite+bathroom.jpg  (alt: Market Parade - en-suite bathroom.jpg)  [saved as: index__24__market-parade-en-suite-bathroom.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598399925-197OXC5EK6ECTWZF07YZ/Market+Parade+-+bathroom.jpg  (alt: Market Parade - bathroom.jpg)  [saved as: index__25__market-parade-bathroom.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598400016-1PN9E1IKP5FRVC1S5LWG/Market+Parade+-+double+bedroom+with+en-suite.jpg  (alt: Market Parade - double bedroom with en-suite.jpg)  [saved as: index__26__market-parade-double-bedroom-with-en-sui.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598402282-EXE0PTVMM7XQSFDIMQUF/Market+Parade+-+single+bedroom+pic+3.jpg  (alt: Market Parade - single bedroom pic 3.jpg)  [saved as: index__27__market-parade-single-bedroom-pic-3.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1524598402195-Q6WETW8PA1ZJ8W5NZRNA/Market+Parade+-+park+view+2.jpg  (alt: Market Parade - park view 2.jpg)  [saved as: index__28__market-parade-park-view-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+http://static1.squarespace.com/static/59de1972bebafb7a8ade213f/t/5aa1b3e5085229f54e5344ce/1520546791929/Pied+a+Terre+Text+Only+PNG.png  (alt: )  [saved as: index__29__og-image.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/the-process
+================================================================================
+HTTP: 200
+TITLE: The Process — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: The Process — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/the-process
+og:type: website
+og:description: The Process
+twitter:title: The Process — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/the-process
+twitter:card: summary
+twitter:description: The Process
+description:   The Process
+
+--- HEADINGS ---
+H1: OUR TEN STEP GUIDE TO RENTING
+H2: STEP 1 - BEFORE YOU BEGIN
+H2: STEP 2 - HOW TO SEARCH
+H2: STEP 3 - ARRANGE A VIEWING
+H2: STEP 4 - INITIAL CHECKS AND HOLDING DEPOSIT
+H2: STEP 5 - PAPERWORK
+H2: STEP 6 - MOVING IN
+H2: STEP 7 - DURING THE TENANCY
+H1: STEP 8 - GIVING NOTICE
+H1: STEP 9 - MOVING OUT
+H1: STEP 10 - RETURN OF YOUR DEPOSIT
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+THE PROCESS
+
+OUR TEN STEP GUIDE TO RENTING
+
+Renting has become an increasingly significant part of life in the United Kingdom and many people are familiar with the process, however you may be looking to rent for the first time and be wondering how it all works. The information on this page will give you a brief guide to the process of renting a property through a letting agent.
+
+STEP 1 - BEFORE YOU BEGIN
+
+Before you begin your search, you must decide how much rent you can afford, how much accommodation the property must have and which location will suit you best. Whilst renting generally gives far more flexibility than home ownership, the process involves both time and money so careful thought should be given to your requirements before you commit to a property.
+
+If you are uncertain of how much you can afford, we recommend using the affordability calculator on the Money Advice Service website.
+
+STEP 2 - HOW TO SEARCH
+
+Most reputable letting agents advertise their properties on the most popular property portal, Rightmove. We recommend you activate notifications for when property meeting your criteria becomes available. Renting is popular and property can be let very quickly. These notifications will help you to avoid missing out.
+
+It can also be beneficial to register with local letting agents, because sometimes you may be notified of suitable property before it is advertised. If you would like to be kept updated when our properties become available, please register with us.
+
+STEP 3 - ARRANGE A VIEWING
+
+Once you have found a property which is of interest, contact the letting agent to arrange a viewing. You will need to provide a few contact details and will likely be asked a few questions to determine if you would be suitable. These questions could include the length of tenancy which you require, who would be occupying the property and whether you have pets.
+
+It is advisable to suggest at least two or three different times which you are available, as in some cases your preference may not be possible. Some properties may still be occupied by the current tenant and their wishes must also be considered. For our opening hours, please see our contact page.
+
+STEP 4 - INITIAL CHECKS AND HOLDING DEPOSIT
+
+At this stage you will be asked to provide identification and pay a holding deposit equivalent to one weeks rent. References are obtained from a third party referencing agent, current landlord/managing agent and employer (if applicable). Furthermore, there will be a right to rent check and a credit check.
+
+Sometimes a guarantor may be required. If so, the same checks will apply to the person(s) who are acting as your guarantor.
+
+Please click here for information relating to holding deposits.
+
+You will be informed whether your application has been successful.
+
+STEP 5 - PAPERWORK
+
+If the references are successful, the next stage is to complete the formal paperwork. The letting agent will prepare a Tenancy Agreement and this will outline both your and the landlords contractual obligations. It is important to read this carefully and raise a query if you have any concerns. You will also need to pay your security deposit (if you have not already done so) and pay your first months rent.
+
+At Pied-à-terre Property, all deposits are held by the Deposit Protection Scheme.
+
+STEP 6 - MOVING IN
+
+Just before you move in, you will be provided with an inventory/condition schedule. This document details the condition of the property and any damage, plus the details of any items, equipment and fittings at the property which belong to the landlord. The purpose of this to protect both you (the tenant) and the landlord. When your tenancy ends the property will be inspected and any defects/damage noted. The inventory/condition schedule proves whether any issues noted were caused by the tenant or pre-existing.
+
+We strongly recommend that you purchase contents insurance, because in most cases the landlord's insurance will only cover the building,
+
+You can now move into your new home!
+
+If you have a dog, we recommend clicking here for a helpful article on how to make the move as stress free as possible.
+
+STEP 7 - DURING THE TENANCY
+
+During the tenancy, your property could be managed by either the landlord or the agent. You will be informed which applies so that you know who to contact should any issues arise.
+
+You must pay your rent on time and look after the property. Failure to do so will put you in breach of your tenancy agreement and at risk of losing your home.
+
+The landlord and/or managing agent must do the following:
+
+Insure the building
+
+Pay the service charge (where applicable)
+
+Allow you to live as undisturbed as possible
+
+Deal with repairs and maintenance promptly
+
+Keep all services in working order
+
+Have any gas appliances checked annually
+
+Provide instructions for all appliances they have provided at the property
+
+Provide smoke and co2 alarms, fitted in compliant locations
+
+If you stay in the property for several years, the landlord should consider undertaking general redecoration and updating
+
+ 
+
+In additional, you must also do the following:
+
+Pay your council tax
+
+Pay your utility bills
+
+Pay your TV license
+
+Keep the property in good order
+
+Notify the landlord/managing agent of any required maintenance
+
+Maintain the gardens (if applicable)
+
+Keep the windows clean (may not apply to apartments)
+
+Keep the property secure
+
+Dispose of rubbish
+
+Not cause unnecessary disturbance to neighbours
+
+Ventilate the property to avoid condensation and mould
+
+“
+You must pay your rent on time and look after the property. Failure to do so will put you in breach of your tenancy agreement and at risk of losing your home.
+— Pied-a-terre Property
+STEP 8 - GIVING NOTICE
+
+When the time comes to move out, you will need to give notice to your landlord/managing agent. The amount of notice which both the tenant and landlord must give will be detailed in your tenancy agreement. Please note that the notice period is often governed by your 'rent due date.'
+
+STEP 9 - MOVING OUT
+
+Your landlord/managing agent will arrange a 'check out' appointment to inspect the property. It is preferable you are present so that any issues can be discussed.
+
+All rent payments must be up to date, including the final month. Your security deposit cannot be used as your final month's rent
+
+You must remove all of your belongings and ensure the property is clean and tidy. The property should be left in the same condition as when you moved in, although some 'reasonable wear and tear' is normal. Please note that accidental damage, including issues such as stained carpets, is considered to be damage, not 'reasonable wear and tear'
+
+Remember to re-direct your mail to your new address. Note that you should request the direction several days before it needs to begin
+
+Take meter readings prior to moving out
+
+Ensure there is not excessive amounts of rubbish in the bins. If you are disposing of household items, please take these to your local waste recycling centre
+
+Ensure the gardens are in the same condition as when you moved in (if applicable)
+
+Return all keys to the managing agent/landlord
+
+Cancel any media services
+
+Cancel your rent standing order
+
+STEP 10 - RETURN OF YOUR DEPOSIT
+
+The final condition of the property is compared to the initial inventory from when you moved in. You should leave the property in the same condition as when you moved in, allowing for 'reasonable wear and tear,' in order to ensure that your deposit is promptly returned in full.
+
+If the property requires repairs or cleaning, or any items stated in the initial inventory are missing, a deduction to cover the costs will need to be agreed. At Pied-à-Terre Property, our tenants deposits are held with the Deposit Protection Scheme who can intervene should there be difficulty in reaching an agreement.
+
+We hope the above information is helpful to you, however should you have any questions about the process please contact us.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[affordability calculator] -> https://www.moneyadviceservice.org.uk/en/articles/how-much-rent-can-you-afford
+[register with us.] -> https://piedaterreproperty.co.uk/registerwithus
+[Rightmove logo] -> http://www.rightmove.co.uk/estate-agents/agent/Pied-A-Terre-Property/Emsworth-193895.html#lamhttp://www.rightmove.co.uk
+[contact page.] -> https://piedaterreproperty.co.uk/contactus
+[click here] -> https://piedaterreproperty.co.uk/deposits
+[clicking here] -> https://yourdogadvisor.com/stress-free-house-move/
+[contact us.] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/the-process#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957568352-BNKXAMR4GNZAY0DNLS1D/banner-2.jpg  (alt: banner-2.jpg)  [saved as: the-process__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508958081028-N8HN70TCIJAGP4HF7D4D/Rightmove+logo  (alt: Rightmove logo)  [saved as: global__rightmove-logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/registerwithus
+================================================================================
+HTTP: 200
+TITLE: Register with us — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Register with us — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/registerwithus
+og:type: website
+og:description: Register with us
+twitter:title: Register with us — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/registerwithus
+twitter:card: summary
+twitter:description: Register with us
+description:   Register with us
+
+--- HEADINGS ---
+H1: LET US HELP YOU FIND A NEW HOME
+H2: HOUSING BENEFIT
+H2: PETS
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+REGISTER WITH US
+
+LET US HELP YOU FIND A NEW HOME
+
+If you are searching for a new home, please complete the form below and we will endeavour to update you of suitable properties which become available.
+
+HOUSING BENEFIT
+
+Whilst we have properties within our portfolio where the tenants receive housing benefit and as a company we are not adverse to it, please note that acceptance is at the landlords discretion.
+
+PETS
+
+Whilst we have properties within our portfolio where the tenants have pets, acceptance is at the landlords discretion. In most cases, tenants with pets will be asked to pay a larger deposit due to the increased risk of damage occurring and there being a need for additional cleaning at the end of the tenancy. 
+
+Name
+First Name
+(required)
+Last Name
+(required)
+Current Address
+(required)
+Phone Number
+Email Address
+How would you like to be contacted?
+(required)
+
+Please select at least one option.
+
+Email
+Text message
+Telephone
+Post
+Do you have any pets?
+(required)
+Select an option
+None
+Dog(s)
+Cat(s)
+Other(s)
+Smoker(s)?
+(required)
+Select an option
+Non-Smoker(s)
+Smoker(s)
+Do you receive housing benefit?
+(required)
+Select an option
+No
+Yes
+How much is your budget (pcm)?
+(required)
+What is the minimum number of bedrooms you require?
+(required)
+Select an option
+Studio
+1
+2
+3
+4
+5
+6
+Please tell us which areas you are interested in.
+(required)
+Approximately when would you like to move in?
+(required)
+What type(s) of property are you looking for?
+
+Please select at least one.
+
+Apartment
+Apartment with garden
+House
+Bungalow
+Message
+SUBMIT
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- FORM FIELDS ---
+First Name (required) | text | fname | required: yes | placeholder: 
+Last Name (required) | text | lname | required: yes | placeholder: 
+Current Address (required) | textarea | textarea-yui_3_17_2_1_1507739795528_156986-field | required: yes | placeholder: 
+Phone Number | text | text-yui_3_17_2_1_1507739795528_154950-field | required: no | placeholder: 
+Email Address | email | email-yui_3_17_2_26_1507739795528_6243-field | required: no | placeholder: 
+How would you like to be contacted? [Email] | checkbox | checkbox-yui_3_17_2_1_1507991300821_102058-field | required: yes (select at least one option) | placeholder: 
+How would you like to be contacted? [Text message] | checkbox | checkbox-yui_3_17_2_1_1507991300821_102058-field | required: yes (select at least one option) | placeholder: 
+How would you like to be contacted? [Telephone] | checkbox | checkbox-yui_3_17_2_1_1507991300821_102058-field | required: yes (select at least one option) | placeholder: 
+How would you like to be contacted? [Post] | checkbox | checkbox-yui_3_17_2_1_1507991300821_102058-field | required: yes (select at least one option) | placeholder: 
+Do you have any pets? (required) | select-one | select-yui_3_17_2_1_1507991300821_112938-field | required: yes | placeholder:  | options: Select an option /  / None / Dog(s) / Cat(s) / Other(s)
+Smoker(s)? (required) | select-one | select-yui_3_17_2_1_1507991300821_113624-field | required: yes | placeholder:  | options: Select an option /  / Non-Smoker(s) / Smoker(s)
+Do you receive housing benefit? (required) | select-one | select-yui_3_17_2_1_1507991300821_114380-field | required: yes | placeholder:  | options: Select an option /  / No / Yes
+How much is your budget (pcm)? (required) | text | text-yui_3_17_2_1_1507991300821_179475-field | required: yes | placeholder: 
+What is the minimum number of bedrooms you require? (required) | select-one | select-yui_3_17_2_1_1507991300821_182501-field | required: yes | placeholder:  | options: Select an option /  / Studio / 1 / 2 / 3 / 4 / 5 / 6
+Please tell us which areas you are interested in. (required) | textarea | textarea-yui_3_17_2_1_1507991300821_184914-field | required: yes | placeholder: 
+Approximately when would you like to move in? (required) | text | text-yui_3_17_2_1_1507991300821_115091-field | required: yes | placeholder: 
+What type(s) of property are you looking for? [Apartment] | checkbox | checkbox-yui_3_17_2_1_1507991300821_183174-field | required: yes (select at least one) | placeholder: 
+What type(s) of property are you looking for? [Apartment with garden] | checkbox | checkbox-yui_3_17_2_1_1507991300821_183174-field | required: yes (select at least one) | placeholder: 
+What type(s) of property are you looking for? [House] | checkbox | checkbox-yui_3_17_2_1_1507991300821_183174-field | required: yes (select at least one) | placeholder: 
+What type(s) of property are you looking for? [Bungalow] | checkbox | checkbox-yui_3_17_2_1_1507991300821_183174-field | required: yes (select at least one) | placeholder: 
+Message | textarea | textarea-yui_3_17_2_26_1507739795528_6245-field | required: no | placeholder: If you wish to provide further information, do so here.
+ (anti-spam honeypot) | text | message-yui_39690527-44b4-42ab-8a43-79efab0ddf74-field | required: no | placeholder: 
+SUBMIT | button | (form submit) | required: n/a | placeholder:
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/registerwithus#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957595333-2JW8X8HVD2GSEU5SCKG8/banner-2.jpg  (alt: banner-2.jpg)  [saved as: registerwithus__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/report-maintenance-issue
+================================================================================
+HTTP: 200
+TITLE: Request Maintenance — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Request Maintenance — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/report-maintenance-issue
+og:type: website
+og:description: Request Maintenance
+twitter:title: Request Maintenance — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/report-maintenance-issue
+twitter:card: summary
+twitter:description: Request Maintenance
+description:   Request Maintenance
+
+--- HEADINGS ---
+H1: NOTIFY US OF A NON-URGENT MAINTENANCE ISSUE
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+REQUEST MAINTENANCE
+
+NOTIFY US OF A NON-URGENT MAINTENANCE ISSUE
+
+Sorry to hear you're having trouble. Please fill in the form below as fully as possible, so that we can work to resolve the problem promptly.
+
+Name
+First Name
+(required)
+Last Name
+(required)
+Property address
+(required)
+Phone Number
+(required)
+Can we pass your phone number to a contractor, if necesarry?
+(required)
+
+Please select yes or no.
+
+Select an option
+Yes
+No
+Email Address
+Message
+(required)
+Best time for a contractor to attend (if applicable)
+
+Must be during normal working hours.
+
+SUBMIT
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- FORM FIELDS ---
+First Name (required) | text | fname | required: yes | placeholder: 
+Last Name (required) | text | lname | required: yes | placeholder: 
+Property address (required) | textarea | textarea-yui_3_17_2_1_1507739795528_156986-field | required: yes | placeholder: 
+Phone Number (required) | text | text-yui_3_17_2_1_1507739795528_154950-field | required: yes | placeholder: 
+Can we pass your phone number to a contractor, if necesarry? (required) | select-one | select-yui_3_17_2_1_1507991300821_38759-field | required: yes | placeholder:  | options: Select an option / Yes / No
+Email Address | email | email-yui_3_17_2_26_1507739795528_6243-field | required: no | placeholder: 
+Message (required) | textarea | textarea-yui_3_17_2_26_1507739795528_6245-field | required: yes | placeholder: Please provide as much detail as possible.
+Best time for a contractor to attend (if applicable) | text | text-yui_3_17_2_1_1507739795528_158035-field | required: no | placeholder: If it will be necesarry for a contractor to attend the property, please state when will be convenient.
+ (anti-spam honeypot) | text | message-yui_e1e161ab-750b-467c-b56f-83f57b58e55d-field | required: no | placeholder: 
+SUBMIT | button | (form submit) | required: n/a | placeholder:
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/report-maintenance-issue#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957636818-O1Q1KQT68XFNTKCWP3J9/banner-2.jpg  (alt: banner-2.jpg)  [saved as: report-maintenance-issue__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/holdingdeposits
+================================================================================
+HTTP: 200
+TITLE: Tennacy Deposits — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Tennacy Deposits — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/holdingdeposits
+og:type: website
+og:description: Tennacy Deposits
+twitter:title: Tennacy Deposits — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/holdingdeposits
+twitter:card: summary
+twitter:description: Tennacy Deposits
+description:  Tennacy Deposits
+
+--- HEADINGS ---
+(no content headings on this page - text is set as body paragraphs)
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+Holding Deposit (per tenancy) — One week’s rent.
+
+This is to reserve a property. Please Note: This will be withheld if  person (including any guarantor(s)) withdraw from the tenancy, fail a Right-to-Rent check, provide false or misleading information or fail to take all reasonable steps to enter into a tenancy agreement  (and / or Deed of Guarantee) within 15 calendar days (or other Deadline for Agreement as mutually agreed in writing). Please note: References will be required from current employer, previous landlord(s) and credit checks will be obtained.
+
+Security Deposit (per tenancy. Rent under £50,000 per year)
+
+Five weeks’ rent.
+
+Security Deposit (per tenancy. Rent of £50,000 or over per year)
+
+Six weeks’ rent.
+
+This covers damages or defaults on the part of the tenant during the tenancy.
+
+Unpaid Rent
+
+Interest at 3% above the Bank of England Base Rate from Rent Due Date until paid in order to pursue non-payment of rent. Please Note. This will not become due until the rent is more than 14 days in arrears.
+
+Lost Key(s) or other Security Device(s)
+
+Tenants are liable for the actual cost of replacing any lost key(s) or other security device(s). If the loss results in locks needing to be changed, the actual costs of a locksmith, new lock and replacement keys for the tenant, landlord any other persons requiring keys will be charged to the tenant. If extra costs are incurred there will be a charge of £10 per hour (inc. VAT) for the time taken replacing lost key(s) or other security device(s).
+
+Variation of Contract (Tenant’s Request)
+
+£50.00 (inc. VAT) per agreed variation.
+
+To cover the costs associated with taking landlord’s instructions as well as the preparation and execution of new legal documents.
+
+Early Termination (Tenant’s Request)
+
+Should the tenant wish to leave their contract early, they shall be liable  the landlord’s costs in re-letting the property as well as all rent due under the tenancy until the start date of the replacement tenancy. These costs will be no more than the maximum amount of rent outstanding on the tenancy.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/holdingdeposits#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/complaints-procedure
+================================================================================
+HTTP: 200
+TITLE: Complaints Procedure — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Complaints Procedure — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/complaints-procedure
+og:type: website
+og:description: Pied-a-terre Property Complaints Procedure
+twitter:title: Complaints Procedure — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/complaints-procedure
+twitter:card: summary
+twitter:description: Pied-a-terre Property Complaints Procedure
+description: Pied-a-terre Property Complaints Procedure
+ROBOTS: NOINDEX
+
+--- HEADINGS ---
+H2: PIED-A-TERRE PROPERTY IN-HOUSE COMPLAINTS PROCEDURE
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+PIED-A-TERRE PROPERTY IN-HOUSE COMPLAINTS PROCEDURE
+
+We are committed to providing a professional service to all our clients and customers.  When something goes wrong, we need you to tell us about it.  This will help us to improve our standards.
+
+We will where appropriate, make reasonable adjustments for consumers who might be disadvantaged because of factors such as their age, infirmity, disability, lack of knowledge, lack of linguistic or numeracy ability, economic circumstances, bereavement or do not speak English as a first language
+
+If you have a complaint, please put it in writing, including as much detail as possible.  We will then respond in line with the timeframes set out below (if you feel we have not sought to address your complaints within eight weeks, you may be able to refer your complaint to the Property Ombudsman to consider without our final viewpoint on the matter).
+
+What will happen next?
+
+·       We will send you written acknowledgment of the receipt of your complaint within three working days of receiving it, enclosing a copy of this procedure.
+
+·       We will then investigate your complaint. This will normally be dealt with by the office manager who will review your file and speak to the member of staff who dealt with you.  A formal written outcome of our investigation will be sent to you within 15 working days of receipt of the original complaint.
+
+·       If, at this stage, you are still not satisfied, you should contact us again and we will arrange for a separate review to take place by a senior member of staff.
+
+·       We will write to you within 15 working days of receiving your request for a review, confirming our final viewpoint on the matter.
+
+·       If you are still not satisfied with our final viewpoint (or more than 8 weeks has elapsed since the complaint was first made) you can request an independent review from The Property Ombudsman without charge.
+
+The Property Ombudsman
+Milford House
+43-55 Milford Street
+Salisbury
+Wiltshire
+SP1 2BP
+
+01722 333 306
+
+admin@tpos.co.uk 
+
+www.tpos.co.uk 
+
+Please note the following:
+
+You will need to submit your complaint to The Property Ombudsman within 12 months from the date of our final viewpoint , including any evidence to support your case.
+
+The Property Ombudsman requires that all complaints are addressed through this in-house complaints procedure, before being submitted for an independent review.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[admin@tpos.co.uk] -> mailto:admin@tpos.co.uk
+[www.tpos.co.uk] -> http://www.tpos.co.uk/
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/complaints-procedure#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/whychooseus
+================================================================================
+HTTP: 200
+TITLE: Why choose us — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Why choose us — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/whychooseus
+og:type: website
+og:description: CHOOSE US
+twitter:title: Why choose us — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/whychooseus
+twitter:card: summary
+twitter:description: CHOOSE US
+description:   CHOOSE US
+
+--- HEADINGS ---
+H1: SUCCESSFUL TENANCY BEGINS WITH A CHOICE
+H2: MARKETING STRATEGY
+H2: WE MATCH PEOPLE TO HOMES
+H2: OUR TEAM
+H2: MAINTAINING STANDARDS
+H2: DILIGENCE
+H2: THE PROPERTY OMBUDSMAN
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+CHOOSE US
+
+SUCCESSFUL TENANCY BEGINS WITH A CHOICE
+
+We appreciate that you have a number of letting agents to choose from. Whilst the work that we do is ultimately very similar, we believe that our level of service is not.
+
+Instead of relying solely on our years of experience, we also utilise data and information to ensure that we give you the best possible advice.
+
+Something which we feel is often overlooked by landlords is the costs which prospective tenants will be charged by their agent. Expensive fees can deter prospective tenants and in turn this can be detrimental to the landlord. Whilst we must cover our time and third party disbursements, we believe ourselves to be one of the most competitive in the local area.
+
+MARKETING STRATEGY
+
+Instead of simply advertising your property, we actively work to ensure that you achieve the highest possible rental.
+
+Before marketing your property, we will advise you of any works which we feel will make your property a more attractive proposition to prospective tenants. Your property will be photographed using a digital SLR camera and the photographs finished on industry standard software. We believe that many prospective tenants will make their decision to view your property based upon what they see, which is why we endeavour to ensure that your property is captured at it's best.
+
+One of our distinctive 'To be Let' boards will be placed at the property (where possible). Not only could this help to attract the interest of a home hunter, it also helps viewers to find the property. We will also prepare property particulars with concise and considered information.
+
+We contact our database of applicants who's search criteria matches your property. Your property will be advertised on Rightmove.co.uk, the UK's most popular and best known property website.
+
+WE MATCH PEOPLE TO HOMES
+
+Since 2011, we have strived to find the right people for every property. We work to ensure the prospective tenants accommodation needs will be met in both the short term and the long term. This can increase the longevity of the tenancy and maintain a more consistent rental income for the landlord.
+
+OUR TEAM
+
+Should you choose to place your property with us, you can do so with confidence. Our team has many years experience which includes backgrounds within both independent and corporate letting agencies.
+
+MAINTAINING STANDARDS
+
+Your property will be in good company. We take pride in our portfolio.
+
+We encourage our landlords to offer their property for let in the best condition possible. Furthermore, should we continue on to manage the property, we actively work with the landlord and the tenant to ensure that all necessary maintenance is completed to a high standard and in a timely manner.
+
+We believe that if an agent maintains a reputation for offering quality homes with a reliable maintenance schedule, this results in a quicker let to a better tenant who will be happier and likely remain in the property for longer.
+
+DILIGENCE
+
+All prospective tenants must pass our referencing process. Whilst we find that in the majority of cases there is no cause for concern, on occasions things are not always as they appear. 
+
+Our tenant referencing process includes a credit search plus, where applicable, obtaining references from their former landlord/managing agent. We do our best to ensure there isn't any reason the tenant will be unable to pay their rent.
+
+In addition to this, we offer our landlords the opportunity to meet with the prospective tenant should they wish to do so. We want you to be completely satisfied that we have found the correct people for your property.
+
+“
+“Instead of simply advertising your property, we actively work to ensure that you achieve the highest possible rental.”
+— Pied-à-terre Property
+THE PROPERTY OMBUDSMAN
+
+We are a member of The Property Ombudsman scheme and we abide by their code of practice to ensure our business operates in a fair and professional manner at all times.
+
+For further information, please click here to visit their website.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[click here] -> http://www.tpos.co.uk/
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/whychooseus#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957681649-SWP7Q1KL2I480L0RE3DE/banner-2.jpg  (alt: banner-2.jpg)  [saved as: whychooseus__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508196049545-VGMPGQKJHPYM1N2LBJH2/f7.jpg  (alt: f7.jpg)  [saved as: whychooseus__02__f7.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508196174004-MM3L7UB32TZN0DW4M5J8/IMG_7291.jpg  (alt: IMG_7291.jpg)  [saved as: whychooseus__03__img-7291.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521505221551-SDEI12PDNSK1Q0F8G95G/monarch+kitchen+3.jpg  (alt: monarch kitchen 3.jpg)  [saved as: whychooseus__04__monarch-kitchen-3.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521505185518-TW7DW448AVGZKU1XK29E/kitchen.jpg  (alt: kitchen.jpg)  [saved as: whychooseus__05__kitchen.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521505220962-Y6QHUF2FOSQTY3892MYN/monarch+lounge.jpg  (alt: monarch lounge.jpg)  [saved as: whychooseus__06__monarch-lounge.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521505282064-45CO6IU6NO384IN8V4AL/gold+bathroom.jpg  (alt: gold bathroom.jpg)  [saved as: whychooseus__07__gold-bathroom.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/obligations
+================================================================================
+HTTP: 200
+TITLE: Landlord Obligations — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Landlord Obligations — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/obligations
+og:type: website
+og:description: Obligations
+twitter:title: Landlord Obligations — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/obligations
+twitter:card: summary
+twitter:description: Obligations
+description:   Obligations
+
+--- HEADINGS ---
+H2: ELECTRICAL SAFETY
+H2: GAS SAFETY
+H2: MORTGAGE
+H2: CO2 AND SMOKE DETECTORS
+H2: ENTITLEMENT TO RENT
+H2: LEGIONNAIRES DISEASE
+H2: DEPOSIT
+H2: INSURANCE
+H2: MAINTENANCE
+H2: EPC
+H2: INVENTORY/SCHEDULE OF CONDITION
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+OBLIGATIONS
+
+If you are unfamiliar with your obligations as a landlord, please see the below information. This information is only intended as a brief outline and is not exhaustive. We work with our landlords to ensure that all aspects of their property are compliant. If you would like further advice, please contact us.
+
+In order to ensure that your property is compliant throughout the tenancy, you may like to consider our 'Full Management' service.
+
+ELECTRICAL SAFETY
+
+Landlords must adhere to the Electrical Equipment (Safety) Regulations 1994.
+
+Whilst there isn't a specified timescale, all electrics and electrical appliances within a property must be inspected at regular intervals and considered 'safe.' Whilst not compulsory, we recommended that you have the property inspected annually by a suitably qualified electrician.
+
+Records of all inspections should be kept so they can be provided should the need arise. We can assist in this regard.
+
+GAS SAFETY
+
+Landlords must comply with the Gas Safety (Installation and Use) Regulations 1998.
+
+All gas appliances within a property, including, but not limited to, boilers, fires, ovens and hobs must be maintained, regularly inspected and a gas safety record kept. This record must be provided to the tenant at the time the tenancy agreement is signed. Inspections must be carried out annually.
+
+Others points to note include:
+
+Appliances with open flues must not be installed in bedrooms.
+Where the gas meter is in a box, a key to it must be provided to the tenant.
+Appliance ventilation must be unobstructed.
+Instructions for all gas appliances must be available to the tenant.
+Any appliance which is faulty must be repaired, removed or replaced immediately.
+
+Please note this is not an exhaustive list. Please contact us should you require further guidance. We can assist you with obtaining the necessary certification.
+
+MORTGAGE
+
+Landlords who wish to let a property where the mortgage product is for owner occupancy 'residential' terms must contact their lender and obtain 'consent to let.' If you already have a 'buy-to-let' mortgage, this is not necessary.
+
+Please contact us if you would like to arrange a free of charge mortgage consultation with our financial advisor.
+
+CO2 AND SMOKE DETECTORS
+
+Smoke detectors must be fitted on every floor of a property on which there is a room which is used either in whole or in part as living accommodation. Living accommodation can include, but is not limited to, hallways, landings, bedrooms, kitchens, bathrooms and reception rooms. Thus, in most cases, every floor will require a smoke detector.
+
+In the case of flats, every flat is considered a premises and thus the same legislation applies even if there is a smoke detector elsewhere on the same floor of the building. 
+
+Whilst hardwired alarms are preferable, standalone alarms are acceptable. If opting for a standalone alarm, we recommend using a tamperproof model powered by quality lithium batteries, in order to reduce the risk of batteries being removed and not replaced. Please note that heat detectors are not acceptable.
+
+CO2 detectors must be installed in any room where there is an appliance or fire which is capable of burning solid fuels. In addition to this, it is considered best practice to fit CO2 detectors in any room where there is a gas or oil fired appliance.
+
+ENTITLEMENT TO RENT
+
+Under the Immigration Act 2014, the landlord or managing agent must ensure that any tenant or lodger is legally entitled to rent the property. Letting a property to a tenant who is not entitled to do so can result in a fine of up to £3000, thus it is imperative the necessary checks are carried out and records kept.
+
+LEGIONNAIRES DISEASE
+
+Landlords must adhere to the Control of Hazardous Substances Regulations 2002, in order to ensure their tenants are protected against legionnaires disease. Your property should be assessed to determine whether any aspect carries a risk and any necessary action should be taken,
+
+DEPOSIT
+
+Deposits must be registered in a government approved scheme. Before the tenancy begins, the tenant must be given the Governments 'how to rent' booklet.
+
+“
+“We work with a range of tradespeople and contractors who can assist with most aspects of maintenance and compliance, at a fair price.”
+— Pied-à-terre Property
+INSURANCE
+
+The tenant is responsible for insuring their contents and the landlord is responsible for insuring the building and any contents which may belong to themselves.
+
+The landlord should ensure their policy is suitable for rented property. Our financial advisor can assist with finding suitable and competitively priced 'Landlords Insurance.'
+
+MAINTENANCE
+
+Under the Landlord and Tenant Act 1985, the landlord is responsible for the structure and exterior of the property, plus all services which serve the property. The landlord is also responsible for the electrics and gas, including any appliances which they have provided at the property.
+
+Although the tenant is responsible should they cause damage, the landlord must maintain and upkeep the property as 'wear and tear' occurs. This includes both carpets/flooring, decoration, fixtures and fittings.
+
+EPC
+
+Since 2008, all properties being let or sold must have a valid Energy Performance Certificate. The EPC must be provided where any written information relating to the property is given. In addition, it must be provided to the tenant before the tenancy commences. Failure to comply can result in a fine from The Office of Fair Trading.
+
+Pied-à-terre Property can arrange an EPC if necessary.
+
+Prompt maintenance is essential because under new laws, failure to do so can make it difficult to evict the tenant should the need arise.
+
+On properties (usually leasehold) where there is a maintenance/service charge, this is the landlords responsibility.
+
+Landlords who may not be able to deal with issues promptly should consider our 'Full Management' service.
+
+ 
+
+INVENTORY/SCHEDULE OF CONDITION
+
+In addition to the above obligations, it is highly recommended that an inventory/schedule of condition is prepared. This should be completed and signed by both the landlord/managing agent and the tenant before the tenancy begins. The 'Deposit Protection Scheme' was introduced in 2007 and the landlord must now prove that damage was caused in order to make a deduction from the tenants deposit. Not only does this allow the landlord to make a claim where damage (beyond reasonable wear and tear) has occurred, it also protects the tenant from the landlord claiming where the damage was caused by a third party.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[contact us.] -> https://piedaterreproperty.co.uk/services
+[F] -> https://piedaterreproperty.co.uk/services
+[ull Management'] -> https://piedaterreproperty.co.uk/services
+[service] -> https://piedaterreproperty.co.uk/services
+['Full Management'] -> https://piedaterreproperty.co.uk/services
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/obligations#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957712921-W4QPB89H8A33K9VFSO1X/banner-2.jpg  (alt: banner-2.jpg)  [saved as: obligations__01__banner-2.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/portfolio
+================================================================================
+HTTP: 200
+TITLE: Portfolio — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Portfolio — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/portfolio
+og:type: website
+og:description: PORTFOLIO
+twitter:title: Portfolio — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/portfolio
+twitter:card: summary
+twitter:description: PORTFOLIO
+description:   PORTFOLIO
+
+--- HEADINGS ---
+H1: A SAMPLE OF OUR PORTFOLIO
+H2: WALLIS ROAD, WATERLOOVILLE
+H2: BEVAN ROAD, LOVEDEAN
+H2: MONARCH CLOSE, WATERLOOVILLE
+H2: GOLD CLOSE, WATERLOOVILLE
+H2: PADNELL GRANGE, COWPLAIN
+H2: WEST STREET, FAREHAM
+H2: BARNEY EVANS CRESCENT, COWPLAIN
+H2: FERRY ROAD, EASTNEY
+H2: BURITON, PETERSFIELD
+H2: SEA VIEW ROAD, DRAYTON
+H2: MILTON ROAD, WATERLOOVILLE
+H2: HULBERT ROAD, WATERLOOVILLE
+H2: THE CURVE, LOVEDEAN
+H2: LOWLAND ROAD, DENMEAD
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+PORTFOLIO
+
+A SAMPLE OF OUR PORTFOLIO
+
+The Pied-à-Terre portfolio is somewhat varied and includes everything from studio apartments through to substantial detached homes. In addition, we also let and manage commercial units.
+
+Our principle area is from Southsea to Clanfield, but we have successfully let property as far as Southampton and Chichester. If you are a landlord in search of a professional and knowledgeable letting agent, please view our services or contact us.
+
+Below are some properties we have successfully let.
+
+WALLIS ROAD, WATERLOOVILLE
+
+Charming double bay window house in one of Waterlooville’s best regarded roads. Driveway, garage and good size rear garden.
+
+BEVAN ROAD, LOVEDEAN
+
+Immaculate  semi detached house with garage. Accommodation includes spacious lounge with doors into the garden, refitted kitchen, three bedrooms and bathroom. Renewed central heating system, redecorated and new carpets throughout.
+
+MONARCH CLOSE, WATERLOOVILLE
+
+Lovely three bedroom link detached house situated in the popular Tempest Avenue area. The landlord has kept this property in very good order including a modern kitchen and neutral decor throughout.. We have managed this property for a number of years.
+
+GOLD CLOSE, WATERLOOVILLE
+
+Modern and spacious two bedroom coach house. This property benefits from a garage, allocated parking, en-suite and balcony.
+
+The landlord is a returning client and we have successfully let this property on two occasions.
+
+ 
+PADNELL GRANGE,
+COWPLAIN
+
+Padnell Grange is an impressive residence with an imposing facade. Set within approximately 7 acres of maintained grounds and adjoining the local golf course.
+
+We are honoured to have been given the opportunity to let and manage this outstanding and unusual property.
+
+WEST STREET, FAREHAM
+
+Surprisingly spacious three bedroom flat which has accommodation split over two levels. Located in the centre of Fareham and benefiting from off road parking. 
+
+We found three prospective tenants for this property.
+
+BARNEY EVANS CRESCENT, COWPLAIN
+
+Two bedroom terraced house in Cowplain. Lounge/diner with French doors leading to a low maintenance garden, fitted kitchen, two double bedrooms with fitted wardrobes, bathroom. Immaculate throughout.
+
+FERRY ROAD, EASTNEY
+
+One bedroom ground floor flat located close to both the shoreline and nature reserve. Accommodation includes hallway, double bedroom with fitted wardrobes, bathroom and open plan lounge/kitchen. Gas central heating and allocated parking. Well presented throughout.
+
+BURITON, PETERSFIELD
+
+Three bedroom detached bungalow which features an impressive vaulted roof kitchen/dining room with French doors leading to a mature rear garden. Situated in the beautiful rural village of Buriton from which you can explore the surrounding countryside and Queen Elizabeth Country Park. The market town of Petersfield is only a short distance away and offers direct trains into London Waterloo Station.
+
+SEA VIEW ROAD, DRAYTON
+
+Spacious three bedroom detached bungalow occupying a corner plot on the slopes of Portsdown Hill. This property benefits from garden to all sides, plus the added benefits of a conservatory and garage. This property is ideal for a couple but also has the space to accommodate a growing family.
+
+MILTON ROAD, WATERLOOVILLE
+
+Spacious two bedroom top floor flat located on Milton Road. This property benefits from a balcony and it’s own front door. Outside is a large car park which generally offers ample parking.
+
+HULBERT ROAD, WATERLOOVILLE
+
+Well presented one bedroom first floor retirement flat. Facilities on site include residents lounge, laundry and drying areas, communal garden and house manager. Please note that applicants must be aged 60 years or older.
+
+THE CURVE, LOVEDEAN
+
+Semi-detached property situated in a quiet, requested Lovedean cul-de-sac. South facing rear garden. Two ground floor bedrooms plus a first floor master bedroom with en-suite shower room and fitted wardrobe cupboards.
+
+LOWLAND ROAD, DENMEAD
+
+Two bedroom house situated in a quiet cul-de-sac location in Denmead. Lounge with under stairs storage cupboard and doors that leads to the fitted kitchen with a dining area and access to the low maintenance rear garden. Two allocated parking bays.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[services] -> https://piedaterreproperty.co.uk/services
+[contact us.] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/portfolio#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957733721-EYUJ7XQGVA13DM9FP50K/banner-2.jpg  (alt: )  [saved as: portfolio__01__page-banner.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560720297798-0ED40QMUBA2Y9GLDP5N0/IMG_20190411_180150.jpg  (alt: )  [saved as: portfolio__02__wallis-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560720302148-77Q00388U633LZCVYB9H/IMG_20190411_180150.jpg  (alt: )  [saved as: portfolio__03__wallis-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719844103-4JK4XKB6444H21I4XB0U/2019-05-13+11.28.35+%282%29+resized+.jpg  (alt: )  [saved as: portfolio__04__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719848885-TYJAZ8RMPXDA3QZNSCRM/2019-05-13+12.00.51+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__05__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719849518-YZDOWSTNNUM0K7AAOTGJ/2019-05-13+12.01.40+%282%29+resize.jpg  (alt: )  [saved as: portfolio__06__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719851601-WQPWVBBWBZ976Q73SHUU/2019-05-13+12.08.35+%282%29+resize.jpg  (alt: )  [saved as: portfolio__07__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719845915-LT6E2JE5W5CINMX937DF/2019-05-13+11.49.55+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__08__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719843415-16USSQOIQ747C0FIOGL8/2019-05-13+11.43.39+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__09__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719846921-F00IZJHVOSHYBPHU3I4Q/2019-05-13+11.52.37+%283%29+rezised+.jpg  (alt: )  [saved as: portfolio__10__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719844955-PAYHR1KZBDK057Q8P0AT/2019-05-13+11.46.29+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__11__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719847466-2QO51XOZD0ILMIQPHI24/2019-05-13+11.54.51+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__12__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719848444-TSWW60SAAVXJVIUGG8BB/2019-05-13+11.55.34+%282%29+rezised+.jpg  (alt: )  [saved as: portfolio__13__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1560719852284-FBDG6Z15WEWS6IDTYBIR/2019-05-13+12.10.54+%282%29+resize.jpg  (alt: )  [saved as: portfolio__14__bevan-road-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502489080-Z1FER48OCYDEQ2SNRUA0/Monarch+front.jpg  (alt: )  [saved as: portfolio__15__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502532505-GEJQAQWABJXLICZ3BRPT/monarch+lounge+2.jpg  (alt: )  [saved as: portfolio__16__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502520831-F3VVQHRJUW1BFJCFUIH5/monarch+kitchen+3.jpg  (alt: )  [saved as: portfolio__17__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502514777-SRAINZJMM7MJB2D7L97P/monarch+kitchen+2.jpg  (alt: )  [saved as: portfolio__18__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502485377-LDB2JJDIEWRPMXZE14PX/monarch+kitchen+1.jpg  (alt: )  [saved as: portfolio__19__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502458654-2TXKHNXUSD6BYOHHPY4O/monarch+bedroom+1.jpg  (alt: )  [saved as: portfolio__20__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521502453696-DHWWIQV2L3OCTEB2BK2D/monarch+bathroom+2.jpg  (alt: )  [saved as: portfolio__21__monarch-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503197915-IXPU24ICI4OFAUERVX2B/gold+front.jpg  (alt: )  [saved as: portfolio__22__gold-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503211552-5BI7PEMX8V0ETVSL0CT3/kitchen.jpg  (alt: )  [saved as: portfolio__23__gold-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503197037-K1BXKLCJJYOMKO81KAF8/gold+lounge+1.jpg  (alt: )  [saved as: portfolio__24__gold-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503167235-FO2XUCROVPB9YSPJF8IZ/gold+bed+1.jpg  (alt: )  [saved as: portfolio__25__gold-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503167512-F40WRIJHT0T8Z8LL0FSW/gold+bathroom.jpg  (alt: )  [saved as: portfolio__26__gold-close-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503656571-6RFAB6N4M2KZCEEKHIAJ/Padnell+3.jpg  (alt: )  [saved as: portfolio__27__padnell-grange-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503657142-VUFPDU9KHT781CO53AEM/Padnell+2.jpg  (alt: )  [saved as: portfolio__28__padnell-grange-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503899053-TOZ8AM25B1C8UGO5WR3E/f2.jpg  (alt: )  [saved as: portfolio__29__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503911572-S5WVSSLQNDUZ0WV0GEMZ/f4.jpg  (alt: )  [saved as: portfolio__30__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503917032-ME5PMT5DOWBW7UK94X9O/f7.jpg  (alt: )  [saved as: portfolio__31__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503941656-ICE2MMAHNONSEP7ME3F6/f14.jpg  (alt: )  [saved as: portfolio__32__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503939082-6JY6MG0DBXADQQ5Z0YSR/f9.jpg  (alt: )  [saved as: portfolio__33__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1521503923646-54LIYEPZ0PX1K41SFTN7/f8.jpg  (alt: )  [saved as: portfolio__34__west-street-fareham.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893664142-0FL9LA9SP6P2E93777DR/front.jpg  (alt: )  [saved as: portfolio__35__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893690571-9TNN26413HAWU7VP9K04/kitchen.jpg  (alt: )  [saved as: portfolio__36__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893736898-VKNZ1YDZVWJJC5LMXJ9B/lounge+diner.jpg  (alt: )  [saved as: portfolio__37__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893727562-K7CSP120SLZWHELF23QE/lounge+diner+2.jpg  (alt: )  [saved as: portfolio__38__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893609840-ATY2VROEU40I4SD3B1Y0/dining.jpg  (alt: )  [saved as: portfolio__39__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893612262-219LJYJPWR9N8RBUBSKK/bathroom.jpg  (alt: )  [saved as: portfolio__40__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893654999-O2EFZ1HAM1WUWYWXK0ZG/garden+1.jpg  (alt: )  [saved as: portfolio__41__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1527893702634-8IKPPCDTEAHTEHL8J6UH/garden+2.jpg  (alt: )  [saved as: portfolio__42__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069237893-UZDVPDEGU4336J8MXC1Q/IMG_8393.JPG  (alt: )  [saved as: portfolio__43__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069268027-FOPWJFULW06RJT30FH9G/IMG_8402.JPG  (alt: )  [saved as: portfolio__44__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069252659-OEBNJU7VGH5HMGN0U6I5/IMG_8397+%282%29.JPG  (alt: )  [saved as: portfolio__45__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069275264-IIRA6FORD5EWV7V5S4Q8/IMG_8403.JPG  (alt: )  [saved as: portfolio__46__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069297160-DSPDJWJPCJGIE8LS44PN/IMG_8408.JPG  (alt: )  [saved as: portfolio__47__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533069300731-OLXLRB925XFQHZ5M0U1W/IMG_8411+%282%29.JPG  (alt: )  [saved as: portfolio__48__barney-evans-crescent-cowplain.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067191981-ELXN458XFHWHE6OC1UCP/DSCN0124.JPG  (alt: )  [saved as: portfolio__49__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067201050-20U9PXUGVN4ZDSC3LE00/DSCN0122.JPG  (alt: )  [saved as: portfolio__50__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067237658-5RQ4TOIF3SV2COFIG6BJ/DSCN0469.JPG  (alt: )  [saved as: portfolio__51__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067214540-0LYE8CNO3IPPAKV83ALN/DSCN0450.JPG  (alt: )  [saved as: portfolio__52__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067222837-XFDMXD24UX4AOT3E0A20/DSCN0453.JPG  (alt: )  [saved as: portfolio__53__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533067254558-564X2JJW733GUT93YRKF/DSCN0483.JPG  (alt: )  [saved as: portfolio__54__buriton-petersfield.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066948938-1WUBHM6UH9SIBUTQ11XX/DSCN0255.JPG  (alt: )  [saved as: portfolio__55__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066894223-X1395YYHOB4XIJRW5V0L/DSCN0245.JPG  (alt: )  [saved as: portfolio__56__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066899899-J992QHDOWMUB6F0ZXSSY/DSCN0241.JPG  (alt: )  [saved as: portfolio__57__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066921088-12BWWSICCJ46TQA2JUHM/DSCN0247.JPG  (alt: )  [saved as: portfolio__58__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066928344-DBHHOA0P0U9DYD3ERXUF/DSCN0251.JPG  (alt: )  [saved as: portfolio__59__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1533066952862-0XPDFBQGI2RRJ3INGGV1/DSCN0259.JPG  (alt: )  [saved as: portfolio__60__sea-view-road-drayton.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520814273-CN5DQFBQQK1ZM3K6P1KA/IMG_2188+%282%29.JPG  (alt: )  [saved as: portfolio__61__milton-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520810515-1JI8OTLXYMG4K7PUHR7B/IMG_2163+%283%29.JPG  (alt: )  [saved as: portfolio__62__milton-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520811474-XUH98EHSQGSXOJM489LB/IMG_2179+%282%29.JPG  (alt: )  [saved as: portfolio__63__milton-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520813294-H2EJNUJR8XPTVGWVO6KE/IMG_2183+%282%29.JPG  (alt: )  [saved as: portfolio__64__milton-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520774169-YO2C7K959TUBEJ74QFLB/IMG_1969.JPG  (alt: )  [saved as: portfolio__65__hulbert-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520773103-DSRMLZMDX5AGU5FEV0IR/IMG_1991.JPG  (alt: )  [saved as: portfolio__66__hulbert-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520774317-HP7B1XJXO5U0JXSTTFW2/IMG_1993.JPG  (alt: )  [saved as: portfolio__67__hulbert-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520775427-OX5HVCE5S1XFGT7BR075/IMG_1994.JPG  (alt: )  [saved as: portfolio__68__hulbert-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1571520775554-6TSRIC84YZ3PMT7W9300/IMG_1995.JPG  (alt: )  [saved as: portfolio__69__hulbert-road-waterlooville.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117740937-C6S2VDE25VYT5X7X5KO0/IMG_2838+%282%29.JPG  (alt: )  [saved as: portfolio__70__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117737366-JUMW9RRNHQUUZAQIDCQM/IMG_2792+%282%29+-+Copy.JPG  (alt: )  [saved as: portfolio__71__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117736946-TUEXIBLHDMRZGFK21MUG/IMG_2790.JPG  (alt: )  [saved as: portfolio__72__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117734893-1SFSX9XJBJI9MCCJXSE5/IMG_2760+%282%29.JPG  (alt: )  [saved as: portfolio__73__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117734842-9DIGLAHFCAJ84O83WYTG/IMG_2766+%282%29.JPG  (alt: )  [saved as: portfolio__74__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117735677-AVT5DVM3K51X6FXJC8AC/IMG_2775+%282%29.JPG  (alt: )  [saved as: portfolio__75__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117736086-CD1L14AZBSP9DZQE5GAC/IMG_2778+%282%29.JPG  (alt: )  [saved as: portfolio__76__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117736525-ALZ31VW64GFBM7OWKB78/IMG_2786+%282%29.JPG  (alt: )  [saved as: portfolio__77__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117738268-M16Z4FIC0U5J9EIQ0LNT/IMG_2815+%282%29.JPG  (alt: )  [saved as: portfolio__78__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117738452-HAAGSP7NML1KTOJ3KD19/IMG_2820+-+Copy.JPG  (alt: )  [saved as: portfolio__79__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117740935-XFW257YQ7ZQ5AC8BMYDS/IMG_2822+%282%29.JPG  (alt: )  [saved as: portfolio__80__the-curve-lovedean.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117600033-EB1SC2IH6HAP637XE5MG/IMG_2894+%282%29.JPG  (alt: )  [saved as: portfolio__81__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117598459-HE6JCJ1JEQ339JLI035K/IMG_2905+%282%29.JPG  (alt: )  [saved as: portfolio__82__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117605641-66FWPQAKRDLA161N12EL/IMG_2952+%282%29.JPG  (alt: )  [saved as: portfolio__83__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117599854-6Z6C6SEMAUMZE66C0RE8/IMG_2917+%282%29.JPG  (alt: )  [saved as: portfolio__84__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117603244-Q57ONZFM631XI8ROAG69/IMG_2943+%282%29.JPG  (alt: )  [saved as: portfolio__85__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117609609-VNRRXAH5ZCEN56L3V1MU/IMG_2959+%282%29.JPG  (alt: )  [saved as: portfolio__86__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117602043-DOW21NLNVOTSNH7G2ZID/IMG_2919+%282%29.JPG  (alt: )  [saved as: portfolio__87__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117603561-PZBDFMH3DN8NMNAIA5RL/IMG_2921+%282%29.JPG  (alt: )  [saved as: portfolio__88__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1586117607865-HSVZWMLPOQERX4P2NTUF/IMG_2957+%282%29.JPG  (alt: )  [saved as: portfolio__89__lowland-road-denmead.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/feesandservicelevels
+================================================================================
+HTTP: 200
+TITLE: Fees and Service Levels — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Fees and Service Levels — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/feesandservicelevels
+og:type: website
+og:description: OUR SERVICES
+twitter:title: Fees and Service Levels — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/feesandservicelevels
+twitter:card: summary
+twitter:description: OUR SERVICES
+description:   OUR SERVICES
+
+--- HEADINGS ---
+H1: CHOOSE THE LEVEL OF SERVICE WHICH SUITS YOU BEST
+H2: TENANT INTRODUCTION
+H2: RENT COLLECTION
+H2: FULL MANAGEMENT
+H2: ADDITIONAL CHARGES
+H2: HAVE A QUESTION OR PRICING ENQUIRY?
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+OUR SERVICES
+
+CHOOSE THE LEVEL OF SERVICE WHICH SUITS YOU BEST
+
+We offers three levels of service. Our charges, whilst competitive, vary depending on the rental income and type of property. Please use the information below to establish which level of service is most suitable and then contact us to request pricing. 
+
+TENANT INTRODUCTION
+
+Ideal for landlords who have the time for more involvement and who are willing to undertake full responsibility for the ongoing tenancy, including maintenance and compliance.
+
+We advertise the property, accompany viewings, interview the tenants and source references. Once satisfied, we prepare the property inventory, draw up the tenancy agreement and oversee the deposit payment.
+
+Once the tenant has moved in, ongoing responsibility lies with the landlord.
+
+Set up fee: Equivalent of four weeks rent, subject to a minimum fee of £795.00
+
+Please see below additional charges which are applicable on all service levels.
+
+RENT COLLECTION
+
+In addition to the benefits of our tenant introduction service, we monitor the payment of rent and chase the tenant if necessary.
+
+The rent is paid to us and then passed to the landlord, minus a small fee for doing so.
+
+The landlord is responsible for ongoing maintenance and compliance.
+
+8% of rent 
+
+Set up fee: Equivalent of two weeks, subject to a minimum fee of £595.00
+
+Please see below additional charges which are applicable on all service levels.
+
+FULL MANAGEMENT
+
+Our most popular service. All the benefits of our other services, plus we oversee all property maintenance, undertake mid-term inspections, ensure certification is up to date and deal with tenant enquiries.
+
+In addition, at the end of the tenancy we inspect the property and cross reference any damage against the inventory, oversee repairs and decoration (if applicable) and return the deposit (minus repair costs, if necessary).
+
+In the event of a dispute, we work with the Deposit Protection Service to find a resolution.
+
+10% of rent )
+
+Set up fee: Equivalent of two weeks rent, subject to a minimum fee of £595.00
+
+Please see below additional charges which are applicable on all service levels.
+
+ 
+
+ADDITIONAL CHARGES
+
+Inventory schedule of condition: Prices upon application
+
+Renewal fee: £65.00 .
+
+Services of legal notices to terminate tenancy: £125.00.
+
+Checkout report: Prices upon application
+
+Additional copies of documents previously provided: £25.00.
+
+HAVE A QUESTION OR PRICING ENQUIRY?
+
+Drop us a line, we'll get back to you as soon as we can.
+
+Name
+(required)
+Email Address (optional)
+Phone number (optional)
+Message
+(required)
+SUBMIT
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- EXTRACTED / NOTES ---
+The service-comparison table on this page is published as a FLAT IMAGE, not as HTML text
+(image: .../1566385788001-K4U09COR65POQNT16E0I/Services+Table+JPG.jpg, 2500x2500).
+Its contents were read visually from the rendered page and are transcribed below row-by-row.
+Legend: Y = included in that service level, - = not included.
+
+LANDLORD SERVICES               | TENANT INTRO | RENT COLLECTION | FULL MANAGEMENT
+Property valuation              | Y            | Y               | Y
+Advertising of property         | Y            | Y               | Y
+Guided viewings                 | Y            | Y               | Y
+Tenant referencing              | Y            | Y               | Y
+Tenancy agreement               | Y            | Y               | Y
+Deposit placed with DPS         | Y            | Y               | Y
+Oversee tenant move in          | Y            | Y               | Y
+Collect rent                    | -            | Y               | Y
+Chase overdue payments          | -            | Y               | Y
+Pay landlord by BACS            | -            | Y               | Y
+Regular inspections             | -            | -               | Y
+Arrange maintenance             | -            | -               | Y
+Arrange repairs                 | -            | -               | Y
+Ensure compliance               | -            | -               | Y
+Answer tenant enquiries         | -            | -               | Y
+End of tenancy inspection       | -            | -               | Y
+
+HEADLINE PRICING (from the body text above):
+  Tenant Introduction : Set up fee = equivalent of FOUR weeks rent, minimum £795.00. No ongoing % fee stated.
+  Rent Collection     : 8% of rent.  Set up fee = equivalent of TWO weeks, minimum £595.00.
+  Full Management     : 10% of rent. Set up fee = equivalent of TWO weeks rent, minimum £595.00.
+  Additional charges (all service levels):
+    Inventory schedule of condition ................ Prices upon application
+    Renewal fee .................................... £65.00
+    Service of legal notices to terminate tenancy .. £125.00
+    Checkout report ................................ Prices upon application
+    Additional copies of documents previously provided £25.00
+  NOTE: the page does not state VAT treatment for any of the landlord fees above.
+  (VAT is only mentioned on the Holding Deposits page: lost keys £10 per hour inc. VAT,
+   variation of contract £50.00 inc. VAT.)
+
+--- FORM FIELDS ---
+Name (required) | text | text-yui_3_17_2_1_1507739795528_41748-field | required: yes | placeholder: 
+Email Address (optional) | email | email-yui_3_10_1_1_1389902554996_14932-field | required: no | placeholder: 
+Phone number (optional) | text | number-yui_3_17_2_1_1507739795528_44024-field | required: no | placeholder: 
+Message (required) | textarea | textarea-yui_3_10_1_1_1389902554996_15718-field | required: yes | placeholder: 
+ (anti-spam honeypot) | text | message-yui_958d5f27-a5ac-42ab-a79b-7898d2241cc8-field | required: no | placeholder: 
+SUBMIT | button | (form submit) | required: n/a | placeholder:
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/feesandservicelevels#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957765286-4UKSW618VFOJ8ISWA0XQ/banner-2.jpg  (alt: )  [saved as: feesandservicelevels__01__page-banner.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1566385788001-K4U09COR65POQNT16E0I/Services+Table+JPG.jpg  (alt: Services Table JPG.jpg)  [saved as: feesandservicelevels__02__services-table-jpg.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/contactus
+================================================================================
+HTTP: 200
+TITLE: Contact us — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Contact us — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/contactus
+og:type: website
+og:description: contact us
+twitter:title: Contact us — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/contactus
+twitter:card: summary
+twitter:description: contact us
+description:   contact us
+
+--- HEADINGS ---
+H2: CONTACT FORM
+H2: OPENING HOURS
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+CONTACT US
+
+CONTACT FORM
+
+We aim to reply within 24hrs (Monday to Saturday).
+
+Name
+First Name
+(required)
+Last Name
+(required)
+Email Address
+(required)
+Telephone Number
+Subject
+(required)
+Message
+(required)
+How would you like to be contacted?
+By phone
+By email
+By post
+SUBMIT
+OPENING HOURS
+
+Monday to Friday 9am to 6pm
+Saturday 9am to 1pm
+Sunday Closed
+
+02392 484119
+
+enquiries@piedaterreproperty.co.uk
+
+Trafalgar House Business centre, 
+
+233 Southampton Rd, 
+
+Portchester, 
+
+PO6 4PY
+(by appointment)
+
+Keyboard shortcuts
+Map data ©2026 Google
+Terms
+Report a map error
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- EXTRACTED / NOTES ---
+KEY CONTACT DATA (extracted for reference):
+  Trading name .... Pied-à-terre Property
+  Address ......... Trafalgar House Business Centre, 233 Southampton Rd, Portchester, PO6 4PY
+                    (office is BY APPOINTMENT)
+  Telephone ....... 02392 484119
+  Email ........... enquiries@piedaterreproperty.co.uk
+  Response time ... "We aim to reply within 24hrs (Monday to Saturday)."
+  Opening hours ... Monday 9am to 6pm
+                    Tuesday 9am to 6pm
+                    Wednesday 9am to 6pm
+                    Thursday 9am to 6pm
+                    Friday 9am to 6pm
+                    Saturday 9am to 1pm
+                    Sunday Closed
+                    (published as "Monday to Friday 9am to 6pm / Saturday 9am to 1pm / Sunday Closed")
+  Redress scheme .. The Property Ombudsman (tpos.co.uk), membership number D13453
+  CMP scheme ...... Money Shield (government approved Client Money Protection)
+  Deposits held by  The Deposit Protection Scheme (DPS)
+  Map ............. Google Maps embed centred on 50.8727127, -0.9845861 (zoom 12)
+  Social .......... Instagram http://instagram.com/pied_a_terre_property
+                    Facebook  https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+  NOTE: the site footer/meta still describe the business as an "EMSWORTH LETTING AGENT" and the
+  home page body text says "based in Havant", while the postal address given is in Portchester.
+
+--- FORM FIELDS ---
+First Name (required) | text | fname | required: yes | placeholder: 
+Last Name (required) | text | lname | required: yes | placeholder: 
+Email Address (required) | email | email-yui_3_17_2_52_1507730395143_34724-field | required: yes | placeholder: 
+Telephone Number | text | text-yui_3_17_2_1_1508183075370_19750-field | required: no | placeholder: 
+Subject (required) | text | text-yui_3_17_2_52_1507730395143_34725-field | required: yes | placeholder: 
+Message (required) | textarea | textarea-yui_3_17_2_52_1507730395143_34726-field | required: yes | placeholder: 
+How would you like to be contacted? [By phone] | checkbox | checkbox-yui_3_17_2_1_1523213635800_41097-field | required: no | placeholder: 
+How would you like to be contacted? [By email] | checkbox | checkbox-yui_3_17_2_1_1523213635800_41097-field | required: no | placeholder: 
+How would you like to be contacted? [By post] | checkbox | checkbox-yui_3_17_2_1_1523213635800_41097-field | required: no | placeholder: 
+ (anti-spam honeypot) | text | message-yui_d9cccaab-41db-40bc-9658-524e121d0fb6-field | required: no | placeholder: 
+SUBMIT | button | (form submit) | required: n/a | placeholder:
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Open this area in Google Maps (opens a new window)] -> https://maps.google.com/maps
+[Terms] -> https://www.google.com/intl/en_GB/help/terms_maps.html
+[Report a map error] -> https://www.google.com/maps/@50.8727127,-0.9845861,12z/data=!10m1!1e1!12b1
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/contactus#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1508957787439-IQZSQNYZ6XRI31LO6XNT/banner-2.jpg  (alt: )  [saved as: contactus__01__page-banner.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523217777034-9OFVDGRPI8DBDLY4296V/Telephone+Icon.jpg  (alt: Telephone Icon.jpg)  [saved as: contactus__02__telephone-icon.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523217714604-BDUNUMJALTAPZ3VCZJ81/Pied+a+Terre+Email+Icon  (alt: Pied a Terre Email Icon)  [saved as: contactus__03__pied-a-terre-email-icon.jpg]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523218051641-M2DG51GUX2B2L4EN13CW/Location+Icon.jpg  (alt: Location Icon.jpg)  [saved as: contactus__04__location-icon.jpg]
+https://piedaterreproperty.co.uk/universal/images-v6/icons/cover-pages-map-marker-pin-dark-2x.png  (alt: )  [saved as: contactus__05__map-marker-pin-squarespace-asset.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/services
+================================================================================
+HTTP: 404 (Squarespace "page not found" template served)
+TITLE: Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Pied-à-terre Property
+og:type: website
+og:image: http://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png
+twitter:title: Pied-à-terre Property
+twitter:image: http://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png
+twitter:card: summary
+description:
+
+--- HEADINGS ---
+(no content headings - 404 template)
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+We couldn't find the page you were looking for. This is either because:
+
+There is an error in the URL entered into your web browser. Please check the URL and try again.
+The page you are looking for has been moved or deleted.
+
+You can return to our homepage by clicking here, or you can try searching for the content you are seeking by clicking here.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- EXTRACTED / NOTES ---
+BROKEN LINK. /services does not exist, but it is linked FOUR times from
+/obligations ("our 'Full Management' service", twice) and once from
+/portfolio ("please view our services"). The live services page is
+/feesandservicelevels. This should be fixed or redirected.
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/services#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/cookies
+================================================================================
+HTTP: 200
+TITLE: Cookie Policy — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Cookie Policy — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/cookies
+og:type: website
+twitter:title: Cookie Policy — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/cookies
+twitter:card: summary
+description:
+
+--- HEADINGS ---
+H2: PIED-A-TERRE PROPERTY WEBSITE COOKIE POLICY
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+PIED-A-TERRE PROPERTY WEBSITE COOKIE POLICY
+
+What Are Cookies
+
+As is common practice with almost all professional websites, this site uses cookies. Cookies are small files that are downloaded to your computers web browser to improve your online experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.
+
+For more general information on cookies see the Wikipedia article on HTTP Cookies.
+
+How We Use Cookies
+
+We use cookies for a variety of reasons detailed below. Unfortunately, in most cases there are no industry standard options for disabling cookies without the possibility of disabling the functionality and features they add to this or other websites. In most cases, it is recommended that you leave cookies on as they may be used on websites which you visit.
+
+Disabling Cookies
+
+You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.
+
+The Cookies We Set
+
+When you submit data to through a form such as those found on contact pages or comment forms cookies may be set to remember your user details for future correspondence.
+
+In order to provide you with a great experience on this site we provide the functionality to set your preferences for how this site runs when you use it. In order to remember your preferences we need to set cookies so that this information can be called whenever you interact with a page is affected by your preferences.
+
+Third Party Cookies
+
+In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.
+
+This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.
+
+For more information on Google Analytics cookies, see the official Google Analytics page.
+
+Third party analytics are used to track and measure usage of this site so that we can continue to produce engaging content. These cookies may track things such as how long you spend on the site or pages you visit which helps us to understand how we can improve the site for you.
+
+From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience whilst on the site whilst ensuring we understand which optimisations our users appreciate the most.
+
+As we sell products it's important for us to understand statistics about how many of the visitors to our site actually make a purchase and as such this is the kind of data that these cookies will track. This is important to you as it means that we can accurately make business predictions that allow us to monitor our advertising and product costs to ensure the best possible price.
+
+The Google AdSense service we use to serve advertising uses a DoubleClick cookie to serve more relevant ads across the web and limit the number of times that a given ad is shown to you.
+
+For more information on Google AdSense see the official Google AdSense privacy FAQ.
+
+We use adverts to offset the costs of running this site and provide funding for further development. The behavioural advertising cookies used by this site are designed to ensure that we provide you with the most relevant adverts where possible by anonymously tracking your interests and presenting similar things that may be of interest.
+
+We also use social media buttons and/or plugins on this site that allow you to connect with your social network in various ways. For these to work the following social media sites including; Facebook, Instagram, Twitter, will set cookies through our site which may be used to enhance your profile on their site or contribute to the data they hold for various purposes outlined in their respective privacy policies.
+
+More Information
+
+We hope the information above is helpful, however if you would like to know more, please contact us.
+
+ 
+
+ 
+
+ 
+
+ 
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/cookies#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/privacy-policy
+================================================================================
+HTTP: 200
+TITLE: Privacy Policy — Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Privacy Policy — Pied-à-terre Property
+og:url: https://piedaterreproperty.co.uk/privacy-policy
+og:type: website
+twitter:title: Privacy Policy — Pied-à-terre Property
+twitter:url: https://piedaterreproperty.co.uk/privacy-policy
+twitter:card: summary
+description:
+
+--- HEADINGS ---
+H2: PIED-A-TERRE PRIVACY POLICY
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+PIED-A-TERRE PRIVACY POLICY
+
+Pied-à-terre are committed to ensuring that your privacy is protected. We understand that your privacy is important to you and that you care about how your personal data is used and shared. We respect and value the privacy of everyone and will only collect and use personal data in ways that are described here, and in a manner that is consistent with our obligations and your rights under the law.
+
+
+What information Pied-a-terre may collect and how we use it:
+As a business we collect, use, store and transfer different types of personal data depending on who you are. If you are renting, or letting a property through Pied-a-Terre, we collect and use your personal data for us to provide you with our services. We process your information to support and maintain our contractual relationship with you and to comply with legal and regulatory requirements. 
+
+
+The personal data we collect, and use may include:
+Identity Data - name, marital status, title, date of birth, gender, job title, profession, business name; Information to verify your identity, Credit scoring and credit management (where applicable)
+Contact Data - address, email address and telephone numbers
+Financial Data - bank account and payment details, financial information
+Transaction Data (details about payments to and from you and other services you have purchased through us)
+
+
+When Pied-a-terre will collect your information:
+
+When you apply for our services
+If you contact us through Rightmove
+If you email us
+If you subscribe to our service or publications
+If you request marketing to be sent to you
+If you contact us through social media including Instagram and Facebook
+If you walk-in to or telephone our office
+If you enter a competition, promotion, or survey
+If you are giving us feedback
+If you visit our website – Cookies our website automatically collects information from your computer using “cookies” which provides us with limited personal information.  Cookies are small text files that are placed on your computer by websites that you visit; they are widely used to make websites work. For further information visit www.allaboutcookies.org. You can set your browser not to accept cookies and the mentioned website will tell you how to remove cookies from your browser.
+
+Third Party Data Sharing:
+
+Data will only be shared and used within the boundary of the law, we will not sell your personal data to anyone.
+
+We share data with third parties to verify your identity, in line with money laundering or other requirements (this may involve carrying out checks with credit reference databases). We may also share your data with organisations, including regulatory bodies, the police and fraud prevention agencies, to prevent and detect fraud
+
+We may also share your data with third parties where required by law, court order or regulation; and where we are involved in legal proceedings, where we are complying with legal requirements, a court order, or a government authority. We share your information with trusted third party companies who's services are essential to our business, these include referencing companies and rent guarantee services. 
+
+Data Security
+Once we have received your personal data we will use reasonable and necessary procedures and security features to try and prevent unauthorised access. If we become aware of a data breach, we will notify the Information Commissioner’s Office. If we believe that the data breach is serious, we may notify you in accordance with our legal requirements. Our computer software, Rent Man, stores all personal data in cloud storage using their secure servers. Some personal data is stored on paper copies within a locked filing cabinet, any third parties storing your data will be also be working in line with all current data protection and confidentiality policies.
+
+
+Requests for data held on you and/or for data to be deleted
+If you would like to know what personal information Pied-a-Terre holds about you, you may make a request; we will need to see proof of identity before processing any such request. If requested, Pied-a-Terre will use all reasonable efforts to supply, correct or delete information about you on file; You have the right to withdraw your consent to us using your personal data at any time, and to request that we delete it. All subject access requests should be made in writing. We will usually respond to a request from you to exercise your rights within 1 month of receipt, but it might take longer if your request is particularly complex or if you have made several requests.
+
+
+Data Retention
+We hold on to your personal data whilst you use our services (or whilst we provide services connected to you). We will keep your information only for as long as it is relevant and useful for the purpose for which it was originally collected and for at least six years thereafter, for legal, regulatory, and accounting purposes.
+
+
+Complaints and Feedback
+If you have any cause for complaint about our use of your personal data, please contact us and we will do our best to solve the problem for you. If we are unable to help, you also have the right to lodge a complaint with the UK’s supervisory authority, the Information Commissioner’s Office - www.ico.org.uk.
+
+
+It is important that the personal data we hold about you is accurate and current. Please keep us informed if your personal data changes during your relationship with us. You can ask us to rectify or update your personal information at any time.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/privacy-policy#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+PAGE: https://piedaterreproperty.co.uk/deposits
+================================================================================
+HTTP: 404 (Squarespace "page not found" template served)
+TITLE: Pied-à-terre Property
+
+--- META ---
+X-UA-Compatible: IE=edge,chrome=1
+viewport: width=device-width, initial-scale=1
+charset: utf-8
+Accept-CH: Sec-CH-UA-Platform-Version, Sec-CH-UA-Model
+og:site_name: Pied-à-terre Property
+og:title: Pied-à-terre Property
+og:type: website
+og:image: http://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png
+twitter:title: Pied-à-terre Property
+twitter:image: http://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png
+twitter:card: summary
+description:
+
+--- HEADINGS ---
+(no content headings - 404 template)
+H2: EMSWORTH LETTING AGENT
+H3: PIED-À-TERRE PROPERTY
+H3: TRAFALGAR HOUSE BUSINESS CENTRE,
+H3: 233 SOUTHAMPTON RD, PORTCHESTER, PO6 4PY
+H3: MEMBERS OF TPOS.CO.UK NUMBER D13453
+H3: ©2018 PIED-À-TERRE ALL RIGHTS RESERVED
+H3: PRIVACY POLICY
+H3: COOKIE POLICY
+
+--- BODY TEXT (VERBATIM) ---
+We couldn't find the page you were looking for. This is either because:
+
+There is an error in the URL entered into your web browser. Please check the URL and try again.
+The page you are looking for has been moved or deleted.
+
+You can return to our homepage by clicking here, or you can try searching for the content you are seeking by clicking here.
+
+EMSWORTH LETTING AGENT
+ENQUIRIES@PIEDATERREPROPERTY.CO.UK
+PIED-À-TERRE PROPERTY
+TRAFALGAR HOUSE BUSINESS CENTRE,
+233 SOUTHAMPTON RD, PORTCHESTER,
+PO6 4PY
+
+02392 484119
+
+MEMBERS OF TPOS.CO.UK
+NUMBER D13453
+©2018 PIED-À-TERRE
+ALL RIGHTS RESERVED
+PRIVACY POLICY
+COOKIE POLICY
+
+--- EXTRACTED / NOTES ---
+BROKEN LINK. /deposits does not exist. It is linked from /the-process
+STEP 4 - INITIAL CHECKS AND HOLDING DEPOSIT: "Please click here for information
+relating to holding deposits." The live page is /holdingdeposits.
+This should be fixed or redirected.
+
+--- LINKS ---
+[] -> https://piedaterreproperty.co.uk/
+[] -> https://piedaterreproperty.co.uk/the-process
+[] -> https://piedaterreproperty.co.uk/registerwithus
+[] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[] -> https://piedaterreproperty.co.uk/holdingdeposits
+[] -> https://piedaterreproperty.co.uk/complaints-procedure
+[] -> https://piedaterreproperty.co.uk/whychooseus
+[] -> https://piedaterreproperty.co.uk/obligations
+[] -> https://piedaterreproperty.co.uk/portfolio
+[] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[] -> https://piedaterreproperty.co.uk/contactus
+[Pied-à-terre Property] -> https://piedaterreproperty.co.uk/
+[Home] -> https://piedaterreproperty.co.uk/
+[The Process] -> https://piedaterreproperty.co.uk/the-process
+[Register with us] -> https://piedaterreproperty.co.uk/registerwithus
+[Request Maintenance] -> https://piedaterreproperty.co.uk/report-maintenance-issue
+[Holding Deposits] -> https://piedaterreproperty.co.uk/holdingdeposits
+[Complaints Procedure] -> https://piedaterreproperty.co.uk/complaints-procedure
+[Why choose us] -> https://piedaterreproperty.co.uk/whychooseus
+[Landlord Obligations] -> https://piedaterreproperty.co.uk/obligations
+[Portfolio] -> https://piedaterreproperty.co.uk/portfolio
+[Fees and Service Levels] -> https://piedaterreproperty.co.uk/feesandservicelevels
+[Contact us] -> https://piedaterreproperty.co.uk/contactus
+[Pied a Terre Property] -> http://instagram.com/pied_a_terre_property
+[John Arthur on Facebook] -> https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+[Back to Top] -> https://piedaterreproperty.co.uk/deposits#header
+[ENQUIRIES@PIEDATERREPROPERTY.CO.UK] -> mailto:enquiries@piedaterreproperty.co.uk
+[tpos-logo small for web.png] -> http://www.tpos.co.uk/
+[PRIVACY POLICY] -> https://piedaterreproperty.co.uk/privacy-policy
+[COOKIE POLICY] -> https://piedaterreproperty.co.uk/cookies
+
+--- IMAGES ---
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1520546789936-T9EIE4D8TT17S9KL6F42/Pied+a+Terre+Text+Only+PNG.png  (alt: Pied-à-terre Property)  [saved as: global__logo.png]
+https://images.squarespace-cdn.com/content/v1/59de1972bebafb7a8ade213f/1523611320237-ZCSGQK8A79EWAVF7MEOY/tpos-logo+small+for+web.png  (alt: tpos-logo small for web.png)  [saved as: global__tpos-logo.png]
+
+================================================================================
+SITE-WIDE SUMMARY
+================================================================================
+Pages captured: 16
+  14 live pages (HTTP 200) plus 2 dead URLs (404) discovered by following in-page links.
+  Every URL on the requested list has a block above. /home is an exact alias of /.
+
+Images catalogued: 143 unique assets (de-duplicated by Squarespace media id).
+  Every row in image_manifest.csv carries the full-resolution original URL.
+  This capture session had no outbound internet of its own - all page content came
+  through the browser - so the binaries are fetched by download_assets.ps1, which
+  writes them into site_images\ under exactly the filenames in the manifest, fills in
+  the bytes column, and saves each page HTML into site_html\.
+  Breakdown by page:
+    https://piedaterreproperty.co.uk/portfolio                  89
+    https://piedaterreproperty.co.uk/                           35
+    https://piedaterreproperty.co.uk/whychooseus                 7
+    https://piedaterreproperty.co.uk/contactus                   5
+    https://piedaterreproperty.co.uk/the-process                 2
+    https://piedaterreproperty.co.uk/feesandservicelevels        2
+    https://piedaterreproperty.co.uk/registerwithus              1
+    https://piedaterreproperty.co.uk/report-maintenance-issue    1
+    https://piedaterreproperty.co.uk/obligations                 1
+
+  Brand / accreditation assets are named global__* and are saved once:
+    global__logo.png ................................ wordmark logo, site header
+    global__pied-a-terre-crest-logo.png ............. crest logo, home page
+    global__british-property-awards-2018-2019.jpg ... British Property Awards 2018-2019 badge
+    global__property-ombudsman-logo.jpg ............. The Property Ombudsman
+    global__money-shield-logo.jpg ................... Money Shield (CMP scheme)
+    global__tpos-logo.png ........................... TPO badge in the footer
+    global__rightmove-logo.png ...................... Rightmove, on /the-process
+  There is NO DPS (Deposit Protection Scheme) logo image anywhere on the site - DPS is
+  referenced in body text only, on /the-process and /feesandservicelevels.
+
+Portfolio image mapping: all 88 gallery images on /portfolio are attributed to the
+  correct property in the context column. This needed care - each portfolio row places
+  the gallery to the LEFT of its heading, so a naive "nearest preceding heading" read
+  attributes every gallery to the previous property. The mapping here was derived from
+  the Squarespace row/column structure and spot-checked visually against the rendered
+  page. Counts per property:
+    BARNEY EVANS CRESCENT, COWPLAIN          14 images
+    BEVAN ROAD, LOVEDEAN                     11 images
+    THE CURVE, LOVEDEAN                      11 images
+    LOWLAND ROAD, DENMEAD                     9 images
+    MONARCH CLOSE, WATERLOOVILLE              7 images
+    WEST STREET, FAREHAM                      6 images
+    BURITON, PETERSFIELD                      6 images
+    SEA VIEW ROAD, DRAYTON                    6 images
+    GOLD CLOSE, WATERLOOVILLE                 5 images
+    HULBERT ROAD, WATERLOOVILLE               5 images
+    MILTON ROAD, WATERLOOVILLE                4 images
+    WALLIS ROAD, WATERLOOVILLE                2 images
+    PADNELL GRANGE, COWPLAIN                  2 images
+  FERRY ROAD, EASTNEY is the one portfolio entry with no gallery attached.
+
+Contact details found:
+  Phone   : 02392 484119
+  Email   : enquiries@piedaterreproperty.co.uk
+  Address : Trafalgar House Business Centre, 233 Southampton Rd, Portchester, PO6 4PY
+            (office by appointment)
+  Hours   : Mon-Fri 9am-6pm; Sat 9am-1pm; Sun closed
+  Redress : The Property Ombudsman, member number D13453
+  CMP     : Money Shield
+  Map     : Google Maps embed centred on 50.8727127, -0.9845861
+
+Social links:
+  Instagram : http://instagram.com/pied_a_terre_property
+  Facebook  : https://www.facebook.com/Pied-%C3%A0-Terre-Property-208212646451645/
+  Rightmove : http://www.rightmove.co.uk/estate-agents/agent/Pied-A-Terre-Property/Emsworth-193895.html
+
+Pages that failed or were skipped: NONE of the requested URLs failed.
+  Two dead links were found while crawling and are recorded as their own blocks above:
+    /services  404 - linked 5x (4x from /obligations, 1x from /portfolio).
+               The real page is /feesandservicelevels.
+    /deposits  404 - linked 1x from /the-process step 4.
+               The real page is /holdingdeposits.
+
+Things worth knowing before a rebuild:
+  1. The fees comparison table on /feesandservicelevels is a FLAT 2500x2500 JPEG, not
+     HTML. Its 16 rows x 3 columns were read visually and transcribed into that page
+     block above. Rebuild it as a real table - as it stands it is invisible to search
+     engines and to screen readers.
+  2. The <title> of /holdingdeposits reads "Tennacy Deposits" - misspelling of Tenancy,
+     and that is the string search engines index.
+  3. The business describes itself inconsistently: meta and footer say "Emsworth letting
+     agent", the home page body says "based in Havant", the postal address is Portchester,
+     and the Rightmove profile is filed under Emsworth.
+  4. /complaints-procedure is set to NOINDEX and is absent from sitemap.xml, even though
+     TPO membership requires the complaints procedure to be publicly available.
+  5. Typos preserved verbatim in the dump: "is an in independent letting agent" (home),
+     "necesarry" x3 (maintenance form), "We offers three levels of service" and a stray
+     "10% of rent )" (fees), "Immaculate  semi detached" (portfolio), "In additional, you
+     must also" (the process), "withheld if  person" and "shall be liable  the landlord’s
+     costs" (holding deposits).
+  6. The Rightmove link on /the-process has a malformed href - two URLs concatenated:
+     ...Emsworth-193895.html#lamhttp://www.rightmove.co.uk
+  7. Copyright line still reads 2018.
+  8. The fees page states no VAT treatment for any landlord fee. VAT appears only on
+     /holdingdeposits (lost keys £10/hr inc. VAT; variation of contract £50.00 inc. VAT).
+  9. Every form carries a hidden anti-spam honeypot field, marked as such in the FORM
+     FIELDS sections. No form was filled or submitted during this capture.
+================================================================================

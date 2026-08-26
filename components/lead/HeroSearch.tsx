@@ -10,7 +10,8 @@
  * Routes to /properties with typed query params; that page is built in prompt
  * 05 and reads these params.
  */
-import { useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useRouter } from 'next/navigation'
 import { PathToggle, type Path } from '@/components/marketing/PathToggle'
 import { SelectField } from '@/components/primitives/Field'
@@ -93,6 +94,47 @@ export function HeroSearch() {
   const idBase = useId()
   const [path, setPath] = useState<Path>('sales')
   const [sheetOpen, setSheetOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
+  const panelRef = useRef<HTMLDivElement | null>(null)
+  const closeRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    if (!sheetOpen) return
+    const returnTarget = triggerRef.current
+    document.body.style.overflow = 'hidden'
+    closeRef.current?.focus()
+
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        setSheetOpen(false)
+        return
+      }
+      if (e.key !== 'Tab') return
+      const panel = panelRef.current
+      if (!panel) return
+      const focusable = panel.querySelectorAll<HTMLElement>(
+        'input, select, button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (!first || !last) return
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+      returnTarget?.focus()
+    }
+  }, [sheetOpen])
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -103,7 +145,7 @@ export function HeroSearch() {
     const location = String(data.get('location') ?? '').trim()
     const maxPrice = String(data.get('maxPrice') ?? '')
     const minBeds = String(data.get('minBeds') ?? '')
-    if (location) params.set('location', location)
+    if (location) params.set('town', location)
     if (maxPrice) params.set('maxPrice', maxPrice)
     if (minBeds) params.set('minBeds', minBeds)
     track('search_performed', { path, location, maxPrice, minBeds })
@@ -131,6 +173,7 @@ export function HeroSearch() {
 
       {/* Mobile: single tap target opening a full-screen sheet */}
       <button
+        ref={triggerRef}
         type="button"
         className={cn('btn w-full md:hidden', path === 'sales' ? 'btn-sales' : 'btn-lettings')}
         onClick={() => setSheetOpen(true)}
@@ -141,29 +184,34 @@ export function HeroSearch() {
         Search {path === 'sales' ? 'homes for sale' : 'homes to rent'}
       </button>
 
-      {sheetOpen ? (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Search properties"
-          className="fixed inset-0 flex flex-col gap-6 overflow-y-auto bg-ground p-6 md:hidden"
-          style={{ zIndex: 'var(--z-menu)' }}
-        >
-          <div className="flex items-center justify-between">
-            <p className="eyebrow">Search</p>
-            <button
-              type="button"
-              className="btn btn-icon"
-              aria-label="Close search"
-              onClick={() => setSheetOpen(false)}
+      {sheetOpen && typeof document !== 'undefined'
+        ? createPortal(
+            <div
+              ref={panelRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Search properties"
+              className="fixed inset-0 flex flex-col gap-6 overflow-y-auto bg-ground p-6 md:hidden"
+              style={{ zIndex: 'var(--z-modal)' }}
             >
-              <Icon name="close" />
-            </button>
-          </div>
-          <PathToggle value={path} onChange={setPath} label="Choose sales or lettings" />
-          <Fields path={path} onSubmit={submit} idBase={`${idBase}-m`} />
-        </div>
-      ) : null}
+              <div className="flex items-center justify-between">
+                <p className="eyebrow">Search</p>
+                <button
+                  ref={closeRef}
+                  type="button"
+                  className="btn btn-icon"
+                  aria-label="Close search"
+                  onClick={() => setSheetOpen(false)}
+                >
+                  <Icon name="close" />
+                </button>
+              </div>
+              <PathToggle value={path} onChange={setPath} label="Choose sales or lettings" />
+              <Fields path={path} onSubmit={submit} idBase={`${idBase}-m`} />
+            </div>,
+            document.body
+          )
+        : null}
     </div>
   )
 }

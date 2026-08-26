@@ -52,7 +52,7 @@ export function EpcBar({ epc }: { epc: Epc }) {
               {isCurrent ? (
                 <span className="inline-flex items-center gap-2 whitespace-nowrap text-small text-ink">
                   <span className="font-medium">This home</span>
-                  <span className="tabular rounded-xs bg-ink px-2 py-0.5 text-on-dark">
+                  <span className="tabular rounded-xs bg-night px-2 py-0.5 text-on-dark">
                     {epc.score}
                   </span>
                 </span>

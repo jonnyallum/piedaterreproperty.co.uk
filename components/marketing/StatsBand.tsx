@@ -5,16 +5,35 @@
  * to someone handing over a large asset. Numbers come from lib/site so nothing
  * dates or is invented.
  */
+import Image from 'next/image'
 import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { CountUp } from './CountUp'
 import { SITE, yearsTrading } from '@/lib/site'
 
 const CREDENTIALS = [
-  { label: 'The Property Ombudsman', detail: `Redress, member ${SITE.accreditations.tpoReference}` },
-  { label: 'Money Shield', detail: 'Client money protection' },
+  {
+    label: 'The Property Ombudsman',
+    detail: `Redress, member ${SITE.accreditations.tpoReference}`,
+    image: '/images/archive/global__property-ombudsman-logo.jpg',
+    width: 3095,
+    height: 795,
+  },
+  {
+    label: 'Money Shield',
+    detail: 'Client money protection',
+    image: '/images/archive/global__money-shield-logo.jpg',
+    width: 1656,
+    height: 708,
+  },
   { label: 'Deposit Protection Scheme', detail: 'Tenant deposits held safely' },
-  { label: 'Lettings Award', detail: SITE.accreditations.award },
+  {
+    label: 'Lettings Award',
+    detail: SITE.accreditations.award,
+    image: '/images/archive/global__british-property-awards-2018-2019.jpg',
+    width: 175,
+    height: 450,
+  },
 ]
 
 export function StatsBand() {
@@ -54,11 +73,25 @@ export function StatsBand() {
           These are the safeguards a serious firm carries as standard.
         </p>
 
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CREDENTIALS.map((c) => (
-            <li key={c.label} className="border-l-2 border-brass pl-4">
-              <p className="text-body font-medium text-on-dark">{c.label}</p>
-              <p className="text-small text-on-dark/75">{c.detail}</p>
+            <li key={c.label} className="flex min-h-36 flex-col rounded-md border border-brass/40 bg-ground p-4 text-ink">
+              <div className="flex h-14 items-center">
+                {c.image ? (
+                  <Image
+                    src={c.image}
+                    alt=""
+                    width={c.width}
+                    height={c.height}
+                    sizes="12rem"
+                    className="max-h-12 w-auto max-w-44 object-contain"
+                  />
+                ) : (
+                  <span className="font-display text-h3 text-brass" aria-hidden="true">DPS</span>
+                )}
+              </div>
+              <p className="mt-auto pt-4 text-body font-medium text-ink">{c.label}</p>
+              <p className="text-small text-ink-soft">{c.detail}</p>
             </li>
           ))}
         </ul>

@@ -46,7 +46,7 @@ type ButtonAsLink = CommonProps & {
 type ButtonProps = ButtonAsButton | ButtonAsLink
 
 export function Button(props: ButtonProps) {
-  const { variant = 'sales', children, className, loading = false } = props
+  const { variant = 'sales', children, className } = props
   const classes = cn(VARIANT_CLASS[variant], className)
 
   if ('href' in props && props.href !== undefined) {
@@ -71,16 +71,24 @@ export function Button(props: ButtonProps) {
     )
   }
 
-  const { disabled, type = 'button', ...rest } = props as ButtonAsButton
+  const {
+    disabled,
+    type = 'button',
+    variant: nativeVariant = 'sales',
+    className: nativeClassName,
+    loading: nativeLoading = false,
+    children: nativeChildren,
+    ...rest
+  } = props as ButtonAsButton
   return (
     <button
       type={type}
-      className={classes}
-      disabled={disabled || loading}
-      aria-busy={loading || undefined}
+      className={cn(VARIANT_CLASS[nativeVariant], nativeClassName)}
+      disabled={disabled || nativeLoading}
+      aria-busy={nativeLoading || undefined}
       {...rest}
     >
-      {children}
+      {nativeChildren}
     </button>
   )
 }

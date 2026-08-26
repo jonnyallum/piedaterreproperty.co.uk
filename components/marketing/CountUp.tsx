@@ -72,9 +72,16 @@ export function CountUp({ to, prefix, suffix, durationMs = 1400, className }: Co
 
   return (
     <span ref={ref} className={cn('tabular', className)}>
-      {prefix}
-      {value.toLocaleString('en-GB')}
-      {suffix}
+      <span aria-hidden="true">
+        {prefix}
+        {value.toLocaleString('en-GB')}
+        {suffix}
+      </span>
+      <span className="sr-only">
+        {prefix}
+        {to.toLocaleString('en-GB')}
+        {suffix}
+      </span>
     </span>
   )
 }

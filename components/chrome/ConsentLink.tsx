@@ -9,7 +9,11 @@ import { openConsentPreferences } from '@/components/chrome/CookieBanner'
 
 export function ConsentLink() {
   return (
-    <button type="button" onClick={openConsentPreferences} className="hover:text-on-dark">
+    <button
+      type="button"
+      onClick={openConsentPreferences}
+      className="inline-flex min-h-11 items-center hover:text-on-dark"
+    >
       Cookie preferences
     </button>
   )

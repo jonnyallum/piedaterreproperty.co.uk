@@ -53,7 +53,7 @@ export default function LettingsFeesPage() {
           <table className="w-full min-w-[44rem] border-collapse text-left align-top">
             <caption className="sr-only">Lettings service levels and what each includes</caption>
             <thead>
-              <tr className="bg-ink text-on-dark">
+              <tr className="bg-night text-on-dark">
                 <th scope="col" className="px-5 py-4 font-medium">
                   Included
                 </th>
@@ -98,7 +98,7 @@ export default function LettingsFeesPage() {
                   </tr>
                 )
               })}
-              <tr className="bg-ink text-on-dark">
+              <tr className="bg-night text-on-dark">
                 <th scope="row" className="px-5 py-4 text-left font-medium">
                   Fee
                 </th>

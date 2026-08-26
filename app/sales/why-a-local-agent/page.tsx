@@ -101,7 +101,7 @@ export default function WhyLocalAgentPage() {
                 Comparison of online-only agents, national chains and Pied-à-Terre Property
               </caption>
               <thead>
-                <tr className="bg-ink text-on-dark">
+                <tr className="bg-night text-on-dark">
                   <th scope="col" className="px-5 py-4 font-medium">
                     What matters
                   </th>

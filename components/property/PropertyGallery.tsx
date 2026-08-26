@@ -117,7 +117,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
           blurDataURL={cover.blurDataURL}
         />
         <span
-          className="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-xs bg-ink/80 px-2.5 py-1.5 text-small text-on-dark"
+          className="pointer-events-none absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-xs bg-night/80 px-2.5 py-1.5 text-small text-on-dark"
           style={{ zIndex: 'var(--z-content)' }}
         >
           <Icon name="expand" className="h-4 w-4" />
@@ -175,7 +175,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
             aria-label="Close photo viewer"
             onClick={close}
             tabIndex={-1}
-            className="absolute inset-0 cursor-zoom-out bg-ink/95"
+            className="absolute inset-0 cursor-zoom-out bg-night/95"
           />
 
           <div className="pointer-events-none absolute inset-0 flex flex-col">

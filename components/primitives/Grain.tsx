@@ -6,6 +6,7 @@
  *
  * Server component: it renders a static SVG with no interactivity.
  */
+import { useId } from 'react'
 import { cn } from '@/lib/cn'
 
 interface GrainProps {
@@ -18,6 +19,8 @@ interface GrainProps {
 
 export function Grain({ fixed = true, photo = false, className }: GrainProps) {
   const frequency = photo ? 0.62 : 0.82
+  const instanceId = useId().replaceAll(':', '')
+  const filterId = `pt-grain-${photo ? 'photo' : 'fine'}-${instanceId}`
   return (
     <div
       aria-hidden="true"
@@ -32,7 +35,7 @@ export function Grain({ fixed = true, photo = false, className }: GrainProps) {
       }}
     >
       <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-        <filter id={photo ? 'pt-grain-photo' : 'pt-grain'}>
+        <filter id={filterId}>
           <feTurbulence
             type="fractalNoise"
             baseFrequency={frequency}
@@ -44,7 +47,7 @@ export function Grain({ fixed = true, photo = false, className }: GrainProps) {
         <rect
           width="100%"
           height="100%"
-          filter={`url(#${photo ? 'pt-grain-photo' : 'pt-grain'})`}
+          filter={`url(#${filterId})`}
         />
       </svg>
     </div>

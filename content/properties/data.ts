@@ -20,6 +20,13 @@
 
 const NOW = '2026-08-20'
 
+const archiveImage = (filename: string, alt: string, width: number, height: number) => ({
+  src: `/images/archive/${filename}`,
+  alt,
+  width,
+  height,
+})
+
 export const rawProperties = [
   // ---- Live listings from the old home page ----------------------------
   {
@@ -42,7 +49,14 @@ export const rawProperties = [
     archivedDescription:
       'Semi-detached property situated in a quiet, requested Lovedean cul-de-sac. South facing rear garden. Two ground floor bedrooms plus a first floor master bedroom with en-suite shower room and fitted wardrobe cupboards.',
     features: ['South-facing garden', 'En-suite to main bedroom', 'Fitted wardrobes', 'Cul-de-sac position'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__70__the-curve-lovedean.jpg',
+        'Front exterior of the three-bedroom chalet at The Curve, Lovedean',
+        1731,
+        1154
+      ),
+    ],
     featured: true,
     furnished: 'unfurnished',
     publishedAt: NOW,
@@ -68,7 +82,14 @@ export const rawProperties = [
     archivedDescription:
       'Two bedroom house situated in a quiet cul-de-sac location in Denmead. Lounge with under stairs storage cupboard and doors that leads to the fitted kitchen with a dining area and access to the low maintenance rear garden. Two allocated parking bays.',
     features: ['Two allocated parking bays', 'Low-maintenance garden', 'Fitted kitchen with dining area', 'Cul-de-sac position'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__81__lowland-road-denmead.jpg',
+        'Front exterior of the two-bedroom home on Lowland Road, Denmead',
+        1732,
+        1154
+      ),
+    ],
     featured: false,
     furnished: 'unfurnished',
     publishedAt: NOW,
@@ -92,7 +113,14 @@ export const rawProperties = [
       'Available on a nightly basis, suited to visitors, contractors and families needing short-term space.',
     ],
     features: ['Central Havant', 'Sleeps a family', 'Short-term and nightly lets', 'Close to the station'],
-    images: [],
+    images: [
+      archiveImage(
+        'index__20__market-parade-kitchen-pic-1.jpg',
+        'Bright fitted kitchen at the Market Parade holiday rental in Havant',
+        750,
+        490
+      ),
+    ],
     featured: true,
     publishedAt: NOW,
     updatedAt: NOW,
@@ -117,7 +145,14 @@ export const rawProperties = [
     archivedDescription:
       "Charming double bay window house in one of Waterlooville's best regarded roads. Driveway, garage and good size rear garden.",
     features: ['Driveway', 'Garage', 'Good-sized rear garden'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__02__wallis-road-waterlooville.jpg',
+        'Front exterior of the double bay-fronted home on Wallis Road, Waterlooville',
+        2500,
+        1875
+      ),
+    ],
     featured: false,
     publishedAt: '2024-01-01',
     updatedAt: NOW,
@@ -142,7 +177,14 @@ export const rawProperties = [
     archivedDescription:
       'Immaculate semi detached house with garage. Accommodation includes spacious lounge with doors into the garden, refitted kitchen, three bedrooms and bathroom. Renewed central heating system, redecorated and new carpets throughout.',
     features: ['Garage', 'Refitted kitchen', 'Renewed central heating', 'Garden access from the lounge'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__04__bevan-road-lovedean.jpg',
+        'Front exterior of the three-bedroom home on Bevan Road, Lovedean',
+        1732,
+        1154
+      ),
+    ],
     featured: false,
     publishedAt: '2023-06-01',
     updatedAt: NOW,
@@ -167,7 +209,14 @@ export const rawProperties = [
     archivedDescription:
       'Lovely three bedroom link detached house situated in the popular Tempest Avenue area. The landlord has kept this property in very good order including a modern kitchen and neutral decor throughout. We have managed this property for a number of years.',
     features: ['Modern kitchen', 'Neutral decoration', 'Popular Tempest Avenue area'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__15__monarch-close-waterlooville.jpg',
+        'Front exterior of the three-bedroom home on Monarch Close, Waterlooville',
+        2500,
+        1648
+      ),
+    ],
     featured: false,
     publishedAt: '2023-03-01',
     updatedAt: NOW,
@@ -192,7 +241,14 @@ export const rawProperties = [
     archivedDescription:
       'Modern and spacious two bedroom coach house. This property benefits from a garage, allocated parking, en-suite and balcony. The landlord is a returning client and we have successfully let this property on two occasions.',
     features: ['Garage', 'Allocated parking', 'En-suite', 'Balcony'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__22__gold-close-waterlooville.jpg',
+        'Front exterior of the two-bedroom coach house on Gold Close, Waterlooville',
+        2500,
+        1674
+      ),
+    ],
     featured: false,
     publishedAt: '2023-02-01',
     updatedAt: NOW,
@@ -215,7 +271,14 @@ export const rawProperties = [
     archivedDescription:
       'Padnell Grange is an impressive residence with an imposing facade. Set within approximately 7 acres of maintained grounds and adjoining the local golf course.',
     features: ['Approximately seven acres of grounds', 'Adjoining the golf course', 'Substantial detached residence'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__27__padnell-grange-cowplain.jpg',
+        'Exterior of Padnell Grange and its established grounds in Cowplain',
+        1280,
+        960
+      ),
+    ],
     featured: false,
     publishedAt: '2022-09-01',
     updatedAt: NOW,
@@ -239,7 +302,14 @@ export const rawProperties = [
     archivedDescription:
       'Surprisingly spacious three bedroom flat which has accommodation split over two levels. Located in the centre of Fareham and benefiting from off road parking.',
     features: ['Off-road parking', 'Accommodation over two levels', 'Central Fareham'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__29__west-street-fareham.jpg',
+        'Interior of the spacious split-level flat on West Street, Fareham',
+        2500,
+        1670
+      ),
+    ],
     featured: false,
     publishedAt: '2022-07-01',
     updatedAt: NOW,
@@ -263,7 +333,14 @@ export const rawProperties = [
     archivedDescription:
       'Two bedroom terraced house with lounge/diner, French doors, fitted kitchen, double bedrooms with fitted wardrobes, bathroom. Immaculate throughout.',
     features: ['French doors', 'Fitted wardrobes to both bedrooms', 'Fitted kitchen'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__35__barney-evans-crescent-cowplain.jpg',
+        'Front exterior of the home on Barney Evans Crescent, Cowplain',
+        2500,
+        1670
+      ),
+    ],
     featured: false,
     publishedAt: '2022-05-01',
     updatedAt: NOW,
@@ -313,7 +390,14 @@ export const rawProperties = [
     archivedDescription:
       'Three bedroom detached bungalow which features an impressive vaulted roof kitchen/dining room with French doors leading to a mature rear garden. Situated in the beautiful rural village of Buriton from which you can explore the surrounding countryside and Queen Elizabeth Country Park.',
     features: ['Vaulted kitchen and dining room', 'Mature rear garden', 'Village setting', 'Near Queen Elizabeth Country Park'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__49__buriton-petersfield.jpg',
+        'Exterior of the detached bungalow in the village of Buriton',
+        2500,
+        1875
+      ),
+    ],
     featured: false,
     publishedAt: '2022-03-01',
     updatedAt: NOW,
@@ -337,7 +421,14 @@ export const rawProperties = [
     archivedDescription:
       'Spacious three bedroom detached bungalow occupying a corner plot on the slopes of Portsdown Hill. This property benefits from garden to all sides, plus the added benefits of a conservatory and garage.',
     features: ['Corner plot', 'Garden to all sides', 'Conservatory', 'Garage'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__55__sea-view-road-drayton.jpg',
+        'Front exterior of the detached bungalow on Sea View Road, Drayton',
+        2500,
+        1875
+      ),
+    ],
     featured: false,
     publishedAt: '2022-02-01',
     updatedAt: NOW,
@@ -361,7 +452,14 @@ export const rawProperties = [
     archivedDescription:
       "Spacious two bedroom top floor flat located on Milton Road. This property benefits from a balcony and it's own front door. Outside is a large car park which generally offers ample parking.",
     features: ['Balcony', 'Own front door', 'Ample parking'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__61__milton-road-waterlooville.jpg',
+        'Exterior of the top-floor flat building on Milton Road, Waterlooville',
+        1732,
+        1154
+      ),
+    ],
     featured: false,
     publishedAt: '2022-01-01',
     updatedAt: NOW,
@@ -386,7 +484,14 @@ export const rawProperties = [
     archivedDescription:
       'Well presented one bedroom first floor retirement flat. Facilities on site include residents lounge, laundry and drying areas, communal garden and house manager. Please note that applicants must be aged 60 years or older.',
     features: ['Residents lounge', 'House manager', 'Communal garden', 'Age 60 and over'],
-    images: [],
+    images: [
+      archiveImage(
+        'portfolio__65__hulbert-road-waterlooville.jpg',
+        'Exterior of the retirement development on Hulbert Road, Waterlooville',
+        1732,
+        1154
+      ),
+    ],
     featured: false,
     publishedAt: '2021-11-01',
     updatedAt: NOW,

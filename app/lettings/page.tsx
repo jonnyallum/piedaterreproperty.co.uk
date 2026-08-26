@@ -110,7 +110,7 @@ export default function LettingsHubPage() {
       </section>
 
       {/* Management difference */}
-      <section className="bg-ink text-on-dark">
+      <section className="bg-night text-on-dark">
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
             <div>

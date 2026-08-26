@@ -46,7 +46,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" suppressHydrationWarning>
+    <html lang="en-GB" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={fontVariables}>
         {/* Consent Mode v2 defaults: denied for every signal until consent. This
             raw inline script parses before any tag, guaranteeing order. */}
@@ -67,6 +67,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Organisation and WebSite structured data, site-wide. */}
         <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
         <SkipLink />
+        {/* A fixed coastal-atlas field gives every route one shared visual
+            world. It is decorative, non-interactive and deliberately faint. */}
+        <div className="site-atmosphere" aria-hidden="true" />
         <Grain />
         <Nav />
         <main id="main" className="relative" style={{ zIndex: 'var(--z-content)' }}>

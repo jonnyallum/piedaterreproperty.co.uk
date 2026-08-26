@@ -23,7 +23,7 @@ interface PillarsProps {
 const GROUND: Record<NonNullable<PillarsProps['ground']>, string> = {
   ground: 'bg-ground text-ink',
   oat: 'bg-oat text-ink',
-  ink: 'bg-ink text-on-dark',
+  ink: 'bg-night text-on-dark',
 }
 
 export function Pillars({ eyebrow, heading, items, ground = 'ground' }: PillarsProps) {

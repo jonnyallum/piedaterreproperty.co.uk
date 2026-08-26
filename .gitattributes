@@ -6,3 +6,8 @@
 *.avif binary
 *.woff2 binary
 *.ico binary
+
+# Preserve the supplied former-site capture byte-for-byte. It is source
+# evidence, not application code, so line-ending normalisation and text diffs
+# would make it noisier and less faithful to the original archive.
+reference/old-site/** -text -diff

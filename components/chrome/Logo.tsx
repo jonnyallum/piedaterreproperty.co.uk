@@ -1,10 +1,7 @@
 /**
- * Logo. A typographic wordmark in Fraunces with a Martian Mono descriptor,
- * standing in until the client supplies the vector logo (tracked in
- * ASSET_REQUEST_LIST). Honest placeholder: it reads as the brand, not as a
- * missing asset.
- *
- * `tone` inverts the mark for dark grounds such as the nav-over-hero state.
+ * Pied-à-Terre's new house mark: an arched doorway, a small coastal sun and a
+ * generous editorial wordmark. It is deliberately built from type and CSS so
+ * it remains crisp, accessible and colour-aware at every size.
  */
 import Link from 'next/link'
 import { cn } from '@/lib/cn'
@@ -19,16 +16,22 @@ export function Logo({ tone = 'ink', className }: LogoProps) {
   return (
     <Link
       href="/"
-      className={cn('group inline-flex flex-col leading-none', color, className)}
+      className={cn('brand-lockup group inline-flex items-center leading-none', color, className)}
       aria-label="Pied-à-Terre Property, home"
     >
-      <span
-        className="font-display text-h3 font-normal tracking-tight"
-        style={{ fontVariationSettings: "'SOFT' 20, 'WONK' 1" }}
-      >
-        Pied-à-Terre
+      <span className="brand-mark" aria-hidden="true">
+        <span className="brand-mark-sun" />
+        <span className="brand-mark-letter">P</span>
       </span>
-      <span className="eyebrow mt-1 text-brass">Property . Solent Coast</span>
+      <span className="brand-wordmark">
+        <span
+          className="font-display text-h3 font-normal tracking-tight"
+          style={{ fontVariationSettings: "'SOFT' 20, 'WONK' 1" }}
+        >
+          Pied-à-Terre
+        </span>
+        <span className="brand-descriptor">Property / Solent coast</span>
+      </span>
     </Link>
   )
 }

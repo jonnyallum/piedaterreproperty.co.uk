@@ -42,7 +42,7 @@ export function PathToggle({ value, onChange, label, className }: PathToggleProp
             aria-pressed={active}
             onClick={() => onChange(opt.value)}
             className={cn(
-              'rounded-sm px-4 py-2 text-small font-medium transition-colors',
+              'min-h-11 rounded-sm px-4 py-2 text-small font-medium transition-colors',
               active ? cn(fill, 'text-on-dark') : 'text-ink-soft hover:text-ink'
             )}
           >
