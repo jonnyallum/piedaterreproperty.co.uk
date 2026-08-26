@@ -1,12 +1,11 @@
 /**
  * ValuationBand. The full-width Kiln gradient call to action that sits above the
- * footer on most pages. One sentence, one magnetic button, no distractions.
+ * footer on most pages. One sentence, one clear button, no distractions.
  * Reused site-wide so every page has a low-friction route to a valuation.
  */
 import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Button } from '@/components/primitives/Button'
-import { MagneticButton } from '@/components/primitives/MagneticButton'
 
 interface ValuationBandProps {
   heading?: string
@@ -37,11 +36,9 @@ export function ValuationBand({
         <h2 className="mt-4 max-w-3xl text-h1">{heading}</h2>
         <p className="measure mt-5 text-lead text-on-dark/90">{copy}</p>
         <div className="mt-9">
-          <MagneticButton>
-            <Button href={href} variant="secondary" className="btn-invert btn-arch">
-              {cta}
-            </Button>
-          </MagneticButton>
+          <Button href={href} variant="secondary" className="btn-invert btn-arch">
+            {cta}
+          </Button>
         </div>
       </div>
     </section>

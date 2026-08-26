@@ -1,6 +1,6 @@
 /**
  * StatsBand. The credibility band that follows the hero. Indigo ground with
- * grain. Count-up statistics in tabular numerals, the brass credential marks,
+ * grain. Static statistics in tabular numerals, the brass credential marks,
  * and one plain line explaining why redress and client money protection matter
  * to someone handing over a large asset. Numbers come from lib/site so nothing
  * dates or is invented.
@@ -8,7 +8,6 @@
 import Image from 'next/image'
 import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
-import { CountUp } from './CountUp'
 import { SITE, yearsTrading } from '@/lib/site'
 
 const CREDENTIALS = [
@@ -49,19 +48,19 @@ export function StatsBand() {
         <div className="mt-8 grid gap-10 sm:grid-cols-3">
           <div>
             <p className="font-display text-display leading-none text-ochre">
-              <CountUp to={years} />
+              {years}
             </p>
             <p className="mt-2 text-lead text-on-dark/85">years on this coastline</p>
           </div>
           <div>
             <p className="font-display text-display leading-none text-ochre">
-              <CountUp to={35} prefix="~" />
+              ~35
             </p>
             <p className="mt-2 text-lead text-on-dark/85">homes under management</p>
           </div>
           <div>
             <p className="font-display text-display leading-none text-ochre">
-              <CountUp to={5} />
+              5
             </p>
             <p className="mt-2 text-lead text-on-dark/85">towns we know street by street</p>
           </div>
