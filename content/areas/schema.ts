@@ -54,8 +54,14 @@ const AreaContentShape = z.object({
   gettingAround: z.array(z.string().min(40)).min(1),
   /** Schools and amenities, named and factual, no ratings that will date. */
   schoolsAndAmenities: z.array(z.string().min(40)).min(1),
-  /** Qualitative market notes only. No invented figures. May carry [CONFIRM]. */
+  /** Qualitative market notes only. No invented figures. Rendered on the page. */
   marketNotes: z.array(z.string().min(40)).min(1),
+  /**
+   * Author-facing notes about figures deliberately withheld pending Charisma's
+   * confirmation. These are NEVER rendered on the page and are surfaced only in
+   * ASSET_REQUEST_LIST, so a [CONFIRM] marker here is expected and allowed.
+   */
+  confirmNotes: z.array(z.string().min(4)).default([]),
   /** Outcodes genuinely associated with the town, for internal relevance. */
   postcodes: z.array(z.string().min(2)).min(1),
   /** At least two other town slugs to link to, for the internal link graph. */
@@ -75,6 +81,16 @@ export const AreaContentSchema = AreaContentShape.superRefine((a, ctx) => {
       code: z.ZodIssueCode.custom,
       message: `Area page "${a.slug}" has ${words} words of prose, below the ${MIN_AREA_WORDS} word minimum. Write more local detail or remove the page.`,
     })
+  }
+  // No [CONFIRM] marker may reach a rendered field. Author notes belong in
+  // confirmNotes, which the page never renders. Proven by injecting a marker.
+  for (const p of areaProse(a)) {
+    if (/\[CONFIRM/i.test(p)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Area page "${a.slug}" has a [CONFIRM] marker in rendered content. Move it to confirmNotes so it is not published.`,
+      })
+    }
   }
 })
 

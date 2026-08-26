@@ -51,6 +51,8 @@ export const AREA_CONTENT: AreaContent[] = [
     marketNotes: [
       'Havant behaves like two markets in one postcode. Anything walkable to the station and the old town moves quickly in both sales and lettings, and rental demand there is consistent through the year rather than seasonal. Family houses with parking and a real garden also let fast, because the competing stock in Portsmouth mostly has neither.',
       'What sits is stock priced as though it were Emsworth, and upper floor flats without allocated parking. Both are correctable with honest pricing rather than more advertising, which is a conversation we would rather have at the valuation than three months later.',
+    ],
+    confirmNotes: [
       '[CONFIRM: whether Charisma wants indicative achieved rent and price ranges for PO9 published here, and if so the source. We will not publish figures we cannot attribute.]',
     ],
     postcodes: ['PO9'],
@@ -91,6 +93,8 @@ export const AREA_CONTENT: AreaContent[] = [
     marketNotes: [
       'Lettings here are seasonal in a way the rest of our patch is not. The student cycle pulls the centre and Southsea forward into the summer, while naval and hospital demand runs steadily all year, so a property marketed on the wrong calendar can look weak when it is simply early.',
       'On sales, well presented terraces in the established family roads of Copnor, Baffins and Milton continue to find buyers quickly. What sits is converted flats without parking, and anything where the freehold position, the lease length or the cladding position is unclear at the point of listing. Getting that paperwork straight before going live is worth more than any amount of portal spend.',
+    ],
+    confirmNotes: [
       '[CONFIRM: whether to publish indicative rent ranges by property type for PO1 to PO6, and the source. Portal averages are not a source we are willing to cite as fact.]',
     ],
     postcodes: ['PO1', 'PO2', 'PO3', 'PO4', 'PO5', 'PO6'],
@@ -131,6 +135,8 @@ export const AREA_CONTENT: AreaContent[] = [
     marketNotes: [
       'Family houses with parking and a garden are the strongest part of this market in both sales and lettings, and good bungalows are the scarcest thing in it. Where we see a property stick, it is usually a three bedroom house presented as though it were competing with the new build stock at Berewood, when the buyer or tenant looking at it is making a completely different comparison.',
       'The London Road corridor and anything within a walk of the precinct lets well to tenants without a car. Further out on the estates, off street parking stops being a nice extra and becomes the thing the enquiry turns on.',
+    ],
+    confirmNotes: [
       '[CONFIRM: whether Charisma wants indicative rent ranges for PO7 and PO8 by bedroom count published, and the source for them.]',
     ],
     postcodes: ['PO7', 'PO8'],
@@ -172,6 +178,8 @@ export const AREA_CONTENT: AreaContent[] = [
       'Supply is the whole story in Emsworth. The conservation area and the harbour designation together mean very little is built, so the market is made almost entirely of existing stock changing hands. Good houses within a walk of the square attract competing interest, and a meaningful share of sales here are agreed before they are widely advertised.',
       'On lettings, long let stock is scarce and tenants who secure a good house here tend to stay, which suits landlords looking for stability rather than turnover. Where property does sit, it is almost always a period house where the maintenance position, or the extent of what can lawfully be altered, was not made clear at the outset.',
       'We would rather tell a seller here that their house needs two weeks of preparation than list it immediately, because in a village this small a stale listing is visible to everyone.',
+    ],
+    confirmNotes: [
       '[CONFIRM: whether Charisma wants indicative PO10 price and rent ranges published, and the source. Portal averages are not acceptable as a citation.]',
     ],
     postcodes: ['PO10'],
@@ -212,6 +220,8 @@ export const AREA_CONTENT: AreaContent[] = [
     marketNotes: [
       'The island market is more seasonal than anywhere else we cover. Interest rises sharply with the weather, which flatters spring and summer listings and punishes anything that comes to market in November without a clear reason to look at it.',
       'Bungalows in good order and anything with a genuine water outlook are the strongest stock in both sales and lettings. What sits is property priced on a summer viewing in a winter market, and houses where the flood risk position, the insurance history or the holiday let permission has not been established before listing. Those three questions come up here far more often than anywhere else on our patch, and having the answers ready is worth more than any amount of marketing.',
+    ],
+    confirmNotes: [
       '[CONFIRM: whether Charisma wants indicative PO11 figures published, and separately whether the firm will take on holiday let management or is long lets only. Both are asked at almost every island valuation.]',
     ],
     postcodes: ['PO11'],
