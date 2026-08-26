@@ -36,7 +36,7 @@ appraisal ready to arrange.]
 [Live variant: Our books are open. Call the office or register online whenever
 suits you, and we will arrange a time to visit.]
 
-You can register in a minute at piedaterreproperty.co.uk/sales/landlords, or
+You can register in a minute at piedaterreproperty.co.uk/l/landlords, or
 simply call me on 01243 468738.
 
 Thank you, as ever, for your custom over the years.

@@ -24,6 +24,7 @@ import { Icon } from '@/components/primitives/Icon'
 import { SALES_LIVE, COVERAGE } from '@/lib/site'
 import { AREAS } from '@/content/areas'
 import { CONSENT_WORDING } from '@/lib/leads'
+import { readUtm } from '@/lib/utm'
 import { track } from '@/lib/analytics'
 import { cn } from '@/lib/cn'
 
@@ -68,22 +69,6 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
 const TOWNS = [...AREAS.map((a) => a.name), ...COVERAGE.secondary]
 const TYPES = ['House', 'Flat or apartment', 'Bungalow', 'Maisonette', 'Other']
-
-interface StoredUtm {
-  source?: string
-  medium?: string
-  campaign?: string
-  content?: string
-}
-
-function readUtm(): StoredUtm | undefined {
-  try {
-    const raw = sessionStorage.getItem('pt_utm')
-    return raw ? (JSON.parse(raw) as StoredUtm) : undefined
-  } catch {
-    return undefined
-  }
-}
 
 export function ValuationForm({ path, source, initialTown }: ValuationFormProps) {
   const idBase = useId()

@@ -14,6 +14,7 @@ import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
 import { track } from '@/lib/analytics'
 import { CONSENT_WORDING } from '@/lib/leads'
+import { readUtm } from '@/lib/utm'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
@@ -79,6 +80,7 @@ export function PropertySearchLead({ summary, criteria }: PropertySearchLeadProp
           email: get('email'),
           phone: get('phone'),
           consentMarketing: fd.get('consentMarketing') === 'on',
+          utm: readUtm(),
           message: `Register interest for a search with no current matches: ${summary}.`,
           extra: {
             searchSummary: summary,

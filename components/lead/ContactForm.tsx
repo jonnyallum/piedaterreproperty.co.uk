@@ -16,6 +16,7 @@ import { Field, TextareaField } from '@/components/primitives/Field'
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
+import { readUtm } from '@/lib/utm'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
@@ -66,6 +67,7 @@ export function ContactForm() {
           phone: get('phone'),
           message: get('message'),
           consentMarketing: consent,
+          utm: readUtm(),
           elapsedMs: Date.now() - startedAt.current,
         }),
       })

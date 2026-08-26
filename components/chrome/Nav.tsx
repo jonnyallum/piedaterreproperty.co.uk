@@ -21,6 +21,10 @@ import { cn } from '@/lib/cn'
 export function Nav() {
   const pathname = usePathname()
   const overlay = pathname === '/'
+  // Campaign landing pages strip the primary navigation so nothing competes with
+  // their single conversion goal (prompt 14 A). The logo and the phone stay, and
+  // the sticky mobile bar still carries call and WhatsApp.
+  const landing = pathname === '/sales/landlords' || pathname === '/sales/thinking-of-selling'
   const [scrolled, setScrolled] = useState(!overlay)
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement | null>(null)
@@ -60,30 +64,33 @@ export function Nav() {
       <div className="mx-auto flex max-w-content items-center justify-between gap-6 px-6 py-4 md:px-8">
         <Logo tone={onDark || solid ? 'on-dark' : 'ink'} />
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-7">
-            {PRIMARY_NAV.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    'text-small font-medium transition-opacity hover:opacity-70',
-                    onDark || solid ? 'text-on-dark' : 'text-ink'
-                  )}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {landing ? null : (
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-7">
+              {PRIMARY_NAV.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'text-small font-medium transition-opacity hover:opacity-70',
+                      onDark || solid ? 'text-on-dark' : 'text-ink'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         <div className="flex items-center gap-3">
           <a
             href={SITE.phone.href}
             onClick={() => track('call_click', { location: 'nav' })}
             className={cn(
-              'tabular hidden text-small font-medium md:inline-flex md:items-center md:gap-2',
+              'tabular items-center gap-2 text-small font-medium',
+              landing ? 'inline-flex' : 'hidden md:inline-flex',
               onDark || solid ? 'text-on-dark' : 'text-ink'
             )}
           >
@@ -91,29 +98,31 @@ export function Nav() {
             {SITE.phone.display}
           </a>
 
-          <Button
-            href="/sales/free-valuation"
-            variant="sales"
-            className="hidden md:inline-flex"
-          >
-            Free valuation
-          </Button>
+          {landing ? null : (
+            <>
+              <Button href="/sales/free-valuation" variant="sales" className="hidden md:inline-flex">
+                Free valuation
+              </Button>
 
-          <button
-            ref={menuButtonRef}
-            type="button"
-            className={cn('btn btn-icon lg:hidden', (onDark || solid) && 'text-on-dark')}
-            aria-label="Open menu"
-            aria-expanded={menuOpen}
-            aria-haspopup="dialog"
-            onClick={() => setMenuOpen(true)}
-          >
-            <Icon name="menu" />
-          </button>
+              <button
+                ref={menuButtonRef}
+                type="button"
+                className={cn('btn btn-icon lg:hidden', (onDark || solid) && 'text-on-dark')}
+                aria-label="Open menu"
+                aria-expanded={menuOpen}
+                aria-haspopup="dialog"
+                onClick={() => setMenuOpen(true)}
+              >
+                <Icon name="menu" />
+              </button>
+            </>
+          )}
         </div>
       </div>
 
-      <MobileMenu open={menuOpen} onClose={closeMenu} returnFocusTo={menuButtonRef} />
+      {landing ? null : (
+        <MobileMenu open={menuOpen} onClose={closeMenu} returnFocusTo={menuButtonRef} />
+      )}
     </header>
   )
 }

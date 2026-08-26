@@ -9,9 +9,10 @@ applicant list to back it on the day it prints. Two versions of the card are
 below: a compliant version to use now, and the "buyers waiting" version to use
 only once a real applicant list exists, confirmed by Charisma.
 
-Every printed piece carries a QR code pointing at a tracked landing page:
-piedaterreproperty.co.uk/sales/landlords (add the print campaign UTM from the
-prompt 11 analytics setup).
+Every printed piece carries a QR code pointing at a short, tracked landing link.
+The general leaflet and card use piedaterreproperty.co.uk/l/sell; the per-town
+cards use /l/havant, /l/emsworth and so on. The exact links and their attribution
+are listed in tracking.md.
 
 ---
 
@@ -40,7 +41,7 @@ first to know.]
 [Live line: Call the office to arrange a time that suits you.]
 
 01243 468738
-piedaterreproperty.co.uk/sales/landlords
+piedaterreproperty.co.uk/l/sell
 233 Southampton Road, Portchester, PO6 4PY
 
 QR code to the tracked landing page.

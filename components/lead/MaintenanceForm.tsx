@@ -14,6 +14,7 @@ import { Field, SelectField, TextareaField } from '@/components/primitives/Field
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
+import { readUtm } from '@/lib/utm'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
@@ -119,6 +120,7 @@ export function MaintenanceForm() {
           email: get('email') || undefined,
           message: get('description'),
           consentMarketing: consent,
+          utm: readUtm(),
           extra: {
             address: get('address'),
             category: get('category'),

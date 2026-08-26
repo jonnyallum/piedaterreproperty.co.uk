@@ -7,6 +7,7 @@ import { Footer } from '@/components/chrome/Footer'
 import { MobileActionBar } from '@/components/chrome/MobileActionBar'
 import { CookieBanner } from '@/components/chrome/CookieBanner'
 import { Analytics, GtmNoScript, CONSENT_DEFAULT_SCRIPT } from '@/components/analytics/Analytics'
+import { UtmCapture } from '@/components/analytics/UtmCapture'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Grain } from '@/components/primitives/Grain'
 import { themeColor } from '@/lib/tokens'
@@ -61,6 +62,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {/* Consent Mode v2 defaults plus GA4 and GTM, denied until consent. */}
         <Analytics />
+        {/* Capture campaign utm_* params on landing so leads carry attribution. */}
+        <UtmCapture />
         {/* Organisation and WebSite structured data, site-wide. */}
         <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
         <SkipLink />

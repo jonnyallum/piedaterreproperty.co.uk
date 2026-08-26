@@ -70,4 +70,31 @@ the Solent coast, Pied-à-Terre Property is opening a sales department covering
 Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island. Free, honest
 valuations from a local team. Register your interest or call 01243 468738.
 
-Button: Learn more. Link: piedaterreproperty.co.uk/sales
+Button: Learn more. Link: piedaterreproperty.co.uk/l/sell
+
+---
+
+## Google Business Profile: updated description
+
+Replace the current profile description with this once the sales gate opens
+(in pre-launch, change "now offer" to "are opening"):
+
+Pied-à-Terre Property is an independent, award-winning lettings, management and
+sales agent on the Solent coast. After fifteen years looking after homes across
+Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island, we now offer
+residential sales too. We are members of The Property Ombudsman, our client money
+is protected, and you always deal with the same local team. Free, honest
+valuations, no obligation.
+
+## Google Business Profile: category
+
+Add the additional category "Estate agents" (Google category
+`real_estate_agency`) alongside the existing "Letting agents". Keep "Letting
+agents" as the primary category until sales instructions are flowing, then review
+which should be primary. Do not add the sales category before the sales gate opens.
+
+## Tracked links for social
+
+Social posts use the short links piedaterreproperty.co.uk/l/sell and /l/landlords
+where a link is allowed, or a full URL with utm_medium=social. Every destination
+is listed in tracking.md.

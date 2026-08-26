@@ -11,6 +11,7 @@ import { Field, SelectField, TextareaField } from '@/components/primitives/Field
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE, COVERAGE } from '@/lib/site'
+import { readUtm } from '@/lib/utm'
 import { AREAS } from '@/content/areas'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
@@ -59,6 +60,7 @@ export function RegisterForm() {
           email: get('email'),
           phone: get('phone'),
           consentMarketing: consent,
+          utm: readUtm(),
           extra: {
             locations: get('locations'),
             budget: get('budget'),

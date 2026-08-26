@@ -61,7 +61,7 @@ export default function LandlordsLandingPage() {
             <Eyebrow>{SALES_LIVE ? 'Book your valuation' : 'Register your interest'}</Eyebrow>
             <h2 className="mt-2 text-h3">Tell us about the property</h2>
             <div className="mt-5">
-              <ValuationForm path="sales" source="warm-landlord-letter" />
+              <ValuationForm path="sales" source="campaign_landlords" />
             </div>
             <div className="mt-8">
               <ContactRoutes
