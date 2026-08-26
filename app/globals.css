@@ -35,7 +35,7 @@
   --pt-verdigris: #2e7c6e; /* lettings accent */
   --pt-verdigris-d: #1f5f55; /* verdigris button-fill depth */
   --pt-sage: #8fa891; /* botanical neutral, dividers */
-  --pt-brass: #b08d57; /* rules, focus rings, credential metal */
+  --pt-brass: #7f6038; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
 
   /* ---- Semantic roles, light scene ------------------------------------- */
   --c-ground: var(--pt-bone);
@@ -475,6 +475,9 @@
     line-height: 1;
     text-transform: uppercase;
     color: var(--c-brass);
+  }
+  .brand-lockup[data-tone='on-dark'] .brand-descriptor {
+    color: var(--c-on-dark);
   }
 
   /* Home hero: a real local property is the first impression. A directional

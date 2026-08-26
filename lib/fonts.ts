@@ -4,7 +4,9 @@
  * headings do not reflow when the web font arrives. No third-party font request
  * is made from the browser at runtime.
  *
- * Fraunces carries the SOFT and WONK axes for the warm, hand-cut display feel.
+ * Fraunces provides the warm editorial display feel. We ship its variable
+ * weight in one normal face; browsers synthesize the few italic accents. This
+ * avoids preloading a second large face and optional axes before first paint.
  * Inter Tight is the UI face. Martian Mono sets the eyebrows.
  */
 import { Fraunces, Inter_Tight, Martian_Mono } from 'next/font/google'
@@ -12,9 +14,7 @@ import { Fraunces, Inter_Tight, Martian_Mono } from 'next/font/google'
 export const fraunces = Fraunces({
   subsets: ['latin'],
   display: 'swap',
-  // Variable weight is required when axes are set; the ramp uses 300 to 500.
-  style: ['normal', 'italic'],
-  axes: ['SOFT', 'WONK', 'opsz'],
+  style: 'normal',
   variable: '--font-fraunces',
   fallback: ['Georgia', 'Times New Roman', 'serif'],
 })

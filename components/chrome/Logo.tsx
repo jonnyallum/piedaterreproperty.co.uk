@@ -17,16 +17,14 @@ export function Logo({ tone = 'ink', className }: LogoProps) {
     <Link
       href="/"
       className={cn('brand-lockup group inline-flex items-center leading-none', color, className)}
+      data-tone={tone}
     >
       <span className="brand-mark" aria-hidden="true">
         <span className="brand-mark-sun" />
         <span className="brand-mark-letter" />
       </span>
       <span className="brand-wordmark">
-        <span
-          className="font-display text-h3 font-normal tracking-tight"
-          style={{ fontVariationSettings: "'SOFT' 20, 'WONK' 1" }}
-        >
+        <span className="font-display text-h3 font-normal tracking-tight">
           Pied-à-Terre
         </span>
         <span className="brand-descriptor">Property / Solent coast</span>
