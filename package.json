@@ -13,7 +13,8 @@
     "check:tokens": "node scripts/check-tokens.mjs",
     "check": "npm run check:dashes && npm run check:tokens && npm run lint && npm run typecheck",
     "check:headings": "node scripts/check-headings.mjs",
-    "verify": "npm run check && npm run build && npm run check:headings",
+    "check:budget": "node scripts/check-budget.mjs",
+    "verify": "npm run check && npm run build && npm run check:headings && npm run check:budget",
     "optimise-images": "node scripts/optimise-images.mjs"
   },
   "dependencies": {

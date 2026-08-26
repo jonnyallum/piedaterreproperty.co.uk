@@ -11,6 +11,12 @@ next-env.d.ts
 # production
 /build
 
+# image pipeline source originals (prompt 12). The high-resolution camera files
+# live here locally and are never committed; the optimised AVIF and WebP ladder
+# under public/images is the committed output. Switch to Git LFS here instead if
+# the team wants the originals versioned.
+/assets/source/
+
 # misc
 .DS_Store
 *.pem

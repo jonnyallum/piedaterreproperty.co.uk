@@ -43,7 +43,33 @@ standard, and the response-time commitment.
 - [ ] Contact page opening hours, Holding Deposits, Landlord Obligations,
       Complaints Procedure, Privacy Policy, Cookie Policy
 
-## Photography and imagery (2400px minimum, from originals)
+## Photography and imagery
+
+Source specification, so the delivered files are right first time:
+
+- At least 2400 px on the long edge, ideally 3000 px. The pipeline never upscales,
+  so a smaller file caps the quality of every page it appears on.
+- The original camera file, in sRGB. Not a portal download and not a screenshot.
+  An untagged file is assumed sRGB and tagged as such.
+- Colour grading is best done by a retoucher on the frames that carry the site.
+  The pipeline can apply a gentle warm grade on request, but it is off by default
+  and will not beat a hand grade on a hero.
+- GPS and device EXIF are stripped automatically, so there is no need to scrub
+  files first, but do send the originals rather than pre-compressed exports.
+
+How to add images once they arrive (the pipeline, prompt 12):
+
+1. Drop the originals into `assets/source/` (git-ignored, never committed).
+2. Describe each one in `assets/source/images.json`, keyed by filename, with a
+   `key` (used in code), `alt` (mandatory, an image with no alt is not shipped),
+   an optional `role`, and `treatment` set to `photo` for property and general
+   imagery or `duotone` for the town and place photography.
+3. Run `npm run optimise-images`. It writes the AVIF and WebP ladder and the blur
+   placeholders into `public/images/` and updates the manifest.
+4. Commit the generated `public/images/**` and reference each image by its `key`
+   through the SiteImage component.
+
+The images still needed:
 
 - [ ] Hero image: local housing stock or harbour, wide, calm, natural light.
       Currently the hero is a Harbour Dusk gradient scene, honest but awaiting

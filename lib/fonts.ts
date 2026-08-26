@@ -33,6 +33,11 @@ export const martianMono = Martian_Mono({
   weight: ['400', '500'],
   variable: '--font-martian-mono',
   fallback: ['ui-monospace', 'SFMono-Regular', 'monospace'],
+  // Only the two faces that carry the LCP heading and the body are preloaded
+  // (prompt 12 D). Martian Mono sets only the small uppercase eyebrow labels, so
+  // it stays out of the critical path; the metric-matched fallback next/font
+  // injects makes its swap imperceptible.
+  preload: false,
 })
 
 export const fontVariables = `${fraunces.variable} ${interTight.variable} ${martianMono.variable}`

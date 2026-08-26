@@ -60,11 +60,16 @@ function Card({ review }: { review: Review }) {
     <figure className="review-card">
       <div className="flex items-center gap-3">
         {review.authorPhotoUrl ? (
+          // A Google Places avatar is a remote, per-review URL; next/image would
+          // need Google's avatar host whitelisted and would proxy a third-party
+          // thumbnail for no gain. It is tiny, below the fold, lazy and async,
+          // with fixed dimensions so it holds its space.
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={review.authorPhotoUrl}
             alt=""
             loading="lazy"
+            decoding="async"
             width={40}
             height={40}
             className="h-10 w-10 shrink-0 rounded-full object-cover"
