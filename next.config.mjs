@@ -12,6 +12,10 @@ const nextConfig = {
   trailingSlash: false,
   // Pin the tracing root: other lockfiles exist higher up the machine.
   outputFileTracingRoot: projectRoot,
+  // Keep metadata in <head> for every user agent. Dynamic property-search
+  // routes otherwise stream their static metadata into <body>, where audit and
+  // crawler tooling can miss the description and canonical.
+  htmlLimitedBots: /.*/,
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [390, 480, 640, 768, 1024, 1280, 1600, 1920],

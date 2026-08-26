@@ -12,6 +12,7 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { Grain } from '@/components/primitives/Grain'
 import { themeColor } from '@/lib/tokens'
 import { SITE } from '@/lib/site'
+import { CONSENT_VISIBILITY_SCRIPT } from '@/lib/consent'
 import { siteUrl, organizationJsonLd, webSiteJsonLd } from '@/lib/seo'
 import '@/lib/env'
 
@@ -51,6 +52,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Consent Mode v2 defaults: denied for every signal until consent. This
             raw inline script parses before any tag, guaranteeing order. */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }} />
+        {/* Returning visitors should not see the consent panel flash. New
+            visitors receive it in the initial HTML, before hydration. */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_VISIBILITY_SCRIPT }} />
         {/* GTM noscript iframe, immediately after body per Google's snippet. */}
         <GtmNoScript />
         {/* Mark that JavaScript is available so scroll entrances never hide

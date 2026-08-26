@@ -210,8 +210,10 @@
   --color-indigo: var(--pt-indigo);
   --color-sales: var(--c-sales);
   --color-sales-ink: var(--c-sales-ink);
+  --color-sales-deep: var(--pt-sienna);
   --color-lettings: var(--c-lettings);
   --color-lettings-deep: var(--c-lettings-deep);
+  --color-lettings-fill: var(--pt-verdigris-d);
   --color-ochre: var(--c-ochre);
   --color-marigold: var(--c-marigold);
   --color-madder: var(--c-madder);
@@ -516,6 +518,18 @@
     color: color-mix(in srgb, var(--c-on-dark) 72%, transparent);
   }
 
+  /* Charisma's supplied portrait sits in the same arched frame on the home and
+     About pages. The lower wash keeps the real caption legible without
+     flattening the photograph. */
+  .founder-portrait::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: var(--z-grain);
+    background: linear-gradient(0deg, rgba(23, 35, 46, 0.88), transparent 48%);
+    pointer-events: none;
+  }
+
   /* The arch, the signature form */
   .arch-full {
     border-radius: var(--arch-full);
@@ -619,6 +633,15 @@
     transform: scale(0.985);
   }
 
+  /* The parser-time consent check hides a returning visitor's banner before
+     paint; React then removes it from the tree after hydration. */
+  .cookie-banner {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  html[data-consent-set='true'] .cookie-banner {
+    display: none;
+  }
+
   /* Primary sales: Kiln gradient */
   .btn-sales {
     background-image: var(--grad-kiln);
@@ -633,12 +656,11 @@
 
   /* Primary lettings: verdigris depth fill */
   .btn-lettings {
-    background-color: var(--c-lettings-deep);
+    background-color: var(--pt-verdigris-d);
     color: var(--pt-bone);
     box-shadow: var(--shadow-warm-sm);
   }
   .btn-lettings:hover {
-    background-color: var(--pt-verdigris);
     transform: translateY(-1px);
     box-shadow: var(--shadow-warm);
   }

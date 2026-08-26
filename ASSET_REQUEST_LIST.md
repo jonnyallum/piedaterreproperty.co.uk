@@ -7,10 +7,10 @@ build pack at `_reference/ASSET_REQUEST_LIST.md`.
 Reviewed against the final acceptance audit on 26 August 2026 (see
 `ACCEPTANCE_REPORT.md`). The audit found no new asset needs beyond the list
 below: every remaining gap is one of these items or a live-only measurement
-(Lighthouse, Core Web Vitals, email delivery, real-device checks) that closes at
-the temporary domain and cutover per `DEPLOY.md`. The two hardest blockers for
-the site doing its job are the photography and the founder portrait: until they
-land, the hero and gallery are honest gradient placeholders.
+(Core Web Vitals, email delivery, real-device checks) that closes at cutover per
+`DEPLOY.md`. The authentic property archive and Charisma&rsquo;s portrait are now
+integrated; the remaining visual requests are the wider team, office and town
+photography.
 
 ## Blocking: the site cannot launch without these
 
@@ -79,16 +79,15 @@ How to add images once they arrive (the pipeline, prompt 12):
 
 The images still needed:
 
-- [ ] Hero image: local housing stock or harbour, wide, calm, natural light.
-      Currently the hero is a Harbour Dusk gradient scene, honest but awaiting
-      the real photograph
-- [ ] Portrait of Charisma on location, for the founder story duotone frame
-      (currently a labelled gradient placeholder)
+- [x] Hero image: authentic Monarch Close property photograph restored from the
+      old-site archive and integrated on 26 August 2026
+- [x] Portrait of Charisma, supplied and integrated into the founder story on 26 August 2026
 - [ ] The founder's signature, as a vector or clean scan, for the ink-script
       accent (currently set in Fraunces italic as a placeholder)
 - [ ] Office exterior at 233 Southampton Road, Portchester
 - [ ] Place photography for the five towns, for duotone risograph treatment
-- [ ] Property photography for any live listing, full resolution
+- [x] Property photography restored from the old-site archive for the current
+      portfolio and listing pages
 - [ ] Logo in vector, light and dark (currently a typographic wordmark)
 - [ ] The British Property Lettings Award mark, vector if available
 

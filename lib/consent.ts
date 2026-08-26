@@ -29,6 +29,15 @@ export const CONSENT_VERSION = 1
 
 export const STORAGE_KEY = 'pt-consent'
 
+/**
+ * Runs during HTML parsing so a returning visitor's already-set choice hides
+ * the server-rendered banner before first paint. The banner still ships in the
+ * initial HTML for a new visitor, avoiding a hydration-delayed LCP.
+ */
+export const CONSENT_VISIBILITY_SCRIPT = `try{var c=JSON.parse(localStorage.getItem(${JSON.stringify(
+  STORAGE_KEY
+)}));if(c&&c.version===${CONSENT_VERSION})document.documentElement.dataset.consentSet='true'}catch(e){}`
+
 export interface CookieDef {
   name: string
   provider: string

@@ -78,9 +78,9 @@ export default function HomePage() {
             <Reveal>
               <Eyebrow tone="on-dark">Independent estate agency / established 2011</Eyebrow>
             </Reveal>
-            <Reveal as="h1" delay={80} className="mt-6 max-w-3xl text-display">
+            <h1 className="mt-6 max-w-3xl text-display">
               Property, with a <em className="italic text-ochre">foot</em> on the ground.
-            </Reveal>
+            </h1>
             <Reveal delay={160} className="mt-7 max-w-xl text-lead text-on-dark/90">
               We sell, let and look after homes from Portchester to Hayling Island.
               Local knowledge, one steady team, and {years} years of relationships on
@@ -151,12 +151,11 @@ export default function HomePage() {
       {/* 5. The founder's story. No invented biography or visual placeholder. */}
       <section className="surface-paper-muted">
         <div className="mx-auto grid max-w-content gap-12 px-6 py-24 md:grid-cols-[5fr_7fr] md:px-8">
-          <Arch variant="full" className="relative aspect-[4/5] w-full bg-indigo">
+          <Arch variant="full" className="founder-portrait relative aspect-[4/5] w-full bg-indigo">
             <Image
-              src="/images/brand/solent-coast-risograph.png"
-              alt="Solent coast artwork with a house, harbour and sea holly"
+              src="/images/team/charisma-smith.jpg"
+              alt="Charisma Smith, founder and director of Pied-à-Terre Property"
               fill
-              priority
               sizes="(max-width: 48rem) 100vw, 42vw"
               className="object-cover"
             />

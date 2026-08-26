@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { ValuationBand } from '@/components/marketing/ValuationBand'
@@ -69,21 +70,25 @@ export default function AboutPage() {
 
       {/* 1. The founder's story. Draft copy in the house voice, awaiting the
           founder's approval. No biographical, family or origin detail is
-          invented. Tracked in ASSET_REQUEST_LIST. */}
+          invented. */}
       <section className="bg-oat">
         <div className="mx-auto grid max-w-content gap-12 px-6 py-24 md:grid-cols-[5fr_7fr] md:px-8">
           <div>
-            <Arch variant="full" className="relative aspect-[4/5] w-full surface-harbour-dusk">
+            <Arch variant="full" className="founder-portrait relative aspect-[4/5] w-full bg-indigo">
+              <Image
+                src="/images/team/charisma-smith.jpg"
+                alt="Charisma Smith, founder and director of Pied-à-Terre Property"
+                fill
+                sizes="(max-width: 48rem) 100vw, 42vw"
+                className="object-cover"
+              />
               <Grain fixed={false} photo />
               <span className="absolute bottom-5 left-5 right-5" style={{ zIndex: 'var(--z-content)' }}>
                 <span className="eyebrow text-on-dark/80">Founder and director</span>
                 <span className="mt-1 block text-h3 text-on-dark">{SITE.director}</span>
               </span>
             </Arch>
-            <p className="mt-3 text-small text-ink-soft">
-              Portrait on location to follow. We would rather show a real photograph than a
-              stock one.
-            </p>
+            <p className="mt-3 text-small text-ink-soft">{SITE.director}, founder and director.</p>
           </div>
 
           <div>
@@ -148,23 +153,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. The team. Founder-led until real, on-location team photography exists.
-          No stock imagery, no placeholder avatars on a live page (prompt 08). */}
+      {/* 2. The team. Founder-led until the remaining team photography exists.
+          No stock imagery or placeholder avatars (prompt 08). */}
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <Eyebrow>The team</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-h2">
           A small team, and you will know their <em className="italic text-sales-ink">names</em>.
         </h2>
         <p className="measure mt-4 text-body text-ink-soft">
-          We are a compact, local team rather than a branch network. Rather than fill this page
-          with stock photographs or grey silhouettes, we are waiting for proper portraits of the
-          people you will actually deal with, taken on location where we work.
+          We are a compact, local team rather than a branch network. Charisma&rsquo;s portrait is
+          now in place; rather than fill the rest of this page with stock photographs or grey
+          silhouettes, we are waiting for proper portraits of the people you will actually deal
+          with.
         </p>
         <div className="mt-8 rounded-md border border-brass/40 bg-well p-6 md:p-8">
           <p className="text-body text-ink">
-            Team names, roles and on-location photographs are being prepared and will appear
-            here before launch. In the meantime, the fastest way to meet us is a call or a
-            valuation.
+            Further team names, roles and photographs are being prepared and will appear here
+            before launch. In the meantime, the fastest way to meet us is a call or a valuation.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a href={SITE.phone.href} className="btn btn-lettings tabular">

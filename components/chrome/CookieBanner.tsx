@@ -13,7 +13,7 @@
  *
  * Styled to the system: bone ground, brass hairline, ink type.
  */
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
   CONSENT_VERSION,
@@ -51,14 +51,20 @@ export function openConsentPreferences() {
 }
 
 export function CookieBanner() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [managing, setManaging] = useState(false)
   const [analytics, setAnalytics] = useState(false)
-  const regionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (readConsent() === null) setVisible(true)
+    const stored = readConsent()
+    if (stored === null) {
+      delete document.documentElement.dataset.consentSet
+    } else {
+      document.documentElement.dataset.consentSet = 'true'
+      setVisible(false)
+    }
     const open = () => {
+      delete document.documentElement.dataset.consentSet
       setAnalytics(readConsent()?.analytics ?? false)
       setManaging(true)
       setVisible(true)
@@ -69,6 +75,7 @@ export function CookieBanner() {
 
   const choose = useCallback((state: ConsentState) => {
     persist(state)
+    document.documentElement.dataset.consentSet = 'true'
     setVisible(false)
     setManaging(false)
   }, [])
@@ -83,49 +90,20 @@ export function CookieBanner() {
     return () => window.removeEventListener('keydown', onKey)
   }, [visible, choose])
 
-  /** Keep focus inside the region while it is open. */
-  useEffect(() => {
-    if (!visible) return
-    const region = regionRef.current
-    if (!region) return
-    const focusables = () =>
-      Array.from(
-        region.querySelectorAll<HTMLElement>('button, a[href], input[type="checkbox"]')
-      ).filter((el) => !el.hasAttribute('disabled'))
-    const onTab = (e: KeyboardEvent) => {
-      if (e.key !== 'Tab') return
-      const items = focusables()
-      if (items.length === 0) return
-      const first = items[0]!
-      const last = items[items.length - 1]!
-      const active = document.activeElement
-      if (e.shiftKey && (active === first || !region.contains(active))) {
-        e.preventDefault()
-        last.focus()
-      } else if (!e.shiftKey && active === last) {
-        e.preventDefault()
-        first.focus()
-      }
-    }
-    region.addEventListener('keydown', onTab)
-    const first = region.querySelector<HTMLElement>('button')
-    first?.focus()
-    return () => region.removeEventListener('keydown', onTab)
-  }, [visible, managing])
-
   if (!visible) return null
 
   return (
     <div
-      ref={regionRef}
       role="region"
       aria-label="Cookie choices"
-      className="fixed inset-x-3 bottom-3 mx-auto max-w-3xl rounded-md border border-brass/40 bg-ground p-5 shadow-warm-lg md:inset-x-6 md:bottom-6"
+      className="cookie-banner fixed inset-x-3 bottom-3 mx-auto max-w-3xl rounded-md border border-brass/40 bg-ground p-5 shadow-warm-lg md:inset-x-6 md:bottom-6"
       style={{ zIndex: 'var(--z-toast)' }}
     >
       <p className="measure text-small text-ink">
-        We use a small number of cookies to understand how the site is used and to improve it.
-        Nothing is set until you choose. Read our{' '}
+        Analytics cookies stay off until you choose.
+      </p>
+      <p className="measure mt-1 text-small text-ink">
+        Read our{' '}
         <Link href="/cookie-policy" className="text-sales-ink underline">
           cookie policy
         </Link>

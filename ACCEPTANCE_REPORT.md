@@ -223,16 +223,11 @@ prerendered pages, `check-budget` within ceilings. Build green.
 
 ## 9. The honest questions (61 to 64)
 
-**61. Would you submit this to Awwwards?** Not yet, and honestly not until real
-photography lands. The system is genuinely distinctive: the arch, the grain over
-dyed gradients, the Fraunces and Martian Mono pairing, the disciplined pigment
-wayfinding. But an Awwwards jury rewards photography and finished motion, and this
-site currently stands on type and gradient placeholders. The three weakest
-moments: (a) every hero and portrait is a labelled gradient, not a photograph;
-(b) the founder story carries a placeholder paragraph awaiting her own words; (c)
-the property pages have no listings with images, so the arch gallery, the
-strongest visual device, is never seen. All three are asset-blocked, not
-build-blocked, and are tracked in ASSET_REQUEST_LIST.
+**61. Would you submit this to Awwwards?** The visual system is now genuinely
+distinctive: the arch, the grain over dyed gradients, the Fraunces and Martian
+Mono pairing, authentic property photography and Charisma&rsquo;s founder portrait.
+The remaining editorial weakness is the founder story paragraph awaiting her own
+words, plus the wider team and town photography tracked in ASSET_REQUEST_LIST.
 
 **62. As an Emsworth homeowner, what makes you pick up the phone?** The line
 "fifteen years on this coast, now selling too", carried by the credential strip
@@ -243,12 +238,9 @@ specific element: the pairing of local tenure with visible, plain-spoken
 credentials. The site does have a nameable reason to call.
 
 **63. The single most likely reason a visitor abandons before booking a
-valuation?** The gradient placeholders where photography should be. A vendor
-deciding who to trust with the largest sale of their life wants to see the homes
-the firm handles and the face they will deal with. Empty arches read as "not
-established yet", the opposite of the fifteen-year message. The fix is not code;
-it is the photography and the founder portrait, which is why they are the top
-blocking items in ASSET_REQUEST_LIST.
+valuation?** The sales service is deliberately honest about the registrations
+still being confirmed. That transparency builds trust, but it also means a vendor
+who needs immediate certainty may wait until the readiness gate is complete.
 
 **64. What breaks first in six months?** The "fifteen years" figure and the legal
 review dates. "Fifteen years" is computed from a founding month that is still a
@@ -287,16 +279,16 @@ Open, minor, not blocking:
   the rule against it. No confidential detail, but the wording could avoid naming
   it at all.
 
-Blocked on Charisma or Jonny (tracked in ASSET_REQUEST_LIST.md): real
-photography, the founder story and portrait, the GA4, Places and Resend keys, the
+Blocked on Charisma or Jonny (tracked in ASSET_REQUEST_LIST.md): the founder
+story approval, remaining team photography, the GA4, Places and Resend keys, the
 Place ID and Business Profile URL, the office email and opening hours, the ICO
 number and founding month, the sales registrations, and per-town figures.
 
 ## What "done" means, against the README
 
 The build is complete as an award-standard, lead-generating site whose every
-claim traces to fact and whose funnel is measurable and demonstrated. It is not
-launch-complete: it awaits real assets, live keys, a deploy, and the live-only
-measurements above. An Emsworth homeowner can name the specific thing that makes
-them call (item 62). The remaining gap to a finished launch is assets and the
-cutover, not code.
+claim traces to fact and whose funnel is measurable and demonstrated. The
+redundant Vercel deployment is live; launch-complete still requires the remaining
+facts and keys, sales-readiness confirmations, production-domain cutover and the
+live-only measurements above. An Emsworth homeowner can name the specific thing
+that makes them call (item 62).

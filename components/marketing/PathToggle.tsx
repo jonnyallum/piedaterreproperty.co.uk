@@ -32,9 +32,9 @@ export function PathToggle({ value, onChange, label, className }: PathToggleProp
     >
       {OPTIONS.map((opt) => {
         const active = value === opt.value
-        // Accessible depths so bone text clears AA: bone on sienna 5.98:1,
-        // bone on verdigris-deep 6.66:1. Same wayfinding colour family.
-        const fill = opt.value === 'sales' ? 'bg-sales-ink' : 'bg-lettings-deep'
+        // Fixed pigment depths keep bone text above 4.5:1 in both colour
+        // schemes; the semantic accent tokens become lighter in dark mode.
+        const fill = opt.value === 'sales' ? 'bg-sales-deep' : 'bg-lettings-fill'
         return (
           <button
             key={opt.value}
