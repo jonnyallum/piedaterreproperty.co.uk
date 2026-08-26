@@ -158,11 +158,13 @@ export default function HomePage() {
               alt="Charisma Smith, founder and director of Pied-à-Terre Property"
               fill
               sizes="(max-width: 48rem) 100vw, 42vw"
-              className="object-cover"
+              className="object-contain object-top"
             />
-            <span className="absolute inset-x-5 bottom-5 rounded-md bg-night/90 p-4 text-on-dark">
+            <span className="absolute inset-x-4 bottom-4 rounded-md bg-night/90 p-3 text-on-dark md:inset-x-5 md:bottom-5 md:p-4">
               <span className="eyebrow text-on-dark/80">Independent since 2011</span>
-              <span className="mt-1 block text-h3 text-on-dark">Led by {SITE.director}</span>
+              <span className="mt-1 block text-body font-medium text-on-dark md:text-h3">
+                Led by {SITE.directorDisplay}
+              </span>
             </span>
           </Arch>
           <div>
@@ -189,7 +191,7 @@ export default function HomePage() {
               business has grown into two disciplines without losing the thing that made
               landlords trust it in the first place.
             </p>
-            <p className="signature mt-6 text-h2">{SITE.director}</p>
+            <p className="signature mt-6 text-h2">{SITE.directorDisplay}</p>
           </div>
         </div>
       </section>

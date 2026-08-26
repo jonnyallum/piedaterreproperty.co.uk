@@ -13,6 +13,7 @@ export const SITE = {
   legalEntity: 'Solent C Property Services Limited',
   companyNumber: '07482593',
   director: 'Charisma Marie Smith',
+  directorDisplay: 'Charisma Smith',
 
   registeredOffice: {
     line1: 'C/O Sterling Accounting',
@@ -39,8 +40,8 @@ export const SITE = {
   // confirm: office email address for the contact page and lead notifications.
   email: 'hello@piedaterreproperty.co.uk',
 
-  // confirm: WhatsApp business number in international form, digits only.
-  whatsapp: '441243468738',
+  // WhatsApp business number in international form, digits only.
+  whatsapp: '447481288509',
 
   urls: {
     production: 'https://piedaterreproperty.co.uk',

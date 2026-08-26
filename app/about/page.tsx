@@ -80,15 +80,19 @@ export default function AboutPage() {
                 alt="Charisma Smith, founder and director of Pied-à-Terre Property"
                 fill
                 sizes="(max-width: 48rem) 100vw, 42vw"
-                className="object-cover"
+                className="object-contain object-top"
               />
               <Grain fixed={false} photo />
               <span className="absolute bottom-5 left-5 right-5" style={{ zIndex: 'var(--z-content)' }}>
                 <span className="eyebrow text-on-dark/80">Founder and director</span>
-                <span className="mt-1 block text-h3 text-on-dark">{SITE.director}</span>
+                <span className="mt-1 block text-body font-medium text-on-dark md:text-h3">
+                  {SITE.directorDisplay}
+                </span>
               </span>
             </Arch>
-            <p className="mt-3 text-small text-ink-soft">{SITE.director}, founder and director.</p>
+            <p className="mt-3 text-small text-ink-soft">
+              {SITE.directorDisplay}, founder and director.
+            </p>
           </div>
 
           <div>
@@ -148,7 +152,7 @@ export default function AboutPage() {
               paragraph is left for her own words.]
             </p>
 
-            <p className="signature mt-8 text-h2">{SITE.director}</p>
+            <p className="signature mt-8 text-h2">{SITE.directorDisplay}</p>
             <p className="text-small text-ink-soft">Founder and director</p>
           </div>
         </div>
