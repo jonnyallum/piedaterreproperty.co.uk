@@ -1,0 +1,11 @@
+# The complete former-site capture is retained in GitHub for provenance, but
+# the running Next.js application only needs the curated assets under public/.
+reference/
+
+# Project handover material is not part of the deployed runtime.
+REDESIGN_PROMPT.md
+UI_AUDIT.md
+ACCEPTANCE_REPORT.md
+ASSET_REQUEST_LIST.md
+DEPLOY.md
+PERFORMANCE.md

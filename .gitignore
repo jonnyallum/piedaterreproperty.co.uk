@@ -42,3 +42,5 @@ yarn-error.log*
 # testing and reports
 /coverage
 /lighthouse
+
+.vercel
