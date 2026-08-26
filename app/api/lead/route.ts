@@ -218,7 +218,9 @@ async function alertDeliveryFailure(lead: LeadInput): Promise<void> {
 
 /** Server-side GA4 conversion, so a blocked client tag never loses the count. */
 async function ga4ServerEvent(lead: LeadInput): Promise<void> {
-  const id = process.env.NEXT_PUBLIC_GA4_ID
+  // Same measurement ID as the client tag in Analytics.tsx; the server event is
+  // the same GA4 property, so it must read the same variable, not a second name.
+  const id = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID
   const secret = process.env.GA4_API_SECRET
   if (!id || !secret) return
   const eventName =

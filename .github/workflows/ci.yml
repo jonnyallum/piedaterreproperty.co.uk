@@ -1,0 +1,55 @@
+name: CI
+
+# Runs on every push and pull request (prompt 15 A). The gate job is the same
+# set of checks as `npm run verify`, so a regression that would break the build
+# is caught before merge. The lighthouse job enforces the master-prompt
+# thresholds against a locally served production build.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: Gate (types, lint, dashes, tokens, build, headings, budget, confirm)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # check runs dashes, tokens, lint (with jsx-a11y) and typecheck.
+      - run: npm run check
+      - run: npm run build
+      - run: npm run check:headings
+      - run: npm run check:budget
+      - run: npm run check:confirm
+
+  lighthouse:
+    name: Lighthouse (mobile thresholds)
+    runs-on: ubuntu-latest
+    needs: gate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # Build indexable so the SEO category can reach 100; the env assertion in
+      # lib/env.ts requires ALLOW_INDEXING when SITE_ENV is production.
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_ENV: production
+          NEXT_PUBLIC_ALLOW_INDEXING: 'true'
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
