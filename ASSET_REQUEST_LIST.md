@@ -4,6 +4,14 @@ What the build needs from Charisma or a supplier before launch. This is the
 repository copy, kept in step as prompts add items. The master list lives in the
 build pack at `_reference/ASSET_REQUEST_LIST.md`.
 
+Reviewed against the final acceptance audit on 26 August 2026 (see
+`ACCEPTANCE_REPORT.md`). The audit found no new asset needs beyond the list
+below: every remaining gap is one of these items or a live-only measurement
+(Lighthouse, Core Web Vitals, email delivery, real-device checks) that closes at
+the temporary domain and cutover per `DEPLOY.md`. The two hardest blockers for
+the site doing its job are the photography and the founder portrait: until they
+land, the hero and gallery are honest gradient placeholders.
+
 ## Blocking: the site cannot launch without these
 
 ### Business facts

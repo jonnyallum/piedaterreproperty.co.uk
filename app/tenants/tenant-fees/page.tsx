@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { PageHero } from '@/components/marketing/PageHero'
 import { LegalNotice } from '@/components/marketing/LegalNotice'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
 import { TENANT_FEES } from '@/content/tenants'
 import { pageMeta } from '@/lib/seo'
