@@ -47,8 +47,9 @@ export const SITE = {
     instagram: 'https://instagram.com/pied_a_terre_property',
     facebook: 'https://www.facebook.com/Pied-à-Terre-Property-208212646451645/',
     tpo: 'https://www.tpos.co.uk',
-    // confirm: Google Business Profile URL and Place ID, needed for reviews.
-    googleBusiness: '',
+    googleBusiness: 'https://maps.app.goo.gl/vBzUW3wVUET9SGwUA',
+    googleReview:
+      'https://www.google.com/search?hl=en-GB&gl=uk&q=29,+Pied-%C3%A0-terre+Property,+The+Oakwood+Centre,+Downley+Rd,+Havant+PO9+2NP&ludocid=7532606762005395162&lsig=AB86z5UKehhaCpg-NhC2kJaw6xir#lrd=0x487445ae907f8d3f:0x688931f0ca0976da,3',
   },
 
   founded: 2011,
@@ -104,18 +105,38 @@ export function yearsTrading(now = new Date()): number {
 
 export const COVERAGE = {
   primary: ['Havant', 'Portsmouth', 'Waterlooville', 'Emsworth', 'Hayling Island'],
-  secondary: [
-    'Portchester',
+  wider: [
+    'Southampton',
     'Fareham',
+    'Gosport',
+    'Portchester',
+    'Southsea',
+    'Chichester',
+    'Petersfield',
+  ],
+  secondary: [
+    'Eastleigh',
+    'Cosham',
+    'Drayton',
+    'Bedhampton',
+    'Langstone',
     'Denmead',
     'Cowplain',
     'Lovedean',
-    'Drayton',
-    'Eastney',
-    'Petersfield',
-    'Buriton',
+    'Clanfield',
+    'Horndean',
+    'Rowlands Castle',
+    'Westbourne',
+    'Southbourne',
+    'Bosham',
   ],
 } as const
+
+export const COVERAGE_PLACES: readonly string[] = [
+  ...COVERAGE.primary,
+  ...COVERAGE.wider,
+  ...COVERAGE.secondary,
+]
 
 /**
  * Resolve a town supplied in a query string to the canonical spelling we cover,
@@ -127,6 +148,5 @@ export const COVERAGE = {
 export function canonicalTown(input: string | string[] | undefined): string | undefined {
   const raw = (Array.isArray(input) ? input[0] : input)?.trim().toLowerCase()
   if (!raw) return undefined
-  const all: readonly string[] = [...COVERAGE.primary, ...COVERAGE.secondary]
-  return all.find((town) => town.toLowerCase() === raw)
+  return COVERAGE_PLACES.find((town) => town.toLowerCase() === raw)
 }

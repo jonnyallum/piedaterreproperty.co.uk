@@ -10,15 +10,14 @@ import { useId, useState } from 'react'
 import { Field, SelectField, TextareaField } from '@/components/primitives/Field'
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
-import { SITE, COVERAGE } from '@/lib/site'
+import { SITE, COVERAGE_PLACES } from '@/lib/site'
 import { readUtm } from '@/lib/utm'
-import { AREAS } from '@/content/areas'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
-const TOWNS = [...AREAS.map((a) => a.name), ...COVERAGE.secondary]
+const TOWNS = COVERAGE_PLACES
 
 export function RegisterForm() {
   const id = useId()

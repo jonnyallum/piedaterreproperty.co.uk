@@ -47,7 +47,7 @@ const CARDS = [
   {
     href: '/properties',
     title: 'Browse homes to rent',
-    body: 'See what is available now across the five towns we cover.',
+    body: 'See what is available now across the South Coast and Hampshire.',
     icon: 'pin' as const,
   },
 ]

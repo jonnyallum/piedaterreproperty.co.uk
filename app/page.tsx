@@ -11,7 +11,7 @@ import { PropertyCard } from '@/components/property/PropertyCard'
 import { StatsBand } from '@/components/marketing/StatsBand'
 import { SalesFeature } from '@/components/marketing/SalesFeature'
 import { HowItWorks } from '@/components/marketing/HowItWorks'
-import { Marquee } from '@/components/marketing/Marquee'
+import { ReviewsSection } from '@/components/marketing/ReviewsSection'
 import { Faq } from '@/components/marketing/Faq'
 import { ValuationBand } from '@/components/marketing/ValuationBand'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -29,13 +29,13 @@ import { featuredProperties } from '@/lib/properties'
  */
 export const metadata: Metadata = {
   ...pageMeta({
-    title: 'Estate and letting agents in Havant, Portsmouth and Emsworth',
+    title: 'Estate and letting agents across the South Coast and Hampshire',
     description:
-      'Independent estate and letting agents on the Solent coast since 2011. Selling, letting and managing homes in Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island.',
+      'Independent estate and letting agents across the South Coast and Hampshire since 2011, from Southampton and Fareham to Portsmouth, Havant and Chichester.',
     path: '/',
   }),
   title: {
-    absolute: 'Estate and letting agents in Havant, Portsmouth and Emsworth | Pied-à-Terre Property',
+    absolute: 'Estate and letting agents across the South Coast and Hampshire | Pied-à-Terre Property',
   },
 }
 
@@ -82,7 +82,8 @@ export default function HomePage() {
               Property, with a <em className="italic text-ochre">foot</em> on the ground.
             </h1>
             <Reveal delay={160} className="mt-7 max-w-xl text-lead text-on-dark/90">
-              We sell, let and look after homes from Portchester to Hayling Island.
+              We sell, let and look after homes from Southampton to Chichester, across
+              the Solent and Hampshire.
               Local knowledge, one steady team, and {years} years of relationships on
               this coast.
             </Reveal>
@@ -197,58 +198,55 @@ export default function HomePage() {
       <section className="py-24">
         <div className="mx-auto max-w-content px-6 md:px-8">
           <Eyebrow>Areas we cover</Eyebrow>
-          <h2 className="mt-3 max-w-2xl text-h2">
-            Five towns, known <em className="italic text-sales-ink">street by street</em>.
+          <h2 className="mt-3 max-w-3xl text-h2">
+            From Southampton to Chichester, across the{' '}
+            <em className="italic text-sales-ink">South Coast and Hampshire</em>.
           </h2>
-        </div>
-        <Marquee items={COVERAGE.primary} className="my-12" />
-        <div className="mx-auto grid max-w-content gap-5 px-6 sm:grid-cols-2 lg:grid-cols-3 md:px-8">
-          {AREAS.map((area) => (
-            <Link
-              key={area.slug}
-              href={`/areas/${area.slug}`}
-              className="group rounded-md border border-brass/40 bg-ground p-6 transition-colors hover:bg-well"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="text-h3">{area.name}</h3>
-                <Icon
-                  name="arrow-up-right"
-                  className="h-5 w-5 text-brass transition-transform group-hover:translate-x-0.5"
-                />
-              </div>
-              <p className="measure mt-2 text-small text-ink-soft">{area.blurb}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 7. Reviews. The live Google rail is wired in prompt 10. Until then we do
-          not fabricate reviews; we point to the real profile. */}
-      <section className="bg-night text-on-dark">
-        <div className="mx-auto flex max-w-content flex-col items-start gap-4 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-8">
-          <div>
-            <Eyebrow tone="on-dark">What our clients say</Eyebrow>
-            <p className="mt-3 max-w-xl text-lead text-on-dark/90">
-              Our reviews are public on our Google Business Profile, gathered from real
-              landlords and tenants across the years.
-            </p>
+          <p className="measure mt-4 text-lead text-ink-soft">
+            Our detailed guides begin with the five places at the heart of our original
+            lettings patch. Our working area now follows the coast in both directions.
+          </p>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {AREAS.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/areas/${area.slug}`}
+                className="group rounded-md border border-brass/40 bg-ground p-6 transition-colors hover:bg-well"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-h3">{area.name}</h3>
+                  <Icon
+                    name="arrow-up-right"
+                    className="h-5 w-5 text-brass transition-transform group-hover:translate-x-0.5"
+                  />
+                </div>
+                <p className="measure mt-2 text-small text-ink-soft">{area.blurb}</p>
+              </Link>
+            ))}
           </div>
-          {SITE.urls.googleBusiness ? (
-            <Link href={SITE.urls.googleBusiness} className="btn btn-secondary btn-invert">
-              Read our Google reviews
+          <div className="mt-12 border-t border-brass/30 pt-8">
+            <Eyebrow>Wider coastal coverage</Eyebrow>
+            <ul className="mt-5 flex flex-wrap gap-2.5" aria-label="Wider areas covered">
+              {COVERAGE.wider.map((place) => (
+                <li
+                  key={place}
+                  className="rounded-sm border border-brass/40 bg-well px-3 py-2 text-small text-ink"
+                >
+                  {place}
+                </li>
+              ))}
+            </ul>
+            <Link href="/areas" className="btn btn-ghost mt-5">
+              Explore our full coverage
             </Link>
-          ) : (
-            <Link href="/reviews" className="btn btn-secondary btn-invert">
-              Read our reviews
-            </Link>
-          )}
+          </div>
         </div>
       </section>
 
-      {/* 8. How it works */}
+      {/* 7. How it works */}
       <HowItWorks />
 
-      {/* 9. FAQ preview */}
+      {/* 8. FAQ preview */}
       <section className="surface-paper-muted">
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -262,6 +260,16 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <Faq items={HOME_FAQS} />
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Verified Google feedback and the continuous review rail. */}
+      <section className="overflow-hidden border-y border-brass/30 surface-paper py-24">
+        <div className="mx-auto max-w-content px-6 md:px-8">
+          <Eyebrow>Google reviews</Eyebrow>
+          <div className="mt-4">
+            <ReviewsSection heading="What our customers said on Google" />
           </div>
         </div>
       </section>

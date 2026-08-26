@@ -402,7 +402,7 @@ export const FAQ_DATA: FaqEntry[] = [
     group: 'General',
     question: 'Which areas do you cover?',
     answer: [
-      'We work a defined patch on the Solent coast: Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island, and the villages around them such as Portchester, Fareham, Denmead, Cowplain and Lovedean.',
+      'We work across the South Coast and Hampshire, from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus places such as Portchester, Gosport, Waterlooville, Hayling Island, Denmead and Petersfield.',
       'Knowing a small area properly is the whole point of an independent local agent, so we do not claim to cover the entire county. If you are just outside our patch, ask us anyway and we will tell you honestly whether we are the right firm.',
     ],
     relatedLinks: [{ label: 'The towns we cover', href: '/areas' }],

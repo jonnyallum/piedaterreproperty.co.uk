@@ -76,6 +76,15 @@ export function Footer() {
                 <Icon name="facebook" className="h-5 w-5" />
               </a>
             </div>
+            <a
+              href={SITE.urls.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-small text-on-dark/80 hover:text-on-dark hover:underline"
+            >
+              See what our customers said on Google
+              <Icon name="arrow-up-right" className="h-4 w-4" />
+            </a>
           </div>
 
           <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-4">

@@ -10,7 +10,7 @@ import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { SITE, yearsTrading } from '@/lib/site'
+import { COVERAGE, SITE, yearsTrading } from '@/lib/site'
 import { pageMeta, realEstateAgentJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
@@ -28,7 +28,7 @@ export const metadata: Metadata = pageMeta({
 const NUMBERS = [
   { value: yearsTrading(), label: 'years on this coastline' },
   { value: 35, prefix: '~', label: 'homes under management' },
-  { value: 5, label: 'towns we know street by street' },
+  { value: COVERAGE.primary.length + COVERAGE.wider.length, label: 'principal coastal areas covered' },
 ]
 
 /**
@@ -37,8 +37,8 @@ const NUMBERS = [
  */
 const LIMITS = [
   {
-    title: 'We do not cover the whole county',
-    body: 'We work five towns and the villages around them. If you are outside our patch we will say so and, where we can, point you to someone good who is not us.',
+    title: 'We grow without handing you off',
+    body: 'Our reach now runs from Southampton to Chichester and through the Hampshire towns between them. We only accept work the same local team can still service personally.',
   },
   {
     title: 'We are not the cheapest',
@@ -65,7 +65,7 @@ export default function AboutPage() {
             You will deal with <em className="italic text-sales-ink">us</em>, not a call centre.
           </>
         }
-        lead="An independent firm that has stayed on one stretch of the Solent coast since 2011, rather than chasing growth across a county. People instruct people, so it is worth knowing who you would be instructing."
+        lead="An independent firm rooted on the Solent coast since 2011, now working from Southampton to Chichester and across Hampshire without becoming a branch network. People instruct people, so it is worth knowing who you would be instructing."
       />
 
       {/* 1. The founder's story. Draft copy in the house voice, awaiting the
@@ -103,13 +103,14 @@ export default function AboutPage() {
             <p className="dropcap measure mt-6 text-body text-ink">
               Pied-à-Terre means a foot on the ground: a small place you keep for the times you
               need to be somewhere. It is the right name for a firm that has stayed on one
-              stretch of coast since 2011 rather than spreading itself across a county. We
-              learned these towns the only way you can, by working them, one landlord and one
+              coastline since 2011. We learned the original towns the only way you can, by
+              working them, one landlord and one
               home at a time.
             </p>
             <p className="measure mt-4 text-body text-ink-soft">
               For {years} years we have done one thing and done it properly: letting and
-              managing homes between Portsmouth and Emsworth. That is long enough to know which
+              managing homes from Southampton and Portsmouth through to Havant, Emsworth and
+              Chichester. That is long enough to know which
               streets let in a week and which take a month, what a harbour view is really worth,
               and who to call when a boiler fails on a Friday afternoon. It is knowledge you
               cannot buy in from a call centre, and it is the reason landlords stay with us for

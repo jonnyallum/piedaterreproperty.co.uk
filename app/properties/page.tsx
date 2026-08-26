@@ -23,7 +23,7 @@ type RawParams = Record<string, string | string[] | undefined>
 export const metadata: Metadata = pageMeta({
   title: 'Property search',
   description:
-    'Search homes to rent and for sale across the Solent coast, from Havant and Waterlooville to Emsworth, Fareham and Hayling Island.',
+    'Search homes to rent and for sale across the South Coast and Hampshire, from Southampton and Fareham to Portsmouth, Havant and Chichester.',
   path: '/properties',
 })
 

@@ -9,6 +9,7 @@
  */
 import { Stars } from './Stars'
 import { ReviewRail } from './ReviewRail'
+import { GoogleReviewBadge } from './GoogleReviewBadge'
 import { Icon } from '@/components/primitives/Icon'
 import { getReviews, googleWriteReviewUrl } from '@/lib/reviews'
 import { SITE } from '@/lib/site'
@@ -24,32 +25,26 @@ export async function ReviewsSection({ heading = 'What our clients say' }: Revie
   const writeUrl = googleWriteReviewUrl()
 
   if (reviews.length === 0) {
-    // Honest pre-launch state: no fabricated reviews, no error, and a clear route
-    // to Google. Fills in automatically once the Place ID and key are live.
+    // Honest state: no fabricated review text, and direct routes to the verified
+    // Google profile and review form while the Places feed is being connected.
     return (
       <div className="rounded-md border border-brass/40 bg-well p-8 md:p-10">
-        <h2 className="text-h2">Sourced from Google, verbatim</h2>
+        <h2 className="text-h2">See what our customers said on Google</h2>
         <p className="measure mt-4 text-body text-ink-soft">
-          Our reviews are published straight from our Google Business Profile so you can trust they
-          are genuine and unedited. The live feed and overall rating are being connected and will
-          appear here in full. Until then, the most reliable place to read and leave a review is
-          Google itself.
+          Our public Google profile is the source of truth: genuine feedback, published under each
+          customer&rsquo;s own name and never rewritten by us.
         </p>
-        <div className="mt-7 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          {writeUrl ? <GoogleReviewBadge href={writeUrl} /> : null}
           {googleProfile ? (
-            <a href={googleProfile} target="_blank" rel="noopener noreferrer" className="btn btn-sales">
-              <Icon name="arrow-up-right" className="h-5 w-5" />
-              Read reviews on Google
-            </a>
-          ) : (
-            <span className="inline-flex items-center gap-2 rounded-sm border border-brass/40 bg-ground px-4 py-2 text-small text-ink-soft">
-              <Icon name="clock" className="h-4 w-4 text-brass" />
-              Google Business Profile link awaiting confirmation before launch
-            </span>
-          )}
-          {writeUrl ? (
-            <a href="/review" className="btn btn-secondary">
-              Leave a review
+            <a
+              href={googleProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-2 text-small font-medium text-sales-ink hover:underline"
+            >
+              See what our customers said on Google
+              <Icon name="arrow-up-right" className="h-4 w-4" />
             </a>
           ) : null}
         </div>
@@ -72,17 +67,20 @@ export async function ReviewsSection({ heading = 'What our clients say' }: Revie
             </div>
           ) : null}
         </div>
-        {googleProfile ? (
-          <a
-            href={googleProfile}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-body font-medium text-sales-ink hover:underline"
-          >
-            Read all on Google
-            <Icon name="arrow-up-right" className="h-4 w-4" />
-          </a>
-        ) : null}
+        <div className="flex flex-col items-start gap-3">
+          {writeUrl ? <GoogleReviewBadge href={writeUrl} /> : null}
+          {googleProfile ? (
+            <a
+              href={googleProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-small font-medium text-sales-ink hover:underline"
+            >
+              See all Google reviews
+              <Icon name="arrow-up-right" className="h-4 w-4" />
+            </a>
+          ) : null}
+        </div>
       </div>
 
       <p className="mt-3 text-small text-ink-soft">

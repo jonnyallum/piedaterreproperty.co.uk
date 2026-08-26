@@ -281,7 +281,7 @@ Open, minor, not blocking:
 
 Blocked on Charisma or Jonny (tracked in ASSET_REQUEST_LIST.md): the founder
 story approval, remaining team photography, the GA4, Places and Resend keys, the
-Place ID and Business Profile URL, the office email and opening hours, the ICO
+Place ID, the office email and opening hours, the ICO
 number and founding month, the sales registrations, and per-town figures.
 
 ## What "done" means, against the README

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
-import { Marquee } from '@/components/marketing/Marquee'
 import { Grain } from '@/components/primitives/Grain'
 import { Icon } from '@/components/primitives/Icon'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -11,13 +10,11 @@ import { COVERAGE } from '@/lib/site'
 import { pageMeta, realEstateAgentJsonLd } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
-  title: 'Areas we cover on the Solent coast',
+  title: 'Areas we cover across the South Coast and Hampshire',
   description:
-    'The Solent coast towns we know street by street: Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island, plus the villages around them.',
+    'Estate and letting agency coverage from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus the surrounding Hampshire towns.',
   path: '/areas',
 })
-
-const ALL_TOWNS = [...COVERAGE.primary, ...COVERAGE.secondary]
 
 /** A tint per card so the arch grid does not read as one flat block. */
 const TINTS = ['surface-tide', 'surface-harbour-dusk', 'surface-tide', 'surface-harbour-dusk', 'surface-tide']
@@ -33,15 +30,21 @@ export default function AreasPage() {
         trail={[{ name: 'Areas', path: '/areas' }]}
         title={
           <>
-            We know these streets, <em className="italic text-sales-ink">not a county</em>.
+            Southampton to Chichester, with{' '}
+            <em className="italic text-sales-ink">Hampshire at our back</em>.
           </>
         }
-        lead="Fifteen years on one small patch of the Solent coast. We would rather know five towns properly than claim to cover the whole of Hampshire."
+        lead="Our established heartland runs through Portsmouth, Havant and the eastern Solent. Today we also work west towards Southampton, east to Chichester and inland through Hampshire."
       />
 
-      <Marquee items={ALL_TOWNS} className="border-y border-brass/30" />
-
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="text-h2">Our local area guides</h2>
+          <p className="measure mt-3 text-body text-ink-soft">
+            These five detailed guides cover the places where our original lettings book was
+            built. Each town appears once, with the broader service area set out below.
+          </p>
+        </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {AREAS.map((area, i) => {
             const hasPage = live.has(area.slug)
@@ -84,10 +87,25 @@ export default function AreasPage() {
         </div>
 
         <div className="mt-16 border-t border-brass/30 pt-10">
-          <h2 className="text-h3">And the villages around them</h2>
+          <h2 className="text-h2">Across the wider South Coast</h2>
           <p className="measure mt-2 text-body text-ink-soft">
-            We also let, manage and now sell across the surrounding villages and suburbs. If your
-            street is near one of our towns, it is very likely near us too.
+            Our working corridor extends west to Southampton and east to Chichester, taking in
+            the towns and city neighbourhoods around the Solent.
+          </p>
+          <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
+            {COVERAGE.wider.map((place) => (
+              <li key={place} className="rounded-sm border border-brass/40 bg-ground px-3 py-1.5 text-small text-ink">
+                {place}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 border-t border-brass/30 pt-10">
+          <h2 className="text-h3">Hampshire towns, villages and suburbs</h2>
+          <p className="measure mt-2 text-body text-ink-soft">
+            We also let, manage and sell across the surrounding communities. If your street sits
+            between the coast and the South Downs, ask us rather than assuming it is outside our area.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
             {COVERAGE.secondary.map((place) => (

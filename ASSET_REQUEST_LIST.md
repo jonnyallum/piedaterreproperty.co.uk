@@ -40,7 +40,8 @@ standard, and the response-time commitment.
 
 - [ ] GA4 measurement ID and GTM container ID (plus publish permission)
 - [ ] Google Maps Platform API key, billing on, referrer restricted
-- [ ] Google Place ID and Google Business Profile URL (for the reviews rail)
+- [x] Google Business Profile and direct review URLs
+- [ ] Google Place ID (for the live scrolling reviews rail)
 - [ ] Resend account and verified sending domain
 - [ ] DNS access for piedaterreproperty.co.uk
 - [ ] Search Console access, to export the old URL list and ranking baseline

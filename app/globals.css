@@ -939,6 +939,40 @@
     border: 1px solid color-mix(in srgb, var(--c-brass) 40%, transparent);
     border-radius: var(--radius-md);
   }
+  .google-review-badge {
+    display: inline-flex;
+    width: min(100%, 25rem);
+    min-height: 4.5rem;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--c-brass) 48%, transparent);
+    border-radius: var(--radius-md);
+    background-color: var(--c-ground);
+    box-shadow: var(--shadow-warm-sm);
+    transition:
+      transform var(--dur-ui) var(--ease-quill),
+      box-shadow var(--dur-ui) var(--ease-quill);
+  }
+  .google-review-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-warm);
+  }
+  .google-review-g {
+    display: inline-flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #4285f4;
+    box-shadow: inset 0 0 0 1px rgba(23, 35, 46, 0.1);
+  }
   /* Reduced motion: stop entirely and let the reader scroll the row by hand. */
   @media (prefers-reduced-motion: reduce) {
     .review-rail-track {

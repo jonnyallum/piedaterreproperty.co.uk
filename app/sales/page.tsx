@@ -20,7 +20,7 @@ export const metadata: Metadata = pageMeta({
     ? 'Selling your home with a local agent'
     : 'Selling with us, opening soon',
   description:
-    'Fifteen years on this coast, now selling homes across Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island. Book a free, honest valuation.',
+    'Fifteen years on this coast, now selling homes from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester. Book a free, honest valuation.',
   path: '/sales',
 })
 

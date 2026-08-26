@@ -23,7 +23,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Do you cover my area?',
-    a: 'We work a defined patch on the Solent coast: Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island, and the villages around them. Knowing one area well is the whole point, so we do not spread thinly.',
+    a: 'We work across the South Coast and Hampshire, from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus the towns and villages between the coast and the South Downs.',
     group: 'General',
     home: true,
   },

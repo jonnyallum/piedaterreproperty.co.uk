@@ -17,7 +17,7 @@ export interface Pillar {
 export const SALES_PILLARS: Pillar[] = [
   {
     title: 'We already know this patch, street by street',
-    body: 'Not a region, five towns. We have valued, let, inspected and maintained homes on these roads for fifteen years. We know which streets have parking, which schools people move for, and what a buyer will actually pay.',
+    body: 'A connected coastal market, backed by fifteen years of work on these roads. We know which streets have parking, which schools people move for, and what a buyer will actually pay from Southampton to Chichester and across Hampshire.',
   },
   {
     title: 'The same people, from valuation to completion',

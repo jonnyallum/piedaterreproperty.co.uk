@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s . Pied-à-Terre Property',
   },
   description:
-    'An established, award-winning independent lettings and management firm on the Solent coast, now selling homes across Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island.',
+    'An established, award-winning independent property firm covering the South Coast and Hampshire, from Southampton and Fareham to Portsmouth, Havant and Chichester.',
   applicationName: SITE.tradingName,
   robots: ALLOW_INDEXING
     ? { index: true, follow: true }

@@ -5,10 +5,9 @@
  */
 import { SelectField } from '@/components/primitives/Field'
 import { Icon } from '@/components/primitives/Icon'
-import { AREAS } from '@/content/areas'
-import { COVERAGE } from '@/lib/site'
+import { COVERAGE_PLACES } from '@/lib/site'
 
-const ALL_TOWNS = [...AREAS.map((area) => area.name), ...COVERAGE.secondary]
+const ALL_TOWNS = COVERAGE_PLACES
 
 export function HeroSearch() {
   return (

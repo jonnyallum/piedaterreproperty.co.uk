@@ -27,7 +27,7 @@ const OPTIONS = [
   {
     name: 'A small local firm',
     good: 'One patch known street by street, the same person from valuation to completion, and an office you can walk into.',
-    cost: 'We are honest about this: we do not carry a national brand, and we cover five towns, not the whole county. If your home is outside our patch, we are not the right firm, and we will say so.',
+    cost: 'We are honest about this: we do not carry a national brand. Our working area runs from Southampton to Chichester and through Hampshire, and we only take on homes the same local team can service properly.',
   },
 ]
 

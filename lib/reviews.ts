@@ -24,6 +24,7 @@
  */
 import { z } from 'zod'
 import fallback from '@/content/reviews/fallback.json'
+import { SITE } from '@/lib/site'
 
 /** 12 hours, in seconds. */
 export const REVIEWS_REVALIDATE = 43200
@@ -182,5 +183,5 @@ export async function getReviews(): Promise<ReviewsPayload> {
 export function googleWriteReviewUrl(placeId = process.env.GOOGLE_PLACE_ID ?? ''): string {
   return placeId
     ? `https://search.google.com/local/writereview?placeid=${encodeURIComponent(placeId)}`
-    : ''
+    : SITE.urls.googleReview
 }

@@ -3,7 +3,7 @@
  * keep titles, canonicals and the indexing gate consistent from prompt 01 on.
  */
 import type { Metadata } from 'next'
-import { SITE } from './site'
+import { COVERAGE_PLACES, SITE } from './site'
 import type { Property } from '@/lib/schemas/property'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE.urls.production
@@ -111,7 +111,7 @@ export function realEstateAgentJsonLd(opts: AgentJsonLdOptions = {}) {
       latitude: SITE.office.lat,
       longitude: SITE.office.lng,
     },
-    areaServed: ['Havant', 'Portsmouth', 'Waterlooville', 'Emsworth', 'Hayling Island'],
+    areaServed: COVERAGE_PLACES,
     openingHoursSpecification: hours,
     sameAs: [SITE.urls.instagram, SITE.urls.facebook].filter(Boolean),
   }

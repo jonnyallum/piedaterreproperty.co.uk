@@ -41,7 +41,7 @@ export default function OgImage() {
             Estate and letting agents on the Solent coast
           </div>
           <div style={{ fontSize: 30, color: palette.slate, maxWidth: 860 }}>
-            Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island. Independent since 2011.
+            Southampton to Chichester, across the South Coast and Hampshire. Independent since 2011.
           </div>
         </div>
 

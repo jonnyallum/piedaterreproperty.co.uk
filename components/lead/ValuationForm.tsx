@@ -21,8 +21,7 @@ import { Field, SelectField, TextareaField } from '@/components/primitives/Field
 import { Button } from '@/components/primitives/Button'
 import { BrassRule } from '@/components/primitives/BrassRule'
 import { Icon } from '@/components/primitives/Icon'
-import { SALES_LIVE, COVERAGE } from '@/lib/site'
-import { AREAS } from '@/content/areas'
+import { SALES_LIVE, COVERAGE_PLACES } from '@/lib/site'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { readUtm } from '@/lib/utm'
 import { track } from '@/lib/analytics'
@@ -67,7 +66,7 @@ const EMPTY: FormState = {
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
-const TOWNS = [...AREAS.map((a) => a.name), ...COVERAGE.secondary]
+const TOWNS = COVERAGE_PLACES
 const TYPES = ['House', 'Flat or apartment', 'Bungalow', 'Maisonette', 'Other']
 
 export function ValuationForm({ path, source, initialTown }: ValuationFormProps) {

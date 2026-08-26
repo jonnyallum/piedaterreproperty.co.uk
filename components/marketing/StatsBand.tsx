@@ -60,9 +60,9 @@ export function StatsBand() {
           </div>
           <div>
             <p className="font-display text-display leading-none text-ochre">
-              5
+              Solent
             </p>
-            <p className="mt-2 text-lead text-on-dark/85">towns we know street by street</p>
+            <p className="mt-2 text-lead text-on-dark/85">South Coast and Hampshire coverage</p>
           </div>
         </div>
 
