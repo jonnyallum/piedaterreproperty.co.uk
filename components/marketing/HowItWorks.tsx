@@ -26,7 +26,7 @@ const PATHS = [
   },
   {
     label: 'Letting',
-    tone: 'font-medium text-lettings',
+    tone: 'font-medium text-lettings-deep',
     steps: [
       {
         title: 'Free rental valuation',
