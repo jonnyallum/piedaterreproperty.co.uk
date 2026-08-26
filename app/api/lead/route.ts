@@ -181,7 +181,15 @@ async function logLead(lead: LeadInput, meta: { ip: string; delivered: boolean }
     const dir = process.env.LEAD_LOG_DIR ?? join(tmpdir(), 'piedaterre-leads')
     await mkdir(dir, { recursive: true })
     const day = new Date().toISOString().slice(0, 10)
-    const record = { at: new Date().toISOString(), ...lead, _meta: meta }
+    // The durable record carries all three parts prompt 13 requires: the consent
+    // state (consentMarketing, from the lead), the timestamp (at), and the exact
+    // wording version the visitor was shown, so what was agreed is provable later.
+    const record = {
+      at: new Date().toISOString(),
+      consentWordingVersion: CONSENT_VERSION,
+      ...lead,
+      _meta: meta,
+    }
     await appendFile(join(dir, `leads-${day}.ndjson`), JSON.stringify(record) + '\n', 'utf8')
   } catch (err) {
     // A log failure must never lose the lead silently; surface it for the alert.

@@ -169,10 +169,14 @@ export function CookieBanner() {
         </div>
       ) : (
         <div className="mt-4 flex flex-wrap gap-3">
+          {/* Accept all and Reject all carry identical weight: same fill, same
+              size, side by side. Under UK GDPR and PECR rejecting must be as easy
+              and as prominent as accepting, so the label carries the meaning, not
+              the styling. Manage preferences is the lesser, tertiary action. */}
           <button type="button" className="btn btn-lettings" onClick={() => choose(grantedConsent())}>
             Accept all
           </button>
-          <button type="button" className="btn btn-secondary" onClick={() => choose(emptyConsent())}>
+          <button type="button" className="btn btn-lettings" onClick={() => choose(emptyConsent())}>
             Reject all
           </button>
           <button

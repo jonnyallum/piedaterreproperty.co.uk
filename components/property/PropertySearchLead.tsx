@@ -13,6 +13,7 @@ import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
 import { track } from '@/lib/analytics'
+import { CONSENT_WORDING } from '@/lib/leads'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
@@ -77,6 +78,7 @@ export function PropertySearchLead({ summary, criteria }: PropertySearchLeadProp
           name: get('name'),
           email: get('email'),
           phone: get('phone'),
+          consentMarketing: fd.get('consentMarketing') === 'on',
           message: `Register interest for a search with no current matches: ${summary}.`,
           extra: {
             searchSummary: summary,
@@ -140,6 +142,26 @@ export function PropertySearchLead({ summary, criteria }: PropertySearchLeadProp
         <Field id={`${id}-name`} name="name" label="Your name" required autoComplete="name" error={errors.name} />
         <Field id={`${id}-email`} name="email" label="Email" type="email" autoComplete="email" error={errors.email} />
         <Field id={`${id}-phone`} name="phone" label="Phone" type="tel" autoComplete="tel" error={errors.phone} />
+      </div>
+
+      {/* Marketing consent, separate from the registration and unticked by
+          default: registering interest is not consent to wider marketing. */}
+      <div className="mt-5">
+        <label className="flex items-start gap-3 text-small text-ink-soft">
+          <input
+            type="checkbox"
+            name="consentMarketing"
+            className="mt-1 h-4 w-4 shrink-0 accent-lettings-deep"
+          />
+          <span>{CONSENT_WORDING}</span>
+        </label>
+        <p className="mt-2 text-small text-ink-soft">
+          See our{' '}
+          <a href="/privacy-policy" className="underline underline-offset-2 hover:no-underline">
+            privacy policy
+          </a>{' '}
+          for how we use your details.
+        </p>
       </div>
 
       {submitError ? (
