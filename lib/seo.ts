@@ -10,6 +10,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE.urls.production
 /** Indexing is off by default so the temporary preview domain stays noindex. */
 const ALLOW_INDEXING = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
 
+/**
+ * The canonical origin is ALWAYS the production domain, never the serving origin.
+ * This is deliberate and load-bearing: the single most damaging mistake in a
+ * staged launch is letting the temporary domain become the canonical, which tells
+ * Google to index the wrong host. Canonicals are pinned to production regardless
+ * of where the page is served from. The temporary domain is noindex anyway.
+ */
+const CANONICAL_ORIGIN = SITE.urls.production
+
 export const siteUrl = SITE_URL
 
 interface PageMetaInput {
@@ -20,10 +29,10 @@ interface PageMetaInput {
   noindex?: boolean
 }
 
-/** Absolute canonical URL for a route path. */
+/** Absolute canonical URL for a route path, always on the production domain. */
 export function canonical(path: string): string {
   const clean = path.startsWith('/') ? path : `/${path}`
-  return new URL(clean, SITE_URL).toString()
+  return new URL(clean, CANONICAL_ORIGIN).toString()
 }
 
 /** Build a page's Metadata object with canonical, robots and social cards. */
@@ -257,5 +266,46 @@ export function breadcrumbJsonLd(trail: { name: string; path: string }[]) {
       name: item.name,
       item: canonical(item.path),
     })),
+  }
+}
+
+/**
+ * Organization JSON-LD for the root, carrying the social profiles so Google can
+ * connect the site to the firm's Instagram and Facebook. Kept distinct from the
+ * RealEstateAgent node by @id so they are two nodes, not a conflict.
+ */
+export function organizationJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${CANONICAL_ORIGIN}/#org`,
+    name: SITE.tradingName,
+    legalName: SITE.legalEntity,
+    url: CANONICAL_ORIGIN,
+    telephone: SITE.phone.display,
+    sameAs: [SITE.urls.instagram, SITE.urls.facebook].filter(Boolean),
+  }
+}
+
+/**
+ * WebSite JSON-LD with a SearchAction pointing at the property search, so a
+ * sitelinks search box can surface in results. The query slots into the town
+ * filter the search page already reads.
+ */
+export function webSiteJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${CANONICAL_ORIGIN}/#website`,
+    name: SITE.tradingName,
+    url: CANONICAL_ORIGIN,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${CANONICAL_ORIGIN}/properties?town={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   }
 }

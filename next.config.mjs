@@ -15,20 +15,23 @@ const nextConfig = {
     imageSizes: [16, 24, 48, 64, 96, 128, 256, 384],
   },
   async headers() {
-    return [
+    const security = [
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
       {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
-          },
-        ],
+        key: 'Permissions-Policy',
+        value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
       },
     ]
+    // On any non-production deployment, send a hard noindex header on every
+    // response, belt-and-braces with robots.txt, so the temporary domain can
+    // never be indexed even if a page is requested directly.
+    const isProduction = process.env.NEXT_PUBLIC_SITE_ENV === 'production'
+    if (!isProduction) {
+      security.push({ key: 'X-Robots-Tag', value: 'noindex, nofollow' })
+    }
+    return [{ source: '/(.*)', headers: security }]
   },
 }
 

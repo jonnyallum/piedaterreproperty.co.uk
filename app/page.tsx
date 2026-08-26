@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
@@ -17,7 +18,24 @@ import { AREAS } from '@/content/areas'
 import { HOME_FAQS } from '@/content/faqs'
 import { SITE, COVERAGE, yearsTrading } from '@/lib/site'
 import { inWords } from '@/lib/format'
-import { realEstateAgentJsonLd, faqPageJsonLd } from '@/lib/seo'
+import { realEstateAgentJsonLd, faqPageJsonLd, pageMeta } from '@/lib/seo'
+
+/**
+ * Home metadata. The canonical, robots and social card come from pageMeta so the
+ * home page is pinned to the production domain like every other page. The title
+ * is set absolute, bypassing the brand template, to the primary target query.
+ */
+export const metadata: Metadata = {
+  ...pageMeta({
+    title: 'Estate and letting agents in Havant, Portsmouth and Emsworth',
+    description:
+      'Independent estate and letting agents on the Solent coast since 2011. Selling, letting and managing homes in Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island.',
+    path: '/',
+  }),
+  title: {
+    absolute: 'Estate and letting agents in Havant, Portsmouth and Emsworth | Pied-à-Terre Property',
+  },
+}
 
 /*
  * Hero headline options, in the house voice. The strongest is implemented; the

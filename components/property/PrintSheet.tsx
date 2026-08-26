@@ -50,7 +50,10 @@ export function PrintSheet({ property }: { property: Property }) {
 
       <div className="mt-4">
         <p className="tabular text-small text-ink-soft">{STATUS_LABEL[property.status]}</p>
-        <h1 className="mt-1 font-display text-h2 text-ink">{property.displayAddress}</h1>
+        {/* Not an h1: the page already has one visible h1 with this address, and
+            two would break the single-h1 rule. This print-only sheet uses a
+            styled paragraph so the printed particulars still lead with it. */}
+        <p className="mt-1 font-display text-h2 text-ink">{property.displayAddress}</p>
         <p className="tabular mt-1 text-h3 text-ink">{formatPrice(property.price)}</p>
         <p className="mt-1 text-body text-ink-soft">{property.summary}</p>
       </div>
