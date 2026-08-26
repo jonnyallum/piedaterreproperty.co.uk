@@ -17,7 +17,7 @@ export function Logo({ tone = 'ink', className }: LogoProps) {
     <Link
       href="/"
       className={cn('brand-lockup group inline-flex items-center leading-none', color, className)}
-      aria-label="Pied-à-Terre Property / Solent coast, home"
+      aria-label="P Pied-à-Terre Property / Solent Coast, home"
     >
       <span className="brand-mark" aria-hidden="true">
         <span className="brand-mark-sun" />
