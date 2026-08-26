@@ -203,7 +203,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Credentials, explained rather than displayed as logos. */}
-      <section className="mx-auto max-w-content px-6 py-24 md:px-8">
+      <section id="credentials" className="mx-auto max-w-content px-6 py-24 scroll-mt-28 md:px-8">
         <Eyebrow>Credentials, explained</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-h2">
           The safeguards a serious firm carries as <em className="italic text-sales-ink">standard</em>.

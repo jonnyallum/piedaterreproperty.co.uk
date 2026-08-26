@@ -5,6 +5,7 @@ import { Icon } from '@/components/primitives/Icon'
 import { OpenBadge } from '@/components/marketing/OpeningHours'
 import { pageMeta } from '@/lib/seo'
 import { SITE } from '@/lib/site'
+import { googleWriteReviewUrl } from '@/lib/reviews'
 
 /**
  * Thank-you pages. Each form redirects here on success: a clean conversion
@@ -79,6 +80,9 @@ export default async function ThankYouPage({ params }: { params: Promise<{ kind:
   if (!t) notFound()
 
   const wa = `https://wa.me/${SITE.whatsapp}`
+  // A light review nudge, only when the Google review link is live and never on an
+  // emergency maintenance report. Worded softly, never a nag.
+  const showReviewNudge = Boolean(googleWriteReviewUrl()) && !t.emergency
 
   return (
     <section className="mx-auto max-w-2xl px-6 pb-24 pt-36 text-center md:px-8 md:pt-44">
@@ -111,6 +115,16 @@ export default async function ThankYouPage({ params }: { params: Promise<{ kind:
           <Icon name="arrow-right" className="h-4 w-4" />
         </Link>
       </p>
+
+      {showReviewNudge ? (
+        <p className="mt-6 text-small text-ink-soft">
+          Been happy with us before?{' '}
+          <Link href="/review" className="text-sales-ink underline underline-offset-4 hover:no-underline">
+            A short review
+          </Link>{' '}
+          helps the next person on your street choose.
+        </p>
+      ) : null}
     </section>
   )
 }

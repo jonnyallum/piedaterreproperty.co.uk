@@ -684,6 +684,69 @@
     color: var(--c-on-dark);
   }
 
+  /* ---- Review rail: slow, seamless, GPU-composited --------------------- */
+  .review-rail {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 6%,
+      #000 94%,
+      transparent
+    );
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .review-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .review-rail:focus-visible {
+    outline: 2px solid var(--c-brass);
+    outline-offset: 4px;
+  }
+  .review-rail-track {
+    display: flex;
+    flex-shrink: 0;
+    will-change: transform;
+    animation: pt-review-rail 55s linear infinite;
+  }
+  .review-rail-list {
+    display: flex;
+    flex-shrink: 0;
+    padding-block: 0.5rem;
+    list-style: none;
+    margin: 0;
+  }
+  /* Spacing is baked into each card, not a flex gap, so the two identical lists
+     butt together and a -50% translate loops with no visible seam. */
+  .review-rail-list > li {
+    margin-right: 1.5rem;
+  }
+  /* Pause when the reader wants to read: on hover and on focus within. */
+  .review-rail:hover .review-rail-track,
+  .review-rail:focus-within .review-rail-track {
+    animation-play-state: paused;
+  }
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    max-width: 80vw;
+    flex-shrink: 0;
+    padding: 1.5rem;
+    background: var(--c-ground);
+    border: 1px solid color-mix(in srgb, var(--c-brass) 40%, transparent);
+    border-radius: var(--radius-md);
+  }
+  /* Reduced motion: stop entirely and let the reader scroll the row by hand. */
+  @media (prefers-reduced-motion: reduce) {
+    .review-rail-track {
+      animation: none;
+    }
+  }
+
   /* ---- Property card, arch-topped with a dye bloom on hover ------------ */
   .property-media {
     position: relative;
@@ -817,6 +880,15 @@
   }
   to {
     background-position: 250% 0;
+  }
+}
+
+@keyframes pt-review-rail {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

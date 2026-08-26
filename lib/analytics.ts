@@ -29,6 +29,7 @@ export type AnalyticsEvent =
   | 'search_performed'
   | 'search_empty'
   | 'review_rail_engaged'
+  | 'review_link_click'
 
 /**
  * Events marked as GA4 conversions. Referenced by the analytics configuration in

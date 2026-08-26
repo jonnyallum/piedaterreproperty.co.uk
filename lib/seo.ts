@@ -62,7 +62,16 @@ export function pageMeta({
 }
 
 /** LocalBusiness / RealEstateAgent JSON-LD, using the Portchester office. */
-export function realEstateAgentJsonLd() {
+/**
+ * Optional aggregate rating, only ever passed real Google figures. Never call
+ * this with an invented rating or count: an AggregateRating in schema without
+ * genuine reviews behind it is a manual-action risk and dishonest.
+ */
+interface AgentJsonLdOptions {
+  aggregate?: { rating: number; total: number }
+}
+
+export function realEstateAgentJsonLd(opts: AgentJsonLdOptions = {}) {
   const hours = SITE.openingHours
     .filter((h) => h.open && h.close)
     .map((h) => ({
@@ -72,7 +81,7 @@ export function realEstateAgentJsonLd() {
       closes: h.close,
     }))
 
-  return {
+  const base: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     '@id': `${SITE_URL}/#organisation`,
@@ -97,6 +106,18 @@ export function realEstateAgentJsonLd() {
     openingHoursSpecification: hours,
     sameAs: [SITE.urls.instagram, SITE.urls.facebook].filter(Boolean),
   }
+
+  if (opts.aggregate && opts.aggregate.total > 0) {
+    base.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: opts.aggregate.rating,
+      reviewCount: opts.aggregate.total,
+      bestRating: 5,
+      worstRating: 1,
+    }
+  }
+
+  return base
 }
 
 /**

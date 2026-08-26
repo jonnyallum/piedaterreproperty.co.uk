@@ -1,0 +1,7 @@
+{
+  "note": "Stored snapshot of the last successful Google Places fetch. Populated automatically on each successful call and committed so the rail never renders empty and never shows an error if the API is unavailable. It is empty now because the Place ID and API key are not yet confirmed (see ASSET_REQUEST_LIST). Never hand-edit review text into this file: it must only ever contain real reviews returned by Google.",
+  "fetchedAt": null,
+  "rating": null,
+  "total": 0,
+  "reviews": []
+}
