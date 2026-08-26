@@ -459,6 +459,9 @@
     font-style: italic;
     line-height: 1;
   }
+  .brand-mark-letter::before {
+    content: 'P';
+  }
   .brand-wordmark {
     display: inline-flex;
     flex-direction: column;
