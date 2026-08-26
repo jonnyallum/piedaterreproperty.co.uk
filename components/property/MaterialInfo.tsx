@@ -74,7 +74,10 @@ export function MaterialInfo({ info }: { info: MaterialInformation }) {
       </h2>
       <p className="measure mt-2 text-small text-ink-soft">
         The facts you are entitled to before you enquire, set out under the Digital Markets,
-        Competition and Consumers Act.
+        Competition and Consumers Act.{' '}
+        <a href="/material-information" className="text-sales-ink underline">
+          What is material information?
+        </a>
       </p>
       <div className="mt-6 grid gap-8 sm:grid-cols-2">
         {groups.map((group) => (

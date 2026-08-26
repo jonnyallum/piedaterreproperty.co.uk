@@ -12,6 +12,7 @@ import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE, COVERAGE } from '@/lib/site'
 import { AREAS } from '@/content/areas'
+import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -22,6 +23,7 @@ export function RegisterForm() {
   const id = useId()
   const [done, setDone] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [consent, setConsent] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitError, setSubmitError] = useState('')
 
@@ -56,6 +58,7 @@ export function RegisterForm() {
           name: get('name'),
           email: get('email'),
           phone: get('phone'),
+          consentMarketing: consent,
           extra: {
             locations: get('locations'),
             budget: get('budget'),
@@ -178,6 +181,24 @@ export function RegisterForm() {
           label="Anything else we should know"
           placeholder="Accessibility needs, a parking requirement, a deadline."
         />
+        <div>
+          <label className="flex items-start gap-3 text-small text-ink-soft">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-1 h-4 w-4 shrink-0 accent-lettings-deep"
+            />
+            <span>{CONSENT_WORDING}</span>
+          </label>
+          <p className="mt-2 text-small text-ink-soft">
+            See our{' '}
+            <a href="/privacy-policy" className="underline underline-offset-2 hover:no-underline">
+              privacy policy
+            </a>{' '}
+            for how we use your details.
+          </p>
+        </div>
       </fieldset>
 
       {submitError ? (

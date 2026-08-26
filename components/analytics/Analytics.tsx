@@ -15,25 +15,30 @@
  */
 import Script from 'next/script'
 import { useEffect } from 'react'
-import { readConsent, type ConsentChoice } from '@/components/chrome/CookieBanner'
+import { readConsent, CONSENT_EVENT } from '@/components/chrome/CookieBanner'
+import type { ConsentState } from '@/lib/consent'
 
 const GA4 = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID
 const GTM = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID
 
 export function Analytics() {
   useEffect(() => {
-    const apply = (choice: ConsentChoice) => {
+    const apply = (state: ConsentState) => {
       if (typeof window.gtag !== 'function') return
-      // Analytics only. Advertising signals stay denied in both states.
+      // Analytics follows the stored decision. Advertising signals stay denied
+      // in both states: no marketing technology is deployed (prompt 13).
       window.gtag('consent', 'update', {
-        analytics_storage: choice === 'granted' ? 'granted' : 'denied',
+        analytics_storage: state.analytics ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
       })
     }
     const stored = readConsent()
     if (stored) apply(stored)
-    const handler = (e: Event) => apply((e as CustomEvent<ConsentChoice>).detail)
-    window.addEventListener('pt:consent', handler)
-    return () => window.removeEventListener('pt:consent', handler)
+    const handler = (e: Event) => apply((e as CustomEvent<ConsentState>).detail)
+    window.addEventListener(CONSENT_EVENT, handler)
+    return () => window.removeEventListener(CONSENT_EVENT, handler)
   }, [])
 
   return (

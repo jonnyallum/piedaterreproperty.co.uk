@@ -7,6 +7,7 @@
 import Link from 'next/link'
 import { FOOTER_NAV, LEGAL_NAV } from './nav-data'
 import { Logo } from './Logo'
+import { ConsentLink } from './ConsentLink'
 import { Grain } from '@/components/primitives/Grain'
 import { Icon } from '@/components/primitives/Icon'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
@@ -121,6 +122,7 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
+            <ConsentLink />
             <span className="tabular">© {year} {SITE.legalEntity}</span>
           </div>
         </div>

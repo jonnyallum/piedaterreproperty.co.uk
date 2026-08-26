@@ -14,6 +14,7 @@ import { Field, SelectField, TextareaField } from '@/components/primitives/Field
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
+import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
 const PHONE = /^(\+?44\s?|0)(\d\s?){9,10}\d$/
@@ -60,6 +61,7 @@ export function MaintenanceForm() {
   const [submitting, setSubmitting] = useState(false)
   const [photo, setPhoto] = useState<string>('')
   const [photoNote, setPhotoNote] = useState('')
+  const [consent, setConsent] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitError, setSubmitError] = useState('')
 
@@ -116,6 +118,7 @@ export function MaintenanceForm() {
           phone: get('phone'),
           email: get('email') || undefined,
           message: get('description'),
+          consentMarketing: consent,
           extra: {
             address: get('address'),
             category: get('category'),
@@ -248,6 +251,24 @@ export function MaintenanceForm() {
             ) : (
               <p className="field-hint">We shrink it on your phone first, so it sends on a weak signal.</p>
             )}
+          </div>
+          <div>
+            <label className="flex items-start gap-3 text-small text-ink-soft">
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className="mt-1 h-4 w-4 shrink-0 accent-lettings-deep"
+              />
+              <span>{CONSENT_WORDING}</span>
+            </label>
+            <p className="mt-2 text-small text-ink-soft">
+              See our{' '}
+              <a href="/privacy-policy" className="underline underline-offset-2 hover:no-underline">
+                privacy policy
+              </a>{' '}
+              for how we use your details.
+            </p>
           </div>
         </fieldset>
 

@@ -71,4 +71,5 @@ export const LEGAL_NAV = [
   { label: 'Cookie policy', href: '/cookie-policy' },
   { label: 'Terms', href: '/terms' },
   { label: 'Complaints procedure', href: '/complaints-procedure' },
+  { label: 'Accessibility', href: '/accessibility' },
 ]

@@ -12,6 +12,7 @@ import { Field, TextareaField } from '@/components/primitives/Field'
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { SITE } from '@/lib/site'
+import { CONSENT_WORDING } from '@/lib/leads'
 import { track } from '@/lib/analytics'
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -33,6 +34,7 @@ export function EnquiryForm({
   const id = useId()
   const [done, setDone] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [consent, setConsent] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitError, setSubmitError] = useState('')
 
@@ -70,6 +72,7 @@ export function EnquiryForm({
           email: get('email'),
           phone: get('phone'),
           message: get('message'),
+          consentMarketing: consent,
           propertyRef: propertyId,
           propertyAddress: displayAddress,
           propertySlug: slug,
@@ -134,6 +137,24 @@ export function EnquiryForm({
           label="Message"
           defaultValue={`I would like to arrange a viewing of ${displayAddress}.`}
         />
+        <div>
+          <label className="flex items-start gap-3 text-small text-ink-soft">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-1 h-4 w-4 shrink-0 accent-lettings-deep"
+            />
+            <span>{CONSENT_WORDING}</span>
+          </label>
+          <p className="mt-2 text-small text-ink-soft">
+            See our{' '}
+            <a href="/privacy-policy" className="underline underline-offset-2 hover:no-underline">
+              privacy policy
+            </a>{' '}
+            for how we use your details.
+          </p>
+        </div>
       </div>
 
       {submitError ? (
