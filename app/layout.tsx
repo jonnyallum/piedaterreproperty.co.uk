@@ -9,7 +9,6 @@ import { CookieBanner } from '@/components/chrome/CookieBanner'
 import { Analytics, GtmNoScript, CONSENT_DEFAULT_SCRIPT } from '@/components/analytics/Analytics'
 import { UtmCapture } from '@/components/analytics/UtmCapture'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { Grain } from '@/components/primitives/Grain'
 import { themeColor } from '@/lib/tokens'
 import { SITE } from '@/lib/site'
 import { CONSENT_VISIBILITY_SCRIPT } from '@/lib/consent'
@@ -71,10 +70,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Organisation and WebSite structured data, site-wide. */}
         <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
         <SkipLink />
-        {/* A fixed coastal-atlas field gives every route one shared visual
-            world. It is decorative, non-interactive and deliberately faint. */}
-        <div className="site-atmosphere" aria-hidden="true" />
-        <Grain />
         <Nav />
         <main id="main" className="relative" style={{ zIndex: 'var(--z-content)' }}>
           {children}

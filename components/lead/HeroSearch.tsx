@@ -15,7 +15,7 @@ export function HeroSearch() {
       action="/properties"
       method="get"
       aria-label="Search properties"
-      className="arch-shallow grid gap-5 rounded-md border border-brass/40 bg-ground p-5 shadow-warm-lg md:grid-cols-[auto_1.3fr_1fr_1fr_auto] md:items-end md:p-6"
+      className="grid gap-5 rounded-[2rem] border-2 border-ink bg-ground p-5 shadow-warm-lg md:grid-cols-[auto_1.3fr_1fr_1fr_auto] md:items-end md:p-6"
     >
       <fieldset>
         <legend className="field-label">Looking for</legend>

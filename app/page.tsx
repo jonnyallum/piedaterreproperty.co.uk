@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Grain } from '@/components/primitives/Grain'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Reveal } from '@/components/primitives/Reveal'
 import { Icon } from '@/components/primitives/Icon'
@@ -58,61 +57,59 @@ export default function HomePage() {
     <>
       <JsonLd data={[realEstateAgentJsonLd(), faqPageJsonLd(HOME_FAQS)]} />
 
-      {/* 1. Hero: an authentic archive property leads the page. The brand
-          illustration remains lower down as supporting editorial artwork. */}
-      <section className="home-hero relative isolate overflow-hidden bg-indigo text-on-dark">
-        <Image
-          src="/images/archive/portfolio__15__monarch-close-waterlooville.jpg"
-          alt="Detached red-brick home on Monarch Close, Waterlooville"
-          fill
-          priority
-          sizes="100vw"
-          className="home-hero-background object-cover"
-        />
-        <Grain fixed={false} photo />
-        <div
-          className="relative mx-auto flex min-h-[inherit] w-full max-w-content items-center px-6 pb-32 pt-36 md:px-8 md:pb-40 md:pt-44"
-          style={{ zIndex: 'var(--z-content)' }}
-        >
-          <div className="home-hero-copy max-w-3xl">
+      {/* 1. Hero: calm paper ground, a tall arched photograph of a real home we
+          look after, and the search pill overlapping it. */}
+      <section className="relative">
+        <div className="mx-auto grid w-full max-w-content items-end gap-12 px-6 pb-28 pt-28 md:px-8 md:pb-32 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div>
             <Reveal>
-              <Eyebrow tone="on-dark">Independent estate agency / established 2011</Eyebrow>
+              <Eyebrow className="font-bold text-sales-ink">
+                Independent / Portchester / Since 2011
+              </Eyebrow>
             </Reveal>
-            <h1 className="mt-6 max-w-3xl text-display">
-              Property, with a <em className="italic text-ochre">foot</em> on the ground.
+            <h1 className="mt-6 text-display">
+              A foot on <em className="italic text-sales">the ground</em> of the Solent.
             </h1>
-            <Reveal delay={160} className="mt-7 max-w-xl text-lead text-on-dark/90">
-              We sell, let and look after homes from Southampton to Chichester, across
-              the Solent and Hampshire.
-              Local knowledge, one steady team, and {years} years of relationships on
-              this coast.
+            <Reveal delay={160} className="mt-8 max-w-xl text-lead text-ink-soft">
+              We sell, let and look after homes from Southampton to Chichester. Local
+              knowledge, one steady team, and {years} years of relationships on this coast.
             </Reveal>
-            <Reveal delay={220} className="mt-9 flex flex-wrap gap-4">
+            <Reveal delay={220} className="mt-10 flex flex-wrap gap-4">
               <Link href="/sales/free-valuation" className="btn btn-sales">
                 Value my home
               </Link>
-              <Link href="/properties" className="btn btn-secondary btn-invert">
-                Explore properties
+              <Link href="/properties" className="btn btn-secondary">
+                Explore homes
               </Link>
             </Reveal>
-            <Reveal delay={280} className="mt-10 grid max-w-xl grid-cols-2 gap-6 border-t border-brass/50 pt-6">
-              <p className="text-small text-on-dark/75">
-                <span className="font-display text-h3 tabular text-on-dark">{Years}</span>
+            <Reveal delay={280} className="mt-12 grid max-w-md grid-cols-2 gap-6 border-t border-brass/40 pt-6">
+              <p className="text-small text-ink-soft">
+                <span className="font-display text-h2 tabular text-ink">{Years}</span>
                 <span className="mt-1 block">years trading locally</span>
               </p>
-              <p className="text-small text-on-dark/75">
-                <span className="font-display text-h3 tabular text-on-dark">{SITE.managedHomesCopy}</span>
+              <p className="text-small text-ink-soft">
+                <span className="font-display text-h3 tabular text-ink">{SITE.managedHomesCopy}</span>
                 <span className="mt-1 block">trusted to our care</span>
               </p>
             </Reveal>
           </div>
+          <Arch variant="full" className="home-hero-arch relative aspect-[4/5] w-full bg-well">
+            <Image
+              src="/images/archive/portfolio__15__monarch-close-waterlooville.jpg"
+              alt="Detached red-brick home on Monarch Close, Waterlooville"
+              fill
+              priority
+              sizes="(max-width: 64rem) 100vw, 46vw"
+              className="object-cover"
+            />
+            <span className="absolute bottom-5 left-5 rounded-full bg-ground px-4 py-2 text-small font-bold text-ink">
+              Monarch Close, Waterlooville
+            </span>
+          </Arch>
         </div>
-        <p className="home-hero-credit" style={{ zIndex: 'var(--z-content)' }}>
-          Monarch Close, Waterlooville / from our property archive
-        </p>
       </section>
 
-      {/* Hero search, overlapping the hero by roughly 80px */}
+      {/* Hero search, overlapping the hero */}
       <div className="relative mx-auto -mt-16 w-full max-w-content px-6 md:px-8" style={{ zIndex: 'var(--z-raised)' }}>
         <HeroSearch />
       </div>
@@ -145,6 +142,44 @@ export default function HomePage() {
             {featured.map((property) => (
               <PropertyCard key={property.id} property={property} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tenant portal teaser: the portal itself is built after sign-off, so
+          this routes to the working repair route today. The list is an example. */}
+      <section className="px-6 py-8 md:px-8">
+        <div className="mx-auto grid max-w-content items-center gap-12 rounded-[2rem] bg-sales px-8 py-14 text-on-dark md:grid-cols-2 md:px-14 md:py-16">
+          <div>
+            <p className="eyebrow text-on-dark/80">Tenant portal</p>
+            <h2 className="mt-4 max-w-md text-h1">Something broken? Tell us in thirty seconds.</h2>
+            <p className="measure mt-5 text-lead text-on-dark/90">
+              Log in, photograph the problem, say how urgent it is and watch it get fixed.
+              Every update in one place.
+            </p>
+            <Link href="/tenants/report-maintenance" className="btn mt-8 bg-ground text-ink">
+              Report a repair
+            </Link>
+          </div>
+          <div className="rounded-[1.5rem] bg-ground p-6 text-ink shadow-warm-lg" aria-label="Example of the tenant portal">
+            <p className="eyebrow text-ink-soft">Your issues, example</p>
+            <ul>
+              {[
+                ['Boiler pressure dropping', 'Raised 28 October', 'Engineer booked'],
+                ['Bathroom extractor fan', 'Raised 12 October', 'Fixed'],
+                ['Gutter at the back', 'Raised 2 November', 'Received'],
+              ].map(([title, when, status]) => (
+                <li key={title} className="flex items-center justify-between gap-4 border-b border-brass/30 py-4 last:border-0">
+                  <span>
+                    <span className="block text-body">{title}</span>
+                    <span className="text-small text-ink-soft">{when}</span>
+                  </span>
+                  <span className="rounded-full bg-hover px-3 py-1 text-small font-bold text-sales-ink">
+                    {status}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

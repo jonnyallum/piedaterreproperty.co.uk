@@ -8,32 +8,32 @@
  */
 
 export const palette = {
-  bone: '#F1EEE6',
-  oat: '#E6E1D4',
-  clayMist: '#D9D3C5',
-  shell: '#E9E4D8',
-  ink: '#0B1F26',
-  indigo: '#16323B',
-  slate: '#46636D',
-  terracotta: '#BF3219',
-  sienna: '#A32B15',
-  ochre: '#C8B98E',
-  marigold: '#E4472B',
-  madder: '#2A4A54',
-  verdigris: '#3F6B4F',
-  verdigrisDeep: '#2F5239',
-  sage: '#9DB3A3',
-  brass: '#51655D',
+  bone: '#F5F2EA',
+  oat: '#ECE8DC',
+  clayMist: '#E2DDCF',
+  shell: '#E8EAFF',
+  ink: '#0D0D0F',
+  indigo: '#15151C',
+  slate: '#5C5B57',
+  terracotta: '#1B2CFF',
+  sienna: '#1220C0',
+  ochre: '#AAB2FF',
+  marigold: '#1B2CFF',
+  madder: '#2A2A33',
+  verdigris: '#1B2CFF',
+  verdigrisDeep: '#1220C0',
+  sage: '#B9B5A8',
+  brass: '#5C5B57',
 } as const
 
 export const paletteDark = {
-  ground: '#0B1F26',
-  panel: '#10282F',
-  ink: '#F1EEE6',
-  inkSoft: '#B3C4C9',
-  terracotta: '#FF6A4D',
-  verdigris: '#6FB08A',
-  ochre: '#C8B98E',
+  ground: '#0D0D0F',
+  panel: '#16161A',
+  ink: '#F5F2EA',
+  inkSoft: '#B8B6B0',
+  terracotta: '#6B78FF',
+  verdigris: '#8B95FF',
+  ochre: '#AAB2FF',
 } as const
 
 /** Theme colour for the browser chrome, light and dark. */
@@ -60,13 +60,13 @@ export const easing = {
  * for documentation. Computed with the WCAG 2.1 relative luminance formula.
  */
 export const contrast = {
-  inkOnBone: 14.63,
-  slateOnBone: 5.55,
-  siennaOnBone: 6.22,
-  boneOnVerdigrisDeep: 7.59,
-  inkOnOchre: 8.71,
-  boneOnMadder: 8.21,
-  boneOnInk: 14.63,
+  inkOnBone: 17.36,
+  slateOnBone: 6.08,
+  siennaOnBone: 9.42,
+  boneOnVerdigrisDeep: 9.42,
+  inkOnOchre: 9.73,
+  boneOnMadder: 12.71,
+  boneOnInk: 17.36,
 } as const
 
 export type PaletteKey = keyof typeof palette
