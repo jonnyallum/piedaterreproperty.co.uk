@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* ==========================================================================
-   PIED-A-TERRE PROPERTY  .  SOLENT BOHEMIA design tokens
+   PIED-A-TERRE PROPERTY  .  TIDELINE design tokens
    Single source of raw values for the whole build. No hex and no px may live
    in application code; everything resolves from the custom properties below.
 
@@ -16,26 +16,26 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Grounds, warm paper, never pure white */
-  --pt-bone: #f7f2e8; /* primary page ground */
-  --pt-oat: #ede3d2; /* alternating section ground */
-  --pt-clay-mist: #e2d3c3; /* tertiary ground, card wells */
-  --pt-shell: #f0e0d0; /* soft warm tint for hover fills */
+  --pt-bone: #f1eee6; /* primary page ground */
+  --pt-oat: #e6e1d4; /* alternating section ground */
+  --pt-clay-mist: #d9d3c5; /* tertiary ground, card wells */
+  --pt-shell: #e9e4d8; /* soft warm tint for hover fills */
 
   /* Ink and structure */
-  --pt-ink: #17232e; /* headings, body, footer ground */
-  --pt-indigo: #21384f; /* deep dye, section grounds, nav on scroll */
-  --pt-slate: #4a5c6a; /* secondary body text, meta */
+  --pt-ink: #0b1f26; /* headings, body, footer ground */
+  --pt-indigo: #16323b; /* deep dye, section grounds, nav on scroll */
+  --pt-slate: #46636d; /* secondary body text, meta */
 
   /* Pigments */
-  --pt-terracotta: #c05c34; /* signature warm, fills and display only */
-  --pt-sienna: #9c3f22; /* text-weight terracotta */
-  --pt-ochre: #d9a02b; /* highlights, underlines, marquees */
-  --pt-marigold: #e8b93f; /* light and glow, sparingly */
-  --pt-madder: #7a2e4a; /* deep plum-red, rare emphasis */
-  --pt-verdigris: #2e7c6e; /* lettings accent */
-  --pt-verdigris-d: #1f5f55; /* verdigris button-fill depth */
-  --pt-sage: #8fa891; /* botanical neutral, dividers */
-  --pt-brass: #7f6038; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
+  --pt-terracotta: #bf3219; /* signature warm, fills and display only */
+  --pt-sienna: #a32b15; /* text-weight terracotta */
+  --pt-ochre: #c8b98e; /* highlights, underlines, marquees */
+  --pt-marigold: #e4472b; /* light and glow, sparingly */
+  --pt-madder: #2a4a54; /* deep plum-red, rare emphasis */
+  --pt-verdigris: #3f6b4f; /* lettings accent */
+  --pt-verdigris-d: #2f5239; /* verdigris button-fill depth */
+  --pt-sage: #9db3a3; /* botanical neutral, dividers */
+  --pt-brass: #51655d; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
 
   /* ---- Semantic roles, light scene ------------------------------------- */
   --c-ground: var(--pt-bone);
@@ -70,21 +70,21 @@
     var(--pt-terracotta) 76%,
     var(--pt-ochre) 100%
   );
-  --grad-kiln: linear-gradient(160deg, var(--pt-terracotta) 0%, var(--pt-ochre) 100%);
-  --grad-kiln-hover: linear-gradient(140deg, var(--pt-terracotta) 0%, var(--pt-ochre) 100%);
+  --grad-kiln: linear-gradient(160deg, var(--pt-sienna) 0%, var(--pt-terracotta) 100%);
+  --grad-kiln-hover: linear-gradient(140deg, var(--pt-terracotta) 0%, var(--pt-marigold) 100%);
   --grad-tide: linear-gradient(140deg, var(--pt-indigo) 0%, var(--pt-verdigris) 100%);
   --grad-bleach: linear-gradient(
     180deg,
-    rgba(247, 242, 232, 0.96),
-    rgba(247, 242, 232, 0)
+    rgba(241, 238, 230, 0.96),
+    rgba(241, 238, 230, 0)
   );
   --grad-salt-flat: radial-gradient(
       42rem 28rem at 12% 8%,
-      rgba(226, 211, 195, 0.55),
+      rgba(217, 211, 197, 0.55),
       transparent 60%
     ),
-    radial-gradient(38rem 26rem at 88% 22%, rgba(143, 168, 145, 0.35), transparent 60%),
-    radial-gradient(36rem 30rem at 60% 96%, rgba(240, 224, 208, 0.5), transparent 62%);
+    radial-gradient(38rem 26rem at 88% 22%, rgba(157, 179, 163, 0.35), transparent 60%),
+    radial-gradient(36rem 30rem at 60% 96%, rgba(233, 228, 216, 0.5), transparent 62%);
 
   /* ---- Motion ---------------------------------------------------------- */
   --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
@@ -119,10 +119,10 @@
   --arch-shallow: 200px 200px 4px 4px;
 
   /* ---- Warm shadows, no neutral grey ----------------------------------- */
-  --shadow-warm-sm: 0 2px 8px rgba(23, 35, 46, 0.08);
-  --shadow-warm: 0 8px 24px rgba(192, 92, 52, 0.18);
-  --shadow-warm-cta: 0 8px 24px rgba(192, 92, 52, 0.28);
-  --shadow-warm-lg: 0 20px 60px rgba(122, 46, 74, 0.2);
+  --shadow-warm-sm: 0 2px 8px rgba(11, 31, 38, 0.08);
+  --shadow-warm: 0 8px 24px rgba(191, 50, 25, 0.18);
+  --shadow-warm-cta: 0 8px 24px rgba(191, 50, 25, 0.28);
+  --shadow-warm-lg: 0 20px 60px rgba(22, 50, 59, 0.2);
 
   color-scheme: light;
 }
@@ -134,26 +134,26 @@
    -------------------------------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --c-ground: #12181f; /* night ground */
-    --c-ground-alt: #1a2029; /* panels */
-    --c-well: #1a2029;
-    --c-hover: #222b35;
+    --c-ground: #0b1f26; /* night ground */
+    --c-ground-alt: #10282f; /* panels */
+    --c-well: #10282f;
+    --c-hover: #17323b;
 
-    --c-ink: #f0e6d8; /* ink on night ground   14.47:1  AAA */
-    --c-ink-soft: #b9c2c9; /* soft on night ground   8.60:1  AAA */
-    --c-on-dark: #f0e6d8;
+    --c-ink: #f1eee6; /* ink on night ground   14.47:1  AAA */
+    --c-ink-soft: #b3c4c9; /* soft on night ground   8.60:1  AAA */
+    --c-on-dark: #f1eee6;
 
-    --c-sales: #d9764c; /* lifted terracotta              */
-    --c-sales-ink: #e2895f; /* sales text on night    5.10:1  AA  */
-    --c-lettings: #48a392;
-    --c-lettings-deep: #2e7c6e;
+    --c-sales: #ff6a4d; /* lifted terracotta              */
+    --c-sales-ink: #ff7a5e; /* sales text on night    5.10:1  AA  */
+    --c-lettings: #6fb08a;
+    --c-lettings-deep: #2f5239;
 
-    --c-ochre: #d9a02b;
-    --c-madder: #a24467;
-    --c-sage: #8fa891;
-    --c-brass: #c6a06a;
+    --c-ochre: #c8b98e;
+    --c-madder: #3c6573;
+    --c-sage: #9db3a3;
+    --c-brass: #a9bdb3;
 
-    --grad-bleach: linear-gradient(180deg, rgba(18, 24, 31, 0.96), rgba(18, 24, 31, 0));
+    --grad-bleach: linear-gradient(180deg, rgba(11, 31, 38, 0.96), rgba(11, 31, 38, 0));
     --grain-opacity: 0.018;
     --grain-opacity-photo: 0.012;
     --gradient-opacity: 0.6;
@@ -165,26 +165,26 @@
 /* Explicit toggle, plus .theme-dark so any container can be a local night scene. */
 :root[data-theme='dark'],
 .theme-dark {
-  --c-ground: #12181f;
-  --c-ground-alt: #1a2029;
-  --c-well: #1a2029;
-  --c-hover: #222b35;
+  --c-ground: #0b1f26;
+  --c-ground-alt: #10282f;
+  --c-well: #10282f;
+  --c-hover: #17323b;
 
-  --c-ink: #f0e6d8;
-  --c-ink-soft: #b9c2c9;
-  --c-on-dark: #f0e6d8;
+  --c-ink: #f1eee6;
+  --c-ink-soft: #b3c4c9;
+  --c-on-dark: #f1eee6;
 
-  --c-sales: #d9764c;
-  --c-sales-ink: #e2895f;
-  --c-lettings: #48a392;
-  --c-lettings-deep: #2e7c6e;
+  --c-sales: #ff6a4d;
+  --c-sales-ink: #ff7a5e;
+  --c-lettings: #6fb08a;
+  --c-lettings-deep: #2f5239;
 
-  --c-ochre: #d9a02b;
-  --c-madder: #a24467;
-  --c-sage: #8fa891;
-  --c-brass: #c6a06a;
+  --c-ochre: #c8b98e;
+  --c-madder: #3c6573;
+  --c-sage: #9db3a3;
+  --c-brass: #a9bdb3;
 
-  --grad-bleach: linear-gradient(180deg, rgba(18, 24, 31, 0.96), rgba(18, 24, 31, 0));
+  --grad-bleach: linear-gradient(180deg, rgba(11, 31, 38, 0.96), rgba(11, 31, 38, 0));
   --grain-opacity: 0.018;
   --grain-opacity-photo: 0.012;
   --gradient-opacity: 0.6;
@@ -416,51 +416,16 @@
     background-color: color-mix(in srgb, var(--c-ground-alt) 84%, transparent);
   }
 
-  /* Brand lock-up: the arch is the house shape, the ochre dot is coastal light. */
+  /* Brand lock-up: the Daymark mark (see components/brand/Mark.tsx) beside the
+     wordmark. The mark takes currentColor, the red topmark takes --tl-daymark. */
   .brand-lockup {
     gap: 0.75rem;
   }
   .brand-mark {
-    position: relative;
-    display: inline-flex;
-    width: 2.25rem;
-    height: 2.75rem;
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
     flex: 0 0 auto;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-    border: 1px solid currentColor;
-    border-radius: 999px 999px 0.3rem 0.3rem;
-    color: currentColor;
-  }
-  .brand-mark::after {
-    content: '';
-    position: absolute;
-    inset-inline: 0.35rem;
-    bottom: 0.32rem;
-    height: 1px;
-    background: var(--c-brass);
-    opacity: 0.8;
-  }
-  .brand-mark-sun {
-    position: absolute;
-    top: 0.42rem;
-    right: 0.42rem;
-    width: 0.35rem;
-    height: 0.35rem;
-    border-radius: 50%;
-    background: var(--c-ochre);
-  }
-  .brand-mark-letter {
-    padding-bottom: 0.35rem;
-    font-family: var(--font-display);
-    font-size: 1.7rem;
-    font-weight: 350;
-    font-style: italic;
-    line-height: 1;
-  }
-  .brand-mark-letter::before {
-    content: 'P';
   }
   .brand-wordmark {
     display: inline-flex;
@@ -474,7 +439,7 @@
     letter-spacing: 0.14em;
     line-height: 1;
     text-transform: uppercase;
-    color: var(--c-brass);
+    color: var(--c-ink-soft);
   }
   .brand-lockup[data-tone='on-dark'] .brand-descriptor {
     color: var(--c-on-dark);
@@ -1194,7 +1159,7 @@
   html,
   body {
     background: #ffffff !important;
-    color: #17232e !important;
+    color: #0b1f26 !important;
   }
 
   /* Chrome is rendered as direct children of body around #main. Hide it all and
@@ -1214,7 +1179,7 @@
   }
 
   #pt-print {
-    color: #17232e;
+    color: #0b1f26;
   }
 
   #pt-print img {
