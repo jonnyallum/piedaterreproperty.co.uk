@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Direction B: Lido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0c4a3e;--butter:#f4e9a8;--cream:#fbf8ee;--ink:#0b1f1a;--coral:#ff6a4d;--line:#d8d4c0}
+*{box-sizing:border-box;margin:0}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{text-decoration:none;color:inherit}
+.logo{display:inline-flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque';font-weight:800;font-size:25px;letter-spacing:-.03em}
+.door{width:40px;height:50px;background:var(--butter);color:var(--green);border-radius:40px 40px 6px 6px;display:grid;place-items:center;font-size:19px;letter-spacing:-.04em;position:relative}
+.door::after{content:"";position:absolute;bottom:-6px;left:-4px;right:-4px;height:6px;background:var(--coral);border-radius:3px}
+.logo.l{color:var(--cream)}
+header{background:var(--green);color:var(--cream)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 56px}
+nav ul{display:flex;gap:30px;list-style:none;padding:0;font-weight:500;font-size:15px}
+.btn{background:var(--butter);color:var(--green);padding:14px 26px;border-radius:14px;font-weight:700;font-size:15px;display:inline-block}
+.btn.c{background:var(--coral);color:var(--ink)}
+.btn.o{background:none;color:var(--cream);box-shadow:inset 0 0 0 1.5px #ffffff66}
+.hero{padding:36px 56px 0;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+h1{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(56px,7.6vw,122px);line-height:.92;letter-spacing:-.045em;color:var(--butter)}
+h1 span{color:var(--coral)}
+.lede{max-width:32em;margin:28px 0 32px;font-size:19px;color:#dfe9e3}
+.stack{position:relative;height:520px}
+.stack .p{position:absolute;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -18px #0009}
+.stack img{width:100%;height:100%;object-fit:cover;display:block}
+.p1{right:0;top:0;width:78%;height:340px;border-radius:200px 200px 22px 22px!important}
+.p2{left:0;bottom:0;width:58%;height:230px}
+.sticker{position:absolute;right:6%;bottom:30px;background:var(--coral);color:var(--ink);width:128px;height:128px;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:15px;line-height:1.1;transform:rotate(-10deg)}
+.sticker b{font-size:36px;display:block}
+.wave{display:block;height:46px;background:var(--cream);clip-path:polygon(0 100%,0 40%,6% 30%,12% 42%,18% 28%,24% 40%,30% 30%,36% 42%,42% 28%,48% 40%,54% 30%,60% 42%,66% 28%,72% 40%,78% 30%,84% 42%,90% 28%,96% 40%,100% 30%,100% 100%)}
+section{padding:60px 56px}
+.eyebrow{display:inline-block;background:var(--butter);color:var(--green);font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h2{font-family:'Bricolage Grotesque';font-weight:800;font-size:54px;line-height:1;letter-spacing:-.04em;color:var(--green);max-width:13em}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.tile{border-radius:22px;padding:14px 14px 22px;background:#fff;border:1.5px solid var(--line)}
+.tile .ph{aspect-ratio:4/3;border-radius:14px;overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile h3{font-family:'Bricolage Grotesque';font-weight:800;font-size:23px;margin:14px 8px 2px;letter-spacing:-.02em}
+.tile p{margin:0 8px;color:#55635d;font-size:15px}.tile .pr{color:var(--green);font-weight:700;margin-top:6px}
+.portal{margin:0 56px 64px;background:var(--butter);border-radius:30px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.portal .eyebrow{background:var(--green);color:var(--butter)}
+.steps{display:grid;gap:12px}
+.step{background:#fff;border-radius:16px;padding:16px 20px;display:flex;gap:16px;align-items:center;font-weight:500}
+.step i{width:34px;height:34px;border-radius:50%;background:var(--green);color:var(--butter);display:grid;place-items:center;font-style:normal;font-weight:700}
+</style></head><body>
+<header><nav><a class="logo l" href="#"><span class="door">pàt</span><span>Pied-à-Terre<br><small style="font-family:'DM Sans';font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#a8c4b8">Property</small></span></a>
+<ul><li>Buy</li><li>Sell</li><li>Rent</li><li>Landlords</li><li>Areas</li><li>Tenant portal</li></ul><a class="btn" href="#">Free valuation</a></nav>
+<div class="hero"><div><h1>Your <span>foot</span> on the ground.</h1><p class="lede">Lettings, management and now sales across Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island. Fifteen years on this coast.</p><a class="btn c" href="#">Value my home</a> &nbsp; <a class="btn o" href="#">See homes</a></div>
+<div class="stack"><div class="p p1"><img src="../images/archive/portfolio__15__monarch-close-waterlooville.jpg" alt=""></div><div class="p p2"><img src="../images/archive/portfolio__55__sea-view-road-drayton.jpg" alt=""></div><div class="sticker"><div><b>15</b>years on<br>the coast</div></div></div></div>
+<span class="wave"></span></header>
+<section><span class="eyebrow">Homes in our care</span><h2>Homes with people who actually pick up.</h2>
+<div class="tiles">
+<div class="tile"><div class="ph"><img src="../images/archive/portfolio__70__the-curve-lovedean.jpg" alt=""></div><h3>The Curve, Lovedean</h3><p>3 bedrooms, available now</p><p class="pr">£1,350 pcm</p></div>
+<div class="tile"><div class="ph"><img src="../images/archive/portfolio__81__lowland-road-denmead.jpg" alt=""></div><h3>Lowland Road, Denmead</h3><p>2 bedrooms, let agreed</p><p class="pr">£950 pcm</p></div>
+<div class="tile"><div class="ph"><img src="../images/archive/index__20__market-parade-kitchen-pic-1.jpg" alt=""></div><h3>Market Parade, Havant</h3><p>4 bedroom holiday let</p><p class="pr">from £140 a night</p></div></div></section>
+<div class="portal"><div><span class="eyebrow">Tenant portal</span><h2>Fix it faster. Log in, tell us, track it.</h2><p style="margin:20px 0 28px;color:#33413b">Your own login for reporting repairs, sending photos and seeing exactly where a job is up to.</p><a class="btn" style="background:var(--green);color:var(--butter)" href="#">Tenant log in</a></div>
+<div class="steps"><div class="step"><i>1</i>Report it, with photos</div><div class="step"><i>2</i>We assign a contractor</div><div class="step"><i>3</i>Track it to done</div></div></div>
+</body></html>
