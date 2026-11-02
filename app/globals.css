@@ -1242,3 +1242,20 @@
 html.js .js-only {
   display: block;
 }
+
+/* TIDELINE brand tokens (branch redesign/tideline). Additive for now: the logo
+   concepts at /brand use these. Site-wide adoption follows logo approval.
+   harbour = deep water ink, shingle = pale beach, samphire = saltmarsh,
+   daymark = the single signal red of a Solent navigation mark. */
+:root {
+  --tl-harbour: #0b1f26;
+  --tl-harbour-2: #16323b;
+  --tl-slate-water: #5b7c86;
+  --tl-shingle: #d9d3c5;
+  --tl-chalk: #f1eee6;
+  --tl-samphire: #3f6b4f;
+  --tl-daymark: #e4472b;
+}
+.tl-hair {
+  outline: 1px solid var(--tl-shingle);
+}
