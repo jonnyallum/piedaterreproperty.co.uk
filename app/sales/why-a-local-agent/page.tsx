@@ -27,7 +27,7 @@ const OPTIONS = [
   {
     name: 'A small local firm',
     good: 'One patch known street by street, the same person from valuation to completion, and an office you can walk into.',
-    cost: 'We are honest about this: we do not carry a national brand. Our working area runs from Southampton to Chichester and through Hampshire, and we only take on homes the same local team can service properly.',
+    cost: 'We are honest about this: we do not carry a national brand. Our working area is Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island, and the towns around them, and we only take on homes the same local team can service properly.',
   },
 ]
 

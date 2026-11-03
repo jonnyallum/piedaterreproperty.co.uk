@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE.tradingName}, Solent coast lettings, management and sales`,
     short_name: SITE.tradingName,
     description:
-      'Award-winning independent lettings, management and sales on the Solent coast.',
+      'Independent lettings, management and sales on the Solent coast. Winner of the 2018 to 2019 British Property Lettings Award.',
     start_url: '/',
     display: 'standalone',
     background_color: themeColor.light,

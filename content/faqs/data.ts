@@ -402,7 +402,7 @@ export const FAQ_DATA: FaqEntry[] = [
     group: 'General',
     question: 'Which areas do you cover?',
     answer: [
-      'We work across the South Coast and Hampshire, from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus places such as Portchester, Gosport, Waterlooville, Hayling Island, Denmead and Petersfield.',
+      'We work across Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island, plus places such as Portchester, Fareham, Gosport, Denmead and Petersfield.',
       'Knowing a small area properly is the whole point of an independent local agent, so we do not claim to cover the entire county. If you are just outside our patch, ask us anyway and we will tell you honestly whether we are the right firm.',
     ],
     relatedLinks: [{ label: 'The towns we cover', href: '/areas' }],

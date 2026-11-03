@@ -38,7 +38,7 @@ const NUMBERS = [
 const LIMITS = [
   {
     title: 'We grow without handing you off',
-    body: 'Our reach now runs from Southampton to Chichester and through the Hampshire towns between them. We only accept work the same local team can still service personally.',
+    body: 'Our reach is Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island, and the towns around them. We only accept work the same local team can still service personally.',
   },
   {
     title: 'We are not the cheapest',
@@ -65,7 +65,7 @@ export default function AboutPage() {
             You will deal with <em className="italic">us</em>, not a call centre.
           </>
         }
-        lead="An independent firm rooted on the Solent coast since 2011, now working from Southampton to Chichester and across Hampshire without becoming a branch network. People instruct people, so it is worth knowing who you would be instructing."
+        lead="An independent firm rooted on the Solent coast since 2011, now working across Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island without becoming a branch network. People instruct people, so it is worth knowing who you would be instructing."
       />
 
       {/* 1. The founder's story. Draft copy in the house voice, awaiting the
@@ -110,8 +110,8 @@ export default function AboutPage() {
             </p>
             <p className="measure mt-4 text-body text-ink-soft">
               For {years} years we have done one thing and done it properly: letting and
-              managing homes from Southampton and Portsmouth through to Havant, Emsworth and
-              Chichester. That is long enough to know which
+              managing homes across Portsmouth, Havant, Waterlooville, Emsworth and Hayling
+              Island. That is long enough to know which
               streets let in a week and which take a month, what a harbour view is really worth,
               and who to call when a boiler fails on a Friday afternoon. It is knowledge you
               cannot buy in from a call centre, and it is the reason landlords stay with us for
