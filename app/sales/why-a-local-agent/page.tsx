@@ -95,7 +95,8 @@ export default function WhyLocalAgentPage() {
         <div className="mt-16">
           <SectionBar label="Side by side" className="max-w-md" />
           <h2 className="mt-6 text-h1">A straight comparison</h2>
-          <div className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <caption className="sr-only">
                 Comparison of online-only agents, national chains and Pied-à-Terre Property

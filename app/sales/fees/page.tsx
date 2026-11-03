@@ -112,7 +112,8 @@ export default function SalesFeesPage() {
             so our interest and yours point the same way. Here is how it is set out, with the
             figure confirmed at your valuation and put in writing before you instruct.
           </p>
-          <div className="mt-6 overflow-x-auto">
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="mt-6 overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-left">
               <tbody className="text-body">
                 {[

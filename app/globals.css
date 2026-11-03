@@ -22,19 +22,19 @@
   --pt-shell: #fbe9a0; /* soft warm tint for hover fills */
 
   /* Ink and structure */
-  --pt-ink: #0c0c0a; /* headings, body, lines */
-  --pt-yellow: #f2c200; /* signal yellow, the big surfaces */
-  --pt-black: #0c0c0a; /* black, the accent surfaces */
-  --pt-indigo: #dfb000; /* deep yellow, quiet silhouettes */
+  --pt-ink: #231f19; /* headings, body, lines */
+  --pt-yellow: #f3d36b; /* signal yellow, the big surfaces */
+  --pt-black: #231f19; /* black, the accent surfaces */
+  --pt-indigo: #e6c04f; /* deep yellow, quiet silhouettes */
   --pt-slate: #55524a; /* secondary body text, meta */
 
   /* Pigments */
-  --pt-terracotta: #1a1a17; /* signature warm, fills and display only */
+  --pt-terracotta: #2d2820; /* signature warm, fills and display only */
   --pt-sienna: #2b2b26; /* text-weight terracotta */
-  --pt-ochre: #0c0c0a; /* accent surfaces: black panes, tabs, bars */
-  --pt-marigold: #1a1a17; /* light and glow, sparingly */
+  --pt-ochre: #231f19; /* accent surfaces: black panes, tabs, bars */
+  --pt-marigold: #2d2820; /* light and glow, sparingly */
   --pt-madder: #26261f; /* deep plum-red, rare emphasis */
-  --pt-verdigris: #1a1a17; /* lettings accent */
+  --pt-verdigris: #2d2820; /* lettings accent */
   --pt-verdigris-d: #2b2b26; /* verdigris button-fill depth */
   --pt-sage: #b5ad98; /* botanical neutral, dividers */
   --pt-brass: #6f5600; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
@@ -109,9 +109,9 @@
   --z-toast: 80;
 
   /* ---- Radii ----------------------------------------------------------- */
-  --radius-xs: 0; /* 4px, chips */
-  --radius-sm: 0; /* 8px, buttons, inputs */
-  --radius-md: 0; /* 12px, cards */
+  --radius-xs: 4px; /* 4px, chips */
+  --radius-sm: 8px; /* 8px, buttons, inputs */
+  --radius-md: 12px; /* 12px, cards */
   --pane-gap: 3px; /* mullion width between window panes */
   --arch-full: 0;
   --arch-shallow: 0;
@@ -136,21 +136,21 @@
 /* Explicit toggle, plus .theme-dark so any container can be a local night scene. */
 :root[data-theme='dark'],
 .theme-dark {
-  --c-ground: #0c0c0a;
-  --c-ground-alt: #1a1a17;
-  --c-well: #1a1a17;
+  --c-ground: #231f19;
+  --c-ground-alt: #2d2820;
+  --c-well: #2d2820;
   --c-hover: #242420;
 
   --c-ink: #efe9d8;
   --c-ink-soft: #bdb8a8;
   --c-on-dark: #efe9d8;
 
-  --c-sales: #f2c200;
-  --c-sales-ink: #f7d54a;
-  --c-lettings: #f7d54a;
-  --c-lettings-deep: #1a1a17;
+  --c-sales: #f3d36b;
+  --c-sales-ink: #f8e08e;
+  --c-lettings: #f8e08e;
+  --c-lettings-deep: #2d2820;
 
-  --c-ochre: #f2c200;
+  --c-ochre: #f3d36b;
   --c-madder: #26261f;
   --c-sage: #948d79;
   --c-brass: #948d79;
@@ -248,9 +248,9 @@
   --text-eyebrow--letter-spacing: 0.16em;
 
   /* Radii */
-  --radius-xs: 0;
-  --radius-sm: 0;
-  --radius-md: 0;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
 
   /* Easings, generate ease-quill, ease-tide, ease-drift utilities */
   --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
@@ -303,6 +303,9 @@
     min-height: 100dvh;
   }
 
+  h1, h2, h3, h4, .font-display, .brand-word, .marquee-item {
+    font-variation-settings: 'SOFT' 100;
+  }
   .font-display {
     text-transform: none !important;
     font-synthesis: none;
@@ -344,6 +347,7 @@
     --c-ink: var(--pt-bone);
     --c-ink-soft: #bdb8a8;
     --c-on-dark: var(--pt-bone);
+    --c-sales-ink: var(--pt-yellow);
     --c-ground: var(--pt-black);
     color: var(--pt-bone);
   }
@@ -593,7 +597,7 @@
     gap: 0.5rem;
     min-height: 2.75rem; /* 44px touch target */
     padding: 0.875rem 1.75rem;
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     font-family: var(--font-sans);
     font-weight: 700;
     text-transform: uppercase;
@@ -728,7 +732,7 @@
     padding-left: 0;
     padding-right: 0;
     min-height: 2.75rem;
-    border-radius: 0;
+    border-radius: var(--radius-sm);
   }
   .btn-ghost::after {
     content: '';
@@ -760,7 +764,7 @@
     min-height: 2.75rem;
     min-width: 2.75rem;
     padding: 0;
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     background-color: var(--pt-ochre);
     color: var(--pt-yellow);
   }
@@ -802,7 +806,7 @@
     background-color: var(--c-ground);
     color: var(--c-ink);
     border: 2px solid var(--pt-ink);
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     font-family: var(--font-sans);
     font-size: var(--text-body);
     transition:
@@ -830,7 +834,7 @@
   .field-error {
     margin-top: 0.375rem;
     font-size: var(--text-small);
-    color: var(--pt-sienna);
+    color: var(--c-sales-ink);
   }
 
   /* ---- Brass rule, animated divider ------------------------------------ */
@@ -1021,7 +1025,7 @@
     align-items: center;
     gap: 0.375rem;
     padding: 0.4rem 0.9rem;
-    border-radius: 0;
+    border-radius: var(--radius-xs);
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 0.95rem;

@@ -27,7 +27,8 @@ export default function CookiePolicyPage() {
         lead="This table is generated from the same configuration as the consent banner, so the two can never drift apart. Nothing non-essential is set until you choose."
       />
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
-        <div className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink bg-well">
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink bg-well">
           <table className="w-full border-collapse text-small">
             <caption className="sr-only">
               Cookies and similar technology used on this site, with provider, purpose, duration and category

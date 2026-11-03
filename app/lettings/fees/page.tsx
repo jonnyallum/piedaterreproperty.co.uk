@@ -49,7 +49,8 @@ export default function LettingsFeesPage() {
           </div>
         </div>
 
-        <div className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
           <table className="w-full min-w-[44rem] border-collapse text-left align-top">
             <caption className="sr-only">Lettings service levels and what each includes</caption>
             <thead>
