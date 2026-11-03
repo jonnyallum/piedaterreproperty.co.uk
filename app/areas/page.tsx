@@ -12,7 +12,7 @@ import { pageMeta, realEstateAgentJsonLd } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Areas we cover across the South Coast and Hampshire',
   description:
-    'Estate and letting agency coverage from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus the surrounding Hampshire towns.',
+    'Estate and letting agency coverage across Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island, plus the surrounding Hampshire towns.',
   path: '/areas',
 })
 
@@ -30,11 +30,11 @@ export default function AreasPage() {
         trail={[{ name: 'Areas', path: '/areas' }]}
         title={
           <>
-            Southampton to Chichester, with{' '}
+            Portsmouth to Emsworth, with{' '}
             <em className="italic">Hampshire at our back</em>.
           </>
         }
-        lead="Our established heartland runs through Portsmouth, Havant and the eastern Solent. Today we also work west towards Southampton, east to Chichester and inland through Hampshire."
+        lead="Our established heartland runs through Portsmouth, Havant and the eastern Solent. Today we also work in the neighbouring towns and inland through Hampshire."
       />
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
@@ -89,8 +89,8 @@ export default function AreasPage() {
         <div className="mt-16 border-t-[length:var(--pane-gap)] border-ink pt-10">
           <h2 className="text-h2">Across the wider South Coast</h2>
           <p className="measure mt-2 text-body text-ink-soft">
-            Our working corridor extends west to Southampton and east to Chichester, taking in
-            the towns and city neighbourhoods around the Solent.
+            Our working corridor takes in the towns and city neighbourhoods around the
+            Solent.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
             {COVERAGE.wider.map((place) => (

@@ -1,21 +1,8 @@
 /**
- * Seed property data. The three live listings from the old home page plus the
- * old Portfolio page's track record. The portfolio listed fourteen, but two of
- * those (The Curve and Lowland Road) are the live listings, so they appear once
- * here as available stock and the remaining twelve are the let track record:
- * fifteen distinct addresses, nothing invented or duplicated, so the search
- * reads as a genuine fifteen-year history rather than empty stock.
- *
- * All are lettings: the sales arm is pre-launch, so there is no sales stock yet.
- * The original old-site copy is preserved verbatim as `archivedDescription`
- * where it is useful proof of work; the public summary and description are
- * rewritten in the new plain voice with the estate-agent cliches removed.
- *
- * Figures that were not stated on the old site (EPC ratings, exact bathroom and
- * reception counts, prices for let properties) are left out rather than invented.
- * Photography is added per property with each instruction; until then cards and
- * detail pages render a branded placeholder. Validated by PropertySchema in
- * lib/properties.ts, so a malformed listing fails the build.
+ * Seed property data. Listings carried over from the old site: Lowland Road and
+ * the let track record. The Curve and Market Parade were removed because their
+ * availability could not be confirmed from the source folders. Nothing here is
+ * invented, and the "let" entries are history, not current stock.
  */
 
 const NOW = '2026-08-20'
@@ -28,40 +15,7 @@ const archiveImage = (filename: string, alt: string, width: number, height: numb
 })
 
 export const rawProperties = [
-  // ---- Live listings from the old home page ----------------------------
-  {
-    id: 'let-the-curve-lovedean',
-    slug: 'the-curve-lovedean',
-    transactionType: 'letting',
-    status: 'available',
-    displayAddress: 'The Curve, Lovedean',
-    fullAddress: { line1: 'The Curve', town: 'Lovedean', postcode: 'PO8' },
-    postcodeOutcode: 'PO8',
-    town: 'Lovedean',
-    price: { amount: 1350, qualifier: 'fixed', frequency: 'pcm' },
-    bedrooms: 3,
-    propertyType: 'Chalet',
-    summary: 'A three-bedroom chalet in a quiet Lovedean cul-de-sac, with a south-facing garden.',
-    description: [
-      'A semi-detached chalet in a quiet, requested Lovedean cul-de-sac. Two ground-floor bedrooms sit alongside a first-floor main bedroom with an en-suite shower room and fitted wardrobes.',
-      'The rear garden faces south. The position is settled and residential, within easy reach of Waterlooville and the A3.',
-    ],
-    archivedDescription:
-      'Semi-detached property situated in a quiet, requested Lovedean cul-de-sac. South facing rear garden. Two ground floor bedrooms plus a first floor master bedroom with en-suite shower room and fitted wardrobe cupboards.',
-    features: ['South-facing garden', 'En-suite to main bedroom', 'Fitted wardrobes', 'Cul-de-sac position'],
-    images: [
-      archiveImage(
-        'portfolio__70__the-curve-lovedean.jpg',
-        'Front exterior of the three-bedroom chalet at The Curve, Lovedean',
-        1731,
-        1154
-      ),
-    ],
-    featured: true,
-    furnished: 'unfurnished',
-    publishedAt: NOW,
-    updatedAt: NOW,
-  },
+  // ---- Listings carried over from the old home page ---------------------
   {
     id: 'let-lowland-road-denmead',
     slug: 'lowland-road-denmead',

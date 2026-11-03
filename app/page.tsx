@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ...pageMeta({
     title: 'Estate and letting agents across the South Coast and Hampshire',
     description:
-      'Independent estate and letting agents across the South Coast and Hampshire since 2011, from Southampton and Fareham to Portsmouth, Havant and Chichester.',
+      'Independent estate and letting agents since 2011, covering Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island.',
     path: '/',
   }),
   title: {
@@ -128,7 +128,7 @@ export default function HomePage() {
           </h1>
           <div className="mt-10 grid items-end gap-8 md:grid-cols-12">
             <Reveal delay={120} className="text-lead text-on-dark md:col-span-5">
-              We sell, let and look after homes from Southampton to Chichester. Local
+              We sell, let and look after homes across Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island. Local
               knowledge, one steady team, and {years} years of relationships on this coast.
             </Reveal>
             <Reveal delay={180} className="flex flex-wrap gap-4 md:col-span-7 md:justify-end">
@@ -249,18 +249,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tenant portal teaser: the portal itself is built after sign-off, so
-          this routes to the working repair route today. The list is an example. */}
+      {/* Repairs: the real repair form, described as it is. The tenant portal is
+          not built yet, so nothing here promises a login or live tracking. */}
       <section className="px-6 py-8 md:px-8">
         <div className="mx-auto max-w-content">
           <MullionGrid className="md:grid-cols-2">
             <Cell ground="yellow" className="flex flex-col justify-between gap-10 md:p-12">
-              <p className="eyebrow font-bold">Tenant portal</p>
+              <p className="eyebrow font-bold">For tenants</p>
               <div>
                 <h2 className="max-w-md text-title">Something broken? Tell us in thirty seconds.</h2>
                 <p className="measure mt-5 text-lead">
-                  Log in, photograph the problem, say how urgent it is and watch it get fixed.
-                  Every update in one place.
+                  Describe the problem, add a photo if you can and tell us how urgent it is. Your
+                  report goes straight to the office.
                 </p>
                 <Link href="/tenants/report-maintenance" className="btn btn-sales mt-8">
                   Report a repair
@@ -268,28 +268,26 @@ export default function HomePage() {
               </div>
             </Cell>
             <Cell ground="black" className="md:p-12">
-              <div aria-label="Example of the tenant portal">
-                <p className="eyebrow text-ochre">Your issues, example</p>
-                <ul className="mt-4 border-t-[length:var(--pane-gap)] border-ochre">
+              <div>
+                <p className="eyebrow text-ochre">What the form asks</p>
+                <ol className="mt-4 border-t-[length:var(--pane-gap)] border-ochre">
                   {[
-                    ['Boiler pressure dropping', 'Raised 28 October', 'Engineer booked'],
-                    ['Bathroom extractor fan', 'Raised 12 October', 'Fixed'],
-                    ['Gutter at the back', 'Raised 2 November', 'Received'],
-                  ].map(([title, when, status]) => (
+                    ['Describe the problem', 'In your own words, from your phone'],
+                    ['Add a photo', 'Optional, but it helps us act faster'],
+                    ['Say how urgent it is', 'From not urgent to affecting daily living'],
+                  ].map(([title, note], i) => (
                     <li
                       key={title}
-                      className="flex items-center justify-between gap-4 border-b-[length:var(--pane-gap)] border-ochre py-4"
+                      className="flex items-center gap-5 border-b-[length:var(--pane-gap)] border-ochre py-4"
                     >
+                      <span className="tabular font-display text-h2 text-ochre">{i + 1}</span>
                       <span>
-                        <span className="block font-display text-h3 uppercase">{title}</span>
-                        <span className="text-small text-on-dark/70">{when}</span>
-                      </span>
-                      <span className="bg-ochre px-3 py-1 text-small font-bold uppercase tracking-[0.08em] text-ink">
-                        {status}
+                        <span className="block font-display text-h3">{title}</span>
+                        <span className="text-small text-on-dark/70">{note}</span>
                       </span>
                     </li>
                   ))}
-                </ul>
+                </ol>
               </div>
             </Cell>
           </MullionGrid>
@@ -347,7 +345,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-content px-6 md:px-8">
           <SectionBar label="Areas we cover" index="07" />
           <h2 className="mt-8 max-w-5xl text-title">
-            From Southampton to Chichester, across the <em>South Coast and Hampshire</em>.
+            Portsmouth to Emsworth, across the <em>Solent coast and Hampshire</em>.
           </h2>
           <MullionGrid as="ul" className="mt-12 sm:grid-cols-2 lg:grid-cols-3">
             {AREAS.map((area, i) => (

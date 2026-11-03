@@ -106,12 +106,10 @@ export function yearsTrading(now = new Date()): number {
 export const COVERAGE = {
   primary: ['Havant', 'Portsmouth', 'Waterlooville', 'Emsworth', 'Hayling Island'],
   wider: [
-    'Southampton',
     'Fareham',
     'Gosport',
     'Portchester',
     'Southsea',
-    'Chichester',
     'Petersfield',
   ],
   secondary: [

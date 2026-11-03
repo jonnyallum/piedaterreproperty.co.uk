@@ -23,7 +23,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Do you cover my area?',
-    a: 'We work across the South Coast and Hampshire, from Southampton through Fareham and Portsmouth to Havant, Emsworth and Chichester, plus the towns and villages between the coast and the South Downs.',
+    a: 'We work across Portsmouth, Havant, Waterlooville, Emsworth and Hayling Island, plus the towns and villages between the coast and the South Downs.',
     group: 'General',
     home: true,
   },
