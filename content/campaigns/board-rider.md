@@ -16,7 +16,7 @@ For a board on a property we let, once sales is live:
 
 4. To Let, and now selling too.
 
-Each rider carries the office number, 01243 468738, and the QR code.
+Each rider carries the office number, 07756 869185, and the QR code.
 
 ## QR destination
 

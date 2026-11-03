@@ -16,7 +16,7 @@ import { SectionBar } from '@/components/primitives/SectionBar'
 export const metadata: Metadata = pageMeta({
   title: 'Contact us',
   description:
-    'Call, message or visit Pied-à-Terre Property at 233 Southampton Road, Portchester, PO6 4PY. Opening hours, map and a message form. You reach the office, not a queue.',
+    'Call, message or visit Pied-à-Terre Property at Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY. Opening hours, map and a message form. You reach the office, not a queue.',
   path: '/contact',
 })
 
@@ -90,7 +90,7 @@ export default function ContactPage() {
                   lng={SITE.office.lng}
                   centerLat={SITE.office.lat}
                   centerLng={SITE.office.lng}
-                  label="Map of the Pied-à-Terre Property office at 233 Southampton Road, Portchester"
+                  label="Map of the Pied-à-Terre Property office at Trafalgar House Business Centre, 233 Southampton Road, Portchester"
                   buttonLabel="Show the office on a map"
                 />
               </div>

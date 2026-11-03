@@ -20,7 +20,7 @@ export interface LegalSection {
 export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     title: 'Who is responsible for your data',
-    body: 'The data controller is Solent C Property Services Limited, a company registered in England and Wales, company number 07482593, trading as Pied-à-Terre Property. Our registered office is C/O Sterling Accounting, 9a Waterberry Drive, Waterlooville, PO7 7TH, and our trading office is 233 Southampton Road, Portchester, PO6 4PY. We are registered with the Information Commissioner\'s Office, and our registration number is available on request. You can reach us by phone on 01243 468738 or by email at hello@piedaterreproperty.co.uk.',
+    body: 'The data controller is Solent C Property Services Limited, a company registered in England and Wales, company number 07482593, trading as Pied-à-Terre Property. Our registered office is C/O Sterling Accounting, 9a Waterberry Drive, Waterlooville, PO7 7TH, and our trading office is Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY. We are registered with the Information Commissioner\'s Office, and our registration number is available on request. You can reach us by phone on 07756 869185 or by email at hello@piedaterreproperty.co.uk.',
   },
   {
     title: 'What we collect and why',
@@ -40,7 +40,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   },
   {
     title: 'Your rights',
-    body: 'You have the right to see the data we hold about you, to ask for it to be corrected, deleted or restricted, to object to processing, and to ask for a copy in a portable form. Where processing relies on your consent, you can withdraw it at any time. To exercise any of these rights, call 01243 468738, email hello@piedaterreproperty.co.uk, or write to us at our trading office.',
+    body: 'You have the right to see the data we hold about you, to ask for it to be corrected, deleted or restricted, to object to processing, and to ask for a copy in a portable form. Where processing relies on your consent, you can withdraw it at any time. To exercise any of these rights, call 07756 869185, email hello@piedaterreproperty.co.uk, or write to us at our trading office.',
   },
   {
     title: 'International transfers',
@@ -56,7 +56,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
 export const COMPLAINT_STEPS: LegalSection[] = [
   {
     title: 'Tell us what happened',
-    body: 'The quickest way to raise a complaint is by phone on 01243 468738 or by email at hello@piedaterreproperty.co.uk. You can also write to us at 233 Southampton Road, Portchester, PO6 4PY. Please say what went wrong and what you would like us to do about it.',
+    body: 'The quickest way to raise a complaint is by phone on 07756 869185 or by email at hello@piedaterreproperty.co.uk. You can also write to us at Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY. Please say what went wrong and what you would like us to do about it.',
   },
   {
     title: 'We acknowledge it within two working days',
@@ -120,7 +120,7 @@ export const ACCESSIBILITY_POINTS: LegalSection[] = [
   },
   {
     title: 'Reporting a problem',
-    body: 'If you find anything hard to use, tell us and we will fix it. Call 01243 468738, email hello@piedaterreproperty.co.uk, or write to us at 233 Southampton Road, Portchester, PO6 4PY. We will acknowledge your report within two working days and confirm what we have done.',
+    body: 'If you find anything hard to use, tell us and we will fix it. Call 07756 869185, email hello@piedaterreproperty.co.uk, or write to us at Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY. We will acknowledge your report within two working days and confirm what we have done.',
   },
 ]
 

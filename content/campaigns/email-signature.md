@@ -15,11 +15,11 @@ Charisma Marie Smith
 Pied-à-Terre Property
 Lettings, management and residential sales on the Solent coast
 
-01243 468738
+07756 869185
 hello@piedaterreproperty.co.uk
 piedaterreproperty.co.uk
 
-233 Southampton Road, Portchester, PO6 4PY
+Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY
 
 The Property Ombudsman, member D13453. Client money protected.
 

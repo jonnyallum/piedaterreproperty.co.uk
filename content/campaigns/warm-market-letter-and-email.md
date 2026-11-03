@@ -37,7 +37,7 @@ appraisal ready to arrange.]
 suits you, and we will arrange a time to visit.]
 
 You can register in a minute at piedaterreproperty.co.uk/l/landlords, or
-simply call me on 01243 468738.
+simply call me on 07756 869185.
 
 Thank you, as ever, for your custom over the years.
 
@@ -71,10 +71,10 @@ interest and we will be in touch the week we open.]
 and we will arrange a time.]
 
 Register in a minute here: piedaterreproperty.co.uk/sales/landlords
-Or call me directly on 01243 468738.
+Or call me directly on 07756 869185.
 
 Thank you for your custom over the years.
 
 Charisma Marie Smith
 Pied-à-Terre Property
-01243 468738
+07756 869185

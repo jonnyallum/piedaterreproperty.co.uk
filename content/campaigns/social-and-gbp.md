@@ -16,7 +16,7 @@ We have some news. After fifteen years letting and managing homes on this coast,
 we are opening a residential sales department. The same people, the same local
 knowledge, now for selling too. Register your interest at the link.
 
-Image direction: the office frontage at 233 Southampton Road, or a wide, calm
+Image direction: the office frontage at Trafalgar House Business Centre, 233 Southampton Road, or a wide, calm
 shot of local housing stock in warm natural light. No stock photography.
 
 ## Post 2, the why
@@ -68,7 +68,7 @@ Image direction: a duotone of a To Be Let board in situ on a local street.
 New service: residential sales. After fifteen years of lettings and management on
 the Solent coast, Pied-à-Terre Property is opening a sales department covering
 Havant, Portsmouth, Waterlooville, Emsworth and Hayling Island. Free, honest
-valuations from a local team. Register your interest or call 01243 468738.
+valuations from a local team. Register your interest or call 07756 869185.
 
 Button: Learn more. Link: piedaterreproperty.co.uk/l/sell
 

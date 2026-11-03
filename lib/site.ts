@@ -24,7 +24,7 @@ export const SITE = {
 
   /** The trading office. Used in LocalBusiness schema, contact page and GBP. */
   office: {
-    line1: '233 Southampton Road',
+    line1: 'Trafalgar House Business Centre, 233 Southampton Road',
     town: 'Portchester',
     postcode: 'PO6 4PY',
     // Portchester trading office coordinates, for the contact map.
@@ -33,8 +33,8 @@ export const SITE = {
   },
 
   phone: {
-    display: '01243 468738',
-    href: 'tel:+441243468738',
+    display: '07756 869185',
+    href: 'tel:+447756869185',
   },
 
   // confirm: office email address for the contact page and lead notifications.

@@ -33,7 +33,7 @@ With best wishes,
 
 Charisma Marie Smith
 Pied-à-Terre Property
-01243 468738
+07756 869185
 
 ---
 
@@ -56,4 +56,4 @@ Thank you, and welcome.
 
 Charisma Marie Smith
 Pied-à-Terre Property
-01243 468738
+07756 869185
