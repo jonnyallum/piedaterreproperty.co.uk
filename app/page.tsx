@@ -101,7 +101,6 @@ const SERVICES = [
 
 export default function HomePage() {
   const years = inWords(yearsTrading())
-  const Years = years.charAt(0).toUpperCase() + years.slice(1)
   const featured = featuredProperties(3)
 
   return (
@@ -147,7 +146,7 @@ export default function HomePage() {
             (Spinnaker Tower included) cut out in black. */}
         <div className="relative h-[17rem] overflow-hidden bg-ochre md:h-[26rem]" aria-hidden="true">
           <div
-            className="absolute bottom-[-4rem] left-[78%] h-[16rem] w-[16rem] -translate-x-1/2 rounded-none md:left-[58%] md:bottom-[-8rem] md:h-[40rem] md:w-[40rem]"
+            className="absolute bottom-[-4rem] left-[78%] h-[16rem] w-[16rem] -translate-x-1/2 rounded-full md:left-[58%] md:bottom-[-8rem] md:h-[40rem] md:w-[40rem]"
             style={{ background: 'var(--pt-bone)' }}
           />
           <Skyline className="absolute inset-x-0 bottom-0 h-full w-full text-ink" />

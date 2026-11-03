@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { PageHero } from '@/components/marketing/PageHero'
 import { ValuationBand } from '@/components/marketing/ValuationBand'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
 import { SALES_LIVE } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'Why a local agent',
@@ -93,8 +93,8 @@ export default function WhyLocalAgentPage() {
         </div>
 
         <div className="mt-16">
-          <Eyebrow>Side by side</Eyebrow>
-          <h2 className="mt-3 text-h2">A straight comparison</h2>
+          <SectionBar label="Side by side" className="max-w-md" />
+          <h2 className="mt-6 text-h1">A straight comparison</h2>
           <div className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-night">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <caption className="sr-only">

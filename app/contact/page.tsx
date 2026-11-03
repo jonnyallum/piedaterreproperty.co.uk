@@ -11,6 +11,7 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { SITE } from '@/lib/site'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { pageMeta, realEstateAgentJsonLd } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'Contact us',
@@ -108,8 +109,8 @@ export default function ContactPage() {
 
           {/* Right: option three, the message form. */}
           <div>
-            <Eyebrow>Or send a message</Eyebrow>
-            <h2 className="mt-3 text-h2">Write to us</h2>
+            <SectionBar label="Or send a message" className="max-w-md" />
+            <h2 className="mt-6 text-h1">Write to us</h2>
             <p className="measure mt-3 text-body text-ink-soft">
               Leave your details and how we can help. It reaches the office directly and we aim to
               reply the same working day.

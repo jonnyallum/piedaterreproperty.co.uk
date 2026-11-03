@@ -7,6 +7,7 @@ import { Icon } from '@/components/primitives/Icon'
 import { SALES_PROCESS } from '@/content/sales'
 import { SALES_LIVE } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'How we sell',
@@ -47,8 +48,8 @@ export default function HowWeSellPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <Eyebrow>Eight stages</Eyebrow>
-            <h2 className="mt-3 text-h2">
+            <SectionBar label="Eight stages" className="max-w-md" />
+            <h2 className="mt-6 text-h1">
               From first visit to the day you hand over the{' '}
               <em className="italic text-sales-ink">keys</em>.
             </h2>

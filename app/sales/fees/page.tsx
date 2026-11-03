@@ -5,6 +5,7 @@ import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
 import { SALES_LIVE } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'Sales fees',
@@ -104,8 +105,8 @@ export default function SalesFeesPage() {
 
         {/* How the fee is worked out, structure without invented figures */}
         <div className="mt-16">
-          <Eyebrow>How the fee is worked out</Eyebrow>
-          <h2 className="mt-3 text-h2">Clear arithmetic, VAT shown</h2>
+          <SectionBar label="How the fee is worked out" className="max-w-md" />
+          <h2 className="mt-6 text-h1">Clear arithmetic, VAT shown</h2>
           <p className="measure mt-4 text-body text-ink-soft">
             Our fee is a single agreed percentage of the price your home actually sells for,
             so our interest and yours point the same way. Here is how it is set out, with the
