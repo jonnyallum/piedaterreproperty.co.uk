@@ -1,13 +1,13 @@
 /**
- * StatsBand. The credibility band that follows the hero. Indigo ground with
- * grain. Static statistics in tabular numerals, the brass credential marks,
- * and one plain line explaining why redress and client money protection matter
- * to someone handing over a large asset. Numbers come from lib/site so nothing
- * dates or is invented.
+ * StatsBand. The credibility band that follows the hero. Three stat panes in a
+ * mullion grid, a plain line on why redress and client money protection matter
+ * to someone handing over a large asset, then the credential marks in a
+ * yellow-framed grid. Numbers come from lib/site so nothing dates or is
+ * invented.
  */
 import Image from 'next/image'
-import { Grain } from '@/components/primitives/Grain'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
+import { Cell, MullionGrid } from '@/components/primitives/Mullion'
+import { SectionBar } from '@/components/primitives/SectionBar'
 import { SITE, yearsTrading } from '@/lib/site'
 
 const CREDENTIALS = [
@@ -37,34 +37,23 @@ const CREDENTIALS = [
 
 export function StatsBand() {
   const years = yearsTrading()
+  const STATS = [
+    { value: String(years), label: 'years on this coastline', ground: 'yellow' as const },
+    { value: '~35', label: 'homes under management', ground: 'black' as const },
+    { value: 'Solent', label: 'South Coast and Hampshire coverage', ground: 'black' as const },
+  ]
   return (
-    <section className="relative isolate overflow-hidden bg-indigo text-on-dark">
-      <Grain fixed={false} />
-      <div
-        className="relative mx-auto max-w-content px-6 py-20 md:px-8"
-        style={{ zIndex: 'var(--z-content)' }}
-      >
-        <Eyebrow tone="on-dark">A regulated firm, not a startup</Eyebrow>
-        <div className="mt-8 grid gap-10 sm:grid-cols-3">
-          <div>
-            <p className="font-display text-display leading-none text-ochre">
-              {years}
-            </p>
-            <p className="mt-2 text-lead text-on-dark/85">years on this coastline</p>
-          </div>
-          <div>
-            <p className="font-display text-display leading-none text-ochre">
-              ~35
-            </p>
-            <p className="mt-2 text-lead text-on-dark/85">homes under management</p>
-          </div>
-          <div>
-            <p className="font-display text-display leading-none text-ochre">
-              Solent
-            </p>
-            <p className="mt-2 text-lead text-on-dark/85">South Coast and Hampshire coverage</p>
-          </div>
-        </div>
+    <section className="bg-night text-on-dark">
+      <div className="mx-auto max-w-content px-6 py-20 md:px-8 md:py-28">
+        <SectionBar label="A regulated firm, not a startup" />
+        <MullionGrid className="mt-10 border-ochre bg-[var(--pt-ochre)] sm:grid-cols-3">
+          {STATS.map((st) => (
+            <Cell key={st.label} ground={st.ground} className="flex min-h-56 flex-col justify-between">
+              <p className="font-display text-display leading-none">{st.value}</p>
+              <p className="mt-6 text-lead">{st.label}</p>
+            </Cell>
+          ))}
+        </MullionGrid>
 
         <p className="measure mt-12 text-lead text-on-dark/90">
           Redress means an independent ombudsman can hold us to account. Client money
@@ -72,9 +61,9 @@ export function StatsBand() {
           These are the safeguards a serious firm carries as standard.
         </p>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <MullionGrid as="ul" className="mt-10 border-ochre bg-[var(--pt-ochre)] sm:grid-cols-2 lg:grid-cols-4">
           {CREDENTIALS.map((c) => (
-            <li key={c.label} className="flex min-h-36 flex-col rounded-md border border-brass/40 bg-ground p-4 text-ink">
+            <Cell as="li" key={c.label} className="flex min-h-44 flex-col p-5 md:p-5">
               <div className="flex h-14 items-center">
                 {c.image ? (
                   <Image
@@ -86,14 +75,16 @@ export function StatsBand() {
                     className="max-h-12 w-auto max-w-44 object-contain"
                   />
                 ) : (
-                  <span className="font-display text-h3 text-brass" aria-hidden="true">DPS</span>
+                  <span className="font-display text-h2 text-ink" aria-hidden="true">
+                    DPS
+                  </span>
                 )}
               </div>
-              <p className="mt-auto pt-4 text-body font-medium text-ink">{c.label}</p>
-              <p className="text-small text-ink-soft">{c.detail}</p>
-            </li>
+              <p className="mt-auto pt-4 font-display text-h3 leading-none">{c.label}</p>
+              <p className="mt-1 text-small text-ink-soft">{c.detail}</p>
+            </Cell>
           ))}
-        </ul>
+        </MullionGrid>
       </div>
     </section>
   )

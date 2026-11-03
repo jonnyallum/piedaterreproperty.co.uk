@@ -67,7 +67,7 @@ export default function HowWeSellPage() {
           <h2 className="mt-3 max-w-2xl text-h2">Two things we explain properly</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {CALLOUTS.map((c) => (
-              <div key={c.title} className="rounded-md border border-brass/40 bg-ground p-7">
+              <div key={c.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-7">
                 <Icon name="check" className="h-6 w-6 text-sales-ink" />
                 <h3 className="mt-4 text-h3">{c.title}</h3>
                 <p className="measure mt-2 text-body text-ink-soft">{c.body}</p>

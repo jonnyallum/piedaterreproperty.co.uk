@@ -57,8 +57,8 @@ export default function LettingsHubPage() {
           {SERVICE_LEVELS.map((level, i) => (
             <div
               key={level.name}
-              className={`flex flex-col rounded-md border p-7 ${
-                i === 2 ? 'border-lettings bg-well' : 'border-brass/40 bg-ground'
+              className={`flex flex-col rounded-none border p-7 ${
+                i === 2 ? 'border-lettings bg-well' : 'border-night bg-ground'
               }`}
             >
               <h3 className="text-h3">{level.name}</h3>
@@ -71,7 +71,7 @@ export default function LettingsHubPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 border-t border-brass/40 pt-4 text-small text-ink-soft">
+              <p className="mt-5 border-t-[length:var(--pane-gap)] border-night pt-4 text-small text-ink-soft">
                 {level.fee}
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function LettingsHubPage() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {WHY_CHOOSE_US_POINTS.map((p) => (
-              <div key={p.title} className="border-t border-brass/40 pt-5">
+              <div key={p.title} className="border-t-[length:var(--pane-gap)] border-night pt-5">
                 <h3 className="text-h3">{p.title}</h3>
                 <p className="measure mt-2 text-body text-ink-soft">{p.body}</p>
               </div>
@@ -162,7 +162,7 @@ export default function LettingsHubPage() {
 
       {/* Sales cross-link, the only warm element */}
       <section className="mx-auto max-w-content px-6 py-16 md:px-8">
-        <div className="flex flex-col items-start gap-4 rounded-md border border-sales/40 bg-well p-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col items-start gap-4 rounded-none border border-sales/40 bg-well p-8 md:flex-row md:items-center md:justify-between">
           <div>
             <Eyebrow>Thinking of selling instead?</Eyebrow>
             <p className="mt-2 max-w-xl text-body text-ink-soft">

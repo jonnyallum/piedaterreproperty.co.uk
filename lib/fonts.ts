@@ -3,18 +3,17 @@
  * time and injects a metric-matched fallback so headings do not reflow when the
  * web font arrives. No third-party font request is made at runtime.
  *
- * Instrument Serif is the display face: tall, condensed, editorial, with a true
- * italic used for single emphasised words. Manrope is the UI and body face.
+ * Barlow Condensed is the display face: a heavy, tall signage-style sans used
+ * in capitals for headlines, labels and tiles. Manrope is the UI and body face.
  */
-import { Instrument_Serif, Manrope } from 'next/font/google'
+import { Barlow_Condensed, Manrope } from 'next/font/google'
 
-export const instrumentSerif = Instrument_Serif({
+export const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
   display: 'swap',
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-instrument',
-  fallback: ['Times New Roman', 'serif'],
+  weight: ['600', '700', '800'],
+  variable: '--font-barlow',
+  fallback: ['Arial Narrow', 'Helvetica', 'Arial', 'sans-serif'],
 })
 
 export const manrope = Manrope({
@@ -24,4 +23,4 @@ export const manrope = Manrope({
   fallback: ['system-ui', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
 })
 
-export const fontVariables = `${instrumentSerif.variable} ${manrope.variable}`
+export const fontVariables = `${barlowCondensed.variable} ${manrope.variable}`

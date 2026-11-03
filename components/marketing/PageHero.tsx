@@ -1,8 +1,8 @@
 /**
  * PageHero. The interior-page header, laid out like the opening of a
  * monograph: a narrow margin column carrying the section label, a very large
- * title beside it, and a lead paragraph offset underneath. A six-pane window
- * frame sits behind the title as the one decorative device. Tinted by path:
+ * title beside it, and a lead paragraph offset underneath. A small eight-pane window
+ * frame sits beside the breadcrumbs as the one decorative device. Tinted by path:
  * sales and neutral are black, lettings is signal yellow. Carries
  * breadcrumbs, one h1, a lead line and up to two calls to action.
  */
@@ -39,16 +39,16 @@ export function PageHero({
   const onDark = tone !== 'lettings'
   return (
     <section className={cn('relative isolate overflow-hidden', SURFACE[tone])}>
-      {/* A window frame: six panes behind the title, one filled. */}
+      {/* A small window frame beside the breadcrumbs, one pane filled. */}
       <div
         aria-hidden="true"
         className={cn(
-          'pointer-events-none absolute -right-10 top-28 hidden h-[34rem] w-[22rem] grid-cols-2 grid-rows-3 gap-[var(--pane-gap)] p-[var(--pane-gap)] lg:grid',
+          'pointer-events-none absolute right-8 top-24 hidden h-24 w-64 grid-cols-4 grid-rows-2 gap-[var(--pane-gap)] p-[var(--pane-gap)] lg:grid',
           onDark ? 'bg-ochre' : 'bg-ink'
         )}
       >
-        {[0, 1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className={i === 3 ? (onDark ? 'bg-ochre' : 'bg-ink') : onDark ? 'bg-ink' : 'bg-ochre'} />
+        {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+          <div key={i} className={i === 5 ? (onDark ? 'bg-ochre' : 'bg-ink') : onDark ? 'bg-ink' : 'bg-ochre'} />
         ))}
       </div>
       <div

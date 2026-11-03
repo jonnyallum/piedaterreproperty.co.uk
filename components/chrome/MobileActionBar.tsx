@@ -16,16 +16,16 @@ import { track } from '@/lib/analytics'
 export function MobileActionBar() {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 grid grid-cols-3 border-t border-brass/40 bg-ground/95 backdrop-blur-md md:hidden"
+      className="fixed inset-x-0 bottom-0 grid grid-cols-3 gap-[var(--pane-gap)] border-t-[length:var(--pane-gap)] border-night bg-night md:hidden"
       style={{ zIndex: 'var(--z-sticky-bar)' }}
       aria-label="Quick contact"
     >
       <a
         href={SITE.phone.href}
         onClick={() => track('call_click', { location: 'sticky_bar' })}
-        className="flex flex-col items-center gap-1 py-3 text-ink"
+        className="flex flex-col items-center gap-1 bg-ground py-3 text-ink"
       >
-        <Icon name="phone" className="h-5 w-5 text-lettings" />
+        <Icon name="phone" className="h-5 w-5" />
         <span className="text-small font-medium">Call</span>
       </a>
       <a
@@ -33,17 +33,17 @@ export function MobileActionBar() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => track('whatsapp_click', { location: 'sticky_bar' })}
-        className="flex flex-col items-center gap-1 border-x border-brass/40 py-3 text-ink"
+        className="flex flex-col items-center gap-1 bg-ground py-3 text-ink"
       >
-        <Icon name="whatsapp" className="h-5 w-5 text-lettings" />
+        <Icon name="whatsapp" className="h-5 w-5" />
         <span className="text-small font-medium">WhatsApp</span>
       </a>
       <Link
         href="/sales/free-valuation"
         onClick={() => track('nav_cta_click', { location: 'sticky_bar' })}
-        className="flex flex-col items-center gap-1 py-3 text-sales-ink"
+        className="flex flex-col items-center gap-1 bg-ochre py-3 font-bold text-ink"
       >
-        <Icon name="arch" className="h-5 w-5" />
+        <Icon name="arrow-right" className="h-5 w-5" />
         <span className="text-small font-medium">Valuation</span>
       </Link>
     </div>

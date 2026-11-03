@@ -83,7 +83,7 @@ const ALL_ICONS: IconName[] = [
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <section className="border-t border-brass/40 py-14">
+    <section className="border-t-[length:var(--pane-gap)] border-night py-14">
       <Eyebrow>{title}</Eyebrow>
       <div className="mt-6">{children}</div>
     </section>
@@ -92,7 +92,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 
 function Swatch({ name, hex }: { name: string; hex: string }) {
   return (
-    <div className="overflow-hidden rounded-sm border border-brass/40">
+    <div className="overflow-hidden rounded-sm border-[length:var(--pane-gap)] border-night">
       <div className="h-20 w-full" style={{ backgroundColor: hex }} />
       <div className="bg-ground px-3 py-2">
         <p className="text-small font-medium text-ink">{name}</p>
@@ -222,7 +222,7 @@ export default function StyleGuidePage() {
             </thead>
             <tbody>
               {CONTRAST_ROWS.map(([pair, ratio, grade]) => (
-                <tr key={pair} className="border-t border-brass/40">
+                <tr key={pair} className="border-t-[length:var(--pane-gap)] border-night">
                   <td className="py-2 pr-6">{pair}</td>
                   <td className="tabular py-2 pr-6">{ratio.toFixed(2)} to 1</td>
                   <td className="py-2">{grade}</td>
@@ -273,12 +273,12 @@ export default function StyleGuidePage() {
       </Section>
 
       <Section title="Components, light and dark side by side">
-        <div className="grid gap-6 overflow-hidden rounded-md border border-brass/40 lg:grid-cols-2">
+        <div className="grid gap-6 overflow-hidden rounded-none border-[length:var(--pane-gap)] border-night lg:grid-cols-2">
           <div>
             <p className="eyebrow px-6 pt-6">Light scene</p>
             <Gallery />
           </div>
-          <div className="theme-dark border-t border-brass/40 lg:border-l lg:border-t-0">
+          <div className="theme-dark border-t-[length:var(--pane-gap)] border-night lg:border-l lg:border-t-0">
             <p className="eyebrow px-6 pt-6 text-on-dark/80">Dark scene</p>
             <Gallery />
           </div>

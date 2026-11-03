@@ -82,7 +82,7 @@ export default function WhyLocalAgentPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           {OPTIONS.map((o) => (
-            <div key={o.name} className="rounded-md border border-brass/40 bg-well p-7">
+            <div key={o.name} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
               <h2 className="text-h3">{o.name}</h2>
               <p className="mt-4 text-small font-medium text-lettings-deep">Where it helps</p>
               <p className="measure mt-1 text-body text-ink-soft">{o.good}</p>
@@ -95,7 +95,7 @@ export default function WhyLocalAgentPage() {
         <div className="mt-16">
           <Eyebrow>Side by side</Eyebrow>
           <h2 className="mt-3 text-h2">A straight comparison</h2>
-          <div className="mt-6 overflow-x-auto rounded-md border border-brass/40">
+          <div className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-night">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <caption className="sr-only">
                 Comparison of online-only agents, national chains and Pied-à-Terre Property

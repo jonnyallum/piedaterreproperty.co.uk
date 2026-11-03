@@ -51,7 +51,7 @@ export default async function ReviewsPage() {
         </p>
       </section>
 
-      <section className="border-t border-brass/30 bg-oat">
+      <section className="border-t-[length:var(--pane-gap)] border-night bg-oat">
         <div className="mx-auto max-w-content px-6 py-16 md:px-8">
           <Eyebrow>Regulated and accountable</Eyebrow>
           <h2 className="mt-3 max-w-2xl text-h2">

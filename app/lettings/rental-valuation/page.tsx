@@ -56,7 +56,7 @@ export default async function RentalValuationPage({
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="mb-14 grid gap-6 sm:grid-cols-3">
           {AFTER.map((a, i) => (
-            <div key={a.title} className="rounded-md border border-brass/40 bg-well p-6">
+            <div key={a.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
               <p className="font-display text-h2 leading-none tabular text-brass">
                 {String(i + 1).padStart(2, '0')}
               </p>

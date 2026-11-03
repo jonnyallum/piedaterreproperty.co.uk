@@ -1,5 +1,5 @@
 /**
- * Eyebrow. The Martian Mono uppercase label that sits above headings. Renders
+ * Eyebrow. The small uppercase label, marked with a yellow square, that sits above headings. Renders
  * as a <p> by default; pass `as` to place it in a heading group without
  * breaking the document outline.
  */
@@ -21,5 +21,10 @@ const TONE: Record<NonNullable<EyebrowProps['tone']>, string> = {
 }
 
 export function Eyebrow({ children, as: Tag = 'p', tone = 'slate', className }: EyebrowProps) {
-  return <Tag className={cn('eyebrow', TONE[tone], className)}>{children}</Tag>
+  return (
+    <Tag className={cn('eyebrow inline-flex items-center gap-2 font-bold', TONE[tone], className)}>
+      <span aria-hidden="true" className="inline-block h-2.5 w-2.5 shrink-0 bg-ochre ring-2 ring-ink" />
+      {children}
+    </Tag>
+  )
 }

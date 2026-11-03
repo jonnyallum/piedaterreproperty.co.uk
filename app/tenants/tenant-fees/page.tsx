@@ -32,7 +32,7 @@ export default function TenantFeesPage() {
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-md border border-brass/40 bg-well p-7">
+          <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
             <div className="flex items-center gap-2 text-lettings-deep">
               <Icon name="check" className="h-5 w-5" />
               <h2 className="text-h3 text-ink">What can be charged</h2>
@@ -46,7 +46,7 @@ export default function TenantFeesPage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-md border border-brass/40 bg-ground p-7">
+          <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-7">
             <div className="flex items-center gap-2 text-sales-ink">
               <Icon name="close" className="h-5 w-5" />
               <h2 className="text-h3 text-ink">What cannot be charged</h2>

@@ -51,7 +51,7 @@ export default function FaqsPage() {
                   <li key={group}>
                     <a
                       href={`#${groupSlug(group)}`}
-                      className="flex items-center justify-between gap-3 rounded-sm border border-brass/40 bg-well px-4 py-2.5 text-body text-ink transition-colors hover:bg-hover"
+                      className="flex items-center justify-between gap-3 rounded-sm border-[length:var(--pane-gap)] border-night bg-well px-4 py-2.5 text-body text-ink transition-colors hover:bg-hover"
                     >
                       <span>{GROUP_META[group].heading}</span>
                       <span className="tabular text-small text-ink-soft">{entries.length}</span>

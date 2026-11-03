@@ -97,7 +97,7 @@ export default function AboutPage() {
 
           <div>
             <Eyebrow>Our story</Eyebrow>
-            <span className="mt-3 inline-block rounded-sm border border-brass/50 bg-well px-3 py-1 text-small text-ink-soft">
+            <span className="mt-3 inline-block rounded-sm border-[length:var(--pane-gap)] border-night bg-well px-3 py-1 text-small text-ink-soft">
               Draft, awaiting the founder&rsquo;s approval
             </span>
             <h2 className="mt-4 text-h2">
@@ -171,7 +171,7 @@ export default function AboutPage() {
           silhouettes, we are waiting for proper portraits of the people you will actually deal
           with.
         </p>
-        <div className="mt-8 rounded-md border border-brass/40 bg-well p-6 md:p-8">
+        <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6 md:p-8">
           <p className="text-body text-ink">
             Further team names, roles and photographs are being prepared and will appear here
             before launch. In the meantime, the fastest way to meet us is a call or a valuation.
@@ -189,14 +189,14 @@ export default function AboutPage() {
       </section>
 
       {/* 3. The award, given a proper block. One award presented well. */}
-      <section className="border-y border-brass/30 bg-indigo text-on-dark">
+      <section className="border-y border-night bg-indigo text-on-dark">
         <div className="relative isolate overflow-hidden">
           <Grain fixed={false} />
           <div
             className="relative mx-auto grid max-w-content gap-8 px-6 py-16 md:grid-cols-[auto_1fr] md:items-center md:px-8"
             style={{ zIndex: 'var(--z-content)' }}
           >
-            <span className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-brass text-brass">
+            <span className="flex h-24 w-24 items-center justify-center rounded-none border-2 border-brass text-brass">
               <Icon name="shield" className="h-11 w-11" />
             </span>
             <div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. The numbers band. Honest figures only, no sales figure invented. */}
-      <section className="border-y border-brass/30 bg-oat">
+      <section className="border-y border-night bg-oat">
         <div className="mx-auto max-w-content px-6 py-16 md:px-8">
           <div className="grid gap-10 sm:grid-cols-3">
             {NUMBERS.map((n) => (
@@ -276,7 +276,7 @@ export default function AboutPage() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {LIMITS.map((l) => (
-            <div key={l.title} className="rounded-md border border-brass/40 bg-ground p-6">
+            <div key={l.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6">
               <h3 className="text-h3">{l.title}</h3>
               <p className="measure mt-3 text-body text-ink-soft">{l.body}</p>
             </div>

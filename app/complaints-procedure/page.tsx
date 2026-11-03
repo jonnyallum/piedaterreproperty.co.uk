@@ -29,7 +29,7 @@ export default function ComplaintsProcedurePage() {
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           {COMPLAINT_STEPS.map((step, i) => (
-            <div key={step.title} className="rounded-md border border-brass/40 bg-well p-7">
+            <div key={step.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
               <p className="font-display text-h2 leading-none tabular text-lettings">
                 {String(i + 1).padStart(2, '0')}
               </p>

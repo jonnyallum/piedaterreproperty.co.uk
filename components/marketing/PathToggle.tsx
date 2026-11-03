@@ -28,7 +28,7 @@ export function PathToggle({ value, onChange, label, className }: PathToggleProp
     <div
       role="group"
       aria-label={label}
-      className={cn('inline-flex rounded-md border border-brass/40 bg-well p-1', className)}
+      className={cn('inline-flex rounded-none border-[length:var(--pane-gap)] border-night bg-well p-1', className)}
     >
       {OPTIONS.map((opt) => {
         const active = value === opt.value

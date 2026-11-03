@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Reveal } from '@/components/primitives/Reveal'
 import { Icon } from '@/components/primitives/Icon'
-import { Arch } from '@/components/primitives/Arch'
 import { HeroSearch } from '@/components/lead/HeroSearch'
 import { PropertyCard } from '@/components/property/PropertyCard'
 import { StatsBand } from '@/components/marketing/StatsBand'
@@ -15,6 +14,8 @@ import { Faq } from '@/components/marketing/Faq'
 import { ValuationBand } from '@/components/marketing/ValuationBand'
 import { Marquee } from '@/components/marketing/Marquee'
 import { Skyline } from '@/components/marketing/Skyline'
+import { Cell, MullionGrid } from '@/components/primitives/Mullion'
+import { SectionBar } from '@/components/primitives/SectionBar'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { AREAS } from '@/content/areas'
 import { HOME_FAQS } from '@/content/faqs'
@@ -146,7 +147,7 @@ export default function HomePage() {
             (Spinnaker Tower included) cut out in black. */}
         <div className="relative h-[17rem] overflow-hidden bg-ochre md:h-[26rem]" aria-hidden="true">
           <div
-            className="absolute bottom-[-4rem] left-[78%] h-[16rem] w-[16rem] -translate-x-1/2 rounded-full md:left-[58%] md:bottom-[-8rem] md:h-[40rem] md:w-[40rem]"
+            className="absolute bottom-[-4rem] left-[78%] h-[16rem] w-[16rem] -translate-x-1/2 rounded-none md:left-[58%] md:bottom-[-8rem] md:h-[40rem] md:w-[40rem]"
             style={{ background: 'var(--pt-bone)' }}
           />
           <Skyline className="absolute inset-x-0 bottom-0 h-full w-full text-ink" />
@@ -186,26 +187,26 @@ export default function HomePage() {
       {/* 1b. What we do, as an index. Large type rows that fill with blue. */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-content px-6 md:px-8">
-          <Eyebrow>What we do</Eyebrow>
+          <SectionBar label="What we do" index="01" />
           <ul className="mt-8">
             {SERVICES.map((row, i) => (
               <li key={row.title}>
                 <Link
                   href={row.href}
-                  className="group -mx-6 grid items-baseline gap-x-8 gap-y-3 border-t-2 border-ink px-6 py-8 transition-colors duration-300 hover:bg-sales hover:text-on-dark focus-visible:bg-sales focus-visible:text-on-dark md:-mx-8 md:grid-cols-[4rem_1fr_20rem_2rem] md:px-8 md:py-10"
+                  className="group -mx-6 grid items-baseline gap-x-8 gap-y-3 border-t-[length:var(--pane-gap)] border-night px-6 py-8 transition-colors duration-300 hover:bg-ochre focus-visible:bg-ochre md:-mx-8 md:grid-cols-[4rem_1fr_20rem_2rem] md:px-8 md:py-10"
                 >
                   <span className="eyebrow tabular">0{i + 1}</span>
                   <span className="text-index font-display">
-                    {row.title} <em className="italic text-sales group-hover:text-ochre group-focus-visible:text-ochre">{row.accent}</em>
+                    {row.title} <em>{row.accent}</em>
                   </span>
-                  <span className="text-body text-ink-soft group-hover:text-on-dark/90 group-focus-visible:text-on-dark/90">
+                  <span className="text-body text-ink-soft group-hover:text-ink">
                     {row.copy}
                   </span>
                   <Icon name="arrow-up-right" className="hidden h-7 w-7 transition-transform group-hover:translate-x-1 md:block" />
                 </Link>
               </li>
             ))}
-            <li className="border-t-2 border-ink" aria-hidden="true" />
+            <li className="border-t-[length:var(--pane-gap)] border-night" aria-hidden="true" />
           </ul>
         </div>
       </section>
@@ -219,12 +220,13 @@ export default function HomePage() {
       {/* 4. Real homes, set out as an asymmetric spread: one large, two small. */}
       <section className="surface-paper pb-28 pt-8">
         <div className="mx-auto max-w-content px-6 md:px-8">
-          <div className="grid items-end gap-6 md:grid-cols-12">
-            <h2 className="text-h1 md:col-span-8">
-              Real homes. Real <em className="italic text-sales-ink">local</em> work.
+          <SectionBar label="Real homes" index="04" aside={<Link href="/properties">View all</Link>} />
+          <div className="mt-8 grid items-end gap-6 md:grid-cols-12">
+            <h2 className="text-title md:col-span-9">
+              Real homes. Real <em>local</em> work.
             </h2>
-            <div className="md:col-span-4 md:text-right">
-              <Link href="/properties" className="btn btn-secondary">
+            <div className="md:col-span-3 md:text-right">
+              <Link href="/properties" className="btn btn-sales">
                 View all properties
               </Link>
             </div>
@@ -251,38 +253,47 @@ export default function HomePage() {
       {/* Tenant portal teaser: the portal itself is built after sign-off, so
           this routes to the working repair route today. The list is an example. */}
       <section className="px-6 py-8 md:px-8">
-        <div className="mx-auto grid max-w-content items-center gap-12 rounded-none bg-sales px-8 py-14 text-on-dark md:grid-cols-2 md:px-14 md:py-16">
-          <div>
-            <p className="eyebrow text-on-dark/80">Tenant portal</p>
-            <h2 className="mt-4 max-w-md text-h1">Something broken? Tell us in thirty seconds.</h2>
-            <p className="measure mt-5 text-lead text-on-dark/90">
-              Log in, photograph the problem, say how urgent it is and watch it get fixed.
-              Every update in one place.
-            </p>
-            <Link href="/tenants/report-maintenance" className="btn mt-8 bg-ground text-ink">
-              Report a repair
-            </Link>
-          </div>
-          <div className="rounded-[1.5rem] bg-ground p-6 text-ink shadow-warm-lg" aria-label="Example of the tenant portal">
-            <p className="eyebrow text-ink-soft">Your issues, example</p>
-            <ul>
-              {[
-                ['Boiler pressure dropping', 'Raised 28 October', 'Engineer booked'],
-                ['Bathroom extractor fan', 'Raised 12 October', 'Fixed'],
-                ['Gutter at the back', 'Raised 2 November', 'Received'],
-              ].map(([title, when, status]) => (
-                <li key={title} className="flex items-center justify-between gap-4 border-b border-brass/30 py-4 last:border-0">
-                  <span>
-                    <span className="block text-body">{title}</span>
-                    <span className="text-small text-ink-soft">{when}</span>
-                  </span>
-                  <span className="rounded-none bg-hover px-3 py-1 text-small font-bold text-sales-ink">
-                    {status}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mx-auto max-w-content">
+          <MullionGrid className="md:grid-cols-2">
+            <Cell ground="yellow" className="flex flex-col justify-between gap-10 md:p-12">
+              <p className="eyebrow font-bold">Tenant portal</p>
+              <div>
+                <h2 className="max-w-md text-title">Something broken? Tell us in thirty seconds.</h2>
+                <p className="measure mt-5 text-lead">
+                  Log in, photograph the problem, say how urgent it is and watch it get fixed.
+                  Every update in one place.
+                </p>
+                <Link href="/tenants/report-maintenance" className="btn btn-sales mt-8">
+                  Report a repair
+                </Link>
+              </div>
+            </Cell>
+            <Cell ground="black" className="md:p-12">
+              <div aria-label="Example of the tenant portal">
+                <p className="eyebrow text-ochre">Your issues, example</p>
+                <ul className="mt-4 border-t-[length:var(--pane-gap)] border-ochre">
+                  {[
+                    ['Boiler pressure dropping', 'Raised 28 October', 'Engineer booked'],
+                    ['Bathroom extractor fan', 'Raised 12 October', 'Fixed'],
+                    ['Gutter at the back', 'Raised 2 November', 'Received'],
+                  ].map(([title, when, status]) => (
+                    <li
+                      key={title}
+                      className="flex items-center justify-between gap-4 border-b-[length:var(--pane-gap)] border-ochre py-4"
+                    >
+                      <span>
+                        <span className="block font-display text-h3 uppercase">{title}</span>
+                        <span className="text-small text-on-dark/70">{when}</span>
+                      </span>
+                      <span className="bg-ochre px-3 py-1 text-small font-bold uppercase tracking-[0.08em] text-ink">
+                        {status}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Cell>
+          </MullionGrid>
         </div>
       </section>
 
@@ -290,9 +301,9 @@ export default function HomePage() {
       <section className="surface-paper-muted">
         <div className="mx-auto grid max-w-content gap-x-12 gap-y-14 px-6 py-24 md:px-8 lg:grid-cols-12 lg:py-32">
           <div className="lg:col-span-7">
-            <Eyebrow>Our story</Eyebrow>
-            <h2 className="mt-4 text-h1">
-              A foot on the ground, kept for the <em className="italic text-sales-ink">long</em> term.
+            <SectionBar label="Our story" index="06" />
+            <h2 className="mt-8 text-title">
+              A foot on the ground, kept for the <em>long</em> term.
             </h2>
             <p className="dropcap measure mt-10 text-lead text-ink">
               Pied-à-Terre means a foot on the ground: a small place you keep for the times
@@ -317,7 +328,7 @@ export default function HomePage() {
             </div>
             <p className="signature mt-8 text-h2">{SITE.directorDisplay}</p>
           </div>
-          <Arch variant="full" className="relative aspect-[3/4] w-full bg-indigo lg:col-span-5 lg:mt-24">
+          <div className="relative aspect-[3/4] w-full border-[length:var(--pane-gap)] border-night bg-night lg:col-span-5 lg:mt-24">
             <Image
               src="/images/team/charisma-smith.jpg"
               alt="Charisma Smith, founder and director of Pied-à-Terre Property"
@@ -325,35 +336,60 @@ export default function HomePage() {
               sizes="(max-width: 64rem) 100vw, 40vw"
               className="object-cover object-top"
             />
-          </Arch>
+            <span className="absolute bottom-0 left-0 bg-ochre px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-ink">
+              Charisma Smith, founder
+            </span>
+          </div>
         </div>
       </section>
 
       {/* 6. Areas we cover, as a typographic index. */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-content px-6 md:px-8">
-          <Eyebrow>Areas we cover</Eyebrow>
-          <h2 className="mt-4 max-w-4xl text-h1">
-            From Southampton to Chichester, across the{' '}
-            <em className="italic text-sales-ink">South Coast and Hampshire</em>.
+          <SectionBar label="Areas we cover" index="07" />
+          <h2 className="mt-8 max-w-5xl text-title">
+            From Southampton to Chichester, across the <em>South Coast and Hampshire</em>.
           </h2>
-          <ul className="mt-14">
-            {AREAS.map((area) => (
-              <li key={area.slug}>
+          <MullionGrid as="ul" className="mt-12 sm:grid-cols-2 lg:grid-cols-3">
+            {AREAS.map((area, i) => (
+              <li key={area.slug} className="bg-ground">
                 <Link
                   href={`/areas/${area.slug}`}
-                  className="group grid items-baseline gap-x-8 gap-y-2 border-t border-ink/30 py-6 transition-colors hover:border-ink md:grid-cols-[1fr_24rem_2rem]"
+                  className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-ochre focus-visible:bg-ochre"
                 >
-                  <span className="text-h1 font-display transition-transform duration-300 group-hover:translate-x-3 group-hover:italic group-hover:text-sales-ink">
-                    {area.name}
+                  <span className="flex items-start justify-between">
+                    <span className="tabular eyebrow">{String(i + 1).padStart(2, '0')}</span>
+                    <Icon
+                      name="arrow-up-right"
+                      className="h-6 w-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
                   </span>
-                  <span className="text-small text-ink-soft">{area.blurb}</span>
-                  <Icon name="arrow-up-right" className="hidden h-6 w-6 text-ink md:block" />
+                  <span>
+                    <span className="block break-words font-display text-h2 uppercase leading-[0.9]">
+                      {area.name}
+                    </span>
+                    <span className="mt-2 block text-small text-ink-soft group-hover:text-ink">
+                      {area.blurb}
+                    </span>
+                  </span>
                 </Link>
               </li>
             ))}
-            <li className="border-t border-ink/30" aria-hidden="true" />
-          </ul>
+            <li className="bg-ochre">
+              <Link
+                href="/areas"
+                className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-night hover:text-ochre"
+              >
+                <Icon
+                  name="arrow-up-right"
+                  className="h-6 w-6 self-end transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+                <span className="font-display text-h2 uppercase leading-[0.9]">
+                  Explore all our coverage
+                </span>
+              </Link>
+            </li>
+          </MullionGrid>
           <p className="mt-10 max-w-3xl text-lead text-ink-soft">
             Also across the wider coast: {COVERAGE.wider.join(', ')}.
           </p>
@@ -371,10 +407,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow>Good questions</Eyebrow>
-              <h2 className="mt-3 text-h2">The things people ask us first</h2>
+              <SectionBar label="Good questions" index="08" className="max-w-md" />
+              <h2 className="mt-6 text-title">The things people ask us first</h2>
             </div>
-            <Link href="/faqs" className="btn btn-ghost">
+            <Link href="/faqs" className="btn btn-secondary">
               All questions
             </Link>
           </div>
@@ -385,10 +421,10 @@ export default function HomePage() {
       </section>
 
       {/* 9. Verified Google feedback and the continuous review rail. */}
-      <section className="overflow-hidden border-y border-brass/30 surface-paper py-24">
+      <section className="overflow-hidden surface-paper py-24">
         <div className="mx-auto max-w-content px-6 md:px-8">
-          <Eyebrow>Google reviews</Eyebrow>
-          <div className="mt-4">
+          <SectionBar label="Google reviews" index="09" />
+          <div className="mt-8">
             <ReviewsSection heading="What our customers said on Google" />
           </div>
         </div>

@@ -81,9 +81,9 @@ export default function TenantsHubPage() {
             <Link
               key={card.href}
               href={card.href}
-              className="group flex flex-col rounded-md border border-brass/40 bg-ground p-7 transition-colors hover:bg-well"
+              className="group flex flex-col rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-7 transition-colors hover:bg-well"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-well text-lettings">
+              <span className="flex h-11 w-11 items-center justify-center rounded-none bg-well text-lettings">
                 <Icon name={card.icon} className="h-5 w-5" />
               </span>
               <h2 className="mt-5 flex items-center gap-2 text-h3">

@@ -32,7 +32,7 @@ export default function HoldingDepositsPage() {
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           {HOLDING_DEPOSIT.points.map((p, i) => (
-            <div key={p.title} className="rounded-md border border-brass/40 bg-well p-7">
+            <div key={p.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
               <p className="font-display text-h2 leading-none tabular text-lettings">
                 {String(i + 1).padStart(2, '0')}
               </p>

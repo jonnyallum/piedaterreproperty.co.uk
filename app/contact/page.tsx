@@ -45,7 +45,7 @@ export default function ContactPage() {
           {/* Left: the fast routes, then the office and hours. */}
           <div>
             {/* Option one and two: call and WhatsApp, first. */}
-            <div className="rounded-md border border-brass/40 bg-well p-6 md:p-8">
+            <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6 md:p-8">
               <Eyebrow>The fastest way to reach us</Eyebrow>
               <p className="measure mt-3 text-body text-ink-soft">
                 For anything time-sensitive, call. For a quick question, WhatsApp is easiest. A
@@ -71,7 +71,7 @@ export default function ContactPage() {
             </div>
 
             {/* The trading office, clearly the one to visit. */}
-            <div className="mt-8 rounded-md border border-brass/40 bg-ground p-6 md:p-8">
+            <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-8">
               <Eyebrow>Visit the office</Eyebrow>
               <p className="mt-3 flex items-start gap-3 text-body text-ink">
                 <Icon name="pin" className="mt-1 h-5 w-5 shrink-0 text-brass" />
@@ -96,7 +96,7 @@ export default function ContactPage() {
             </div>
 
             {/* Opening hours with the live open or closed state. */}
-            <div className="mt-8 rounded-md border border-brass/40 bg-ground p-6 md:p-8">
+            <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-8">
               <Eyebrow>Opening hours</Eyebrow>
               <OpeningHours className="mt-4" />
               <p className="mt-4 text-small text-ink-soft">
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 <form
                   action="/api/lead"
                   method="post"
-                  className="rounded-md border border-brass/40 bg-ground p-6 md:p-7"
+                  className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-7"
                   aria-label="Send us a message"
                 >
                   <input type="hidden" name="source" value="contact" />
@@ -159,7 +159,7 @@ export default function ContactPage() {
 
       {/* Registered office, clearly distinct from the trading office so nobody
           turns up at the accountant's door. */}
-      <section className="border-t border-brass/30 bg-oat">
+      <section className="border-t-[length:var(--pane-gap)] border-night bg-oat">
         <div className="mx-auto max-w-content px-6 py-12 md:px-8">
           <div className="grid gap-8 md:grid-cols-2">
             <div>

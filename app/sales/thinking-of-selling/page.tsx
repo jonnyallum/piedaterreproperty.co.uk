@@ -50,7 +50,7 @@ export default function ThinkingOfSellingPage() {
               {POINTS.map((point) => (
                 <li
                   key={point}
-                  className="flex items-start gap-3 rounded-md border border-brass/40 bg-well p-4 text-body text-ink"
+                  className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-4 text-body text-ink"
                 >
                   <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-sales-ink" />
                   {point}

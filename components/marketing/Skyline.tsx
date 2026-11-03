@@ -8,6 +8,7 @@ export function Skyline({ className = '' }: { className?: string }) {
     <svg
       viewBox="0 0 1600 420"
       preserveAspectRatio="xMaxYMax slice"
+      overflow="hidden"
       className={className}
       aria-hidden="true"
       focusable="false"

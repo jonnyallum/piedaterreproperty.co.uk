@@ -115,7 +115,7 @@ export default function SalesHubPage() {
                   See our sales fees
                 </Button>
               ) : (
-                <p className="rounded-md border border-brass/40 bg-well px-5 py-4 text-small text-ink-soft">
+                <p className="rounded-none border-[length:var(--pane-gap)] border-night bg-well px-5 py-4 text-small text-ink-soft">
                   Our full fee page goes live the day we open for sales. Register your
                   interest and we will send it to you first.
                 </p>

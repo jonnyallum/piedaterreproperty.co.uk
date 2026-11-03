@@ -96,7 +96,7 @@ export function CookieBanner() {
     <div
       role="region"
       aria-label="Cookie choices"
-      className="cookie-banner fixed inset-x-3 bottom-3 mx-auto max-w-3xl rounded-md border border-brass/40 bg-ground p-5 shadow-warm-lg md:inset-x-6 md:bottom-6"
+      className="cookie-banner fixed inset-x-3 bottom-3 mx-auto max-w-3xl rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-5  md:inset-x-6 md:bottom-6"
       style={{ zIndex: 'var(--z-toast)' }}
     >
       <p className="measure text-small text-ink">
@@ -111,16 +111,16 @@ export function CookieBanner() {
       </p>
 
       {managing ? (
-        <div className="mt-4 flex flex-col gap-3 border-t border-brass/40 pt-4">
+        <div className="mt-4 flex flex-col gap-3 border-t-[length:var(--pane-gap)] border-night pt-4">
           <p className="text-small font-medium text-ink">Manage preferences</p>
-          <label className="flex items-start gap-3 rounded-md border border-brass/40 bg-well p-3">
+          <label className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-3">
             <input type="checkbox" checked disabled className="mt-1 h-4 w-4 accent-lettings-deep" />
             <span className="text-small text-ink-soft">
               <span className="font-medium text-ink">Strictly necessary.</span> Required for the
               site to work and for your choice to be remembered. Always on.
             </span>
           </label>
-          <label className="flex items-start gap-3 rounded-md border border-brass/40 bg-well p-3">
+          <label className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-3">
             <input
               type="checkbox"
               checked={analytics}

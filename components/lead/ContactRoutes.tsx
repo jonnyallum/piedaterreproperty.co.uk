@@ -22,7 +22,7 @@ export function ContactRoutes({
 }: ContactRoutesProps) {
   const wa = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`
   return (
-    <div className="rounded-md border border-brass/40 bg-well p-6">
+    <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
       <p className="text-h3">{heading}</p>
       <p className="measure mt-2 text-small text-ink-soft">
         Call the office or send a message. You will reach the same people, not a call

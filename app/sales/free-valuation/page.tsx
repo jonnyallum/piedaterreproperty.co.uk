@@ -71,7 +71,7 @@ export default async function FreeValuationPage({
         {/* What happens after you submit */}
         <div className="mb-14 grid gap-6 sm:grid-cols-3">
           {AFTER.map((a, i) => (
-            <div key={a.title} className="rounded-md border border-brass/40 bg-well p-6">
+            <div key={a.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
               <p className="font-display text-h2 leading-none text-brass tabular">
                 {String(i + 1).padStart(2, '0')}
               </p>
@@ -105,7 +105,7 @@ export default async function FreeValuationPage({
 
           <div className="flex flex-col gap-6 lg:sticky lg:top-28">
             <TrustColumn />
-            <div className="rounded-md border border-brass/40 bg-ground p-6">
+            <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6">
               <Eyebrow>Prefer lettings?</Eyebrow>
               <p className="mt-2 text-body text-ink-soft">
                 Looking to let rather than sell? Our rental valuations are live now.

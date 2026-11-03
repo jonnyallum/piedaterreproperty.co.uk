@@ -200,7 +200,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
                   type="button"
                   onClick={() => go(active - 1)}
                   aria-label="Previous image"
-                  className="pointer-events-auto absolute left-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-on-dark/10 text-on-dark hover:bg-on-dark/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
+                  className="pointer-events-auto absolute left-3 inline-flex h-12 w-12 items-center justify-center rounded-none bg-on-dark/10 text-on-dark hover:bg-on-dark/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
                 >
                   <Icon name="arrow-right" className="h-6 w-6 rotate-180" />
                 </button>
@@ -220,7 +220,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
                   type="button"
                   onClick={() => go(active + 1)}
                   aria-label="Next image"
-                  className="pointer-events-auto absolute right-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-on-dark/10 text-on-dark hover:bg-on-dark/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
+                  className="pointer-events-auto absolute right-3 inline-flex h-12 w-12 items-center justify-center rounded-none bg-on-dark/10 text-on-dark hover:bg-on-dark/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
                 >
                   <Icon name="arrow-right" className="h-6 w-6" />
                 </button>
