@@ -18,7 +18,7 @@ export function MullionGrid({
   return (
     <Tag
       className={cn(
-        'mullion-grid grid gap-[var(--pane-gap)] border-[length:var(--pane-gap)] border-night bg-night',
+        'mullion-grid grid gap-[var(--pane-gap)] border-[length:var(--pane-gap)] border-ink bg-ink',
         className
       )}
     >
@@ -32,8 +32,8 @@ type Ground = 'stone' | 'yellow' | 'black' | 'well'
 const GROUND: Record<Ground, string> = {
   stone: 'bg-ground text-ink',
   well: 'bg-well text-ink',
-  yellow: 'bg-ochre text-ink',
-  black: 'bg-night text-on-dark',
+  yellow: 'bg-ochre text-bone',
+  black: 'bg-night text-ink',
 }
 
 export function Cell({

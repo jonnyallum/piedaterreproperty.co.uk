@@ -48,7 +48,7 @@ export default function TheProcessPage() {
         ]}
         title={
           <>
-            Renting a home, <em className="italic text-ochre">step by step</em>.
+            Renting a home, <em className="italic">step by step</em>.
           </>
         }
         lead="Renting is a big part of life here, and you may be doing it for the first time. This is a clear guide to how it works through a letting agent, start to finish."
@@ -59,7 +59,7 @@ export default function TheProcessPage() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionBar label="Eight steps" className="max-w-md" />
             <h2 className="mt-6 text-h1">
-              From first search to <em className="italic text-lettings">deposit back</em>.
+              From first search to <em className="italic">deposit back</em>.
             </h2>
             <p className="measure mt-4 text-body text-ink-soft">
               If you have a question the guide does not answer, just ask us.

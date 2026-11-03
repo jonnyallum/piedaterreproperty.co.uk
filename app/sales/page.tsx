@@ -41,7 +41,7 @@ export default function SalesHubPage() {
         title={
           <>
             {years.charAt(0).toUpperCase() + years.slice(1)} years letting them.{' '}
-            <em className="italic text-ochre">
+            <em className="italic">
               {SALES_LIVE ? 'Now selling them too.' : 'Soon selling them too.'}
             </em>
           </>
@@ -65,7 +65,7 @@ export default function SalesHubPage() {
         eyebrow="Why instruct a firm this small"
         heading={
           <>
-            New to sales. Not new to <em className="italic text-sales-ink">these streets</em>.
+            New to sales. Not new to <em className="italic">these streets</em>.
           </>
         }
         items={SALES_PILLARS}
@@ -103,7 +103,7 @@ export default function SalesHubPage() {
           <div>
             <SectionBar label="Fees" className="max-w-md" />
             <h2 className="mt-6 text-h1">
-              A fee you can find, <em className="italic text-sales-ink">before</em> you ring.
+              A fee you can find, <em className="italic">before</em> you ring.
             </h2>
             <p className="measure mt-4 text-body text-ink-soft">
               Publishing our fee openly is unusual around here, and deliberate. You should
@@ -116,7 +116,7 @@ export default function SalesHubPage() {
                   See our sales fees
                 </Button>
               ) : (
-                <p className="rounded-none border-[length:var(--pane-gap)] border-night bg-well px-5 py-4 text-small text-ink-soft">
+                <p className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well px-5 py-4 text-small text-ink-soft">
                   Our full fee page goes live the day we open for sales. Register your
                   interest and we will send it to you first.
                 </p>

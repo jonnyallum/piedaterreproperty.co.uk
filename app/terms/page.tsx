@@ -21,7 +21,7 @@ export default function TermsPage() {
         trail={[{ name: 'Terms of use', path: '/terms' }]}
         title={
           <>
-            The ground rules for <em className="italic text-ochre">this site</em>.
+            The ground rules for <em className="italic">this site</em>.
           </>
         }
         lead="These terms cover your use of piedaterreproperty.co.uk. They are separate from any agency agreement you enter with us."

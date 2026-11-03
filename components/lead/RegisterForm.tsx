@@ -85,7 +85,7 @@ export function RegisterForm() {
 
   if (done) {
     return (
-      <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-8 text-center">
+      <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-8 text-center">
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
           <Icon name="check" className="h-7 w-7" />
         </span>
@@ -106,7 +106,7 @@ export function RegisterForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-8"
+      className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8"
       aria-label="Register with us"
     >
       <div className="sr-only" aria-hidden="true">

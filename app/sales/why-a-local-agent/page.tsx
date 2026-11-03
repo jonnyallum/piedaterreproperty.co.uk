@@ -73,7 +73,7 @@ export default function WhyLocalAgentPage() {
         ]}
         title={
           <>
-            Three ways to sell. An <em className="italic text-ochre">honest</em> look at each.
+            Three ways to sell. An <em className="italic">honest</em> look at each.
           </>
         }
         lead="There is a right answer for your home, and it is not always us. Here is a fair account of the choices, including where a firm this size falls short."
@@ -82,7 +82,7 @@ export default function WhyLocalAgentPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           {OPTIONS.map((o) => (
-            <div key={o.name} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
+            <div key={o.name} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-7">
               <h2 className="text-h3">{o.name}</h2>
               <p className="mt-4 text-small font-medium text-lettings-deep">Where it helps</p>
               <p className="measure mt-1 text-body text-ink-soft">{o.good}</p>
@@ -95,7 +95,7 @@ export default function WhyLocalAgentPage() {
         <div className="mt-16">
           <SectionBar label="Side by side" className="max-w-md" />
           <h2 className="mt-6 text-h1">A straight comparison</h2>
-          <div className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-night">
+          <div className="mt-6 overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <caption className="sr-only">
                 Comparison of online-only agents, national chains and Pied-à-Terre Property

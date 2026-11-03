@@ -26,7 +26,7 @@ export function ValuationBand({
   const eyebrow = tone === 'sales' ? 'Free valuation' : 'Rental valuation'
   return (
     <section className="relative isolate overflow-hidden bg-ochre text-ink">
-      <Skyline className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] w-full text-ink opacity-90" />
+      <Skyline className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] w-full text-night opacity-90" />
       <div
         className="relative mx-auto max-w-content px-6 pb-56 pt-20 md:px-8 md:pb-72 md:pt-28"
         style={{ zIndex: 'var(--z-content)' }}

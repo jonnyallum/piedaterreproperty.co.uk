@@ -16,7 +16,7 @@ import { track } from '@/lib/analytics'
 export function MobileActionBar() {
   return (
     <div
-      className="fixed inset-x-0 bottom-0 grid grid-cols-3 gap-[var(--pane-gap)] border-t-[length:var(--pane-gap)] border-night bg-night md:hidden"
+      className="fixed inset-x-0 bottom-0 grid grid-cols-3 gap-[var(--pane-gap)] border-t-[length:var(--pane-gap)] border-ink bg-night md:hidden"
       style={{ zIndex: 'var(--z-sticky-bar)' }}
       aria-label="Quick contact"
     >

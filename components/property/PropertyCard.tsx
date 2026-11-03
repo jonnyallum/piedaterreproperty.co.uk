@@ -30,7 +30,7 @@ export function PropertyCard({ property, feature = false }: { property: Property
   return (
     <Link
       href={`/properties/${property.slug}`}
-      className="property-card group block border-[length:var(--pane-gap)] border-night bg-night focus-visible:outline-none focus-visible:outline-2 focus-visible:outline-ochre"
+      className="property-card group block border-[length:var(--pane-gap)] border-ink bg-ink focus-visible:outline-none focus-visible:outline-2 focus-visible:outline-ochre"
     >
       <div
         className={`property-media relative overflow-hidden ${feature ? 'aspect-[4/5]' : 'aspect-[4/3]'}`}
@@ -58,7 +58,7 @@ export function PropertyCard({ property, feature = false }: { property: Property
         </span>
       </div>
 
-      <div className="bg-ochre text-ink transition-colors group-hover:bg-bone">
+      <div className="bg-ochre text-ink transition-colors group-hover:bg-bone group-hover:text-[color:var(--pt-black)]">
         <div className="flex items-start justify-between gap-4 p-4">
           <div>
             <p className="font-display text-h2 leading-none tabular">{formatPrice(property.price)}</p>
@@ -69,7 +69,7 @@ export function PropertyCard({ property, feature = false }: { property: Property
             className="mt-1 h-6 w-6 shrink-0 transition-transform group-hover:translate-x-1"
           />
         </div>
-        <div className="flex divide-x-[length:var(--pane-gap)] divide-night border-t-[length:var(--pane-gap)] border-night">
+        <div className="flex divide-x-[length:var(--pane-gap)] divide-ink border-t-[length:var(--pane-gap)] border-ink">
           {property.bedrooms != null ? (
             <Meta icon="bed" value={property.bedrooms} label="bedrooms" />
           ) : null}

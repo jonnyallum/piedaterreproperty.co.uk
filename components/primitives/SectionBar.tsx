@@ -16,9 +16,9 @@ interface SectionBarProps {
 
 export function SectionBar({ label, index, aside, className }: SectionBarProps) {
   return (
-    <div className={cn('flex items-stretch bg-night text-on-dark', className)}>
+    <div className={cn('flex items-stretch bg-night text-[color:var(--pt-black)]', className)}>
       {index ? (
-        <span className="tabular flex min-w-12 items-center justify-center bg-ochre px-3 font-display text-h3 text-ink">
+        <span className="tabular flex min-w-12 items-center justify-center bg-ochre px-3 font-display text-h3 text-[color:var(--pt-yellow)]">
           {index}
         </span>
       ) : (

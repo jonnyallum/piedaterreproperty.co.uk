@@ -106,7 +106,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ kind:
         <OpenBadge />
       </div>
 
-      <p className="mt-10 border-t-[length:var(--pane-gap)] border-night pt-8">
+      <p className="mt-10 border-t-[length:var(--pane-gap)] border-ink pt-8">
         <Link
           href={t.nextHref}
           className="inline-flex items-center gap-2 text-body text-sales-ink underline underline-offset-4 hover:no-underline"

@@ -28,13 +28,13 @@ export function PathToggle({ value, onChange, label, className }: PathToggleProp
     <div
       role="group"
       aria-label={label}
-      className={cn('inline-flex rounded-none border-[length:var(--pane-gap)] border-night bg-well p-1', className)}
+      className={cn('inline-flex rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-1', className)}
     >
       {OPTIONS.map((opt) => {
         const active = value === opt.value
         // Fixed pigment depths keep bone text above 4.5:1 in both colour
         // schemes; the semantic accent tokens become lighter in dark mode.
-        const fill = opt.value === 'sales' ? 'bg-sales-deep' : 'bg-lettings-fill'
+        const fill = opt.value === 'sales' ? 'bg-night-deep' : 'bg-lettings-fill'
         return (
           <button
             key={opt.value}

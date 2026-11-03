@@ -30,7 +30,7 @@ export default function BlogPage() {
         trail={[{ name: 'Notes', path: '/blog' }]}
         title={
           <>
-            Notes from people who <em className="italic text-sales-ink">live</em> here.
+            Notes from people who <em className="italic">live</em> here.
           </>
         }
         lead="Practical, local writing on the Solent coast market: what is selling, what is letting, and the things worth knowing before you move. Straightforward, and never filler."
@@ -38,7 +38,7 @@ export default function BlogPage() {
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         {posts.length === 0 ? (
-          <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-8 md:p-10">
+          <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-8 md:p-10">
             <h2 className="text-h3">The first notes are on their way</h2>
             <p className="measure mt-3 text-body text-ink-soft">
               We are writing our first local guides now. In the meantime, the town pages already hold

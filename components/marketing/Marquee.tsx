@@ -29,7 +29,7 @@ function Track({ items, hidden }: { items: readonly string[]; hidden?: boolean }
 export function Marquee({ items, className }: MarqueeProps) {
   return (
     // Decorative: the same towns are available as links in the Areas grid below.
-    <div className={cn('marquee bg-indigo py-3', className)}>
+    <div className={cn('marquee bg-night py-3', className)}>
       <Track items={items} />
       <Track items={items} hidden />
     </div>

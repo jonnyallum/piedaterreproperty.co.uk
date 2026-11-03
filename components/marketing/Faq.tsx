@@ -13,11 +13,11 @@ interface FaqProps {
 
 export function Faq({ items }: FaqProps) {
   return (
-    <div className="border-[length:var(--pane-gap)] border-night bg-night">
+    <div className="border-[length:var(--pane-gap)] border-ink bg-ink">
       {items.map((item, i) => (
         <details
           key={item.q}
-          className="group border-b-[length:var(--pane-gap)] border-night bg-ground last:border-b-0"
+          className="group border-b-[length:var(--pane-gap)] border-ink bg-ground last:border-b-0"
         >
           <summary className="flex cursor-pointer list-none items-stretch text-ink marker:hidden [&::-webkit-details-marker]:hidden">
             <span className="tabular flex w-14 shrink-0 items-center justify-center bg-ochre font-display text-h3 text-ink md:w-16">

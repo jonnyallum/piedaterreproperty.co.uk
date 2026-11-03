@@ -22,14 +22,16 @@
   --pt-shell: #fbe9a0; /* soft warm tint for hover fills */
 
   /* Ink and structure */
-  --pt-ink: #0c0c0a; /* headings, body, footer ground */
-  --pt-indigo: #181815; /* deep dye, section grounds, nav on scroll */
+  --pt-ink: #0c0c0a; /* headings, body, lines */
+  --pt-yellow: #f2c200; /* signal yellow, the big surfaces */
+  --pt-black: #0c0c0a; /* black, the accent surfaces */
+  --pt-indigo: #dfb000; /* deep yellow, quiet silhouettes */
   --pt-slate: #55524a; /* secondary body text, meta */
 
   /* Pigments */
   --pt-terracotta: #1a1a17; /* signature warm, fills and display only */
   --pt-sienna: #2b2b26; /* text-weight terracotta */
-  --pt-ochre: #f2c200; /* highlights, underlines, marquees */
+  --pt-ochre: #0c0c0a; /* accent surfaces: black panes, tabs, bars */
   --pt-marigold: #1a1a17; /* light and glow, sparingly */
   --pt-madder: #26261f; /* deep plum-red, rare emphasis */
   --pt-verdigris: #1a1a17; /* lettings accent */
@@ -45,7 +47,7 @@
 
   --c-ink: var(--pt-ink); /* ink on ground        14.30:1  AAA */
   --c-ink-soft: var(--pt-slate); /* slate on ground       6.21:1  AA  */
-  --c-on-dark: var(--pt-bone); /* bone on ink          14.30:1  AAA */
+  --c-on-dark: var(--pt-black); /* black on yellow */
 
   --c-sales: var(--pt-terracotta); /* fill and display only          */
   --c-sales-ink: var(--pt-sienna); /* sienna on ground      5.98:1  AA  */
@@ -64,9 +66,9 @@
 
   /* ---- Gradients (each is used only over a grain overlay) --------------- */
   /* Maison surfaces are flat: ink, signal blue, paper. No diagonal washes. */
-  --grad-harbour-dusk: linear-gradient(var(--pt-ink), var(--pt-ink));
-  --grad-kiln: linear-gradient(var(--pt-terracotta), var(--pt-terracotta));
-  --grad-kiln-hover: linear-gradient(var(--pt-sienna), var(--pt-sienna));
+  --grad-harbour-dusk: linear-gradient(var(--pt-yellow), var(--pt-yellow));
+  --grad-kiln: linear-gradient(var(--pt-yellow), var(--pt-yellow));
+  --grad-kiln-hover: linear-gradient(var(--pt-indigo), var(--pt-indigo));
   --grad-tide: linear-gradient(var(--pt-indigo), var(--pt-indigo));
   --grad-bleach: linear-gradient(
     180deg,
@@ -173,7 +175,7 @@
   --color-well: var(--c-well);
   --color-hover: var(--c-hover);
   --color-ink: var(--c-ink);
-  --color-night: var(--pt-ink);
+  --color-night: var(--pt-yellow);
   --color-ink-soft: var(--c-ink-soft);
   --color-on-dark: var(--c-on-dark);
   --color-indigo: var(--pt-indigo);
@@ -184,6 +186,7 @@
   --color-lettings-deep: var(--c-lettings-deep);
   --color-lettings-fill: var(--pt-verdigris-d);
   --color-ochre: var(--c-ochre);
+  --color-bone: var(--pt-bone);
   --color-marigold: var(--c-marigold);
   --color-madder: var(--c-madder);
   --color-sage: var(--c-sage);
@@ -317,24 +320,27 @@
   :where(h1, h2, h3, h4, .font-display, .marquee-item, .brand-word) em,
   :where(h1, h2, h3, h4, .font-display, .marquee-item) .italic {
     font-style: normal !important;
-    background-image: linear-gradient(transparent 56%, var(--pt-ochre) 56%, var(--pt-ochre) 94%, transparent 94%);
+    background-image: linear-gradient(transparent 14%, var(--pt-ochre) 14%, var(--pt-ochre) 98%, transparent 98%);
+    color: var(--pt-yellow);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    padding-inline: 0.06em;
+    padding-inline: 0.12em;
   }
-  .text-on-dark :is(h1, h2, h3, h4, .font-display) em,
-  .surface-harbour-dusk :is(h1, h2, h3, h4, .font-display) em,
-  .marquee-item em {
-    background-image: none;
-    color: var(--c-ochre);
-    padding-inline: 0;
-  }
+  /* Inside a black pane the bar flips: yellow bar, black word. */
   .bg-ochre :is(h1, h2, h3, h4, .font-display) em {
-    background-image: none;
-    color: var(--pt-ink);
-    text-decoration: underline;
-    text-decoration-thickness: 0.07em;
-    text-underline-offset: 0.08em;
+    background-image: linear-gradient(transparent 14%, var(--pt-yellow) 14%, var(--pt-yellow) 98%, transparent 98%);
+    color: var(--pt-black);
+  }
+
+  /* A black pane is its own scene: text, lines and buttons inside it flip so
+     every pairing stays legible without per-component overrides. */
+  .bg-ochre,
+  .scene-black {
+    --c-ink: var(--pt-bone);
+    --c-ink-soft: #bdb8a8;
+    --c-on-dark: var(--pt-bone);
+    --c-ground: var(--pt-black);
+    color: var(--pt-bone);
   }
 
   p {
@@ -632,20 +638,32 @@
   .btn-sales {
     background-image: none;
     background-color: var(--pt-ochre);
-    color: var(--pt-ink);
+    color: var(--pt-yellow);
     box-shadow: none;
   }
   .btn-sales:hover {
-    background-color: var(--pt-ink);
-    color: var(--pt-ochre);
+    background-color: var(--pt-yellow);
+    color: var(--pt-black);
     transform: none;
-    box-shadow: inset 0 0 0 2px var(--pt-ochre);
+    box-shadow: inset 0 0 0 2px var(--pt-black);
   }
   .surface-kiln .btn-sales:hover,
   .bg-sales .btn-sales:hover,
   .surface-harbour-dusk .btn-sales:hover {
     background-color: var(--pt-bone);
-    color: var(--pt-ink);
+    color: var(--pt-black);
+    box-shadow: none;
+  }
+  /* Inside a black pane the primary is yellow with black type. */
+  .bg-ochre .btn-sales,
+  .scene-black .btn-sales {
+    background-color: var(--pt-yellow);
+    color: var(--pt-black);
+  }
+  .bg-ochre .btn-sales:hover,
+  .scene-black .btn-sales:hover {
+    background-color: var(--pt-bone);
+    color: var(--pt-black);
     box-shadow: none;
   }
 
@@ -692,28 +710,12 @@
     background-color: var(--c-on-dark);
   }
   .btn-secondary.btn-invert:hover {
-    color: var(--pt-ink);
+    color: var(--pt-yellow);
   }
-  /* On a yellow ground the inverted outline reads black. */
-  .bg-ochre .btn-secondary.btn-invert {
-    color: var(--pt-ink);
-    border-color: var(--pt-ink);
+  .bg-ochre .btn-secondary.btn-invert:hover,
+  .scene-black .btn-secondary.btn-invert:hover {
+    color: var(--pt-black);
   }
-  .bg-ochre .btn-secondary.btn-invert::before {
-    background-color: var(--pt-ink);
-  }
-  .bg-ochre .btn-secondary.btn-invert:hover {
-    color: var(--pt-ochre);
-  }
-  .bg-ochre .btn-sales {
-    background-color: var(--pt-ink);
-    color: var(--pt-ochre);
-  }
-  .bg-ochre .btn-sales:hover {
-    background-color: var(--pt-bone);
-    color: var(--pt-ink);
-  }
-
   /* Ghost: ink label with an ink-bleed ochre underline that draws on hover */
   .btn-ghost {
     background-color: transparent;
@@ -755,11 +757,11 @@
     padding: 0;
     border-radius: 0;
     background-color: var(--pt-ochre);
-    color: var(--pt-ink);
+    color: var(--pt-yellow);
   }
   .btn-icon:hover {
-    background-color: var(--pt-ink);
-    color: var(--pt-ochre);
+    background-color: var(--pt-yellow);
+    color: var(--pt-black);
   }
 
   /* Loading: an indeterminate brass sweep under the label, never a spinner */
@@ -1020,12 +1022,12 @@
     font-size: 0.95rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    background-color: var(--pt-ink);
-    color: var(--pt-ochre);
+    background-color: var(--pt-yellow);
+    color: var(--pt-black);
   }
   .status-chip[data-tone='verdigris'] {
     background-color: var(--pt-ochre);
-    color: var(--pt-ink);
+    color: var(--pt-yellow);
   }
   .status-chip[data-tone='muted'] {
     background-color: color-mix(in srgb, var(--c-ink) 70%, transparent);

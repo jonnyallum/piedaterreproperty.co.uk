@@ -38,7 +38,7 @@ export default function LandlordsLandingPage() {
         title={
           <>
             You already trust us to let it. Soon you can trust us to{' '}
-            <em className="italic text-ochre">sell</em> it.
+            <em className="italic">sell</em> it.
           </>
         }
         lead="After fifteen years looking after homes on this coast, we are adding residential sales. If we already manage your property, selling it is the natural next step, and a much easier one."
@@ -51,7 +51,7 @@ export default function LandlordsLandingPage() {
               {POINTS.map((p) => (
                 <li
                   key={p}
-                  className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-4 text-body text-ink"
+                  className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-4 text-body text-ink"
                 >
                   <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-sales-ink" />
                   {p}

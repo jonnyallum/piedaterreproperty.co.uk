@@ -24,7 +24,7 @@ interface PageHeroProps {
 
 const SURFACE: Record<Tone, string> = {
   sales: 'surface-harbour-dusk text-on-dark',
-  lettings: 'bg-ochre text-ink',
+  lettings: 'bg-ochre text-bone',
   neutral: 'surface-harbour-dusk text-on-dark',
 }
 
@@ -44,11 +44,11 @@ export function PageHero({
         aria-hidden="true"
         className={cn(
           'pointer-events-none absolute right-8 top-24 hidden h-24 w-64 grid-cols-4 grid-rows-2 gap-[var(--pane-gap)] p-[var(--pane-gap)] lg:grid',
-          onDark ? 'bg-ochre' : 'bg-ink'
+          onDark ? 'bg-ochre' : 'bg-night'
         )}
       >
         {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-          <div key={i} className={i === 5 ? (onDark ? 'bg-ochre' : 'bg-ink') : onDark ? 'bg-ink' : 'bg-ochre'} />
+          <div key={i} className={i === 5 ? (onDark ? 'bg-ochre' : 'bg-night') : onDark ? 'bg-ink' : 'bg-ochre'} />
         ))}
       </div>
       <div
@@ -64,7 +64,7 @@ export function PageHero({
             {eyebrow}
           </Eyebrow>
           <h1
-            className={cn('text-title lg:col-span-9', onDark ? '[&_em]:!text-ochre' : '[&_em]:!text-ink')}
+            className={cn('text-title lg:col-span-9', onDark ? '[&_em]:!text-[color:var(--pt-yellow)]' : '[&_em]:!text-[color:var(--pt-black)]')}
           >{title}</h1>
         </div>
         {lead || children ? (

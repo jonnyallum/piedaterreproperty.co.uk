@@ -25,7 +25,7 @@ export default function LettingsFeesPage() {
         ]}
         title={
           <>
-            Clear fees, and what each <em className="italic text-ochre">includes</em>.
+            Clear fees, and what each <em className="italic">includes</em>.
           </>
         }
         lead="The same transparency principle as everything we do. Here is what each service level covers, so you can choose the right one for you."
@@ -38,7 +38,7 @@ export default function LettingsFeesPage() {
           ASSET_REQUEST_LIST). No invented figure appears here; fee cells state
           how the figure is confirmed instead.
         */}
-        <div className="mb-12 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
+        <div className="mb-12 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6">
           <div className="flex items-start gap-3">
             <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-lettings" />
             <p className="measure text-body text-ink">
@@ -49,7 +49,7 @@ export default function LettingsFeesPage() {
           </div>
         </div>
 
-        <div className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-night">
+        <div className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink">
           <table className="w-full min-w-[44rem] border-collapse text-left align-top">
             <caption className="sr-only">Lettings service levels and what each includes</caption>
             <thead>

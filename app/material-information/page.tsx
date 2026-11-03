@@ -21,7 +21,7 @@ export default function MaterialInformationPage() {
         trail={[{ name: 'Material information', path: '/material-information' }]}
         title={
           <>
-            The facts you are <em className="italic text-ochre">entitled to</em>.
+            The facts you are <em className="italic">entitled to</em>.
           </>
         }
         lead="Material information is published on every sales listing so you can decide whether a home is worth your time, before you enquire."

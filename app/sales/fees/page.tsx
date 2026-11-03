@@ -52,7 +52,7 @@ export default function SalesFeesPage() {
         ]}
         title={
           <>
-            One clear fee, <em className="italic text-ochre">no surprises</em>.
+            One clear fee, <em className="italic">no surprises</em>.
           </>
         }
         lead="We would rather you saw how our fee works before you ever pick up the phone. It filters out no one worth working with, and it earns trust from everyone else."
@@ -60,7 +60,7 @@ export default function SalesFeesPage() {
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         {!SALES_LIVE ? (
-          <div className="mb-12 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
+          <div className="mb-12 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6">
             <div className="flex items-start gap-3">
               <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-sales-ink" />
               <p className="measure text-body text-ink">
@@ -123,7 +123,7 @@ export default function SalesFeesPage() {
                 ].map(([label, note], i, arr) => (
                   <tr
                     key={label}
-                    className={i < arr.length - 1 ? 'border-b-[length:var(--pane-gap)] border-night' : ''}
+                    className={i < arr.length - 1 ? 'border-b-[length:var(--pane-gap)] border-ink' : ''}
                   >
                     <th scope="row" className="py-4 pr-6 font-medium text-ink">
                       {label}

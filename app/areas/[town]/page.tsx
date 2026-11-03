@@ -89,7 +89,7 @@ export default async function AreaPage({ params }: { params: Promise<{ town: str
 
           {/* Internal link rail: two nearby towns, both service hubs. */}
           <aside className="mt-12 lg:sticky lg:top-28 lg:mt-16 lg:self-start">
-            <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6">
+            <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6">
               <p className="eyebrow text-ink-soft">Nearby</p>
               <ul className="mt-3 flex flex-col gap-2">
                 {nearby.map((n) => (
@@ -123,7 +123,7 @@ export default async function AreaPage({ params }: { params: Promise<{ town: str
       </div>
 
       {properties.length ? (
-        <section className="border-t-[length:var(--pane-gap)] border-night bg-oat">
+        <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
           <div className="mx-auto max-w-content px-6 py-16 md:px-8">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="text-h2">Our properties in and around {area.name}</h2>
@@ -146,7 +146,7 @@ export default async function AreaPage({ params }: { params: Promise<{ town: str
           </div>
         </section>
       ) : (
-        <section className="border-t-[length:var(--pane-gap)] border-night bg-oat">
+        <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
           <div className="mx-auto max-w-content px-6 py-16 text-center md:px-8">
             <h2 className="text-h3">No current listings in {area.name}</h2>
             <p className="measure mx-auto mt-2 text-body text-ink-soft">

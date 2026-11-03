@@ -17,7 +17,7 @@ function monthYear(iso: string): string {
 
 export function LegalNotice({ reviewed }: LegalNoticeProps) {
   return (
-    <p className="mt-8 flex items-start gap-2 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-4 text-small text-ink-soft">
+    <p className="mt-8 flex items-start gap-2 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-4 text-small text-ink-soft">
       <Icon name="clock" className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
       <span>
         Last reviewed {monthYear(reviewed)}. This is general guidance and not legal advice.

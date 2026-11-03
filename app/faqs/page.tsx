@@ -34,7 +34,7 @@ export default function FaqsPage() {
         trail={[{ name: 'FAQs', path: '/faqs' }]}
         title={
           <>
-            The questions worth <em className="italic text-sales-ink">asking</em>, answered straight.
+            The questions worth <em className="italic">asking</em>, answered straight.
           </>
         }
         lead="No jargon and no evasion. If your question is not here, call us and you will reach the same people who wrote these answers."
@@ -51,7 +51,7 @@ export default function FaqsPage() {
                   <li key={group}>
                     <a
                       href={`#${groupSlug(group)}`}
-                      className="flex items-center justify-between gap-3 rounded-sm border-[length:var(--pane-gap)] border-night bg-well px-4 py-2.5 text-body text-ink transition-colors hover:bg-hover"
+                      className="flex items-center justify-between gap-3 rounded-sm border-[length:var(--pane-gap)] border-ink bg-well px-4 py-2.5 text-body text-ink transition-colors hover:bg-hover"
                     >
                       <span>{GROUP_META[group].heading}</span>
                       <span className="tabular text-small text-ink-soft">{entries.length}</span>

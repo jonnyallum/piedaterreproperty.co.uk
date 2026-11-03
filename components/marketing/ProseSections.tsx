@@ -15,12 +15,12 @@ function idFor(title: string): string {
 
 export function ProseSections({ sections }: { sections: LegalSection[] }) {
   return (
-    <div className="flex flex-col border-y-[length:var(--pane-gap)] border-night">
+    <div className="flex flex-col border-y-[length:var(--pane-gap)] border-ink">
       {sections.map((section, i) => (
         <section
           key={section.title}
           aria-labelledby={idFor(section.title)}
-          className="grid gap-4 border-t-[length:var(--pane-gap)] border-night py-8 first:border-t-0 md:grid-cols-[6rem_1fr] md:gap-8"
+          className="grid gap-4 border-t-[length:var(--pane-gap)] border-ink py-8 first:border-t-0 md:grid-cols-[6rem_1fr] md:gap-8"
         >
           <p className="tabular font-display text-h1 leading-none text-ink" aria-hidden="true">
             {String(i + 1).padStart(2, '0')}

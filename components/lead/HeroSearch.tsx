@@ -22,7 +22,7 @@ export function HeroSearch() {
         <div className="inline-flex rounded-sm bg-well p-1" role="radiogroup">
           <label className="cursor-pointer">
             <input className="peer sr-only" type="radio" name="path" value="sales" defaultChecked />
-            <span className="inline-flex min-h-11 items-center rounded-sm px-4 text-small font-medium text-ink peer-checked:bg-sales-deep peer-checked:text-on-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brass">
+            <span className="inline-flex min-h-11 items-center rounded-sm px-4 text-small font-medium text-ink peer-checked:bg-night-deep peer-checked:text-on-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brass">
               Buying
             </span>
           </label>

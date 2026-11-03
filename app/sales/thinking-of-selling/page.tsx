@@ -37,7 +37,7 @@ export default function ThinkingOfSellingPage() {
         ]}
         title={
           <>
-            Start with people who know the <em className="italic text-ochre">street</em>.
+            Start with people who know the <em className="italic">street</em>.
           </>
         }
         lead="We have spent fifteen years letting and managing homes along this coast, and now we sell them too. A local name, a local number, and someone who can meet you at the property this week."
@@ -50,7 +50,7 @@ export default function ThinkingOfSellingPage() {
               {POINTS.map((point) => (
                 <li
                   key={point}
-                  className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-4 text-body text-ink"
+                  className="flex items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-4 text-body text-ink"
                 >
                   <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-sales-ink" />
                   {point}

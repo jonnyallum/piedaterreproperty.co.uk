@@ -105,7 +105,7 @@ export function PropertySearchLead({ summary, criteria }: PropertySearchLeadProp
 
   if (done) {
     return (
-      <div className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-8 text-center">
+      <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-8 text-center">
         <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
           <Icon name="check" className="h-7 w-7" />
         </span>
@@ -126,7 +126,7 @@ export function PropertySearchLead({ summary, criteria }: PropertySearchLeadProp
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-8"
+      className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8"
       aria-label="Register interest for this search"
     >
       <h2 className="text-h3">Be first to hear</h2>

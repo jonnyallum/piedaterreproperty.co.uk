@@ -28,7 +28,7 @@ export async function ReviewsSection({ heading = 'What our clients say' }: Revie
     // Honest state: no fabricated review text, and direct routes to the verified
     // Google profile and review form while the Places feed is being connected.
     return (
-      <div className="border-[length:var(--pane-gap)] border-night bg-ochre p-8 md:p-10">
+      <div className="border-[length:var(--pane-gap)] border-ink bg-ochre p-8 text-bone md:p-10">
         <h2 className="text-h2">See what our customers said on Google</h2>
         <p className="measure mt-4 text-body text-ink-soft">
           Our public Google profile is the source of truth: genuine feedback, published under each

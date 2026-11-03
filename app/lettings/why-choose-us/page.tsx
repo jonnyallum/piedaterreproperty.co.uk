@@ -24,7 +24,7 @@ export default function WhyChooseUsPage() {
         ]}
         title={
           <>
-            The work is similar. The <em className="italic text-ochre">service</em> is not.
+            The work is similar. The <em className="italic">service</em> is not.
           </>
         }
         lead="You have plenty of letting agents to choose from. What separates us is not the list of tasks, it is the care taken over each one, and fifteen years of doing it on the same streets."
@@ -41,7 +41,7 @@ export default function WhyChooseUsPage() {
           {WHY_CHOOSE_US_POINTS.map((p, i) => (
             <div
               key={p.title}
-              className="grid gap-4 border-t-[length:var(--pane-gap)] border-night pt-8 md:grid-cols-[auto_1fr] md:gap-12"
+              className="grid gap-4 border-t-[length:var(--pane-gap)] border-ink pt-8 md:grid-cols-[auto_1fr] md:gap-12"
             >
               <p className="font-display text-h1 leading-none tabular text-lettings">
                 {String(i + 1).padStart(2, '0')}
@@ -54,7 +54,7 @@ export default function WhyChooseUsPage() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-none border-[length:var(--pane-gap)] border-night bg-well p-8">
+        <div className="mt-16 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-8">
           <Eyebrow>Our team</Eyebrow>
           <p className="measure mt-3 text-lead text-ink">
             Place your property with us and you do so with confidence. Our team has years of

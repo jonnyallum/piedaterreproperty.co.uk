@@ -82,7 +82,7 @@ export default function TenantsHubPage() {
             <Link
               key={card.href}
               href={card.href}
-              className={`group flex min-h-60 flex-col p-7 transition-colors hover:bg-ochre ${i === 2 ? 'bg-ochre' : i === 3 ? 'bg-well' : 'bg-ground'}`}
+              className={`group flex min-h-60 flex-col p-7 transition-colors hover:bg-ochre hover:text-bone ${i === 2 ? 'bg-ochre text-bone' : i === 3 ? 'bg-well' : 'bg-ground'}`}
             >
               <span className="flex h-11 w-11 items-center justify-center bg-night text-ochre">
                 <Icon name={card.icon} className="h-5 w-5" />

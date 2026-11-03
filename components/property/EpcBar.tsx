@@ -15,7 +15,7 @@ const BANDS: { rating: Rating; fill: string; width: string }[] = [
   { rating: 'C', fill: 'bg-sage', width: '64%' },
   { rating: 'D', fill: 'bg-ochre', width: '73%' },
   { rating: 'E', fill: 'bg-marigold', width: '82%' },
-  { rating: 'F', fill: 'bg-sales', width: '91%' },
+  { rating: 'F', fill: 'bg-night', width: '91%' },
   { rating: 'G', fill: 'bg-madder', width: '100%' },
 ]
 

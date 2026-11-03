@@ -123,7 +123,7 @@ export default function HomePage() {
             A foot on
             <br />
             <span className="block pl-[8vw] md:pl-[14vw]">
-              the <em className="italic text-ochre">ground.</em>
+              the <em>ground.</em>
             </span>
           </h1>
           <div className="mt-10 grid items-end gap-8 md:grid-cols-12">
@@ -149,7 +149,7 @@ export default function HomePage() {
             className="absolute bottom-[-4rem] left-[78%] h-[16rem] w-[16rem] -translate-x-1/2 rounded-full md:left-[58%] md:bottom-[-8rem] md:h-[40rem] md:w-[40rem]"
             style={{ background: 'var(--pt-bone)' }}
           />
-          <Skyline className="absolute inset-x-0 bottom-0 h-full w-full text-ink" />
+          <Skyline className="absolute inset-x-0 bottom-0 h-full w-full text-night" />
         </div>
       </section>
 
@@ -181,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* Marquee of the towns we work in. */}
-      <Marquee items={COVERAGE.wider} className="bg-sales" />
+      <Marquee items={COVERAGE.wider} className="bg-night" />
 
       {/* 1b. What we do, as an index. Large type rows that fill with blue. */}
       <section className="py-24 md:py-32">
@@ -192,20 +192,20 @@ export default function HomePage() {
               <li key={row.title}>
                 <Link
                   href={row.href}
-                  className="group -mx-6 grid items-baseline gap-x-8 gap-y-3 border-t-[length:var(--pane-gap)] border-night px-6 py-8 transition-colors duration-300 hover:bg-ochre focus-visible:bg-ochre md:-mx-8 md:grid-cols-[4rem_1fr_20rem_2rem] md:px-8 md:py-10"
+                  className="group -mx-6 grid items-baseline gap-x-8 gap-y-3 border-t-[length:var(--pane-gap)] border-ink px-6 py-8 transition-colors duration-300 hover:bg-ochre hover:text-bone focus-visible:bg-ochre focus-visible:text-bone md:-mx-8 md:grid-cols-[4rem_1fr_20rem_2rem] md:px-8 md:py-10"
                 >
                   <span className="eyebrow tabular">0{i + 1}</span>
                   <span className="text-index font-display">
                     {row.title} <em>{row.accent}</em>
                   </span>
-                  <span className="text-body text-ink-soft group-hover:text-ink">
+                  <span className="text-body text-ink-soft group-hover:text-bone">
                     {row.copy}
                   </span>
                   <Icon name="arrow-up-right" className="hidden h-7 w-7 transition-transform group-hover:translate-x-1 md:block" />
                 </Link>
               </li>
             ))}
-            <li className="border-t-[length:var(--pane-gap)] border-night" aria-hidden="true" />
+            <li className="border-t-[length:var(--pane-gap)] border-ink" aria-hidden="true" />
           </ul>
         </div>
       </section>
@@ -327,7 +327,7 @@ export default function HomePage() {
             </div>
             <p className="signature mt-8 text-h2">{SITE.directorDisplay}</p>
           </div>
-          <div className="relative aspect-[3/4] w-full border-[length:var(--pane-gap)] border-night bg-night lg:col-span-5 lg:mt-24">
+          <div className="relative aspect-[3/4] w-full border-[length:var(--pane-gap)] border-ink bg-night lg:col-span-5 lg:mt-24">
             <Image
               src="/images/team/charisma-smith.jpg"
               alt="Charisma Smith, founder and director of Pied-à-Terre Property"
@@ -354,7 +354,7 @@ export default function HomePage() {
               <li key={area.slug} className="bg-ground">
                 <Link
                   href={`/areas/${area.slug}`}
-                  className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-ochre focus-visible:bg-ochre"
+                  className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-ochre hover:text-bone focus-visible:bg-ochre focus-visible:text-bone"
                 >
                   <span className="flex items-start justify-between">
                     <span className="tabular eyebrow">{String(i + 1).padStart(2, '0')}</span>
@@ -367,17 +367,17 @@ export default function HomePage() {
                     <span className="block break-words font-display text-h2 uppercase leading-[0.9]">
                       {area.name}
                     </span>
-                    <span className="mt-2 block text-small text-ink-soft group-hover:text-ink">
+                    <span className="mt-2 block text-small text-ink-soft group-hover:text-bone">
                       {area.blurb}
                     </span>
                   </span>
                 </Link>
               </li>
             ))}
-            <li className="bg-ochre">
+            <li className="bg-ochre text-bone">
               <Link
                 href="/areas"
-                className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-night hover:text-ochre"
+                className="group flex h-full min-h-52 flex-col justify-between p-6 transition-colors hover:bg-night hover:text-ink"
               >
                 <Icon
                   name="arrow-up-right"

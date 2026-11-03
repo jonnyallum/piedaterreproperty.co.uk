@@ -24,7 +24,7 @@ interface CredentialCardProps {
 
 export function CredentialCard({ name, what, meaning, reference, pending }: CredentialCardProps) {
   return (
-    <div className="flex flex-col border-[length:var(--pane-gap)] border-night bg-ground p-6">
+    <div className="flex flex-col border-[length:var(--pane-gap)] border-ink bg-ground p-6">
       <span className="flex h-11 w-11 items-center justify-center bg-ochre text-ink">
         <Icon name="shield" className="h-6 w-6" />
       </span>
@@ -32,12 +32,12 @@ export function CredentialCard({ name, what, meaning, reference, pending }: Cred
       <p className="mt-2 text-small font-medium text-ink">{what}</p>
       <p className="measure mt-2 text-small text-ink-soft">{meaning}</p>
       {reference ? (
-        <p className="tabular mt-4 border-t-[length:var(--pane-gap)] border-night pt-4 text-small text-ink-soft">
+        <p className="tabular mt-4 border-t-[length:var(--pane-gap)] border-ink pt-4 text-small text-ink-soft">
           Reference {reference}
         </p>
       ) : null}
       {pending ? (
-        <p className="mt-4 border-t-[length:var(--pane-gap)] border-night pt-4 text-small text-ink-soft">
+        <p className="mt-4 border-t-[length:var(--pane-gap)] border-ink pt-4 text-small text-ink-soft">
           Being added for the sales arm, confirmed before any sales service goes live.
         </p>
       ) : null}

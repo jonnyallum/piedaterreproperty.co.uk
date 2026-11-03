@@ -32,7 +32,7 @@ export default function LettingsHubPage() {
         trail={[{ name: 'Landlords', path: '/lettings' }]}
         title={
           <>
-            The landlord book that <em className="italic text-ochre">stays</em>.
+            The landlord book that <em className="italic">stays</em>.
           </>
         }
         lead="Fifteen years of letting and managing homes on one patch, with the same people, the same care, and landlords who stay with us for a decade and more."
@@ -71,7 +71,7 @@ export default function LettingsHubPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 border-t-[length:var(--pane-gap)] border-night pt-4 text-small text-ink-soft">
+              <p className="mt-5 border-t-[length:var(--pane-gap)] border-ink pt-4 text-small text-ink-soft">
                 {level.fee}
               </p>
             </div>
@@ -90,7 +90,7 @@ export default function LettingsHubPage() {
           <div className="max-w-2xl">
             <SectionBar label="Why choose us" className="max-w-md" />
             <h2 className="mt-6 text-h1">
-              We work for the <em className="italic text-lettings">rent</em>, not just the advert
+              We work for the <em className="italic">rent</em>, not just the advert
             </h2>
           </div>
           <MullionGrid className="mt-12 md:grid-cols-2 lg:grid-cols-3">
@@ -162,7 +162,7 @@ export default function LettingsHubPage() {
 
       {/* Sales cross-link, the only warm element */}
       <section className="mx-auto max-w-content px-6 py-16 md:px-8">
-        <div className="flex flex-col items-start gap-4 border-[length:var(--pane-gap)] border-night bg-ochre p-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col items-start gap-4 border-[length:var(--pane-gap)] border-ink bg-ochre p-8 text-bone md:flex-row md:items-center md:justify-between">
           <div>
             <Eyebrow>Thinking of selling instead?</Eyebrow>
             <p className="mt-2 max-w-xl text-body text-ink-soft">

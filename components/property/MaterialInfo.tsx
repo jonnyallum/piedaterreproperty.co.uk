@@ -68,7 +68,7 @@ function groupsFor(info: MaterialInformation): Group[] {
 export function MaterialInfo({ info }: { info: MaterialInformation }) {
   const groups = groupsFor(info)
   return (
-    <section aria-labelledby="material-info" className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-6 md:p-8">
+    <section aria-labelledby="material-info" className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6 md:p-8">
       <h2 id="material-info" className="text-h3">
         Material information
       </h2>
@@ -88,7 +88,7 @@ export function MaterialInfo({ info }: { info: MaterialInformation }) {
             </h3>
             <dl className="mt-3 flex flex-col gap-2">
               {group.rows.map((row) => (
-                <div key={row.label} className="flex justify-between gap-4 border-b-[length:var(--pane-gap)] border-night pb-2 text-small">
+                <div key={row.label} className="flex justify-between gap-4 border-b-[length:var(--pane-gap)] border-ink pb-2 text-small">
                   <dt className="text-ink-soft">{row.label}</dt>
                   <dd className="text-right font-medium text-ink">{row.value}</dd>
                 </div>

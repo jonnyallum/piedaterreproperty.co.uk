@@ -51,7 +51,7 @@ export function PropertyFilters({ towns, propertyTypes, current }: PropertyFilte
             const active = current.path === t.value || (!current.path && t.value === 'all')
             const fill =
               t.value === 'sales'
-                ? 'peer-checked:bg-sales-ink'
+                ? 'peer-checked:bg-night-ink'
                 : t.value === 'lettings'
                   ? 'peer-checked:bg-lettings-deep'
                   : 'peer-checked:bg-night'

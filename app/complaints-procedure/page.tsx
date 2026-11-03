@@ -21,7 +21,7 @@ export default function ComplaintsProcedurePage() {
         trail={[{ name: 'Complaints procedure', path: '/complaints-procedure' }]}
         title={
           <>
-            How to raise a concern, <em className="italic text-ochre">step by step</em>.
+            How to raise a concern, <em className="italic">step by step</em>.
           </>
         }
         lead={`We take complaints seriously and work to clear timescales. We are a member of The Property Ombudsman, reference ${SITE.accreditations.tpoReference}.`}
@@ -29,7 +29,7 @@ export default function ComplaintsProcedurePage() {
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           {COMPLAINT_STEPS.map((step, i) => (
-            <div key={step.title} className="rounded-none border-[length:var(--pane-gap)] border-night bg-well p-7">
+            <div key={step.title} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-7">
               <p className="font-display text-h2 leading-none tabular text-lettings">
                 {String(i + 1).padStart(2, '0')}
               </p>

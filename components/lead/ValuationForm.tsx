@@ -228,7 +228,7 @@ export function ValuationForm({ path, source, initialTown }: ValuationFormProps)
       ref={formRef}
       onSubmit={submit}
       noValidate
-      className="rounded-none border-[length:var(--pane-gap)] border-night bg-ground p-6 md:p-8"
+      className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8"
       aria-label={registerMode ? 'Register your interest' : 'Book a free valuation'}
     >
       {/* Progress as a filling brass rule */}
