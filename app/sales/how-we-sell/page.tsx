@@ -7,6 +7,7 @@ import { Icon } from '@/components/primitives/Icon'
 import { SALES_PROCESS } from '@/content/sales'
 import { SALES_LIVE } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'How we sell',
@@ -38,7 +39,7 @@ export default function HowWeSellPage() {
         ]}
         title={
           <>
-            The whole process, <em className="italic text-ochre">start to finish</em>.
+            The whole process, <em className="italic">start to finish</em>.
           </>
         }
         lead="Selling a home has a lot of moving parts. Here is exactly how we handle each one, and where a local firm earns its fee."
@@ -47,10 +48,10 @@ export default function HowWeSellPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <Eyebrow>Eight stages</Eyebrow>
-            <h2 className="mt-3 text-h2">
+            <SectionBar label="Eight stages" className="max-w-md" />
+            <h2 className="mt-6 text-h1">
               From first visit to the day you hand over the{' '}
-              <em className="italic text-sales-ink">keys</em>.
+              <em className="italic">keys</em>.
             </h2>
             <p className="measure mt-4 text-body text-ink-soft">
               We stay with the sale the whole way through, and you deal with the same people
@@ -67,7 +68,7 @@ export default function HowWeSellPage() {
           <h2 className="mt-3 max-w-2xl text-h2">Two things we explain properly</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {CALLOUTS.map((c) => (
-              <div key={c.title} className="rounded-md border border-brass/40 bg-ground p-7">
+              <div key={c.title} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-7">
                 <Icon name="check" className="h-6 w-6 text-sales-ink" />
                 <h3 className="mt-4 text-h3">{c.title}</h3>
                 <p className="measure mt-2 text-body text-ink-soft">{c.body}</p>

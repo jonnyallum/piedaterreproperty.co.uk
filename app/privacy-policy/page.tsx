@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         trail={[{ name: 'Privacy policy', path: '/privacy-policy' }]}
         title={
           <>
-            How we look after <em className="italic text-ochre">your data</em>.
+            How we look after <em className="italic">your data</em>.
           </>
         }
         lead="What we collect, why we collect it, who we share it with, and the rights you hold over it. In plain terms."

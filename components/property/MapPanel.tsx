@@ -46,7 +46,7 @@ export function MapPanel({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex aspect-[16/9] w-full items-center justify-center rounded-md border border-brass/40 bg-well text-ink-soft transition-colors hover:bg-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
+        className="flex aspect-[16/9] w-full items-center justify-center rounded-none border-[length:var(--pane-gap)] border-ink bg-well text-ink-soft transition-colors hover:bg-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"
         aria-label={`${buttonLabel}. Loads a map from OpenStreetMap.`}
       >
         <span className="inline-flex items-center gap-2 text-small font-medium">
@@ -59,7 +59,7 @@ export function MapPanel({
 
   return (
     <figure>
-      <div className="overflow-hidden rounded-md border border-brass/40">
+      <div className="overflow-hidden rounded-none border-[length:var(--pane-gap)] border-ink">
         <iframe
           title={label}
           src={src}

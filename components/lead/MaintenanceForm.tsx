@@ -143,8 +143,8 @@ export function MaintenanceForm() {
 
   if (done) {
     return (
-      <div className="rounded-md border border-brass/40 bg-ground p-8 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-lettings-deep text-on-dark">
+      <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-8 text-center">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
           <Icon name="check" className="h-7 w-7" />
         </span>
         <h2 className="mt-5 text-h3">Reported, thank you</h2>
@@ -163,7 +163,7 @@ export function MaintenanceForm() {
   return (
     <div>
       {/* Emergency route, prominent, away from the form */}
-      <div className="mb-8 rounded-md border-2 border-sales/60 bg-well p-5">
+      <div className="mb-8 rounded-none border-2 border-sales/60 bg-well p-5">
         <p className="flex items-center gap-2 text-h3 text-sales-ink">
           <Icon name="phone" className="h-5 w-5" />
           Is it an emergency?
@@ -186,7 +186,7 @@ export function MaintenanceForm() {
       <form
         onSubmit={onSubmit}
         noValidate
-        className="rounded-md border border-brass/40 bg-ground p-6 md:p-8"
+        className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8"
         aria-label="Report a maintenance issue"
       >
         <div className="sr-only" aria-hidden="true">

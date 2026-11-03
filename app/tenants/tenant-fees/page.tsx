@@ -24,7 +24,7 @@ export default function TenantFeesPage() {
         ]}
         title={
           <>
-            What we can, and <em className="italic text-ochre">cannot</em>, charge.
+            What we can, and <em className="italic">cannot</em>, charge.
           </>
         }
         lead="The Tenant Fees Act 2019 sets out exactly what a letting agent may charge a tenant. We follow it to the letter, and here it is in plain terms."
@@ -32,7 +32,7 @@ export default function TenantFeesPage() {
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-md border border-brass/40 bg-well p-7">
+          <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-7">
             <div className="flex items-center gap-2 text-lettings-deep">
               <Icon name="check" className="h-5 w-5" />
               <h2 className="text-h3 text-ink">What can be charged</h2>
@@ -46,7 +46,7 @@ export default function TenantFeesPage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-md border border-brass/40 bg-ground p-7">
+          <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-7">
             <div className="flex items-center gap-2 text-sales-ink">
               <Icon name="close" className="h-5 w-5" />
               <h2 className="text-h3 text-ink">What cannot be charged</h2>

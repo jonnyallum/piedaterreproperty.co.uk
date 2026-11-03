@@ -1,10 +1,10 @@
 /**
- * ValuationBand. The full-width Kiln gradient call to action that sits above the
+ * ValuationBand. The full-width yellow call to action, standing on the Portsmouth skyline, that sits above the
  * footer on most pages. One sentence, one clear button, no distractions.
  * Reused site-wide so every page has a low-friction route to a valuation.
  */
-import { Grain } from '@/components/primitives/Grain'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
+import { Skyline } from './Skyline'
+import { SectionBar } from '@/components/primitives/SectionBar'
 import { Button } from '@/components/primitives/Button'
 
 interface ValuationBandProps {
@@ -12,7 +12,7 @@ interface ValuationBandProps {
   copy?: string
   cta?: string
   href?: string
-  /** Sales uses the Kiln gradient, lettings the Tide gradient. */
+  /** Sales or lettings wording. */
   tone?: 'sales' | 'lettings'
 }
 
@@ -23,20 +23,19 @@ export function ValuationBand({
   href = '/sales/free-valuation',
   tone = 'sales',
 }: ValuationBandProps) {
-  const surface = tone === 'sales' ? 'surface-kiln' : 'surface-tide'
   const eyebrow = tone === 'sales' ? 'Free valuation' : 'Rental valuation'
   return (
-    <section className={`relative isolate overflow-hidden ${surface} text-on-dark`}>
-      <Grain fixed={false} photo />
+    <section className="relative isolate overflow-hidden bg-ochre text-ink">
+      <Skyline className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] w-full text-night opacity-90" />
       <div
-        className="relative mx-auto flex max-w-content flex-col items-center px-6 py-24 text-center md:px-8"
+        className="relative mx-auto max-w-content px-6 pb-56 pt-20 md:px-8 md:pb-72 md:pt-28"
         style={{ zIndex: 'var(--z-content)' }}
       >
-        <Eyebrow tone="on-dark">{eyebrow}</Eyebrow>
-        <h2 className="mt-4 max-w-3xl text-h1">{heading}</h2>
-        <p className="measure mt-5 text-lead text-on-dark/90">{copy}</p>
+        <SectionBar label={eyebrow} className="max-w-md" />
+        <h2 className="mt-8 max-w-4xl text-title">{heading}</h2>
+        <p className="measure mt-5 text-lead">{copy}</p>
         <div className="mt-9">
-          <Button href={href} variant="secondary" className="btn-invert btn-arch">
+          <Button href={href} variant="sales">
             {cta}
           </Button>
         </div>

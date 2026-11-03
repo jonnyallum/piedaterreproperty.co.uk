@@ -23,7 +23,7 @@ export default function RegisterPage() {
         ]}
         title={
           <>
-            Hear about the right home <em className="italic text-ochre">first</em>.
+            Hear about the right home <em className="italic">first</em>.
           </>
         }
         lead="Tell us what you are looking for and where. Good homes let quickly, and registered applicants often hear before a property is even advertised."

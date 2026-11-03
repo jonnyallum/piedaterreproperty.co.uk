@@ -22,7 +22,7 @@ export default function ReportMaintenancePage() {
         ]}
         title={
           <>
-            Something need <em className="italic text-ochre">fixing</em>?
+            Something need <em className="italic">fixing</em>?
           </>
         }
         lead="Report it here in a minute. Add a photo if it helps, and tell us how urgent it is and when we can get access."

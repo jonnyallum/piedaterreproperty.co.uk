@@ -14,6 +14,7 @@ import { SALES_PILLARS, VALUATION_STEPS, SALES_FAQS } from '@/content/sales'
 import { SALES_LIVE, yearsTrading } from '@/lib/site'
 import { inWords } from '@/lib/format'
 import { pageMeta, faqPageJsonLd } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: SALES_LIVE
@@ -40,7 +41,7 @@ export default function SalesHubPage() {
         title={
           <>
             {years.charAt(0).toUpperCase() + years.slice(1)} years letting them.{' '}
-            <em className="italic text-ochre">
+            <em className="italic">
               {SALES_LIVE ? 'Now selling them too.' : 'Soon selling them too.'}
             </em>
           </>
@@ -64,7 +65,7 @@ export default function SalesHubPage() {
         eyebrow="Why instruct a firm this small"
         heading={
           <>
-            New to sales. Not new to <em className="italic text-sales-ink">these streets</em>.
+            New to sales. Not new to <em className="italic">these streets</em>.
           </>
         }
         items={SALES_PILLARS}
@@ -74,8 +75,8 @@ export default function SalesHubPage() {
       <section className="bg-oat">
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="max-w-2xl">
-            <Eyebrow>No hard sell</Eyebrow>
-            <h2 className="mt-3 text-h2">What a valuation actually involves</h2>
+            <SectionBar label="No hard sell" className="max-w-md" />
+            <h2 className="mt-6 text-h1">What a valuation actually involves</h2>
             <p className="measure mt-4 text-lead text-ink-soft">
               The fear of a pushy valuer is the main reason people put off booking one. So
               here is exactly what happens, start to finish.
@@ -100,9 +101,9 @@ export default function SalesHubPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="grid items-center gap-10 md:grid-cols-[1fr_1fr]">
           <div>
-            <Eyebrow>Fees</Eyebrow>
-            <h2 className="mt-3 text-h2">
-              A fee you can find, <em className="italic text-sales-ink">before</em> you ring.
+            <SectionBar label="Fees" className="max-w-md" />
+            <h2 className="mt-6 text-h1">
+              A fee you can find, <em className="italic">before</em> you ring.
             </h2>
             <p className="measure mt-4 text-body text-ink-soft">
               Publishing our fee openly is unusual around here, and deliberate. You should
@@ -115,7 +116,7 @@ export default function SalesHubPage() {
                   See our sales fees
                 </Button>
               ) : (
-                <p className="rounded-md border border-brass/40 bg-well px-5 py-4 text-small text-ink-soft">
+                <p className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well px-5 py-4 text-small text-ink-soft">
                   Our full fee page goes live the day we open for sales. Register your
                   interest and we will send it to you first.
                 </p>
@@ -170,8 +171,8 @@ export default function SalesHubPage() {
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow>Selling questions</Eyebrow>
-              <h2 className="mt-3 text-h2">The things sellers ask us</h2>
+              <SectionBar label="Selling questions" className="max-w-md" />
+              <h2 className="mt-6 text-h1">The things sellers ask us</h2>
             </div>
             <Link href="/faqs" className="btn btn-ghost">
               All questions

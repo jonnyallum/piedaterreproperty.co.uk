@@ -36,7 +36,7 @@ export default async function ReviewsPage() {
         trail={[{ name: 'Reviews', path: '/reviews' }]}
         title={
           <>
-            In our clients&rsquo; <em className="italic text-sales-ink">own</em> words.
+            In our clients&rsquo; <em className="italic">own</em> words.
           </>
         }
         lead="We show reviews exactly as they appear on Google, with the reviewer's name and date, never edited, shortened or reordered. What you read here is what they wrote."
@@ -51,11 +51,11 @@ export default async function ReviewsPage() {
         </p>
       </section>
 
-      <section className="border-t border-brass/30 bg-oat">
+      <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
         <div className="mx-auto max-w-content px-6 py-16 md:px-8">
           <Eyebrow>Regulated and accountable</Eyebrow>
           <h2 className="mt-3 max-w-2xl text-h2">
-            Trust is more than a <em className="italic text-sales-ink">rating</em>.
+            Trust is more than a <em className="italic">rating</em>.
           </h2>
           <p className="measure mt-3 text-body text-ink-soft">
             Reviews tell you what it is like to work with us. These tell you your money and your

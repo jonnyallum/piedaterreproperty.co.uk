@@ -93,7 +93,7 @@ export default async function PropertyDetailPage({
           <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr] lg:items-start">
             <div className="flex flex-col gap-12">
               {archived ? (
-                <div className="rounded-md border border-brass/50 bg-well p-6 md:p-7">
+                <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6 md:p-7">
                   <h2 className="text-h3">
                     This {isSale ? 'home has sold' : 'home has been let'}.
                   </h2>
@@ -156,7 +156,7 @@ export default async function PropertyDetailPage({
               ) : null}
 
               {epc ? (
-                <div className="rounded-md border border-brass/40 bg-ground p-6 md:p-7">
+                <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-7">
                   <EpcBar epc={epc} />
                 </div>
               ) : null}
@@ -190,7 +190,7 @@ export default async function PropertyDetailPage({
                 transactionType={property.transactionType}
               />
               <ContactRoutes heading="Prefer to talk?" whatsappMessage={whatsappMessage} />
-              <div className="flex items-center justify-between rounded-md border border-brass/40 bg-well px-5 py-4">
+              <div className="flex items-center justify-between rounded-none border-[length:var(--pane-gap)] border-ink bg-well px-5 py-4">
                 <PrintButton />
                 <span className="tabular text-small text-ink-soft">Ref {property.id}</span>
               </div>
@@ -199,7 +199,7 @@ export default async function PropertyDetailPage({
         </section>
 
         {similar.length ? (
-          <section className="border-t border-brass/30 bg-oat">
+          <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
             <div className="mx-auto max-w-content px-6 py-16 md:px-8">
               <h2 className="text-h2">Similar properties</h2>
               <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

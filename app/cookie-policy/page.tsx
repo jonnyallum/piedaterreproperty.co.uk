@@ -21,19 +21,20 @@ export default function CookiePolicyPage() {
         trail={[{ name: 'Cookie policy', path: '/cookie-policy' }]}
         title={
           <>
-            What we set, <em className="italic text-ochre">and why</em>.
+            What we set, <em className="italic">and why</em>.
           </>
         }
         lead="This table is generated from the same configuration as the consent banner, so the two can never drift apart. Nothing non-essential is set until you choose."
       />
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
-        <div className="overflow-x-auto rounded-md border border-brass/40 bg-well">
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-none border-[length:var(--pane-gap)] border-ink bg-well">
           <table className="w-full border-collapse text-small">
             <caption className="sr-only">
               Cookies and similar technology used on this site, with provider, purpose, duration and category
             </caption>
             <thead>
-              <tr className="border-b border-brass/40 text-left">
+              <tr className="border-b-[length:var(--pane-gap)] border-ink text-left">
                 <th scope="col" className="px-4 py-3 font-medium text-ink">
                   Name
                 </th>
@@ -53,7 +54,7 @@ export default function CookiePolicyPage() {
             </thead>
             <tbody>
               {COOKIES.map((cookie) => (
-                <tr key={cookie.name} className="border-b border-brass/20 align-top">
+                <tr key={cookie.name} className="border-b-[length:var(--pane-gap)] border-ink align-top">
                   <td className="px-4 py-3 font-mono text-ink">{cookie.name}</td>
                   <td className="px-4 py-3 text-ink-soft">{cookie.provider}</td>
                   <td className="px-4 py-3 text-ink-soft">{cookie.purpose}</td>
@@ -67,7 +68,7 @@ export default function CookiePolicyPage() {
 
         <div className="mt-8 flex flex-col gap-4">
           {(Object.keys(CATEGORY_LABEL) as (keyof typeof CATEGORY_LABEL)[]).map((category) => (
-            <div key={category} className="rounded-md border border-brass/40 bg-well p-5">
+            <div key={category} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-5">
               <h2 className="text-h3">{CATEGORY_LABEL[category]}</h2>
               <p className="measure mt-2 text-small text-ink-soft">{CATEGORY_NOTE[category]}</p>
             </div>

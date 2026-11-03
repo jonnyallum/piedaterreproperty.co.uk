@@ -33,7 +33,7 @@ export function ValuationFallback({
       <form
         action="/api/lead"
         method="post"
-        className="rounded-md border border-brass/40 bg-ground p-6 md:p-8"
+        className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8"
         aria-label={registerMode ? 'Register your interest' : 'Book a free valuation'}
       >
         <input type="hidden" name="source" value={source} />

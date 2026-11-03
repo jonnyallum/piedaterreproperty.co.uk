@@ -113,7 +113,7 @@ export function FaqGroups({ groups }: FaqGroupsProps) {
       </div>
 
       {total === 0 ? (
-        <div className="rounded-md border border-brass/40 bg-well p-8 text-center">
+        <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-8 text-center">
           <h2 className="text-h3">No questions match that</h2>
           <p className="measure mx-auto mt-2 text-body text-ink-soft">
             You can clear the search and browse by topic, or just ask us. You will reach the same
@@ -136,7 +136,7 @@ export function FaqGroups({ groups }: FaqGroupsProps) {
               <h2 className="text-h2">{GROUP_META[group].heading}</h2>
               <p className="measure mt-2 text-body text-ink-soft">{GROUP_META[group].blurb}</p>
 
-              <div className="mt-6 divide-y divide-brass/40 border-y border-brass/40">
+              <div className="mt-6 divide-y-2 divide-ink border-y border-ink">
                 {entries.map((entry) => {
                   const isOpen = open.has(entry.id)
                   const panelId = `${entry.id}-panel`

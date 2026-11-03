@@ -84,8 +84,8 @@ export function ContactForm() {
 
   if (done) {
     return (
-      <div className="rounded-md border border-brass/40 bg-ground p-8 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-lettings-deep text-on-dark">
+      <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-8 text-center">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
           <Icon name="check" className="h-7 w-7" />
         </span>
         <h2 className="mt-5 text-h3">Message sent</h2>
@@ -105,7 +105,7 @@ export function ContactForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-md border border-brass/40 bg-ground p-6 md:p-7"
+      className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-7"
       aria-label="Send us a message"
     >
       <div className="sr-only" aria-hidden="true">

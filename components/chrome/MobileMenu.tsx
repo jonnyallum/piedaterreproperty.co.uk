@@ -73,11 +73,11 @@ export function MobileMenu({ open, onClose, returnFocusTo }: MobileMenuProps) {
       role="dialog"
       aria-modal="true"
       aria-label="Menu"
-      className="fixed inset-0 flex flex-col overflow-y-auto bg-ground px-6 pb-10 pt-6"
+      className="fixed inset-0 flex flex-col overflow-y-auto bg-night px-6 pb-10 pt-6 text-on-dark"
       style={{ zIndex: 'var(--z-menu)' }}
     >
       <div className="flex items-center justify-between">
-        <Eyebrow>Menu</Eyebrow>
+        <Eyebrow tone="on-dark">Menu</Eyebrow>
         <button
           type="button"
           onClick={onClose}
@@ -89,15 +89,16 @@ export function MobileMenu({ open, onClose, returnFocusTo }: MobileMenuProps) {
       </div>
 
       <nav aria-label="Primary" className="mt-8 flex-1">
-        <ul className="flex flex-col gap-1">
+        <ul className="flex flex-col border-t-[length:var(--pane-gap)] border-ochre">
           {PRIMARY_NAV.map((item, i) => (
-            <li key={item.href}>
+            <li key={item.href} className="border-b-[length:var(--pane-gap)] border-ochre">
               <Link
                 ref={i === 0 ? firstLinkRef : undefined}
                 href={item.href}
                 onClick={onClose}
-                className="block py-3 font-display text-h2 text-ink"
+                className="flex items-baseline gap-4 py-3 font-display text-display uppercase leading-none text-on-dark hover:text-ochre"
               >
+                <span className="tabular w-8 text-h3 text-ochre">{String(i + 1).padStart(2, '0')}</span>
                 {item.label}
               </Link>
             </li>

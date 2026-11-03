@@ -62,7 +62,7 @@ export default function AboutPage() {
         trail={[{ name: 'About', path: '/about' }]}
         title={
           <>
-            You will deal with <em className="italic text-sales-ink">us</em>, not a call centre.
+            You will deal with <em className="italic">us</em>, not a call centre.
           </>
         }
         lead="An independent firm rooted on the Solent coast since 2011, now working from Southampton to Chichester and across Hampshire without becoming a branch network. People instruct people, so it is worth knowing who you would be instructing."
@@ -97,11 +97,11 @@ export default function AboutPage() {
 
           <div>
             <Eyebrow>Our story</Eyebrow>
-            <span className="mt-3 inline-block rounded-sm border border-brass/50 bg-well px-3 py-1 text-small text-ink-soft">
+            <span className="mt-3 inline-block rounded-sm border-[length:var(--pane-gap)] border-ink bg-well px-3 py-1 text-small text-ink-soft">
               Draft, awaiting the founder&rsquo;s approval
             </span>
             <h2 className="mt-4 text-h2">
-              A foot on the ground, kept for the <em className="italic text-sales-ink">long</em> term.
+              A foot on the ground, kept for the <em className="italic">long</em> term.
             </h2>
 
             <p className="dropcap measure mt-6 text-body text-ink">
@@ -163,7 +163,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <Eyebrow>The team</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-h2">
-          A small team, and you will know their <em className="italic text-sales-ink">names</em>.
+          A small team, and you will know their <em className="italic">names</em>.
         </h2>
         <p className="measure mt-4 text-body text-ink-soft">
           We are a compact, local team rather than a branch network. Charisma&rsquo;s portrait is
@@ -171,7 +171,7 @@ export default function AboutPage() {
           silhouettes, we are waiting for proper portraits of the people you will actually deal
           with.
         </p>
-        <div className="mt-8 rounded-md border border-brass/40 bg-well p-6 md:p-8">
+        <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6 md:p-8">
           <p className="text-body text-ink">
             Further team names, roles and photographs are being prepared and will appear here
             before launch. In the meantime, the fastest way to meet us is a call or a valuation.
@@ -189,14 +189,14 @@ export default function AboutPage() {
       </section>
 
       {/* 3. The award, given a proper block. One award presented well. */}
-      <section className="border-y border-brass/30 bg-indigo text-on-dark">
+      <section className="border-y border-ink bg-indigo text-on-dark">
         <div className="relative isolate overflow-hidden">
           <Grain fixed={false} />
           <div
             className="relative mx-auto grid max-w-content gap-8 px-6 py-16 md:grid-cols-[auto_1fr] md:items-center md:px-8"
             style={{ zIndex: 'var(--z-content)' }}
           >
-            <span className="flex h-24 w-24 items-center justify-center rounded-full border-2 border-brass text-brass">
+            <span className="flex h-24 w-24 items-center justify-center rounded-none border-2 border-brass text-brass">
               <Icon name="shield" className="h-11 w-11" />
             </span>
             <div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
       <section id="credentials" className="mx-auto max-w-content px-6 py-24 scroll-mt-28 md:px-8">
         <Eyebrow>Credentials, explained</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-h2">
-          The safeguards a serious firm carries as <em className="italic text-sales-ink">standard</em>.
+          The safeguards a serious firm carries as <em className="italic">standard</em>.
         </h2>
         <p className="measure mt-4 text-body text-ink-soft">
           Most sites show a row of logos and leave you to guess what they mean. Here is what each
@@ -249,7 +249,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. The numbers band. Honest figures only, no sales figure invented. */}
-      <section className="border-y border-brass/30 bg-oat">
+      <section className="border-y border-ink bg-oat">
         <div className="mx-auto max-w-content px-6 py-16 md:px-8">
           <div className="grid gap-10 sm:grid-cols-3">
             {NUMBERS.map((n) => (
@@ -272,11 +272,11 @@ export default function AboutPage() {
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <Eyebrow>What we do not do</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-h2">
-          The limits, said <em className="italic text-sales-ink">plainly</em>.
+          The limits, said <em className="italic">plainly</em>.
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {LIMITS.map((l) => (
-            <div key={l.title} className="rounded-md border border-brass/40 bg-ground p-6">
+            <div key={l.title} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6">
               <h3 className="text-h3">{l.title}</h3>
               <p className="measure mt-3 text-body text-ink-soft">{l.body}</p>
             </div>

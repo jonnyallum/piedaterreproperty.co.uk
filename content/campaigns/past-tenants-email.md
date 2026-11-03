@@ -30,7 +30,7 @@ local knowledge: which streets tend to hold their value, what a fair price looks
 like across our five towns at the moment, and the questions worth asking before
 you commit to anything. No obligation, and no hard sell.
 
-If that would help, reply to this email or call the office on 01243 468738. You
+If that would help, reply to this email or call the office on 07756 869185. You
 can also tell us what you are looking for here:
 piedaterreproperty.co.uk/l/sell
 
@@ -41,7 +41,7 @@ With best wishes,
 
 Charisma Marie Smith
 Pied-à-Terre Property
-01243 468738
+07756 869185
 
 ---
 

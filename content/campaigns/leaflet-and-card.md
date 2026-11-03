@@ -40,9 +40,9 @@ A valuation is free and without obligation.
 first to know.]
 [Live line: Call the office to arrange a time that suits you.]
 
-01243 468738
+07756 869185
 piedaterreproperty.co.uk/l/sell
-233 Southampton Road, Portchester, PO6 4PY
+Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY
 
 QR code to the tracked landing page.
 
@@ -60,7 +60,7 @@ on this coast, now selling homes as well as letting them.
 Back:
 
 Pied-à-Terre Property
-01243 468738
+07756 869185
 piedaterreproperty.co.uk/sales
 [Pre-launch: Opening for sales soon. Register your interest.]
 
@@ -83,7 +83,7 @@ call could match your home to someone already looking.
 Back:
 
 Pied-à-Terre Property
-01243 468738
+07756 869185
 piedaterreproperty.co.uk/sales
 
 QR code to the tracked landing page.

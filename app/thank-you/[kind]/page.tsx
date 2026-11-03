@@ -86,7 +86,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ kind:
 
   return (
     <section className="mx-auto max-w-2xl px-6 pb-24 pt-36 text-center md:px-8 md:pt-44">
-      <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-lettings-deep text-on-dark">
+      <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
         <Icon name="check" className="h-8 w-8" />
       </span>
       <h1 className="mt-6 text-h1">{t.title}</h1>
@@ -106,7 +106,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ kind:
         <OpenBadge />
       </div>
 
-      <p className="mt-10 border-t border-brass/30 pt-8">
+      <p className="mt-10 border-t-[length:var(--pane-gap)] border-ink pt-8">
         <Link
           href={t.nextHref}
           className="inline-flex items-center gap-2 text-body text-sales-ink underline underline-offset-4 hover:no-underline"

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { ProcessTimeline } from '@/components/marketing/ProcessTimeline'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import {
@@ -12,6 +11,7 @@ import {
   MOVE_OUT_CHECKLIST,
 } from '@/content/tenants'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'The process, for tenants',
@@ -48,7 +48,7 @@ export default function TheProcessPage() {
         ]}
         title={
           <>
-            Renting a home, <em className="italic text-ochre">step by step</em>.
+            Renting a home, <em className="italic">step by step</em>.
           </>
         }
         lead="Renting is a big part of life here, and you may be doing it for the first time. This is a clear guide to how it works through a letting agent, start to finish."
@@ -57,9 +57,9 @@ export default function TheProcessPage() {
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <Eyebrow>Eight steps</Eyebrow>
-            <h2 className="mt-3 text-h2">
-              From first search to <em className="italic text-lettings">deposit back</em>.
+            <SectionBar label="Eight steps" className="max-w-md" />
+            <h2 className="mt-6 text-h1">
+              From first search to <em className="italic">deposit back</em>.
             </h2>
             <p className="measure mt-4 text-body text-ink-soft">
               If you have a question the guide does not answer, just ask us.
@@ -72,8 +72,8 @@ export default function TheProcessPage() {
       {/* Obligations both sides */}
       <section className="bg-oat">
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
-          <Eyebrow>During the tenancy</Eyebrow>
-          <h2 className="mt-3 text-h2">Who does what</h2>
+          <SectionBar label="During the tenancy" className="max-w-md" />
+          <h2 className="mt-6 text-h1">Who does what</h2>
           <div className="mt-10 grid gap-12 md:grid-cols-2">
             <DutyList title="The landlord or managing agent will" items={LANDLORD_DUTIES} />
             <DutyList title="You, as the tenant, will" items={TENANT_DUTIES} />
@@ -90,8 +90,8 @@ export default function TheProcessPage() {
 
       {/* Move-out checklist */}
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
-        <Eyebrow>When you move out</Eyebrow>
-        <h2 className="mt-3 text-h2">The move-out checklist</h2>
+        <SectionBar label="When you move out" className="max-w-md" />
+        <h2 className="mt-6 text-h1">The move-out checklist</h2>
         <ul className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2">
           {MOVE_OUT_CHECKLIST.map((item) => (
             <li key={item} className="flex items-start gap-3 text-body text-ink">

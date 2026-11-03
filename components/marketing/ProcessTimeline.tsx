@@ -1,9 +1,10 @@
 /**
- * ProcessTimeline. A numbered vertical timeline of stages, with a brass rule
- * running down the left. Editorial rather than card-based. Reused for the sales
- * process and the tenant process.
+ * ProcessTimeline. Numbered stages as a column of panes with a yellow square
+ * index tab on each, joined by the mullion. Reused for the sales process and
+ * the tenant process.
  */
 import type { ReactNode } from 'react'
+import { MullionGrid } from '@/components/primitives/Mullion'
 
 export interface Stage {
   title: string
@@ -16,28 +17,18 @@ interface ProcessTimelineProps {
 
 export function ProcessTimeline({ stages }: ProcessTimelineProps) {
   return (
-    <ol className="relative flex flex-col">
+    <MullionGrid as="ol">
       {stages.map((stage, i) => (
-        <li key={stage.title} className="relative grid grid-cols-[auto_1fr] gap-6 pb-12 last:pb-0">
-          {/* number and connector */}
-          <div className="flex flex-col items-center">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brass/50 bg-well font-display text-h3 tabular text-sales-ink">
-              {i + 1}
-            </span>
-            {i < stages.length - 1 ? (
-              <span
-                aria-hidden="true"
-                className="mt-2 w-px flex-1 bg-brass/40"
-                style={{ minHeight: '2rem' }}
-              />
-            ) : null}
-          </div>
-          <div className="pt-2">
-            <h3 className="text-h3">{stage.title}</h3>
+        <li key={stage.title} className="grid grid-cols-[4rem_1fr] bg-ground md:grid-cols-[5.5rem_1fr]">
+          <span className="tabular flex items-start justify-center bg-ochre pt-5 font-display text-h1 leading-none text-ink">
+            {i + 1}
+          </span>
+          <div className="p-6 md:p-8">
+            <h3 className="text-h2">{stage.title}</h3>
             <p className="measure mt-2 text-body text-ink-soft">{stage.body}</p>
           </div>
         </li>
       ))}
-    </ol>
+    </MullionGrid>
   )
 }

@@ -11,11 +11,12 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { SITE } from '@/lib/site'
 import { CONSENT_WORDING } from '@/lib/leads'
 import { pageMeta, realEstateAgentJsonLd } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'Contact us',
   description:
-    'Call, message or visit Pied-à-Terre Property at 233 Southampton Road, Portchester, PO6 4PY. Opening hours, map and a message form. You reach the office, not a queue.',
+    'Call, message or visit Pied-à-Terre Property at Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY. Opening hours, map and a message form. You reach the office, not a queue.',
   path: '/contact',
 })
 
@@ -34,7 +35,7 @@ export default function ContactPage() {
         trail={[{ name: 'Contact', path: '/contact' }]}
         title={
           <>
-            Talk to a real person, the <em className="italic text-ochre">same</em> day.
+            Talk to a real person, the <em className="italic">same</em> day.
           </>
         }
         lead="Whatever you need, the quickest route is a call or a message. You reach the office in Portchester, not a queue and not a call centre."
@@ -45,7 +46,7 @@ export default function ContactPage() {
           {/* Left: the fast routes, then the office and hours. */}
           <div>
             {/* Option one and two: call and WhatsApp, first. */}
-            <div className="rounded-md border border-brass/40 bg-well p-6 md:p-8">
+            <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6 md:p-8">
               <Eyebrow>The fastest way to reach us</Eyebrow>
               <p className="measure mt-3 text-body text-ink-soft">
                 For anything time-sensitive, call. For a quick question, WhatsApp is easiest. A
@@ -71,7 +72,7 @@ export default function ContactPage() {
             </div>
 
             {/* The trading office, clearly the one to visit. */}
-            <div className="mt-8 rounded-md border border-brass/40 bg-ground p-6 md:p-8">
+            <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8">
               <Eyebrow>Visit the office</Eyebrow>
               <p className="mt-3 flex items-start gap-3 text-body text-ink">
                 <Icon name="pin" className="mt-1 h-5 w-5 shrink-0 text-brass" />
@@ -89,14 +90,14 @@ export default function ContactPage() {
                   lng={SITE.office.lng}
                   centerLat={SITE.office.lat}
                   centerLng={SITE.office.lng}
-                  label="Map of the Pied-à-Terre Property office at 233 Southampton Road, Portchester"
+                  label="Map of the Pied-à-Terre Property office at Trafalgar House Business Centre, 233 Southampton Road, Portchester"
                   buttonLabel="Show the office on a map"
                 />
               </div>
             </div>
 
             {/* Opening hours with the live open or closed state. */}
-            <div className="mt-8 rounded-md border border-brass/40 bg-ground p-6 md:p-8">
+            <div className="mt-8 rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-8">
               <Eyebrow>Opening hours</Eyebrow>
               <OpeningHours className="mt-4" />
               <p className="mt-4 text-small text-ink-soft">
@@ -108,8 +109,8 @@ export default function ContactPage() {
 
           {/* Right: option three, the message form. */}
           <div>
-            <Eyebrow>Or send a message</Eyebrow>
-            <h2 className="mt-3 text-h2">Write to us</h2>
+            <SectionBar label="Or send a message" className="max-w-md" />
+            <h2 className="mt-6 text-h1">Write to us</h2>
             <p className="measure mt-3 text-body text-ink-soft">
               Leave your details and how we can help. It reaches the office directly and we aim to
               reply the same working day.
@@ -126,7 +127,7 @@ export default function ContactPage() {
                 <form
                   action="/api/lead"
                   method="post"
-                  className="rounded-md border border-brass/40 bg-ground p-6 md:p-7"
+                  className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-7"
                   aria-label="Send us a message"
                 >
                   <input type="hidden" name="source" value="contact" />
@@ -159,7 +160,7 @@ export default function ContactPage() {
 
       {/* Registered office, clearly distinct from the trading office so nobody
           turns up at the accountant's door. */}
-      <section className="border-t border-brass/30 bg-oat">
+      <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
         <div className="mx-auto max-w-content px-6 py-12 md:px-8">
           <div className="grid gap-8 md:grid-cols-2">
             <div>

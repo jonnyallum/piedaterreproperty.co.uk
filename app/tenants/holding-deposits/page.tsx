@@ -23,7 +23,7 @@ export default function HoldingDepositsPage() {
         ]}
         title={
           <>
-            Holding deposits, <em className="italic text-ochre">explained</em>.
+            Holding deposits, <em className="italic">explained</em>.
           </>
         }
         lead={`A holding deposit reserves a property while we reference you. It is ${HOLDING_DEPOSIT.amount.toLowerCase()}, and here is exactly how it works.`}
@@ -32,7 +32,7 @@ export default function HoldingDepositsPage() {
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           {HOLDING_DEPOSIT.points.map((p, i) => (
-            <div key={p.title} className="rounded-md border border-brass/40 bg-well p-7">
+            <div key={p.title} className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-7">
               <p className="font-display text-h2 leading-none tabular text-lettings">
                 {String(i + 1).padStart(2, '0')}
               </p>

@@ -46,7 +46,7 @@ function truncate(text: string): { shown: string; clipped: boolean } {
 function Initial({ name }: { name: string }) {
   return (
     <span
-      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-well font-display text-body text-ink"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-none bg-well font-display text-body text-ink"
       aria-hidden="true"
     >
       {name.trim().charAt(0).toUpperCase() || '?'}

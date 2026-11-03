@@ -5,6 +5,7 @@ import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
 import { SALES_LIVE } from '@/lib/site'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
 
 export const metadata: Metadata = pageMeta({
   title: 'Sales fees',
@@ -51,7 +52,7 @@ export default function SalesFeesPage() {
         ]}
         title={
           <>
-            One clear fee, <em className="italic text-ochre">no surprises</em>.
+            One clear fee, <em className="italic">no surprises</em>.
           </>
         }
         lead="We would rather you saw how our fee works before you ever pick up the phone. It filters out no one worth working with, and it earns trust from everyone else."
@@ -59,7 +60,7 @@ export default function SalesFeesPage() {
 
       <section className="mx-auto max-w-content px-6 py-20 md:px-8">
         {!SALES_LIVE ? (
-          <div className="mb-12 rounded-md border border-brass/50 bg-well p-6">
+          <div className="mb-12 rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6">
             <div className="flex items-start gap-3">
               <Icon name="clock" className="mt-0.5 h-5 w-5 shrink-0 text-sales-ink" />
               <p className="measure text-body text-ink">
@@ -104,14 +105,15 @@ export default function SalesFeesPage() {
 
         {/* How the fee is worked out, structure without invented figures */}
         <div className="mt-16">
-          <Eyebrow>How the fee is worked out</Eyebrow>
-          <h2 className="mt-3 text-h2">Clear arithmetic, VAT shown</h2>
+          <SectionBar label="How the fee is worked out" className="max-w-md" />
+          <h2 className="mt-6 text-h1">Clear arithmetic, VAT shown</h2>
           <p className="measure mt-4 text-body text-ink-soft">
             Our fee is a single agreed percentage of the price your home actually sells for,
             so our interest and yours point the same way. Here is how it is set out, with the
             figure confirmed at your valuation and put in writing before you instruct.
           </p>
-          <div className="mt-6 overflow-x-auto">
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- keyboard users must be able to scroll this table */}
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="mt-6 overflow-x-auto">
             <table className="w-full min-w-[32rem] border-collapse text-left">
               <tbody className="text-body">
                 {[
@@ -122,7 +124,7 @@ export default function SalesFeesPage() {
                 ].map(([label, note], i, arr) => (
                   <tr
                     key={label}
-                    className={i < arr.length - 1 ? 'border-b border-brass/40' : ''}
+                    className={i < arr.length - 1 ? 'border-b-[length:var(--pane-gap)] border-ink' : ''}
                   >
                     <th scope="row" className="py-4 pr-6 font-medium text-ink">
                       {label}

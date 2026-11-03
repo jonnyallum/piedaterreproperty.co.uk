@@ -93,8 +93,8 @@ export function EnquiryForm({
 
   if (done) {
     return (
-      <div className="rounded-md border border-brass/40 bg-ground p-8 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-lettings-deep text-on-dark">
+      <div className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-8 text-center">
+        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-none bg-lettings-deep text-on-dark">
           <Icon name="check" className="h-7 w-7" />
         </span>
         <h2 className="mt-5 text-h3">Enquiry sent</h2>
@@ -114,7 +114,7 @@ export function EnquiryForm({
     <form
       onSubmit={onSubmit}
       noValidate
-      className="rounded-md border border-brass/40 bg-ground p-6 md:p-7"
+      className="rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-6 md:p-7"
       aria-label={`Enquire about ${displayAddress}`}
     >
       <h2 className="text-h3">Enquire about this property</h2>

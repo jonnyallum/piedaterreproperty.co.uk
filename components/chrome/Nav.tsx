@@ -1,8 +1,8 @@
 'use client'
 
 /**
- * Nav. Transparent over the hero on the home page, transitioning to an indigo
- * bar with blur and a brass hairline after 80px of scroll. On interior pages it
+ * Nav. Transparent over the hero on the home page, transitioning to a paper
+ * bar with blur and a hairline after 80px of scroll. On interior pages it
  * is solid from the top. The phone number is a real tel: link that fires an
  * analytics event; the primary CTA is Free valuation in the Kiln gradient.
  */
@@ -41,14 +41,15 @@ export function Nav() {
   }, [overlay])
 
   const solid = scrolled
-  const onDark = overlay && !scrolled
+  // Over the black home hero, before scrolling, the chrome reads light on dark.
+  const light = overlay && !solid
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
   return (
     <header
       className={cn(
         'fixed inset-x-0 top-0 transition-colors',
-        solid ? 'bg-indigo backdrop-blur-md' : 'bg-transparent'
+        solid ? 'bg-ground/90 backdrop-blur-md' : 'bg-transparent'
       )}
       style={{ zIndex: 'var(--z-nav)' }}
       data-scrolled={solid || undefined}
@@ -62,7 +63,7 @@ export function Nav() {
       ) : null}
 
       <div className="mx-auto flex max-w-content items-center justify-between gap-6 px-6 py-4 md:px-8">
-        <Logo tone={onDark || solid ? 'on-dark' : 'ink'} />
+        <Logo tone={light ? 'on-dark' : 'ink'} />
 
         {landing ? null : (
           <nav aria-label="Primary" className="hidden lg:block">
@@ -73,7 +74,7 @@ export function Nav() {
                     href={item.href}
                     className={cn(
                       'text-small font-medium transition-opacity hover:opacity-70',
-                      onDark || solid ? 'text-on-dark' : 'text-ink'
+                      light ? 'text-on-dark' : 'text-ink'
                     )}
                   >
                     {item.label}
@@ -91,7 +92,7 @@ export function Nav() {
             className={cn(
               'tabular items-center gap-2 text-small font-medium',
               landing ? 'inline-flex' : 'hidden md:inline-flex',
-              onDark || solid ? 'text-on-dark' : 'text-ink'
+              light ? 'text-on-dark' : 'text-ink'
             )}
           >
             <Icon name="phone" className="h-5 w-5" />
@@ -107,7 +108,7 @@ export function Nav() {
               <button
                 ref={menuButtonRef}
                 type="button"
-                className={cn('btn btn-icon lg:hidden', (onDark || solid) && 'text-on-dark')}
+                className={cn('btn btn-icon lg:hidden', light ? 'text-on-dark' : 'text-ink')}
                 aria-label="Open menu"
                 aria-expanded={menuOpen}
                 aria-haspopup="dialog"

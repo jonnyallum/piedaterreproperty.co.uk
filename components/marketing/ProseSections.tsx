@@ -1,8 +1,8 @@
 /**
  * ProseSections. The shared legal page layout: a stack of titled sections in
- * the house measure, styled to the system rather than raw document prose.
- * Used by the privacy, terms, complaints, accessibility and material
- * information pages so they all read as one family.
+ * the house measure. Each section is a row with a yellow index tab, a
+ * condensed heading and the text, divided by the black mullion, so long legal
+ * pages read as one family with the rest of the site.
  */
 import type { LegalSection } from '@/content/legal'
 
@@ -15,13 +15,22 @@ function idFor(title: string): string {
 
 export function ProseSections({ sections }: { sections: LegalSection[] }) {
   return (
-    <div className="flex flex-col gap-10">
-      {sections.map((section) => (
-        <section key={section.title} aria-labelledby={idFor(section.title)}>
-          <h2 id={idFor(section.title)} className="text-h3">
-            {section.title}
-          </h2>
-          <p className="measure mt-3 text-body text-ink-soft">{section.body}</p>
+    <div className="flex flex-col border-y-[length:var(--pane-gap)] border-ink">
+      {sections.map((section, i) => (
+        <section
+          key={section.title}
+          aria-labelledby={idFor(section.title)}
+          className="grid gap-4 border-t-[length:var(--pane-gap)] border-ink py-8 first:border-t-0 md:grid-cols-[6rem_1fr] md:gap-8"
+        >
+          <p className="tabular font-display text-h1 leading-none text-ink" aria-hidden="true">
+            {String(i + 1).padStart(2, '0')}
+          </p>
+          <div>
+            <h2 id={idFor(section.title)} className="text-h2">
+              {section.title}
+            </h2>
+            <p className="measure mt-3 text-body text-ink-soft">{section.body}</p>
+          </div>
         </section>
       ))}
     </div>

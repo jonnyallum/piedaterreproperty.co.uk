@@ -5,6 +5,7 @@ import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Button } from '@/components/primitives/Button'
 import { Icon } from '@/components/primitives/Icon'
 import { pageMeta } from '@/lib/seo'
+import { MullionGrid } from '@/components/primitives/Mullion'
 
 export const metadata: Metadata = pageMeta({
   title: 'Renting with us, for tenants',
@@ -61,7 +62,7 @@ export default function TenantsHubPage() {
         trail={[{ name: 'Tenants', path: '/tenants' }]}
         title={
           <>
-            Renting, made <em className="italic text-ochre">straightforward</em>.
+            Renting, made <em>straightforward</em>.
           </>
         }
         lead="Today's tenant is tomorrow's buyer, and we treat you that way. New homes are added every week, and everything you need to rent with us is here."
@@ -76,27 +77,27 @@ export default function TenantsHubPage() {
 
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <Eyebrow>Everything for tenants</Eyebrow>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {CARDS.map((card) => (
+        <MullionGrid className="mt-8 sm:grid-cols-2 lg:grid-cols-3">
+          {CARDS.map((card, i) => (
             <Link
               key={card.href}
               href={card.href}
-              className="group flex flex-col rounded-md border border-brass/40 bg-ground p-7 transition-colors hover:bg-well"
+              className={`group flex min-h-60 flex-col p-7 transition-colors hover:bg-ochre hover:text-bone ${i === 2 ? 'bg-ochre text-bone' : i === 3 ? 'bg-well' : 'bg-ground'}`}
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-well text-lettings">
+              <span className="flex h-11 w-11 items-center justify-center bg-night text-ochre">
                 <Icon name={card.icon} className="h-5 w-5" />
               </span>
-              <h2 className="mt-5 flex items-center gap-2 text-h3">
+              <h2 className="mt-auto flex items-center gap-2 pt-8 text-h2">
                 {card.title}
                 <Icon
                   name="arrow-up-right"
-                  className="h-4 w-4 text-brass transition-transform group-hover:translate-x-0.5"
+                  className="h-5 w-5 transition-transform group-hover:translate-x-1"
                 />
               </h2>
               <p className="measure mt-2 text-body text-ink-soft">{card.body}</p>
             </Link>
           ))}
-        </div>
+        </MullionGrid>
       </section>
     </>
   )

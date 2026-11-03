@@ -22,7 +22,7 @@ export function CredentialStrip({ className }: { className?: string }) {
         <li key={m.label}>
           <Link
             href="/about#credentials"
-            className="flex h-full items-start gap-3 rounded-md border border-brass/40 bg-ground p-4 transition-colors hover:bg-hover"
+            className="flex h-full items-start gap-3 rounded-none border-[length:var(--pane-gap)] border-ink bg-ground p-4 transition-colors hover:bg-hover"
           >
             <Icon name="shield" className="mt-0.5 h-5 w-5 shrink-0 text-brass" />
             <span>

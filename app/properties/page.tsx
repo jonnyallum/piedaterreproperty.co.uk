@@ -98,14 +98,14 @@ export default async function PropertiesPage({
 
   const tone = current.path === 'sales' ? 'sales' : current.path === 'lettings' ? 'lettings' : 'brass'
   const ruleColor =
-    tone === 'sales' ? 'bg-sales' : tone === 'lettings' ? 'bg-lettings' : 'bg-brass'
+    tone === 'sales' ? 'bg-night' : tone === 'lettings' ? 'bg-lettings' : 'bg-brass'
 
   // Alternatives that broaden the search by dropping one filter at a time.
   const alternatives = total === 0 ? broadenings(current) : []
 
   return (
     <>
-      <section className="border-b border-brass/30 bg-ground pt-28 md:pt-32">
+      <section className="border-b-[length:var(--pane-gap)] border-ink bg-ground pt-28 md:pt-32">
         <div className="mx-auto max-w-content px-6 pb-8 md:px-8">
           <Breadcrumbs trail={[{ name: 'Properties', path: '/properties' }]} />
           <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
@@ -142,7 +142,7 @@ export default async function PropertiesPage({
 
             {pages > 1 ? (
               <nav
-                className="mt-14 flex items-center justify-between border-t border-brass/30 pt-6"
+                className="mt-14 flex items-center justify-between border-t-[length:var(--pane-gap)] border-ink pt-6"
                 aria-label="Pagination"
               >
                 {page > 1 ? (

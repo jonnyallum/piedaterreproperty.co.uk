@@ -1,62 +1,54 @@
 /**
- * DualPath. The self-select fork, immediately below the hero statement. Two
- * large arch-topped targets: sell (terracotta, Kiln) and let (verdigris). The
- * single most important structural decision on the page: a visitor picks a side
- * in one click, and the colour follows them across the site.
+ * DualPath. The self-select fork: two large square panes, sell on yellow and
+ * let on black, each a single link with an index tab and an arrow that slides
+ * on hover. A visitor picks a side in one click.
  */
 import Link from 'next/link'
-import { Grain } from '@/components/primitives/Grain'
-import { Eyebrow } from '@/components/primitives/Eyebrow'
 import { Icon } from '@/components/primitives/Icon'
+import { MullionGrid } from '@/components/primitives/Mullion'
 
-interface PathCard {
-  href: string
-  eyebrow: string
-  title: string
-  copy: string
-  surface: string
-}
-
-const CARDS: PathCard[] = [
+const CARDS = [
   {
     href: '/sales',
-    eyebrow: 'Vendors',
+    tag: 'Vendors',
     title: 'I want to sell',
     copy: 'A local sale, handled by the same people from valuation to completion.',
-    surface: 'surface-kiln',
+    ground: 'yellow' as const,
   },
   {
     href: '/lettings',
-    eyebrow: 'Landlords',
+    tag: 'Landlords',
     title: 'I want to let',
     copy: 'Fifteen years of lettings and management, and a landlord book that stays.',
-    surface: 'surface-tide',
+    ground: 'black' as const,
   },
 ]
 
 export function DualPath() {
   return (
-    <div className="grid gap-5 sm:grid-cols-2">
+    <MullionGrid className="sm:grid-cols-2">
       {CARDS.map((card) => (
         <Link
-          key={card.href}
           href={card.href}
-          className={`group relative isolate flex min-h-56 flex-col justify-end overflow-hidden p-7 text-on-dark arch-shallow ${card.surface}`}
+          key={card.href}
+          className={
+            'group flex min-h-64 flex-col justify-between p-6 transition-colors hover:bg-ink hover:text-on-dark md:p-8 ' +
+            (card.ground === 'yellow' ? 'bg-ochre text-ink' : 'bg-night text-on-dark hover:bg-ochre hover:text-ink')
+          }
         >
-          <Grain fixed={false} photo />
-          <div className="relative" style={{ zIndex: 'var(--z-content)' }}>
-            <Eyebrow tone="on-dark">{card.eyebrow}</Eyebrow>
-            <h2 className="mt-2 flex items-center gap-3 text-h2">
+          <p className="eyebrow font-bold">{card.tag}</p>
+          <div>
+            <h2 className="flex items-center gap-3 text-h1">
               {card.title}
               <Icon
                 name="arrow-right"
-                className="h-6 w-6 transition-transform group-hover:translate-x-1"
+                className="h-8 w-8 transition-transform group-hover:translate-x-2"
               />
             </h2>
-            <p className="measure mt-2 text-body text-on-dark/90">{card.copy}</p>
+            <p className="measure mt-2 text-body opacity-90">{card.copy}</p>
           </div>
         </Link>
       ))}
-    </div>
+    </MullionGrid>
   )
 }

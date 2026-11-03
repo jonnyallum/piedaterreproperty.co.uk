@@ -1,7 +1,7 @@
 /**
- * Pied-à-Terre's new house mark: an arched doorway, a small coastal sun and a
- * generous editorial wordmark. It is deliberately built from type and CSS so
- * it remains crisp, accessible and colour-aware at every size.
+ * Pied-à-Terre's wordmark: lowercase "pied à terre" in the display serif, with
+ * the grave accent drawn as a signal-blue roof-pitch stroke (see .brand-a in
+ * globals.css). Live type, so it stays crisp, selectable and colour-aware.
  */
 import Link from 'next/link'
 import { cn } from '@/lib/cn'
@@ -16,18 +16,17 @@ export function Logo({ tone = 'ink', className }: LogoProps) {
   return (
     <Link
       href="/"
-      className={cn('brand-lockup group inline-flex items-center leading-none', color, className)}
+      aria-label="Pied-à-Terre Property, home"
+      className={cn('brand-lockup group inline-flex leading-none', color, className)}
       data-tone={tone}
     >
-      <span className="brand-mark" aria-hidden="true">
-        <span className="brand-mark-sun" />
-        <span className="brand-mark-letter" />
+      <span className="brand-word" aria-hidden="true">
+        <span>pied </span>
+        <span className="brand-a">a</span>
+        <em className="not-italic"> terre</em>
       </span>
-      <span className="brand-wordmark">
-        <span className="font-display text-h3 font-normal tracking-tight">
-          Pied-à-Terre
-        </span>
-        <span className="brand-descriptor">Property / Solent coast</span>
+      <span className="brand-descriptor" aria-hidden="true">
+        Property
       </span>
     </Link>
   )

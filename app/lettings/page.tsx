@@ -13,6 +13,8 @@ import {
   LANDLORD_OBLIGATIONS,
 } from '@/content/lettings'
 import { pageMeta } from '@/lib/seo'
+import { SectionBar } from '@/components/primitives/SectionBar'
+import { MullionGrid } from '@/components/primitives/Mullion'
 
 export const metadata: Metadata = pageMeta({
   title: 'Lettings and management for landlords',
@@ -30,7 +32,7 @@ export default function LettingsHubPage() {
         trail={[{ name: 'Landlords', path: '/lettings' }]}
         title={
           <>
-            The landlord book that <em className="italic text-ochre">stays</em>.
+            The landlord book that <em className="italic">stays</em>.
           </>
         }
         lead="Fifteen years of letting and managing homes on one patch, with the same people, the same care, and landlords who stay with us for a decade and more."
@@ -46,20 +48,18 @@ export default function LettingsHubPage() {
       {/* Service levels */}
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="max-w-2xl">
-          <Eyebrow>The offer in one glance</Eyebrow>
-          <h2 className="mt-3 text-h2">Three levels of service</h2>
+          <SectionBar label="The offer in one glance" className="max-w-md" />
+          <h2 className="mt-6 text-h1">Three levels of service</h2>
           <p className="measure mt-4 text-lead text-ink-soft">
             From finding a tenant to looking after everything, choose the level that suits
             you. Fees are set out in full on the fees page, with VAT stated.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <MullionGrid className="mt-12 lg:grid-cols-3">
           {SERVICE_LEVELS.map((level, i) => (
             <div
               key={level.name}
-              className={`flex flex-col rounded-md border p-7 ${
-                i === 2 ? 'border-lettings bg-well' : 'border-brass/40 bg-ground'
-              }`}
+              className={`flex flex-col p-7 ${i === 2 ? 'bg-ochre text-ink' : 'bg-ground'}`}
             >
               <h3 className="text-h3">{level.name}</h3>
               <p className="measure mt-2 text-small text-ink-soft">{level.summary}</p>
@@ -71,12 +71,12 @@ export default function LettingsHubPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 border-t border-brass/40 pt-4 text-small text-ink-soft">
+              <p className="mt-5 border-t-[length:var(--pane-gap)] border-ink pt-4 text-small text-ink-soft">
                 {level.fee}
               </p>
             </div>
           ))}
-        </div>
+        </MullionGrid>
         <div className="mt-8">
           <Link href="/lettings/fees" className="btn btn-secondary">
             See fees and service levels
@@ -88,19 +88,19 @@ export default function LettingsHubPage() {
       <section className="bg-oat">
         <div className="mx-auto max-w-content px-6 py-24 md:px-8">
           <div className="max-w-2xl">
-            <Eyebrow>Why choose us</Eyebrow>
-            <h2 className="mt-3 text-h2">
-              We work for the <em className="italic text-lettings">rent</em>, not just the advert
+            <SectionBar label="Why choose us" className="max-w-md" />
+            <h2 className="mt-6 text-h1">
+              We work for the <em className="italic">rent</em>, not just the advert
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {WHY_CHOOSE_US_POINTS.map((p) => (
-              <div key={p.title} className="border-t border-brass/40 pt-5">
+          <MullionGrid className="mt-12 md:grid-cols-2 lg:grid-cols-3">
+            {WHY_CHOOSE_US_POINTS.map((p, i) => (
+              <div key={p.title} className={`p-6 ${i % 4 === 0 ? 'bg-ochre text-ink' : 'bg-ground'}`}>
                 <h3 className="text-h3">{p.title}</h3>
                 <p className="measure mt-2 text-body text-ink-soft">{p.body}</p>
               </div>
             ))}
-          </div>
+          </MullionGrid>
           <div className="mt-10">
             <Link href="/lettings/why-choose-us" className="btn btn-ghost">
               Read the full case
@@ -123,7 +123,7 @@ export default function LettingsHubPage() {
             </div>
             <ul className="grid gap-4 sm:grid-cols-2">
               {MANAGEMENT_DIFFERENCE.map((m) => (
-                <li key={m} className="flex items-start gap-3 border-l-2 border-brass pl-4 text-body text-on-dark">
+                <li key={m} className="flex items-start gap-3 border-l-[length:var(--pane-gap)] border-ochre pl-4 text-body text-on-dark">
                   <span>{m}</span>
                 </li>
               ))}
@@ -135,8 +135,8 @@ export default function LettingsHubPage() {
       {/* Compliance summary */}
       <section className="mx-auto max-w-content px-6 py-24 md:px-8">
         <div className="max-w-2xl">
-          <Eyebrow>Compliance for landlords</Eyebrow>
-          <h2 className="mt-3 text-h2">Your legal obligations, in plain terms</h2>
+          <SectionBar label="Compliance for landlords" className="max-w-md" />
+          <h2 className="mt-6 text-h1">Your legal obligations, in plain terms</h2>
           <p className="measure mt-4 text-lead text-ink-soft">
             Letting a home comes with real responsibilities. Here is a current summary,
             with the full detail on the obligations page.
@@ -162,7 +162,7 @@ export default function LettingsHubPage() {
 
       {/* Sales cross-link, the only warm element */}
       <section className="mx-auto max-w-content px-6 py-16 md:px-8">
-        <div className="flex flex-col items-start gap-4 rounded-md border border-sales/40 bg-well p-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col items-start gap-4 border-[length:var(--pane-gap)] border-ink bg-ochre p-8 text-bone md:flex-row md:items-center md:justify-between">
           <div>
             <Eyebrow>Thinking of selling instead?</Eyebrow>
             <p className="mt-2 max-w-xl text-body text-ink-soft">

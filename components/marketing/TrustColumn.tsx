@@ -17,7 +17,7 @@ const MARKS = [
 
 export function TrustColumn() {
   return (
-    <aside className="rounded-md border border-brass/40 bg-well p-6">
+    <aside className="rounded-none border-[length:var(--pane-gap)] border-ink bg-well p-6">
       <Eyebrow>Why us</Eyebrow>
       <p className="mt-3 text-h3">
         {yearsTrading()} years on this coast, and still here afterwards.
@@ -30,7 +30,7 @@ export function TrustColumn() {
           </li>
         ))}
       </ul>
-      <div className="mt-6 border-t border-brass/40 pt-5">
+      <div className="mt-6 border-t-[length:var(--pane-gap)] border-ink pt-5">
         <a
           href={SITE.phone.href}
           className="tabular inline-flex items-center gap-2 text-body font-medium text-ink"

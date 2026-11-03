@@ -21,7 +21,7 @@ export default function AccessibilityPage() {
         trail={[{ name: 'Accessibility', path: '/accessibility' }]}
         title={
           <>
-            Built so <em className="italic text-ochre">everyone</em> can use it.
+            Built so <em className="italic">everyone</em> can use it.
           </>
         }
         lead="We build to the Web Content Accessibility Guidelines at level AA, and we fix what you tell us is hard to use."

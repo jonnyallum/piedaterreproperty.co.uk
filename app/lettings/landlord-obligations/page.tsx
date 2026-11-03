@@ -25,7 +25,7 @@ export default function LandlordObligationsPage() {
         ]}
         title={
           <>
-            Your legal <em className="italic text-ochre">obligations</em>, kept current.
+            Your legal <em className="italic">obligations</em>, kept current.
           </>
         }
         lead="Letting a home carries real responsibilities, and they change. This is a plain summary of the main ones. If we manage your property, we track these for you so nothing lapses."

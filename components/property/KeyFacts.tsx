@@ -57,14 +57,14 @@ function furnishedLabel(f: 'furnished' | 'unfurnished' | 'part_furnished'): stri
 export function KeyFacts({ property }: { property: Property }) {
   const facts = factsFor(property)
   return (
-    <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-brass/40 bg-brass/40 sm:grid-cols-3">
+    <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-none border-[length:var(--pane-gap)] border-ink bg-brass/40 sm:grid-cols-3">
       {facts.map((fact) => (
-        <div key={fact.label} className="flex items-center gap-3 bg-ground p-4">
-          <Icon name={fact.icon} className="h-5 w-5 shrink-0 text-brass" />
-          <div>
-            <dt className="text-small text-ink-soft">{fact.label}</dt>
-            <dd className="tabular text-body font-medium text-ink">{fact.value}</dd>
-          </div>
+        <div key={fact.label} className="bg-ground p-4">
+          <dt className="flex items-center gap-3 text-small text-ink-soft">
+            <Icon name={fact.icon} className="h-5 w-5 shrink-0 text-brass" />
+            {fact.label}
+          </dt>
+          <dd className="tabular mt-1 pl-8 text-body font-medium text-ink">{fact.value}</dd>
         </div>
       ))}
     </dl>

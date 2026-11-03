@@ -40,18 +40,18 @@ export function PropertyFilters({ towns, propertyTypes, current }: PropertyFilte
       ref={formRef}
       action="/properties"
       method="get"
-      className="rounded-md border border-brass/40 bg-ground p-5"
+      className="rounded-none border-2 border-ink bg-ground p-6"
       aria-label="Filter properties"
     >
       {/* Transaction type as radios: one value, works with and without JS. */}
       <fieldset className="mb-4">
         <legend className="sr-only">Transaction type</legend>
-        <div className="inline-flex rounded-md border border-brass/40 bg-well p-1">
+        <div className="inline-flex rounded-none border border-ink/20 bg-well p-1">
           {TYPES.map((t) => {
             const active = current.path === t.value || (!current.path && t.value === 'all')
             const fill =
               t.value === 'sales'
-                ? 'peer-checked:bg-sales-ink'
+                ? 'peer-checked:bg-night-ink'
                 : t.value === 'lettings'
                   ? 'peer-checked:bg-lettings-deep'
                   : 'peer-checked:bg-night'
@@ -67,7 +67,7 @@ export function PropertyFilters({ towns, propertyTypes, current }: PropertyFilte
                 />
                 <span
                   className={cn(
-                    'block rounded-sm px-4 py-2 text-small font-medium text-ink-soft transition-colors peer-checked:text-on-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brass',
+                    'block rounded-none px-5 py-2 text-small font-medium text-ink-soft transition-colors peer-checked:text-on-dark peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brass',
                     fill
                   )}
                 >

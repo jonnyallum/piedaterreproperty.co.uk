@@ -31,7 +31,7 @@ export default function AreasPage() {
         title={
           <>
             Southampton to Chichester, with{' '}
-            <em className="italic text-sales-ink">Hampshire at our back</em>.
+            <em className="italic">Hampshire at our back</em>.
           </>
         }
         lead="Our established heartland runs through Portsmouth, Havant and the eastern Solent. Today we also work west towards Southampton, east to Chichester and inland through Hampshire."
@@ -86,7 +86,7 @@ export default function AreasPage() {
           })}
         </div>
 
-        <div className="mt-16 border-t border-brass/30 pt-10">
+        <div className="mt-16 border-t-[length:var(--pane-gap)] border-ink pt-10">
           <h2 className="text-h2">Across the wider South Coast</h2>
           <p className="measure mt-2 text-body text-ink-soft">
             Our working corridor extends west to Southampton and east to Chichester, taking in
@@ -94,14 +94,14 @@ export default function AreasPage() {
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
             {COVERAGE.wider.map((place) => (
-              <li key={place} className="rounded-sm border border-brass/40 bg-ground px-3 py-1.5 text-small text-ink">
+              <li key={place} className="rounded-sm border-[length:var(--pane-gap)] border-ink bg-ground px-3 py-1.5 text-small text-ink">
                 {place}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-10 border-t border-brass/30 pt-10">
+        <div className="mt-10 border-t-[length:var(--pane-gap)] border-ink pt-10">
           <h2 className="text-h3">Hampshire towns, villages and suburbs</h2>
           <p className="measure mt-2 text-body text-ink-soft">
             We also let, manage and sell across the surrounding communities. If your street sits
@@ -109,7 +109,7 @@ export default function AreasPage() {
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
             {COVERAGE.secondary.map((place) => (
-              <li key={place} className="rounded-sm border border-brass/40 bg-well px-3 py-1.5 text-small text-ink">
+              <li key={place} className="rounded-sm border-[length:var(--pane-gap)] border-ink bg-well px-3 py-1.5 text-small text-ink">
                 {place}
               </li>
             ))}
@@ -117,7 +117,7 @@ export default function AreasPage() {
         </div>
       </section>
 
-      <section className="border-t border-brass/30 bg-oat">
+      <section className="border-t-[length:var(--pane-gap)] border-ink bg-oat">
         <div className="mx-auto flex max-w-content flex-col items-start gap-6 px-6 py-16 md:flex-row md:items-center md:justify-between md:px-8">
           <div>
             <h2 className="text-h2">Thinking of moving, letting or selling?</h2>
