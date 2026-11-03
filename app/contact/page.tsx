@@ -66,9 +66,6 @@ export default function ContactPage() {
                   Email
                 </a>
               </div>
-              <p className="mt-4 text-small text-ink-soft">
-                Email address awaiting confirmation before launch.
-              </p>
             </div>
 
             {/* The trading office, clearly the one to visit. */}
@@ -101,7 +98,7 @@ export default function ContactPage() {
               <Eyebrow>Opening hours</Eyebrow>
               <OpeningHours className="mt-4" />
               <p className="mt-4 text-small text-ink-soft">
-                Hours awaiting confirmation before launch. Outside these times, leave a message or
+                Outside these times, leave a message or
                 WhatsApp and we will come back to you the next working day.
               </p>
             </div>

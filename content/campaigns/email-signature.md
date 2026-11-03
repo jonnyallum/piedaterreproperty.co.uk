@@ -16,7 +16,7 @@ Pied-à-Terre Property
 Lettings, management and residential sales on the Solent coast
 
 07756 869185
-hello@piedaterreproperty.co.uk
+enquiries@piedaterreproperty.co.uk
 piedaterreproperty.co.uk
 
 Trafalgar House Business Centre, 233 Southampton Road, Portchester, PO6 4PY
