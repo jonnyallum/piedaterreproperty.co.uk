@@ -19,9 +19,7 @@ function Track({ items, hidden }: { items: readonly string[]; hidden?: boolean }
       {items.map((item, i) => (
         <span key={`${item}-${i}`} className="marquee-item">
           <span className="px-6">{item}</span>
-          <span className="text-brass" aria-hidden="true">
-            .
-          </span>
+          <span className="h-2 w-2 rounded-full bg-ochre" aria-hidden="true" />
         </span>
       ))}
     </span>
@@ -31,7 +29,7 @@ function Track({ items, hidden }: { items: readonly string[]; hidden?: boolean }
 export function Marquee({ items, className }: MarqueeProps) {
   return (
     // Decorative: the same towns are available as links in the Areas grid below.
-    <div className={cn('marquee bg-indigo py-4', className)}>
+    <div className={cn('marquee bg-indigo py-3', className)}>
       <Track items={items} />
       <Track items={items} hidden />
     </div>

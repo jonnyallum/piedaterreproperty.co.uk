@@ -13,6 +13,7 @@ import { HowItWorks } from '@/components/marketing/HowItWorks'
 import { ReviewsSection } from '@/components/marketing/ReviewsSection'
 import { Faq } from '@/components/marketing/Faq'
 import { ValuationBand } from '@/components/marketing/ValuationBand'
+import { Marquee } from '@/components/marketing/Marquee'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { AREAS } from '@/content/areas'
 import { HOME_FAQS } from '@/content/faqs'
@@ -48,6 +49,54 @@ export const metadata: Metadata = {
  *   - "The agent your landlord already trusts."
  */
 
+const STREET = [
+  {
+    src: '/images/archive/portfolio__15__monarch-close-waterlooville.jpg',
+    alt: 'Detached red-brick home on Monarch Close, Waterlooville',
+    height: 'h-[24rem] md:h-[26rem]',
+    priority: true,
+  },
+  {
+    src: '/images/archive/portfolio__02__wallis-road-waterlooville.jpg',
+    alt: 'Double bay-fronted house on Wallis Road, Waterlooville',
+    height: 'h-[30rem] md:h-[34rem]',
+    priority: true,
+  },
+  {
+    src: '/images/archive/portfolio__04__bevan-road-lovedean.jpg',
+    alt: 'Semi-detached house with a garage on Bevan Road, Lovedean',
+    height: 'h-[26rem] md:h-[30rem]',
+    priority: false,
+  },
+  {
+    src: '/images/archive/portfolio__70__the-curve-lovedean.jpg',
+    alt: 'Chalet bungalow on The Curve, Lovedean',
+    height: 'h-[22rem] md:h-[22rem]',
+    priority: false,
+  },
+] as const
+
+const SERVICES = [
+  {
+    title: 'Sell',
+    accent: 'with us',
+    href: '/sales',
+    copy: 'Our sales department is opening soon. Register your interest and hear first.',
+  },
+  {
+    title: 'Rent',
+    accent: 'a home',
+    href: '/tenants',
+    copy: 'Find a home, register with us, and report repairs, all in one place.',
+  },
+  {
+    title: 'Let',
+    accent: 'yours',
+    href: '/lettings',
+    copy: 'Lettings and management from people who have done it on this coast since 2011.',
+  },
+] as const
+
 export default function HomePage() {
   const years = inWords(yearsTrading())
   const Years = years.charAt(0).toUpperCase() + years.slice(1)
@@ -57,24 +106,31 @@ export default function HomePage() {
     <>
       <JsonLd data={[realEstateAgentJsonLd(), faqPageJsonLd(HOME_FAQS)]} />
 
-      {/* 1. Hero: calm paper ground, a tall arched photograph of a real home we
-          look after, and the search pill overlapping it. */}
-      <section className="relative">
-        <div className="mx-auto grid w-full max-w-content items-end gap-12 px-6 pb-28 pt-28 md:px-8 md:pb-32 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div>
-            <Reveal>
-              <Eyebrow className="font-bold text-sales-ink">
-                Independent / Portchester / Since 2011
-              </Eyebrow>
-            </Reveal>
-            <h1 className="mt-6 text-display">
-              A foot on <em className="italic text-sales">the ground</em> of the Solent.
-            </h1>
-            <Reveal delay={160} className="mt-8 max-w-xl text-lead text-ink-soft">
+      {/* 1. Hero: a full-width headline, then a "street" of four arched doorways
+          photographed on real homes we look after, standing on one ground line. */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto w-full max-w-content px-6 pt-28 md:px-8 md:pt-36">
+          <Reveal className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2">
+            <Eyebrow className="font-bold text-sales-ink">
+              Estate and letting agents / Portchester / Since 2011
+            </Eyebrow>
+            <a href={SITE.phone.href} className="eyebrow tabular text-ink">
+              {SITE.phone.display}
+            </a>
+          </Reveal>
+          <h1 className="mt-8 text-hero">
+            A foot on
+            <br />
+            <span className="block pl-[8vw] md:pl-[14vw]">
+              the <em className="italic text-sales">ground.</em>
+            </span>
+          </h1>
+          <div className="mt-10 grid items-end gap-8 md:grid-cols-12">
+            <Reveal delay={120} className="text-lead text-ink-soft md:col-span-5">
               We sell, let and look after homes from Southampton to Chichester. Local
               knowledge, one steady team, and {years} years of relationships on this coast.
             </Reveal>
-            <Reveal delay={220} className="mt-10 flex flex-wrap gap-4">
+            <Reveal delay={180} className="flex flex-wrap gap-4 md:col-span-7 md:justify-end">
               <Link href="/sales/free-valuation" className="btn btn-sales">
                 Value my home
               </Link>
@@ -82,37 +138,65 @@ export default function HomePage() {
                 Explore homes
               </Link>
             </Reveal>
-            <Reveal delay={280} className="mt-12 grid max-w-md grid-cols-2 gap-6 border-t border-brass/40 pt-6">
-              <p className="text-small text-ink-soft">
-                <span className="font-display text-h2 tabular text-ink">{Years}</span>
-                <span className="mt-1 block">years trading locally</span>
-              </p>
-              <p className="text-small text-ink-soft">
-                <span className="font-display text-h3 tabular text-ink">{SITE.managedHomesCopy}</span>
-                <span className="mt-1 block">trusted to our care</span>
-              </p>
-            </Reveal>
           </div>
-          <Arch variant="full" className="home-hero-arch relative aspect-[4/5] w-full bg-well">
-            <Image
-              src="/images/archive/portfolio__15__monarch-close-waterlooville.jpg"
-              alt="Detached red-brick home on Monarch Close, Waterlooville"
-              fill
-              priority
-              sizes="(max-width: 64rem) 100vw, 46vw"
-              className="object-cover"
-            />
-            <span className="absolute bottom-5 left-5 rounded-full bg-ground px-4 py-2 text-small font-bold text-ink">
-              Monarch Close, Waterlooville
-            </span>
-          </Arch>
+        </div>
+
+        {/* The street. Four doorways of different heights on one ground line. */}
+        <div className="mx-auto mt-14 w-full max-w-content px-6 md:px-8">
+          <ul className="flex snap-x items-end gap-4 overflow-x-auto pb-0 md:grid md:grid-cols-4 md:gap-6 md:overflow-visible" aria-label="Homes we look after">
+            {STREET.map((door) => (
+              <li key={door.src} className={'w-[68vw] shrink-0 snap-start md:w-auto ' + door.height}>
+                <Arch variant="full" className="relative h-full w-full bg-well">
+                  <Image
+                    src={door.src}
+                    alt={door.alt}
+                    fill
+                    priority={door.priority}
+                    sizes="(max-width: 48rem) 68vw, 25vw"
+                    className="object-cover"
+                  />
+                </Arch>
+              </li>
+            ))}
+          </ul>
+          <div className="border-t-4 border-ink" aria-hidden="true" />
         </div>
       </section>
 
-      {/* Hero search, overlapping the hero */}
-      <div className="relative mx-auto -mt-16 w-full max-w-content px-6 md:px-8" style={{ zIndex: 'var(--z-raised)' }}>
+      {/* Search sits just under the ground line. */}
+      <div className="relative mx-auto mt-8 w-full max-w-content px-6 md:px-8" style={{ zIndex: 'var(--z-raised)' }}>
         <HeroSearch />
       </div>
+
+      {/* Marquee of the towns we work in. */}
+      <Marquee items={COVERAGE.wider} className="mt-24 bg-sales" />
+
+      {/* 1b. What we do, as an index. Large type rows that fill with blue. */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-content px-6 md:px-8">
+          <Eyebrow>What we do</Eyebrow>
+          <ul className="mt-8">
+            {SERVICES.map((row, i) => (
+              <li key={row.title}>
+                <Link
+                  href={row.href}
+                  className="group -mx-6 grid items-baseline gap-x-8 gap-y-3 border-t-2 border-ink px-6 py-8 transition-colors duration-300 hover:bg-sales hover:text-on-dark focus-visible:bg-sales focus-visible:text-on-dark md:-mx-8 md:grid-cols-[4rem_1fr_20rem_2rem] md:px-8 md:py-10"
+                >
+                  <span className="eyebrow tabular">0{i + 1}</span>
+                  <span className="text-index font-display">
+                    {row.title} <em className="italic text-sales group-hover:text-ochre group-focus-visible:text-ochre">{row.accent}</em>
+                  </span>
+                  <span className="text-body text-ink-soft group-hover:text-on-dark/90 group-focus-visible:text-on-dark/90">
+                    {row.copy}
+                  </span>
+                  <Icon name="arrow-up-right" className="hidden h-7 w-7 transition-transform group-hover:translate-x-1 md:block" />
+                </Link>
+              </li>
+            ))}
+            <li className="border-t-2 border-ink" aria-hidden="true" />
+          </ul>
+        </div>
+      </section>
 
       {/* 2. Credibility band */}
       <StatsBand />
@@ -120,28 +204,34 @@ export default function HomePage() {
       {/* 3. Sales department feature */}
       <SalesFeature />
 
-      {/* 4. Real property photography from Pied-à-Terre's own archive. */}
-      <section className="surface-paper py-28">
+      {/* 4. Real homes, set out as an asymmetric spread: one large, two small. */}
+      <section className="surface-paper pb-28 pt-8">
         <div className="mx-auto max-w-content px-6 md:px-8">
-          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div>
-              <Eyebrow>Homes in our care</Eyebrow>
-              <h2 className="mt-3 max-w-3xl text-h1">
-                Real homes. Real <em className="italic text-sales-ink">local</em> work.
-              </h2>
-              <p className="measure mt-4 text-lead text-ink-soft">
-                A selection from our property archive, photographed on the streets and in
-                the homes we know. Availability is shown on each property.
-              </p>
+          <div className="grid items-end gap-6 md:grid-cols-12">
+            <h2 className="text-h1 md:col-span-8">
+              Real homes. Real <em className="italic text-sales-ink">local</em> work.
+            </h2>
+            <div className="md:col-span-4 md:text-right">
+              <Link href="/properties" className="btn btn-secondary">
+                View all properties
+              </Link>
             </div>
-            <Link href="/properties" className="btn btn-secondary shrink-0">
-              View all properties
-            </Link>
           </div>
-          <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
+          <p className="measure mt-4 text-lead text-ink-soft">
+            A selection from our property archive, photographed on the streets and in the
+            homes we know. Availability is shown on each property.
+          </p>
+          <div className="mt-14 grid gap-x-8 gap-y-14 lg:grid-cols-12">
+            {featured[0] ? (
+              <div className="lg:col-span-7">
+                <PropertyCard property={featured[0]} feature />
+              </div>
+            ) : null}
+            <div className="grid gap-y-14 lg:col-span-5 lg:pt-24">
+              {featured.slice(1).map((property) => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -184,99 +274,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. The founder's story. No invented biography or visual placeholder. */}
+      {/* 5. The founder's story, as an editorial spread with an offset portrait. */}
       <section className="surface-paper-muted">
-        <div className="mx-auto grid max-w-content gap-12 px-6 py-24 md:grid-cols-[5fr_7fr] md:px-8">
-          <Arch variant="full" className="founder-portrait relative aspect-[4/5] w-full bg-indigo">
-            <Image
-              src="/images/team/charisma-smith.jpg"
-              alt="Charisma Smith, founder and director of Pied-à-Terre Property"
-              fill
-              sizes="(max-width: 48rem) 100vw, 42vw"
-              className="object-contain object-top"
-            />
-            <span className="absolute inset-x-4 bottom-4 rounded-md bg-night/90 p-3 text-on-dark md:inset-x-5 md:bottom-5 md:p-4">
-              <span className="eyebrow text-on-dark/80">Independent since 2011</span>
-              <span className="mt-1 block text-body font-medium text-on-dark md:text-h3">
-                Led by {SITE.directorDisplay}
-              </span>
-            </span>
-          </Arch>
-          <div>
+        <div className="mx-auto grid max-w-content gap-x-12 gap-y-14 px-6 py-24 md:px-8 lg:grid-cols-12 lg:py-32">
+          <div className="lg:col-span-7">
             <Eyebrow>Our story</Eyebrow>
-            <h2 className="mt-3 text-h2">
+            <h2 className="mt-4 text-h1">
               A foot on the ground, kept for the <em className="italic text-sales-ink">long</em> term.
             </h2>
-            <p className="dropcap measure mt-6 text-body text-ink">
+            <p className="dropcap measure mt-10 text-lead text-ink">
               Pied-à-Terre means a foot on the ground: a small place you keep for the times
               you need to be somewhere. It is the right name for a firm that has stayed on
               one stretch of coast for {years} years rather than chasing growth across a
               county. We learned these towns by working them, one landlord and one home at
               a time.
             </p>
-            <p className="measure mt-4 text-body text-ink-soft">
-              That is what {years} years on a single patch teaches you: which streets let in
-              a week, what a harbour view is really worth, and who to call when a boiler
-              fails on a Friday. It is knowledge you cannot buy in from a call centre, and
-              it is why landlords stay with us for a decade and more.
-            </p>
-            <p className="measure mt-4 text-body text-ink-soft">
-              Today we bring the same patient, personal approach to sales: clear advice,
-              proper follow-through, and a familiar person at the end of the phone. The
-              business has grown into two disciplines without losing the thing that made
-              landlords trust it in the first place.
-            </p>
-            <p className="signature mt-6 text-h2">{SITE.directorDisplay}</p>
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <p className="text-body text-ink-soft">
+                That is what {years} years on a single patch teaches you: which streets let in
+                a week, what a harbour view is really worth, and who to call when a boiler
+                fails on a Friday. It is knowledge you cannot buy in from a call centre, and
+                it is why landlords stay with us for a decade and more.
+              </p>
+              <p className="text-body text-ink-soft">
+                Today we bring the same patient, personal approach to sales: clear advice,
+                proper follow-through, and a familiar person at the end of the phone. The
+                business has grown into two disciplines without losing the thing that made
+                landlords trust it in the first place.
+              </p>
+            </div>
+            <p className="signature mt-8 text-h2">{SITE.directorDisplay}</p>
           </div>
+          <Arch variant="full" className="relative aspect-[3/4] w-full bg-indigo lg:col-span-5 lg:mt-24">
+            <Image
+              src="/images/team/charisma-smith.jpg"
+              alt="Charisma Smith, founder and director of Pied-à-Terre Property"
+              fill
+              sizes="(max-width: 64rem) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+          </Arch>
         </div>
       </section>
 
-      {/* 6. Areas we cover */}
-      <section className="py-24">
+      {/* 6. Areas we cover, as a typographic index. */}
+      <section className="py-24 md:py-32">
         <div className="mx-auto max-w-content px-6 md:px-8">
           <Eyebrow>Areas we cover</Eyebrow>
-          <h2 className="mt-3 max-w-3xl text-h2">
+          <h2 className="mt-4 max-w-4xl text-h1">
             From Southampton to Chichester, across the{' '}
             <em className="italic text-sales-ink">South Coast and Hampshire</em>.
           </h2>
-          <p className="measure mt-4 text-lead text-ink-soft">
-            Our detailed guides begin with the five places at the heart of our original
-            lettings patch. Our working area now follows the coast in both directions.
-          </p>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-14">
             {AREAS.map((area) => (
-              <Link
-                key={area.slug}
-                href={`/areas/${area.slug}`}
-                className="group rounded-md border border-brass/40 bg-ground p-6 transition-colors hover:bg-well"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-h3">{area.name}</h3>
-                  <Icon
-                    name="arrow-up-right"
-                    className="h-5 w-5 text-brass transition-transform group-hover:translate-x-0.5"
-                  />
-                </div>
-                <p className="measure mt-2 text-small text-ink-soft">{area.blurb}</p>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-12 border-t border-brass/30 pt-8">
-            <Eyebrow>Wider coastal coverage</Eyebrow>
-            <ul className="mt-5 flex flex-wrap gap-2.5" aria-label="Wider areas covered">
-              {COVERAGE.wider.map((place) => (
-                <li
-                  key={place}
-                  className="rounded-sm border border-brass/40 bg-well px-3 py-2 text-small text-ink"
+              <li key={area.slug}>
+                <Link
+                  href={`/areas/${area.slug}`}
+                  className="group grid items-baseline gap-x-8 gap-y-2 border-t border-ink/30 py-6 transition-colors hover:border-ink md:grid-cols-[1fr_24rem_2rem]"
                 >
-                  {place}
-                </li>
-              ))}
-            </ul>
-            <Link href="/areas" className="btn btn-ghost mt-5">
-              Explore our full coverage
-            </Link>
-          </div>
+                  <span className="text-h1 font-display transition-transform duration-300 group-hover:translate-x-3 group-hover:italic group-hover:text-sales-ink">
+                    {area.name}
+                  </span>
+                  <span className="text-small text-ink-soft">{area.blurb}</span>
+                  <Icon name="arrow-up-right" className="hidden h-6 w-6 text-ink md:block" />
+                </Link>
+              </li>
+            ))}
+            <li className="border-t border-ink/30" aria-hidden="true" />
+          </ul>
+          <p className="mt-10 max-w-3xl text-lead text-ink-soft">
+            Also across the wider coast: {COVERAGE.wider.join(', ')}.
+          </p>
+          <Link href="/areas" className="btn btn-secondary mt-8">
+            Explore our full coverage
+          </Link>
         </div>
       </section>
 

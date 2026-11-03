@@ -24,14 +24,14 @@ function Meta({ icon, value, label }: { icon: IconName; value: string | number; 
   )
 }
 
-export function PropertyCard({ property }: { property: Property }) {
+export function PropertyCard({ property, feature = false }: { property: Property; feature?: boolean }) {
   const cover = property.images[0]
   return (
     <Link
       href={`/properties/${property.slug}`}
       className="property-card group block focus-visible:outline-none"
     >
-      <div className="property-media rounded-[1.75rem] aspect-[4/3] group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-brass">
+      <div className={`property-media rounded-[1.75rem] ${feature ? 'aspect-[4/5]' : 'aspect-[4/3]'} group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-brass`}>
         {cover ? (
           <Image
             src={cover.src}
