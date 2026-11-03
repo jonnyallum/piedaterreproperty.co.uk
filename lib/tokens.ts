@@ -13,12 +13,12 @@ export const palette = {
   clayMist: '#d8cda9',
   shell: '#fbe9a0',
   ink: '#231f19',
-  indigo: '#e6c04f',
+  indigo: '#d6a92c',
   slate: '#55524a',
   terracotta: '#2d2820',
   sienna: '#2b2b26',
   ochre: '#231f19',
-  yellow: '#f3d36b',
+  yellow: '#ebc23f',
   black: '#231f19',
   marigold: '#2d2820',
   madder: '#26261f',
@@ -33,9 +33,9 @@ export const paletteDark = {
   panel: '#2d2820',
   ink: '#efe9d8',
   inkSoft: '#bdb8a8',
-  terracotta: '#f3d36b',
-  verdigris: '#f8e08e',
-  ochre: '#f3d36b',
+  terracotta: '#ebc23f',
+  verdigris: '#f1d36f',
+  ochre: '#ebc23f',
 } as const
 
 /** Theme colour for the browser chrome, light and dark. */
@@ -66,8 +66,8 @@ export const contrast = {
   slateOnBone: 6.08,
   siennaOnBone: 9.42,
   boneOnVerdigrisDeep: 9.42,
-  inkOnYellow: 11.7,
-  yellowOnBlack: 11.7,
+  inkOnYellow: 9.6,
+  yellowOnBlack: 9.6,
   boneOnMadder: 12.71,
   boneOnInk: 17.36,
 } as const

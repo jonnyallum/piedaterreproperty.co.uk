@@ -23,9 +23,9 @@
 
   /* Ink and structure */
   --pt-ink: #231f19; /* headings, body, lines */
-  --pt-yellow: #f3d36b; /* signal yellow, the big surfaces */
+  --pt-yellow: #ebc23f; /* signal yellow, the big surfaces */
   --pt-black: #231f19; /* black, the accent surfaces */
-  --pt-indigo: #e6c04f; /* deep yellow, quiet silhouettes */
+  --pt-indigo: #d6a92c; /* deep yellow, quiet silhouettes */
   --pt-slate: #55524a; /* secondary body text, meta */
 
   /* Pigments */
@@ -145,12 +145,12 @@
   --c-ink-soft: #bdb8a8;
   --c-on-dark: #efe9d8;
 
-  --c-sales: #f3d36b;
-  --c-sales-ink: #f8e08e;
-  --c-lettings: #f8e08e;
+  --c-sales: #ebc23f;
+  --c-sales-ink: #f1d36f;
+  --c-lettings: #f1d36f;
   --c-lettings-deep: #2d2820;
 
-  --c-ochre: #f3d36b;
+  --c-ochre: #ebc23f;
   --c-madder: #26261f;
   --c-sage: #948d79;
   --c-brass: #948d79;
