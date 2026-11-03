@@ -95,37 +95,6 @@ export const rawProperties = [
     publishedAt: NOW,
     updatedAt: NOW,
   },
-  {
-    id: 'let-market-parade-havant',
-    slug: 'market-parade-havant',
-    transactionType: 'letting',
-    status: 'available',
-    displayAddress: 'Market Parade, Havant',
-    fullAddress: { line1: 'Market Parade', town: 'Havant', postcode: 'PO9' },
-    postcodeOutcode: 'PO9',
-    town: 'Havant',
-    price: { amount: 140, qualifier: 'fixed', frequency: 'per_night' },
-    bedrooms: 4,
-    propertyType: 'Holiday rental',
-    summary: 'A four-bedroom holiday rental in the centre of Havant, from £140 per night.',
-    description: [
-      'A four-bedroom holiday rental in central Havant, well placed for the town, the station and the coast at Langstone and Hayling.',
-      'Available on a nightly basis, suited to visitors, contractors and families needing short-term space.',
-    ],
-    features: ['Central Havant', 'Sleeps a family', 'Short-term and nightly lets', 'Close to the station'],
-    images: [
-      archiveImage(
-        'index__20__market-parade-kitchen-pic-1.jpg',
-        'Bright fitted kitchen at the Market Parade holiday rental in Havant',
-        750,
-        490
-      ),
-    ],
-    featured: true,
-    publishedAt: NOW,
-    updatedAt: NOW,
-  },
-
   // ---- Portfolio track record, all let ---------------------------------
   {
     id: 'let-wallis-road-waterlooville',
