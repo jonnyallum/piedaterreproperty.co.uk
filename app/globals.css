@@ -16,26 +16,26 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Grounds, warm paper, never pure white */
-  --pt-bone: #f5f2ea; /* primary page ground */
-  --pt-oat: #ece8dc; /* alternating section ground */
-  --pt-clay-mist: #e2ddcf; /* tertiary ground, card wells */
-  --pt-shell: #e8eaff; /* soft warm tint for hover fills */
+  --pt-bone: #efe9d8; /* primary page ground */
+  --pt-oat: #e4dcc4; /* alternating section ground */
+  --pt-clay-mist: #d8cda9; /* tertiary ground, card wells */
+  --pt-shell: #fbe9a0; /* soft warm tint for hover fills */
 
   /* Ink and structure */
-  --pt-ink: #0d0d0f; /* headings, body, footer ground */
-  --pt-indigo: #15151c; /* deep dye, section grounds, nav on scroll */
-  --pt-slate: #5c5b57; /* secondary body text, meta */
+  --pt-ink: #0c0c0a; /* headings, body, footer ground */
+  --pt-indigo: #181815; /* deep dye, section grounds, nav on scroll */
+  --pt-slate: #55524a; /* secondary body text, meta */
 
   /* Pigments */
-  --pt-terracotta: #1b2cff; /* signature warm, fills and display only */
-  --pt-sienna: #1220c0; /* text-weight terracotta */
-  --pt-ochre: #aab2ff; /* highlights, underlines, marquees */
-  --pt-marigold: #1b2cff; /* light and glow, sparingly */
-  --pt-madder: #2a2a33; /* deep plum-red, rare emphasis */
-  --pt-verdigris: #1b2cff; /* lettings accent */
-  --pt-verdigris-d: #1220c0; /* verdigris button-fill depth */
-  --pt-sage: #b9b5a8; /* botanical neutral, dividers */
-  --pt-brass: #5c5b57; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
+  --pt-terracotta: #1a1a17; /* signature warm, fills and display only */
+  --pt-sienna: #2b2b26; /* text-weight terracotta */
+  --pt-ochre: #f2c200; /* highlights, underlines, marquees */
+  --pt-marigold: #1a1a17; /* light and glow, sparingly */
+  --pt-madder: #26261f; /* deep plum-red, rare emphasis */
+  --pt-verdigris: #1a1a17; /* lettings accent */
+  --pt-verdigris-d: #2b2b26; /* verdigris button-fill depth */
+  --pt-sage: #b5ad98; /* botanical neutral, dividers */
+  --pt-brass: #6f5600; /* antique bronze; 5.18:1 on bone, 4.55:1 on oat */
 
   /* ---- Semantic roles, light scene ------------------------------------- */
   --c-ground: var(--pt-bone);
@@ -70,16 +70,16 @@
   --grad-tide: linear-gradient(var(--pt-indigo), var(--pt-indigo));
   --grad-bleach: linear-gradient(
     180deg,
-    rgba(245, 242, 234, 0.96),
-    rgba(245, 242, 234, 0)
+    rgba(239, 233, 216, 0.96),
+    rgba(239, 233, 216, 0)
   );
   --grad-salt-flat: radial-gradient(
       42rem 28rem at 12% 8%,
-      rgba(236, 232, 220, 0.55),
+      rgba(228, 220, 196, 0.55),
       transparent 60%
     ),
-    radial-gradient(38rem 26rem at 88% 22%, rgba(232, 234, 255, 0.35), transparent 60%),
-    radial-gradient(36rem 30rem at 60% 96%, rgba(245, 242, 234, 0.5), transparent 62%);
+    radial-gradient(38rem 26rem at 88% 22%, rgba(251, 233, 160, 0.35), transparent 60%),
+    radial-gradient(36rem 30rem at 60% 96%, rgba(239, 233, 216, 0.5), transparent 62%);
 
   /* ---- Motion ---------------------------------------------------------- */
   --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
@@ -107,17 +107,18 @@
   --z-toast: 80;
 
   /* ---- Radii ----------------------------------------------------------- */
-  --radius-xs: 0.25rem; /* 4px, chips */
-  --radius-sm: 0.5rem; /* 8px, buttons, inputs */
-  --radius-md: 0.75rem; /* 12px, cards */
-  --arch-full: 999px 999px 8px 8px;
-  --arch-shallow: 200px 200px 4px 4px;
+  --radius-xs: 0; /* 4px, chips */
+  --radius-sm: 0; /* 8px, buttons, inputs */
+  --radius-md: 0; /* 12px, cards */
+  --pane-gap: 3px; /* mullion width between window panes */
+  --arch-full: 0;
+  --arch-shallow: 0;
 
   /* ---- Warm shadows, no neutral grey ----------------------------------- */
-  --shadow-warm-sm: 0 2px 8px rgba(13, 13, 15, 0.08);
-  --shadow-warm: 0 8px 24px rgba(27, 44, 255, 0.18);
-  --shadow-warm-cta: 0 8px 24px rgba(27, 44, 255, 0.28);
-  --shadow-warm-lg: 0 20px 60px rgba(27, 44, 255, 0.2);
+  --shadow-warm-sm: 0 2px 8px rgba(12, 12, 10, 0.08);
+  --shadow-warm: 0 8px 24px rgba(242, 194, 0, 0.18);
+  --shadow-warm-cta: 0 8px 24px rgba(242, 194, 0, 0.28);
+  --shadow-warm-lg: 0 20px 60px rgba(242, 194, 0, 0.2);
 
   color-scheme: light;
 }
@@ -133,26 +134,26 @@
 /* Explicit toggle, plus .theme-dark so any container can be a local night scene. */
 :root[data-theme='dark'],
 .theme-dark {
-  --c-ground: #0d0d0f;
-  --c-ground-alt: #16161a;
-  --c-well: #16161a;
-  --c-hover: #1f1f26;
+  --c-ground: #0c0c0a;
+  --c-ground-alt: #1a1a17;
+  --c-well: #1a1a17;
+  --c-hover: #242420;
 
-  --c-ink: #f5f2ea;
-  --c-ink-soft: #b8b6b0;
-  --c-on-dark: #f5f2ea;
+  --c-ink: #efe9d8;
+  --c-ink-soft: #bdb8a8;
+  --c-on-dark: #efe9d8;
 
-  --c-sales: #6b78ff;
-  --c-sales-ink: #8b95ff;
-  --c-lettings: #8b95ff;
-  --c-lettings-deep: #1b2cff;
+  --c-sales: #f2c200;
+  --c-sales-ink: #f7d54a;
+  --c-lettings: #f7d54a;
+  --c-lettings-deep: #1a1a17;
 
-  --c-ochre: #aab2ff;
-  --c-madder: #2a2a33;
-  --c-sage: #8a877d;
-  --c-brass: #8a877d;
+  --c-ochre: #f2c200;
+  --c-madder: #26261f;
+  --c-sage: #948d79;
+  --c-brass: #948d79;
 
-  --grad-bleach: linear-gradient(180deg, rgba(13, 13, 15, 0.96), rgba(13, 13, 15, 0));
+  --grad-bleach: linear-gradient(180deg, rgba(12, 12, 10, 0.96), rgba(12, 12, 10, 0));
   --grain-opacity: 0.018;
   --grain-opacity-photo: 0.012;
   --gradient-opacity: 0.6;
@@ -244,9 +245,9 @@
   --text-eyebrow--letter-spacing: 0.16em;
 
   /* Radii */
-  --radius-xs: 0.25rem;
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
 
   /* Easings, generate ease-quill, ease-tide, ease-drift utilities */
   --ease-quill: cubic-bezier(0.16, 1, 0.3, 1);
@@ -254,10 +255,10 @@
   --ease-drift: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   /* Warm shadows */
-  --shadow-warm-sm: 0 2px 8px rgba(23, 35, 46, 0.08);
-  --shadow-warm: 0 8px 24px rgba(192, 92, 52, 0.18);
-  --shadow-warm-cta: 0 8px 24px rgba(192, 92, 52, 0.28);
-  --shadow-warm-lg: 0 20px 60px rgba(122, 46, 74, 0.2);
+  --shadow-warm-sm: 0 2px 8px rgba(12, 12, 10, 0.08);
+  --shadow-warm: 0 8px 24px rgba(242, 194, 0, 0.18);
+  --shadow-warm-cta: 0 8px 24px rgba(242, 194, 0, 0.28);
+  --shadow-warm-lg: 0 20px 60px rgba(12, 12, 10, 0.2);
 
   /* Content container */
   --container-content: 82.5rem; /* 1320px max content width */
@@ -435,17 +436,17 @@
     background:
       linear-gradient(
         90deg,
-        rgba(23, 35, 46, 0.98) 0%,
-        rgba(23, 35, 46, 0.9) 35%,
-        rgba(23, 35, 46, 0.48) 62%,
-        rgba(23, 35, 46, 0.12) 100%
+        rgba(12, 12, 10, 0.98) 0%,
+        rgba(12, 12, 10, 0.9) 35%,
+        rgba(12, 12, 10, 0.48) 62%,
+        rgba(12, 12, 10, 0.12) 100%
       ),
-      linear-gradient(0deg, rgba(23, 35, 46, 0.72), transparent 46%),
+      linear-gradient(0deg, rgba(12, 12, 10, 0.72), transparent 46%),
       repeating-linear-gradient(135deg, rgba(247, 242, 232, 0.018) 0 1px, transparent 1px 4px);
     pointer-events: none;
   }
   .home-hero-copy {
-    text-shadow: 0 2px 24px rgba(23, 35, 46, 0.35);
+    text-shadow: 0 2px 24px rgba(12, 12, 10, 0.35);
   }
   .home-hero-credit {
     position: absolute;
@@ -469,7 +470,7 @@
     position: absolute;
     inset: 0;
     z-index: var(--z-grain);
-    background: linear-gradient(0deg, rgba(23, 35, 46, 0.88), transparent 48%);
+    background: linear-gradient(0deg, rgba(12, 12, 10, 0.88), transparent 48%);
     pointer-events: none;
   }
 
@@ -550,9 +551,10 @@
     gap: 0.5rem;
     min-height: 2.75rem; /* 44px touch target */
     padding: 0.875rem 1.75rem;
-    border-radius: 999px;
+    border-radius: 0;
     font-family: var(--font-sans);
-    font-weight: 500;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: var(--text-body);
     letter-spacing: 0.02em;
     line-height: 1;
@@ -585,30 +587,35 @@
     display: none;
   }
 
-  /* Primary sales: Kiln gradient */
+  /* Primary: signal yellow, black type. Square, like a window pane. */
+  .pane::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--pt-bone), var(--pt-bone)) 50% 0 / 3px 100% no-repeat,
+      linear-gradient(var(--pt-bone), var(--pt-bone)) 0 38% / 100% 3px no-repeat;
+    opacity: 0.55;
+  }
   .btn-sales {
-    background-image: var(--grad-kiln);
-    color: var(--pt-bone);
-    box-shadow: var(--shadow-warm);
+    background-image: none;
+    background-color: var(--pt-ochre);
+    color: var(--pt-ink);
+    box-shadow: none;
   }
   .btn-sales:hover {
-    background-image: var(--grad-kiln-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-warm-cta);
-  }
-
-  /* On a flat blue band the primary button flips to paper so it never
-     disappears into its own ground. */
-  .surface-kiln .btn-sales,
-  .bg-sales .btn-sales {
-    background-image: none;
-    background-color: var(--pt-bone);
-    color: var(--pt-ink);
+    background-color: var(--pt-ink);
+    color: var(--pt-ochre);
+    transform: none;
+    box-shadow: inset 0 0 0 2px var(--pt-ochre);
   }
   .surface-kiln .btn-sales:hover,
-  .bg-sales .btn-sales:hover {
-    background-image: none;
-    background-color: var(--pt-shell);
+  .bg-sales .btn-sales:hover,
+  .surface-harbour-dusk .btn-sales:hover {
+    background-color: var(--pt-bone);
+    color: var(--pt-ink);
+    box-shadow: none;
   }
 
   /* Primary lettings: verdigris depth fill */
@@ -654,6 +661,25 @@
     background-color: var(--c-on-dark);
   }
   .btn-secondary.btn-invert:hover {
+    color: var(--pt-ink);
+  }
+  /* On a yellow ground the inverted outline reads black. */
+  .bg-ochre .btn-secondary.btn-invert {
+    color: var(--pt-ink);
+    border-color: var(--pt-ink);
+  }
+  .bg-ochre .btn-secondary.btn-invert::before {
+    background-color: var(--pt-ink);
+  }
+  .bg-ochre .btn-secondary.btn-invert:hover {
+    color: var(--pt-ochre);
+  }
+  .bg-ochre .btn-sales {
+    background-color: var(--pt-ink);
+    color: var(--pt-ochre);
+  }
+  .bg-ochre .btn-sales:hover {
+    background-color: var(--pt-bone);
     color: var(--pt-ink);
   }
 
@@ -929,7 +955,7 @@
     font-size: 1.55rem;
     font-weight: 700;
     color: #4285f4;
-    box-shadow: inset 0 0 0 1px rgba(23, 35, 46, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(12, 12, 10, 0.1);
   }
   /* Reduced motion: stop entirely and let the reader scroll the row by hand. */
   @media (prefers-reduced-motion: reduce) {
@@ -1052,14 +1078,14 @@
     background:
       linear-gradient(
         90deg,
-        rgba(23, 35, 46, 0.93),
-        rgba(23, 35, 46, 0.56)
+        rgba(12, 12, 10, 0.93),
+        rgba(12, 12, 10, 0.56)
       ),
       linear-gradient(
         0deg,
-        rgba(23, 35, 46, 0.9) 0%,
-        rgba(23, 35, 46, 0.45) 68%,
-        rgba(23, 35, 46, 0.28) 100%
+        rgba(12, 12, 10, 0.9) 0%,
+        rgba(12, 12, 10, 0.45) 68%,
+        rgba(12, 12, 10, 0.28) 100%
       );
   }
   .home-hero-credit {

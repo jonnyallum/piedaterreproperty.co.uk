@@ -1,9 +1,9 @@
 /**
  * PageHero. The interior-page header, laid out like the opening of a
  * monograph: a narrow margin column carrying the section label, a very large
- * title beside it, and a lead paragraph offset underneath. Nested doorway
- * outlines sit behind the title as the one decorative device. Tinted by path:
- * sales is flat signal blue, lettings flat ink, neutral paper. Carries
+ * title beside it, and a lead paragraph offset underneath. A six-pane window
+ * frame sits behind the title as the one decorative device. Tinted by path:
+ * sales and neutral are black, lettings is signal yellow. Carries
  * breadcrumbs, one h1, a lead line and up to two calls to action.
  */
 import type { ReactNode } from 'react'
@@ -23,9 +23,9 @@ interface PageHeroProps {
 }
 
 const SURFACE: Record<Tone, string> = {
-  sales: 'surface-kiln text-on-dark',
-  lettings: 'surface-harbour-dusk text-on-dark',
-  neutral: 'bg-ground text-ink',
+  sales: 'surface-harbour-dusk text-on-dark',
+  lettings: 'bg-ochre text-ink',
+  neutral: 'surface-harbour-dusk text-on-dark',
 }
 
 export function PageHero({
@@ -36,17 +36,20 @@ export function PageHero({
   trail,
   children,
 }: PageHeroProps) {
-  const onDark = tone !== 'neutral'
+  const onDark = tone !== 'lettings'
   return (
     <section className={cn('relative isolate overflow-hidden', SURFACE[tone])}>
-      {/* Three nested doorway outlines, behind the type. */}
+      {/* A window frame: six panes behind the title, one filled. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-16 top-28 hidden h-[36rem] w-[24rem] lg:block"
+        className={cn(
+          'pointer-events-none absolute -right-10 top-28 hidden h-[34rem] w-[22rem] grid-cols-2 grid-rows-3 gap-[var(--pane-gap)] p-[var(--pane-gap)] lg:grid',
+          onDark ? 'bg-ochre' : 'bg-ink'
+        )}
       >
-        <div className="arch-full absolute inset-0 border-2 border-current opacity-20" />
-        <div className="arch-full absolute inset-8 border-2 border-current opacity-20" />
-        <div className="arch-full absolute inset-16 border-2 border-current opacity-20" />
+        {[0, 1, 2, 3, 4, 5].map((i) => (
+          <div key={i} className={i === 3 ? (onDark ? 'bg-ochre' : 'bg-ink') : onDark ? 'bg-ink' : 'bg-ochre'} />
+        ))}
       </div>
       <div
         className="relative mx-auto max-w-content px-6 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40"
@@ -60,7 +63,9 @@ export function PageHero({
           >
             {eyebrow}
           </Eyebrow>
-          <h1 className="text-title lg:col-span-9">{title}</h1>
+          <h1
+            className={cn('text-title lg:col-span-9', onDark ? '[&_em]:!text-ochre' : '[&_em]:!text-ink')}
+          >{title}</h1>
         </div>
         {lead || children ? (
           <div className="mt-12 grid gap-y-8 lg:grid-cols-12 lg:gap-x-8">

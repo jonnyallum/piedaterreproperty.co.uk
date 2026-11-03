@@ -41,6 +41,8 @@ export function Nav() {
   }, [overlay])
 
   const solid = scrolled
+  // Over the black home hero, before scrolling, the chrome reads light on dark.
+  const light = overlay && !solid
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
   return (
@@ -61,7 +63,7 @@ export function Nav() {
       ) : null}
 
       <div className="mx-auto flex max-w-content items-center justify-between gap-6 px-6 py-4 md:px-8">
-        <Logo tone="ink" />
+        <Logo tone={light ? 'on-dark' : 'ink'} />
 
         {landing ? null : (
           <nav aria-label="Primary" className="hidden lg:block">
@@ -72,7 +74,7 @@ export function Nav() {
                     href={item.href}
                     className={cn(
                       'text-small font-medium transition-opacity hover:opacity-70',
-                      'text-ink'
+                      light ? 'text-on-dark' : 'text-ink'
                     )}
                   >
                     {item.label}
@@ -90,7 +92,7 @@ export function Nav() {
             className={cn(
               'tabular items-center gap-2 text-small font-medium',
               landing ? 'inline-flex' : 'hidden md:inline-flex',
-              'text-ink'
+              light ? 'text-on-dark' : 'text-ink'
             )}
           >
             <Icon name="phone" className="h-5 w-5" />
@@ -106,7 +108,7 @@ export function Nav() {
               <button
                 ref={menuButtonRef}
                 type="button"
-                className="btn btn-icon text-ink lg:hidden"
+                className={cn('btn btn-icon lg:hidden', light ? 'text-on-dark' : 'text-ink')}
                 aria-label="Open menu"
                 aria-expanded={menuOpen}
                 aria-haspopup="dialog"
