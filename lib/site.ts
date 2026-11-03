@@ -37,8 +37,7 @@ export const SITE = {
     href: 'tel:+447756869185',
   },
 
-  // confirm: office email address for the contact page and lead notifications.
-  email: 'hello@piedaterreproperty.co.uk',
+  email: 'enquiries@piedaterreproperty.co.uk',
 
   // WhatsApp business number in international form, digits only.
   whatsapp: '447756869185',
@@ -55,13 +54,13 @@ export const SITE = {
 
   founded: 2011,
 
-  /** confirm: exact opening hours per day, including whether Saturdays are worked. */
+  /** Confirmed by the client: 8.30am to 5.30pm, Monday to Friday, closed weekends. */
   openingHours: [
-    { day: 'Monday', open: '09:00', close: '17:30' },
-    { day: 'Tuesday', open: '09:00', close: '17:30' },
-    { day: 'Wednesday', open: '09:00', close: '17:30' },
-    { day: 'Thursday', open: '09:00', close: '17:30' },
-    { day: 'Friday', open: '09:00', close: '17:30' },
+    { day: 'Monday', open: '08:30', close: '17:30' },
+    { day: 'Tuesday', open: '08:30', close: '17:30' },
+    { day: 'Wednesday', open: '08:30', close: '17:30' },
+    { day: 'Thursday', open: '08:30', close: '17:30' },
+    { day: 'Friday', open: '08:30', close: '17:30' },
     { day: 'Saturday', open: null, close: null },
     { day: 'Sunday', open: null, close: null },
   ],

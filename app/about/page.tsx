@@ -97,9 +97,6 @@ export default function AboutPage() {
 
           <div>
             <Eyebrow>Our story</Eyebrow>
-            <span className="mt-3 inline-block rounded-sm border-[length:var(--pane-gap)] border-ink bg-well px-3 py-1 text-small text-ink-soft">
-              Draft, awaiting the founder&rsquo;s approval
-            </span>
             <h2 className="mt-4 text-h2">
               A foot on the ground, kept for the <em className="italic">long</em> term.
             </h2>
@@ -144,12 +141,6 @@ export default function AboutPage() {
               carefully, with the right registrations in place before we take it live, because
               doing it properly matters more than doing it quickly, and because our name is the
               only thing on the board.
-            </p>
-            <p className="measure mt-4 text-body text-ink">
-              [Placeholder for {SITE.director} to approve or rewrite: the specific reason she
-              founded the firm, and the one thing she wants a first-time seller or landlord to
-              know before they pick up the phone. Nothing personal is invented here; this
-              paragraph is left for her own words.]
             </p>
 
             <p className="signature mt-8 text-h2">{SITE.directorDisplay}</p>
