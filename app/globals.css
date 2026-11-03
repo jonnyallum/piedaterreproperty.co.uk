@@ -63,16 +63,11 @@
   --c-focus-inner: var(--pt-ink);
 
   /* ---- Gradients (each is used only over a grain overlay) --------------- */
-  --grad-harbour-dusk: linear-gradient(
-    155deg,
-    var(--pt-indigo) 0%,
-    var(--pt-madder) 42%,
-    var(--pt-terracotta) 76%,
-    var(--pt-ochre) 100%
-  );
-  --grad-kiln: linear-gradient(160deg, var(--pt-sienna) 0%, var(--pt-terracotta) 100%);
-  --grad-kiln-hover: linear-gradient(140deg, var(--pt-terracotta) 0%, var(--pt-marigold) 100%);
-  --grad-tide: linear-gradient(140deg, var(--pt-indigo) 0%, var(--pt-verdigris) 100%);
+  /* Maison surfaces are flat: ink, signal blue, paper. No diagonal washes. */
+  --grad-harbour-dusk: linear-gradient(var(--pt-ink), var(--pt-ink));
+  --grad-kiln: linear-gradient(var(--pt-terracotta), var(--pt-terracotta));
+  --grad-kiln-hover: linear-gradient(var(--pt-sienna), var(--pt-sienna));
+  --grad-tide: linear-gradient(var(--pt-indigo), var(--pt-indigo));
   --grad-bleach: linear-gradient(
     180deg,
     rgba(245, 242, 234, 0.96),
@@ -350,11 +345,11 @@
   .brand-word {
     display: inline-flex;
     align-items: baseline;
-    gap: 0.28em;
     font-family: var(--font-display);
     font-size: 2.15rem;
     letter-spacing: -0.01em;
     line-height: 1;
+    white-space: pre;
   }
   .brand-a {
     position: relative;
@@ -363,12 +358,12 @@
   .brand-a::before {
     content: '';
     position: absolute;
-    left: 0.14em;
-    top: -0.1em;
-    width: 0.36em;
-    height: 0.075em;
+    left: 0.06em;
+    top: 0.06em;
+    width: 0.3em;
+    height: 0.07em;
     background: var(--pt-terracotta);
-    transform: rotate(38deg);
+    transform: rotate(30deg);
     transform-origin: left center;
   }
   .brand-word em {
@@ -387,6 +382,20 @@
     color: var(--c-on-dark);
   }
   .brand-lockup[data-tone='on-dark'] .brand-a::before {
+    background: var(--c-ochre);
+  }
+  .brand-giant {
+    display: flex;
+    width: 100%;
+    font-size: clamp(3.5rem, 20.5vw, 21rem);
+    letter-spacing: -0.03em;
+    color: var(--pt-bone);
+    opacity: 0.96;
+  }
+  .brand-giant em {
+    color: var(--c-ochre);
+  }
+  .brand-giant .brand-a::before {
     background: var(--c-ochre);
   }
   .brand-lockup[data-tone='on-dark'] .brand-word em {
@@ -698,8 +707,8 @@
     padding: 0.75rem 1rem;
     background-color: var(--c-ground);
     color: var(--c-ink);
-    border: 1px solid color-mix(in srgb, var(--c-brass) 55%, transparent);
-    border-radius: var(--radius-sm);
+    border: 1px solid color-mix(in srgb, var(--c-ink) 28%, transparent);
+    border-radius: 0.875rem;
     font-family: var(--font-sans);
     font-size: var(--text-body);
     transition:
@@ -929,14 +938,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    padding: 0.25rem 0.625rem;
-    border-radius: var(--radius-xs);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
     font-family: var(--font-mono);
     font-size: var(--text-eyebrow);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    background-color: var(--c-brass);
-    color: var(--pt-ink);
+    background-color: var(--pt-ink);
+    color: var(--pt-bone);
   }
   .status-chip[data-tone='verdigris'] {
     background-color: var(--c-lettings-deep);

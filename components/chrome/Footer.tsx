@@ -1,5 +1,5 @@
 /**
- * Footer. Harbour Dusk gradient under grain. Carries the sitemap, the trading
+ * Footer. Flat ink with an oversized wordmark. Carries the sitemap, the trading
  * office and contact details, opening hours, the credential row, social links,
  * the full legal line with company number and registered office, and the legal
  * page links. Server component.
@@ -135,6 +135,14 @@ export function Footer() {
             <span className="tabular">© {year} {SITE.legalEntity}</span>
           </div>
         </div>
+        <p
+          aria-hidden="true"
+          className="brand-word brand-giant mt-14 select-none justify-center overflow-hidden"
+        >
+          <span>pied </span>
+          <span className="brand-a">a</span>
+          <em className="not-italic"> terre</em>
+        </p>
       </div>
     </footer>
   )

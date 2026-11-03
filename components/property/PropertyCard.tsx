@@ -31,7 +31,7 @@ export function PropertyCard({ property }: { property: Property }) {
       href={`/properties/${property.slug}`}
       className="property-card group block focus-visible:outline-none"
     >
-      <div className="property-media arch-shallow aspect-[4/5] group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-brass">
+      <div className="property-media rounded-[1.75rem] aspect-[4/3] group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-brass">
         {cover ? (
           <Image
             src={cover.src}
@@ -47,7 +47,7 @@ export function PropertyCard({ property }: { property: Property }) {
           <PropertyPlaceholder />
         )}
         <span
-          className="status-chip absolute left-3 top-3"
+          className="status-chip absolute left-4 top-4"
           data-tone={STATUS_TONE[property.status]}
           style={{ zIndex: 'var(--z-content)' }}
         >

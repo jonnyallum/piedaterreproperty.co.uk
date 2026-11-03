@@ -21,9 +21,9 @@ export function Logo({ tone = 'ink', className }: LogoProps) {
       data-tone={tone}
     >
       <span className="brand-word" aria-hidden="true">
-        <span>pied</span>
-        <span className="brand-a">à</span>
-        <em className="not-italic">terre</em>
+        <span>pied </span>
+        <span className="brand-a">a</span>
+        <em className="not-italic"> terre</em>
       </span>
       <span className="brand-descriptor" aria-hidden="true">
         Property

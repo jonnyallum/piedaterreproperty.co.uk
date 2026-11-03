@@ -23,9 +23,9 @@ interface PageHeroProps {
 }
 
 const SURFACE: Record<Tone, string> = {
-  sales: 'surface-harbour-dusk text-on-dark',
-  lettings: 'surface-tide text-on-dark',
-  neutral: 'bg-oat text-ink',
+  sales: 'surface-kiln text-on-dark',
+  lettings: 'surface-harbour-dusk text-on-dark',
+  neutral: 'bg-ground text-ink',
 }
 
 export function PageHero({
