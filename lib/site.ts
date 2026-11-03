@@ -41,7 +41,7 @@ export const SITE = {
   email: 'hello@piedaterreproperty.co.uk',
 
   // WhatsApp business number in international form, digits only.
-  whatsapp: '447481288509',
+  whatsapp: '447756869185',
 
   urls: {
     production: 'https://piedaterreproperty.co.uk',
