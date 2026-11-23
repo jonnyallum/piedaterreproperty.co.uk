@@ -28,6 +28,10 @@ jobs:
       # check runs dashes, tokens, lint (with jsx-a11y) and typecheck.
       - run: npm run check
       - run: npm run build
+        env:
+          # The private Vision demo is noindex and flag-gated. Render it in CI so
+          # the heading check can see the h1; production remains off without the flag.
+          VISION_DEMO_ENABLED: 'true'
       - run: npm run check:headings
       - run: npm run check:budget
       - run: npm run check:confirm
