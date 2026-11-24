@@ -12,7 +12,7 @@ export function GoogleReviewBadge({ href }: GoogleReviewBadgeProps) {
       target="_blank"
       rel="noopener noreferrer"
       className="google-review-badge group"
-      aria-label="Review Pied-à-Terre Property on Google"
+      aria-label="Review us on Google"
     >
       <span className="google-review-g" aria-hidden="true">G</span>
       <span>
