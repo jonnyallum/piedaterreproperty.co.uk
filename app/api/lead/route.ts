@@ -11,6 +11,7 @@ import {
   type LeadInput,
   type LeadSource,
 } from '@/lib/leads'
+import { createLeadStore } from '@/lib/leads/store'
 import { SITE } from '@/lib/site'
 import { palette } from '@/lib/tokens'
 
@@ -78,7 +79,7 @@ function escapeHtml(value: string): string {
 }
 
 /** Rows of every populated field, for the office email body. */
-function fieldRows(lead: LeadInput, meta: { pagePath?: string; referrer?: string }): [string, string][] {
+function fieldRows(lead: LeadInput, meta: { pagePath?: string; referrer?: string; reference?: string }): [string, string][] {
   const rows: [string, string][] = [
     ['Source', SOURCE_LABEL[lead.source]],
     ['Name', lead.name],
@@ -86,6 +87,7 @@ function fieldRows(lead: LeadInput, meta: { pagePath?: string; referrer?: string
   const add = (label: string, value?: string) => {
     if (value) rows.push([label, value])
   }
+  add('Reference', meta.reference)
   add('Email', lead.email || undefined)
   add('Phone', lead.phone || undefined)
   add('Postcode', lead.postcode)
@@ -93,7 +95,7 @@ function fieldRows(lead: LeadInput, meta: { pagePath?: string; referrer?: string
   add('Bedrooms', lead.bedrooms)
   add('Timeframe', lead.timeframe)
   add('Property', lead.propertyAddress)
-  add('Reference', lead.propertyRef)
+  add('Property reference', lead.propertyRef)
   add('Message', lead.message)
   for (const [k, v] of Object.entries(lead.extra ?? {})) if (v) rows.push([k, v])
   add('Marketing consent', lead.consentMarketing ? `Yes (v${CONSENT_VERSION})` : 'No')
@@ -106,7 +108,7 @@ function fieldRows(lead: LeadInput, meta: { pagePath?: string; referrer?: string
   return rows
 }
 
-function officeEmailHtml(lead: LeadInput, meta: { pagePath?: string; referrer?: string }): string {
+function officeEmailHtml(lead: LeadInput, meta: { pagePath?: string; referrer?: string; reference?: string }): string {
   // Inline styles, colours from the token mirror; email clients cannot use CSS
   // variables. Spacing via cellpadding rather than px so the token guard stays
   // meaningful in application code.
@@ -329,9 +331,25 @@ export async function POST(request: Request) {
       : NextResponse.json({ ok: true })
   }
 
+  // Durable store first. If it is not configured, the existing NDJSON fallback
+  // keeps local development working. A store failure must not lose the lead.
+  const store = createLeadStore()
+  let storeReference: string | undefined
+  let stored = false
+  if (store) {
+    try {
+      const saved = await store.save(lead)
+      storeReference = saved.reference
+      stored = saved.stored
+    } catch (error) {
+      console.error('[lead] durable store failed', error instanceof Error ? error.message : error)
+    }
+  }
+
   const meta = {
     pagePath: lead.pagePath,
     referrer: lead.referrer,
+    reference: storeReference,
   }
 
   // Deliver. Any failure still returns success to the user; the lead is logged
@@ -353,7 +371,9 @@ export async function POST(request: Request) {
     delivered = false
   }
 
-  await logLead(lead, { ip, delivered })
+  // The durable row is the record. Keep the local NDJSON fallback only when the
+  // store is absent or failed.
+  if (!stored) await logLead(lead, { ip, delivered })
   if (!delivered && process.env.RESEND_API_KEY) await alertDeliveryFailure(lead)
   await ga4ServerEvent(lead)
 
