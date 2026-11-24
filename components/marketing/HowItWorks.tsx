@@ -67,7 +67,7 @@ export function HowItWorks() {
                     {index + 1}
                   </p>
                   <div>
-                    <h4 className="font-display text-h3 uppercase">{step.title}</h4>
+                    <h3 className="font-display text-h3 uppercase">{step.title}</h3>
                     <p className="measure mt-2 text-body text-ink-soft">{step.body}</p>
                   </div>
                 </Cell>
