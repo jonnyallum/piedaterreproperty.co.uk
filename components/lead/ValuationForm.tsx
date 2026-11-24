@@ -165,6 +165,12 @@ export function ValuationForm({ path, source, initialTown }: ValuationFormProps)
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
+    // Only the final step may send. A submit before it (Enter in a field, or a
+    // stale click) advances one step instead, so step 3 is never skipped.
+    if (step < 2) {
+      next()
+      return
+    }
     if (!validateStep(1)) {
       setStep(1)
       focusFirstError()
@@ -386,13 +392,22 @@ export function ValuationForm({ path, source, initialTown }: ValuationFormProps)
             Back
           </Button>
         ) : null}
+        {/* Distinct keys: without them React reuses the Continue element as the
+            submit button within the same click, and the browser then submits the
+            form from step 2, skipping step 3. */}
         {step < 2 ? (
-          <Button variant={path === 'sales' ? 'sales' : 'lettings'} onClick={next} type="button">
+          <Button
+            key="continue"
+            variant={path === 'sales' ? 'sales' : 'lettings'}
+            onClick={next}
+            type="button"
+          >
             Continue
             <Icon name="arrow-right" className="h-5 w-5" />
           </Button>
         ) : (
           <Button
+            key="submit"
             variant={path === 'sales' ? 'sales' : 'lettings'}
             type="submit"
             loading={submitting}
