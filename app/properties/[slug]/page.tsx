@@ -8,6 +8,7 @@ import { KeyFacts } from '@/components/property/KeyFacts'
 import { EpcBar } from '@/components/property/EpcBar'
 import { MaterialInfo } from '@/components/property/MaterialInfo'
 import { EnquiryForm } from '@/components/property/EnquiryForm'
+import { PropertyView } from '@/components/analytics/PropertyView'
 import { ContactRoutes } from '@/components/lead/ContactRoutes'
 import { PrintButton } from '@/components/property/PrintButton'
 import { PrintSheet } from '@/components/property/PrintSheet'
@@ -59,6 +60,7 @@ export default async function PropertyDetailPage({
   return (
     <>
       <JsonLd data={propertyJsonLd(property)} />
+      <PropertyView propertyId={property.id} />
 
       <article className="print:hidden">
         <section className="mx-auto max-w-content px-6 pt-28 md:px-8 md:pt-32">
